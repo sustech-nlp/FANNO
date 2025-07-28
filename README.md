@@ -88,28 +88,21 @@ pip install -r requirements.txt
 ### Step 1: Document Pre-Screening
 Process unlabeled documents with quality filtering and community detection:
 ```bash
-python src/document_prescreening.py --input_path /path/to/unlabeled/docs --output_path /path/to/prescreened/docs
+python src/prescreen.py
 ```
 
-### Step 2: Seed Instruction Generation  
-Generate initial instruction seeds using tagging-based method:
+### Step 2: Complete FANNO Pipeline
+Run the complete instruction generation pipeline in one step:
 ```bash
-python src/seed_generation.py --docs_path /path/to/prescreened/docs --output_path /path/to/seed/instructions
+python src/fanno.py
 ```
 
-### Step 3: Instruction Augmentation
-Augment instructions using UCB selection and Think Different strategy:
-```bash
-python src/instruction_augmentation.py --seeds_path /path/to/seed/instructions --output_path /path/to/augmented/instructions
-```
+This single command will execute the full pipeline including:
+- **Seed Instruction Generation**: Generate initial instruction seeds using tagging-based method
+- **Instruction Augmentation**: Augment instructions using UCB selection and Think Different strategy  
+- **Response Generation**: Generate responses for all instructions using teacher LLM
 
-### Step 4: Response Generation
-Generate responses for all instructions using teacher LLM:
-```bash
-python src/response_generation.py --instructions_path /path/to/augmented/instructions --output_path /path/to/final/dataset
-```
-
-The complete FANNO instruction dataset will be saved in the specified output directory.
+The complete FANNO instruction dataset will be saved in the default output directory.
 
 ### 🧪 Testing
 For development and testing purposes, you can use smaller teacher models like LLaMA-3.1-TULU-3-8B by updating the model configuration in the respective scripts.
