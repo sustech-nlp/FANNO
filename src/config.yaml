@@ -1,0 +1,8 @@
+model_dir: /home/admin/data/huggingface_model
+data_dir: /home/admin/FANNO/inference/data/
+unlabelled_data_path: /home/admin/advance-pipeline/data/diversity/diversity_unlabel_data_v7.jsonl
+com_unlabelled_data_path: /home/admin/advance-pipeline/data/diversity/diversity_unlabel_data_v8_com.jsonl
+seed_path: /home/admin/FANNO/inference/data/diversity_seed_1.jsonl
+
+seed_docs_num : 100
+window_size : 5000
