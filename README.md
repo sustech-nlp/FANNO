@@ -141,6 +141,4 @@ If you find this work useful, please cite our paper:
 - Yixia Li (Southern University of Science and Technology)
 - Wenjia Zhang (Peking University, Tongji University)
 - Yun Chen (Shanghai University of Finance and Economics)
-- Guanhua Chen (Southern University of Science and Technology) *
-
-*Equal contribution
+- Guanhua Chen (Southern University of Science and Technology)
