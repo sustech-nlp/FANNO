@@ -1,0 +1,38 @@
+inference:
+  backend: azure
+  model_name_or_path: gpt-5
+  azure_tenant_id: 72f988bf-86f1-41af-91ab-2d7cd011db47
+  azure_api_version: 2024-12-01-preview
+  azure_max_retries: 5
+  temperature: 0.7
+  top_p: 0.9
+  max_tokens: 1024
+
+pipeline:
+  seed_docs_num: 50
+  window_size: 500
+  limit_size: 5000
+  diversity_samples: 3
+  seed_gen_strategy: tagging
+  ins_aug_strategy: ucb
+  instruction_quality_strategy: combined
+  response_strategy: basic
+  think_diff_strategy: ucb
+
+files:
+  data_dir: ./data
+  unlabeled_data_path: ./data/unlabel_data.jsonl
+  com_unlabeled_data_path: ./data/unlabel_data_com.jsonl
+  output_dir: ./outputs
+  run_name: response-gpt5
+
+evaluator:
+  threshold: 0.8
+  min_community_size: 1
+  encode_model_path: sentence-transformers/all-MiniLM-L6-v2
+  batch_size: 64
+
+metrics:
+  perplexity_model: null
+  max_ppl_tokens: 1024
+  ifd_prompt_temperature: 0.3
