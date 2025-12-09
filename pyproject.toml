@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fanno"
+version = "0.1.0"
+description = "FANNO: Free ANNOtator pipeline for synthetic instruction generation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "FANNO team"}]
+dependencies = [
+    "loguru>=0.7.0",
+    "pyyaml>=6.0.0",
+    "transformers>=4.40.0",
+    "sentence-transformers>=2.2.2",
+    "vllm>=0.5.4",
+    "torch>=2.1.0",
+    "numpy>=1.24.0",
+    "tqdm>=4.65.0",
+    "pandas>=2.0.0",
+    "seaborn>=0.12.0",
+    "matplotlib>=3.7.0",
+    "umap-learn>=0.5.0",
+    "scikit-learn>=1.3.0",
+    "scipy>=1.11.0",
+    "httpx>=0.24.1",
+    "openai>=1.3.0",
+    "azure-identity>=1.17.0",
+]
+
+[project.scripts]
+fanno = "fanno.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+fanno = ["config.yaml"]

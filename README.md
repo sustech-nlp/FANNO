@@ -21,6 +21,7 @@ FANNO introduces several breakthrough innovations:
 3. **UCB-Based Instruction Augmentation**: Uses Upper Confidence Bound algorithm to select high-quality examples for iterative improvement
 4. **Think Different Strategy**: Encourages diverse instruction generation by treating examples as counterexamples
 5. **End-to-End Automation**: Requires no human annotation or proprietary API access
+6. **DiversityBench-inspired decoding**: Optional temperature, aspect, and iterative strategies for richer generations plus perplexity/IFD-based scoring
 
 ## 🧠 Motivation
 
@@ -79,30 +80,129 @@ Notably, FANNO achieves these results using only **10K instruction pairs** while
 
 ## 🚀 Quick Start
 
-### Prerequisites
-Install the required dependencies:
+### Installation
+Install dependencies (includes vLLM, transformers, Azure client support):
 ```bash
 pip install -r requirements.txt
 ```
 
-### Step 1: Document Pre-Screening
-Process unlabeled documents with quality filtering and community detection:
+Install FANNO in editable mode to get the CLI:
 ```bash
-python src/prescreen.py
+pip install -e .
 ```
 
-### Step 2: Complete FANNO Pipeline
-Run the complete instruction generation pipeline in one step:
+### Step 1: Run the pipeline
+Execute the end-to-end pipeline with the default config:
 ```bash
-python src/fanno.py
+fanno --config src/fanno/config.yaml
+```
+Or pick a preset:
+```bash
+fanno --config configs/azure_gpt5.yaml      # Azure GPT-5 teacher
+fanno --config src/fanno/config.yaml        # local vLLM teacher
 ```
 
-This single command will execute the full pipeline including:
-- **Seed Instruction Generation**: Generate initial instruction seeds using tagging-based method
-- **Instruction Augmentation**: Augment instructions using UCB selection and Think Different strategy  
-- **Response Generation**: Generate responses for all instructions using teacher LLM
+Key behaviors:
+- **Seed Instruction Generation**: tagging-based prompts over unlabeled docs
+- **Instruction Augmentation**: UCB selection + Think-Different sampling
+- **Response Generation**: vLLM-backed inference with optional diversity strategies (`temperature_sweep`, `dynamic_temperature`, `aspect`, `iterative`)
+- **Instruction Value Scoring**: combines perplexity + IFD to rank and filter instructions
 
-The complete FANNO instruction dataset will be saved in the default output directory.
+Artifacts are written under `outputs/<run_name>/` by default and can be customized via the YAML config.
+
+Key config toggles:
+- `pipeline.seed_gen_strategy`: seed prompt style (default `tagging`)
+- `pipeline.ins_aug_strategy`: instruction augmentation (default `ucb`)
+- `pipeline.think_diff_strategy`: Think-Different prompt builder (`ucb` or `random`)
+- `pipeline.response_strategy`: `basic`, `temperature_sweep`, `dynamic_temperature`, `aspect`, or `iterative`
+- `pipeline.diversity_samples`: how many variants to sample per strategy
+- `metrics.perplexity_model` / `metrics.ifd_prompt_temperature`: control instruction-value scoring (perplexity + IFD)
+- `inference.model_name_or_path`: vLLM backend used for all generations
+
+Paths and outputs:
+- Input data: `files.unlabeled_data_path` / `files.com_unlabeled_data_path` (JSONL with `{"doc": ...}`); defaults to `./data/`.
+- Outputs: under `files.output_dir/run_name` (default `outputs/response-100k/`).
+- Seeds and augmented data: `initial_seed.jsonl`, `ucb_aug_*.jsonl`; final merged set: `final_data.jsonl`.
+
+### Inference backends
+- Local vLLM: `fanno.inference.vllm_inference.parallel_inference` (default in pipeline)
+- Azure OpenAI: `fanno.inference.client_inference.client_parallel_inference`
+
+See `docs/inference.md` and the example scripts:
+- `python scripts/vllm_inference_demo.py`
+- `python scripts/azure_inference_demo.py`
+
+## Quick Start (minimal)
+```bash
+pip install -r requirements.txt
+pip install -e .
+# edit src/fanno/config.yaml to point to your model and data paths
+fanno --config src/fanno/config.yaml
+```
+
+## Config examples
+Local vLLM teacher (Qwen):
+```yaml
+inference:
+  backend: vllm
+  model_name_or_path: Qwen/Qwen2.5-7B-Instruct
+  tensor_parallel_size: 1
+  temperature: 0.0
+  top_p: 0.9
+  max_tokens: 1024
+
+pipeline:
+  seed_docs_num: 50
+  window_size: 500
+  limit_size: 5000
+  diversity_samples: 3
+  seed_gen_strategy: tagging
+  ins_aug_strategy: ucb
+  instruction_quality_strategy: combined
+  response_strategy: basic
+  think_diff_strategy: ucb
+
+files:
+  data_dir: ./data
+  unlabeled_data_path: ./data/unlabel_data.jsonl
+  com_unlabeled_data_path: ./data/unlabel_data_com.jsonl
+  output_dir: ./outputs
+  run_name: response-local
+```
+
+Azure GPT-5 teacher (see `configs/azure_gpt5.yaml`):
+```yaml
+inference:
+  backend: azure
+  model_name_or_path: gpt-5
+  azure_tenant_id: 72f988bf-86f1-41af-91ab-2d7cd011db47
+  azure_api_version: 2024-12-01-preview
+  azure_max_retries: 5
+  temperature: 0.7
+  top_p: 0.9
+  max_tokens: 1024
+
+pipeline:
+  seed_docs_num: 50
+  window_size: 500
+  limit_size: 5000
+  diversity_samples: 3
+  seed_gen_strategy: tagging
+  ins_aug_strategy: ucb
+  instruction_quality_strategy: combined
+  response_strategy: basic
+  think_diff_strategy: ucb
+
+files:
+  data_dir: ./data
+  unlabeled_data_path: ./data/unlabel_data.jsonl
+  com_unlabeled_data_path: ./data/unlabel_data_com.jsonl
+  output_dir: ./outputs
+  run_name: response-gpt5
+```
+
+## GitHub Stars
+![GitHub Repo stars](https://img.shields.io/github/stars/sustech-nlp/FANNO?style=social)
 
 ### 🧪 Testing
 For development and testing purposes, you can use smaller teacher models like LLaMA-3.1-TULU-3-8B by updating the model configuration in the respective scripts.
