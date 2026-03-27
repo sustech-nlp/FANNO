@@ -1,0 +1,345 @@
+{
+  "timestamp": "2026-03-28T07:10:00",
+  "per_source": {
+    "Complex QA": {
+      "total": 84895,
+      "structures": {
+        "multi_paragraph": {
+          "count": 45871,
+          "pct": 54.0
+        },
+        "numbered_steps": {
+          "count": 30471,
+          "pct": 35.9
+        },
+        "bullet_points": {
+          "count": 19647,
+          "pct": 23.1
+        },
+        "headers": {
+          "count": 12987,
+          "pct": 15.3
+        },
+        "single_paragraph": {
+          "count": 2386,
+          "pct": 2.8
+        },
+        "math_formula": {
+          "count": 1968,
+          "pct": 2.3
+        },
+        "table": {
+          "count": 195,
+          "pct": 0.2
+        },
+        "code_block": {
+          "count": 14,
+          "pct": 0.0
+        },
+        "mixed": {
+          "count": 12,
+          "pct": 0.0
+        }
+      },
+      "dominant": "multi_paragraph"
+    },
+    "Reasoning QA": {
+      "total": 19913,
+      "structures": {
+        "numbered_steps": {
+          "count": 11215,
+          "pct": 56.3
+        },
+        "single_paragraph": {
+          "count": 7469,
+          "pct": 37.5
+        },
+        "bullet_points": {
+          "count": 6313,
+          "pct": 31.7
+        },
+        "table": {
+          "count": 472,
+          "pct": 2.4
+        },
+        "multi_paragraph": {
+          "count": 373,
+          "pct": 1.9
+        },
+        "mixed": {
+          "count": 265,
+          "pct": 1.3
+        },
+        "headers": {
+          "count": 221,
+          "pct": 1.1
+        },
+        "math_formula": {
+          "count": 44,
+          "pct": 0.2
+        }
+      },
+      "dominant": "numbered_steps"
+    },
+    "Code QA": {
+      "total": 29907,
+      "structures": {
+        "code_block": {
+          "count": 29854,
+          "pct": 99.8
+        },
+        "headers": {
+          "count": 25343,
+          "pct": 84.7
+        },
+        "numbered_steps": {
+          "count": 21997,
+          "pct": 73.6
+        },
+        "bullet_points": {
+          "count": 20243,
+          "pct": 67.7
+        },
+        "table": {
+          "count": 954,
+          "pct": 3.2
+        },
+        "math_formula": {
+          "count": 107,
+          "pct": 0.4
+        },
+        "multi_paragraph": {
+          "count": 23,
+          "pct": 0.1
+        },
+        "single_paragraph": {
+          "count": 6,
+          "pct": 0.0
+        }
+      },
+      "dominant": "code_block"
+    },
+    "Math QA": {
+      "total": 19896,
+      "structures": {
+        "numbered_steps": {
+          "count": 12160,
+          "pct": 61.1
+        },
+        "math_formula": {
+          "count": 5554,
+          "pct": 27.9
+        },
+        "bullet_points": {
+          "count": 5164,
+          "pct": 26.0
+        },
+        "single_paragraph": {
+          "count": 1956,
+          "pct": 9.8
+        },
+        "multi_paragraph": {
+          "count": 1653,
+          "pct": 8.3
+        },
+        "table": {
+          "count": 547,
+          "pct": 2.7
+        },
+        "mixed": {
+          "count": 488,
+          "pct": 2.5
+        },
+        "headers": {
+          "count": 368,
+          "pct": 1.8
+        },
+        "e": {
+          "count": 7,
+          "pct": 0.0
+        },
+        "m": {
+          "count": 7,
+          "pct": 0.0
+        },
+        "p": {
+          "count": 7,
+          "pct": 0.0
+        },
+        "t": {
+          "count": 7,
+          "pct": 0.0
+        },
+        "y": {
+          "count": 7,
+          "pct": 0.0
+        }
+      },
+      "dominant": "numbered_steps"
+    },
+    "Document QA": {
+      "total": 24286,
+      "structures": {
+        "numbered_steps": {
+          "count": 17652,
+          "pct": 72.7
+        },
+        "bullet_points": {
+          "count": 13681,
+          "pct": 56.3
+        },
+        "headers": {
+          "count": 9231,
+          "pct": 38.0
+        },
+        "single_paragraph": {
+          "count": 1865,
+          "pct": 7.7
+        },
+        "code_block": {
+          "count": 1429,
+          "pct": 5.9
+        },
+        "multi_paragraph": {
+          "count": 1099,
+          "pct": 4.5
+        },
+        "math_formula": {
+          "count": 524,
+          "pct": 2.2
+        },
+        "mixed": {
+          "count": 118,
+          "pct": 0.5
+        },
+        "table": {
+          "count": 35,
+          "pct": 0.1
+        }
+      },
+      "dominant": "numbered_steps"
+    },
+    "Creative Writing": {
+      "total": 9909,
+      "structures": {
+        "multi_paragraph": {
+          "count": 8971,
+          "pct": 90.5
+        },
+        "headers": {
+          "count": 483,
+          "pct": 4.9
+        },
+        "numbered_steps": {
+          "count": 395,
+          "pct": 4.0
+        },
+        "bullet_points": {
+          "count": 302,
+          "pct": 3.0
+        },
+        "single_paragraph": {
+          "count": 294,
+          "pct": 3.0
+        },
+        "mixed": {
+          "count": 49,
+          "pct": 0.5
+        },
+        "code_block": {
+          "count": 16,
+          "pct": 0.2
+        },
+        "table": {
+          "count": 2,
+          "pct": 0.0
+        }
+      },
+      "dominant": "multi_paragraph"
+    },
+    "Self-Inversion": {
+      "total": 5000,
+      "structures": {
+        "single_paragraph": {
+          "count": 1896,
+          "pct": 37.9
+        },
+        "numbered_steps": {
+          "count": 1491,
+          "pct": 29.8
+        },
+        "bullet_points": {
+          "count": 1041,
+          "pct": 20.8
+        },
+        "multi_paragraph": {
+          "count": 905,
+          "pct": 18.1
+        },
+        "code_block": {
+          "count": 792,
+          "pct": 15.8
+        },
+        "headers": {
+          "count": 578,
+          "pct": 11.6
+        },
+        "math_formula": {
+          "count": 234,
+          "pct": 4.7
+        },
+        "table": {
+          "count": 71,
+          "pct": 1.4
+        },
+        "mixed": {
+          "count": 31,
+          "pct": 0.6
+        }
+      },
+      "dominant": "single_paragraph"
+    },
+    "Multi-Turn": {
+      "total": 19901,
+      "structures": {
+        "single_paragraph": {
+          "count": 18004,
+          "pct": 90.5
+        },
+        "bullet_points": {
+          "count": 1072,
+          "pct": 5.4
+        },
+        "numbered_steps": {
+          "count": 1065,
+          "pct": 5.4
+        },
+        "code_block": {
+          "count": 1012,
+          "pct": 5.1
+        },
+        "headers": {
+          "count": 436,
+          "pct": 2.2
+        },
+        "mixed": {
+          "count": 42,
+          "pct": 0.2
+        },
+        "math_formula": {
+          "count": 18,
+          "pct": 0.1
+        },
+        "multi_paragraph": {
+          "count": 17,
+          "pct": 0.1
+        },
+        "table": {
+          "count": 10,
+          "pct": 0.1
+        }
+      },
+      "dominant": "single_paragraph"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-03-28T07:20:00",
+  "alpaca": {
+    "total": 125280,
+    "json_valid_pct": 100.0,
+    "has_source_pct": 100.0,
+    "has_question_pct": 100.0,
+    "has_answer_pct": 100.0,
+    "encoding_ok_pct": 100.0,
+    "reasonable_length_pct": 100.0,
+    "refusal_pct": 0.0112,
+    "pass_rate": 100.0
+  },
+  "sharegpt": {
+    "total": 141901,
+    "json_valid_pct": 100.0,
+    "valid_structure_pct": 100.0
+  },
+  "per_source_issues": {
+    "fanno_complex_qa": {
+      "total": 54223
+    },
+    "fanno_code_qa": {
+      "total": 15411
+    },
+    "fanno_math_qa": {
+      "total": 11450
+    },
+    "fanno_seed_qa": {
+      "total": 21432,
+      "refusal": 14
+    },
+    "fanno_reasoning_qa": {
+      "total": 17789
+    },
+    "self_inversion": {
+      "total": 4975
+    }
+  }
+}
