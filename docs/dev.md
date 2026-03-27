@@ -856,3 +856,64 @@ FANNO-Dev Synthesis Framework
 - multi_turn: 19,061 (growing, 2 processes running)
 - 3 synthesis processes still active
 - All figures (13 total) and tables (7 total) regenerated with latest data
+
+### Phase 27: Cross-Source Distance Heatmap
+
+**Analysis**: Computed 7×7 pairwise cosine distance matrix using 1000 embeddings per source.
+- Cross-source avg distance: 0.961 (pipelines are nearly orthogonal)
+- Within-source avg distance: 0.865
+
+**Deliverables**: Fig 14 (cross-source distance heatmap)
+
+### Phase 28: Baseline Comparison & Claims Table
+
+- Tab 8: Claims-evidence summary (15 claims mapped to figure/table evidence)
+- Tab 9: API cost analysis (~$2,245 for 147K samples, $15.58/1K)
+- Tab 10: Baseline comparison (FANNO-Dev vs Self-Instruct, WizardLM, etc.)
+- Contamination check: 0 exact matches with common benchmarks (GSM8K, HumanEval, MMLU)
+- Format validation: 100% pass for both Alpaca and ShareGPT formats
+
+### Phase 29: Domain Zipf Analysis
+
+- 2,296 unique domains (excluding 'unknown')
+- 96.3% are long-tail (<10 samples) — mostly from Self-Inversion
+- Only 20 domains cover 90% of domain-labeled data
+- **Fig 16**: Rank-frequency log-log plot + cumulative coverage
+
+### Phase 30: Answer Structure Analysis
+
+Per-source structural patterns (% of answers containing):
+
+| Source | Headers | Bullets | Numbered | Code | Bold |
+|--------|---------|---------|----------|------|------|
+| Code QA | 71% | 61% | 71% | 100% | 83% |
+| Document QA | 30% | 29% | 73% | 6% | 83% |
+| Complex QA | 1% | 18% | 32% | 0% | 37% |
+| Creative Writing | 3% | 3% | 4% | 0% | 6% |
+
+34 source×format combinations with >10% prevalence → answers are structurally diverse, not just semantically diverse.
+
+### Phase 31: Efficiency Frontier & Pareto Analysis
+
+- **Fig 17**: Pareto frontier plot (cleaned count vs Vendi Score)
+- Pareto-optimal pipelines: **Self-Inversion** and **Document QA** only
+- All other pipelines are dominated (lower diversity, higher cost, or both)
+- Practical insight: for budget-constrained synthesis, use these two pipelines
+
+### Phase 32: Multi-Turn Depth Analysis
+
+- **Fig 19**: Response quality across conversation turns
+- Turn 1-4: TTR stable at 0.84-0.85 (no quality degradation)
+- Response length grows progressively: 66→77→81→87 words (turns 1-4)
+- Unique vocabulary increases per turn: 51→57→59→63 words
+- Quality is well-maintained throughout conversation depth
+
+### Data Status Update (22:38 UTC)
+
+- Raw total: 204,739
+- Cleaned total: 147,092 (28.2% rejection)
+- Single-turn: 128,384 / Multi-turn: 18,708
+- fanno_seed_qa: 15,729 (1 process still running, target 30K)
+- multi_turn: 19,901 (both processes completed)
+- Total deliverables: **19 figures**, **10 LaTeX tables**, **18 scripts**
+- Total git commits on dev: 50+
