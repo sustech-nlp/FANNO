@@ -908,12 +908,46 @@ Per-source structural patterns (% of answers containing):
 - Unique vocabulary increases per turn: 51→57→59→63 words
 - Quality is well-maintained throughout conversation depth
 
-### Data Status Update (22:38 UTC)
+### Phase 33: Embedding Space Analysis (t-SNE, PCA, Bubble Chart)
 
-- Raw total: 204,739
-- Cleaned total: 147,092 (28.2% rejection)
-- Single-turn: 128,384 / Multi-turn: 18,708
-- fanno_seed_qa: 15,729 (1 process still running, target 30K)
-- multi_turn: 19,901 (both processes completed)
-- Total deliverables: **19 figures**, **10 LaTeX tables**, **18 scripts**
-- Total git commits on dev: 50+
+- **Fig 21**: t-SNE visualization of 7 pipeline embeddings (500 samples each, 3500 total)
+- **Fig 22**: PCA analysis — PC1+PC2 only explain 9.2% variance; 50+ components for 90%
+  - High intrinsic dimensionality confirms Vendi Score = 182.75 (data fills many dimensions)
+- **Fig 23**: Embedding space bubble chart
+  - Self-Inversion: highest within-diversity (0.943), lowest centroid distance (0.111) — universal amplifier
+  - Code QA: most semantically unique (0.677 centroid distance) — occupies isolated corner
+  - Creative Writing: lowest within-diversity (0.699) — creative prompts are more similar to each other
+
+### Phase 34: Semantic Cluster Analysis (K-Means, 20 clusters)
+
+- **Fig 25**: Cluster composition heatmap
+- 7 pure clusters (>80% single source): Code (4), Math (1), Reasoning (1), Creative (1)
+- 7 diverse clusters (<50% any source): Complex QA + Document QA spread across many clusters
+- Self-Inversion appears in ALL 20 clusters — confirms "diversity amplifier" role
+- Average cluster entropy: 0.842 / 1.946 max = 43.3% normalized entropy
+- Moderate source separation: each pipeline has identity but also covers shared space
+
+### Phase 35: Question Complexity Analysis
+
+- **Fig 26**: 4-panel question complexity comparison
+- Document QA: highest lexical richness (30.1 bigrams/sample)
+- Math: lowest richness (5.8 bigrams/sample) — vocabulary-constrained domain
+- Self-Inversion: shortest questions (29.6 words) but lowest Q/A ratio (0.130) — concise Q → detailed A
+- Code QA: longest answers (432.8 words), Q/A ratio = 0.095
+
+### Phase 36: Selection Strategy Visualization
+
+- **Fig 27**: 3-panel selection strategy comparison
+- K-Center-Greedy: +33.3% Vendi at N=500, diminishes to +8.6% at N=5000
+- Random is near-optimal for N≥5000 — practical insight for large-scale fine-tuning
+- K-Means actually underperforms Random (cluster centers ≠ diversity-maximizing points)
+- Quality-speed tradeoff: K-Center-Greedy 19s vs Random 0.01s at N=1000
+
+### Data Status Update (23:05 UTC)
+
+- Raw total: 207,000+ (fanno_seed_qa still growing)
+- Cleaned total: 148,766 (27.9% rejection)
+- Single-turn: 130,058 / Multi-turn: 18,708
+- fanno_seed_qa: 17,860 (1 process running, target 30K, ~100 samples/min)
+- Total deliverables: **27 figures** (PNG+PDF), **12 LaTeX tables**, **18 scripts**
+- Total git commits on dev: 60+
