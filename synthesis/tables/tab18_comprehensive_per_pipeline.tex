@@ -1,0 +1,28 @@
+\begin{table*}[t]
+\centering
+\caption{Comprehensive Per-Pipeline Analysis Summary. Each row reports synthesis volume, diversity metrics, embedding properties, quality scores, and efficiency measures. Self-Inversion achieves the best efficiency and embedding diversity; Document QA leads in Vendi Score and linguistic diversity.}
+\label{tab:comprehensive_pipeline}
+\small
+\begin{tabular}{l|cc|ccc|cc|cc}
+\toprule
+ & \multicolumn{2}{c|}{\textbf{Volume}} & \multicolumn{3}{c|}{\textbf{Diversity}} & \multicolumn{2}{c|}{\textbf{Embedding}} & \multicolumn{2}{c}{\textbf{Efficiency}} \\
+\textbf{Pipeline} & \textbf{Raw} & \textbf{Clean} & \textbf{Vendi} & \textbf{TTR} & \textbf{Bigr/S} & \textbf{W-Div} & \textbf{Uniq} & \textbf{Rej\%} & \textbf{Score} \\
+\midrule
+Complex QA & 84.9K & 54.2K & 141.2 & .015 & 21.4 & .912 & .284 & 36.1 & 75.4 \\
+Reasoning QA & 19.9K & 17.8K & 127.3 & .013 & 17.6 & .901 & .325 & 10.7 & 75.5 \\
+Code QA & 29.9K & 15.4K & 66.1 & .007 & 9.6 & .871 & \textbf{.677} & 48.5 & \textbf{85.1} \\
+Math QA & 19.9K & 11.5K & 79.1 & .006 & 5.8 & .821 & .494 & 42.5 & 74.4 \\
+Document QA & 21.6K & 18.5K & \textbf{170.2} & .019 & \textbf{30.1} & .907 & .252 & 2.1 & 77.3 \\
+Creative Writing & 9.9K & 9.4K & 112.7 & .019 & 19.3 & .699 & .274 & 5.5 & 72.9 \\
+Multi-Turn & 19.9K & 18.7K & --- & --- & --- & --- & --- & 7.3 & --- \\
+Self-Inversion & 5.0K & 5.0K & 161.2 & \textbf{.026} & 14.4 & \textbf{.943} & .111 & \textbf{0.5} & 75.2 \\
+\midrule
+\textbf{Total} & \textbf{211K} & \textbf{153K} & \textbf{182.8} & --- & --- & .951 & --- & 27.4 & 76.3 \\
+\bottomrule
+\end{tabular}
+\vspace{1mm}
+\begin{flushleft}
+\footnotesize W-Div = within-source cosine distance; Uniq = centroid-to-global distance; Bigr/S = unique bigrams per sample; Score = heuristic quality (0--100).
+\end{flushleft}
+\vspace{-4mm}
+\end{table*}
