@@ -951,3 +951,45 @@ Per-source structural patterns (% of answers containing):
 - fanno_seed_qa: 17,860 (1 process running, target 30K, ~100 samples/min)
 - Total deliverables: **27 figures** (PNG+PDF), **12 LaTeX tables**, **18 scripts**
 - Total git commits on dev: 60+
+
+### Phase 37: Self-Inversion Angle Shift Analysis
+
+- **Fig 32**: Self-inversion quality analysis with embedding-based measurement
+- 0% same angle — all 5000 samples successfully shifted perspective
+- Mean angle shift cosine distance: 0.458 (large semantic shift)
+- 82.6% of angles > 0.3 distance (genuine perspective change)
+- 36.8% > 0.5 distance (major semantic shift)
+- Trajectory inversion confirmed as effective diversity amplification method
+
+### Phase 38: Semantic Coverage & Gap Analysis
+
+- **Fig 33**: Density heatmap + convex hull coverage regions
+- Sparse regions: Code QA (64%) + Math QA (19%) — distant, isolated semantic clusters
+- Dense regions: Creative Writing (85%) — explains lowest within-diversity (0.699)
+- Self-Inversion spans broadest area (appears in both sparse and dense)
+
+### Phase 39: Multi-Turn Coherence Analysis
+
+- **Fig 35**: Turn-to-turn coherence analysis
+- Adjacent similarity: 0.575 ± 0.157 (good coherence with topic progression)
+- Coherence decay: 0.575→0.474→0.413 (natural distance gradient)
+- Alternating pattern: Q-A pairs high (0.64), between same-role low (0.49)
+- Quality maintains across conversation depth
+
+### Phase 40: Additional Deliverables
+
+- **Fig 34**: 6-panel dataset composition overview
+- **Fig 28**: Pipeline architecture overview diagram
+- **Fig 29**: Detailed multi-turn analysis (patterns, scenarios, depth)
+- **Tab 16**: Key findings summary with cross-references (17 findings)
+- Updated paper_outline.md: all 35 figures + 16 tables mapped to sections
+- Updated DATASET_CARD.md with 151K+ numbers and embedding analysis section
+
+### Data Status Update (23:25 UTC)
+
+- Raw total: 210,000+ (fanno_seed_qa at 21K and growing)
+- Cleaned total: 151,031 (27.6% rejection)
+- Single-turn: 132,323 / Multi-turn: 18,708
+- fanno_seed_qa: 21,000+ (1 process running, ~100 samples/min, target 30K)
+- Total deliverables: **35 figures** (PNG+PDF), **16 LaTeX tables**, **18 scripts**
+- Total git commits on dev: 70+

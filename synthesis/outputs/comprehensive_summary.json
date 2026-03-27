@@ -1,0 +1,116 @@
+{
+  "timestamp": "2026-03-27T23:23:22.561220",
+  "data_counts": {
+    "raw_total": 209000,
+    "cleaned_total": 151031,
+    "single_turn": 132323,
+    "multi_turn": 18708,
+    "rejection_rate": 27.6,
+    "alpaca_format": 122960,
+    "sharegpt_format": 139581
+  },
+  "per_source": {
+    "complex_qa": {
+      "raw": 84895,
+      "cleaned": 54223,
+      "rejection": 36.1
+    },
+    "reasoning_qa": {
+      "raw": 19913,
+      "cleaned": 17789,
+      "rejection": 10.7
+    },
+    "code_qa": {
+      "raw": 29907,
+      "cleaned": 15411,
+      "rejection": 48.5
+    },
+    "math_qa": {
+      "raw": 19896,
+      "cleaned": 11450,
+      "rejection": 42.5
+    },
+    "document_qa": {
+      "raw": 19600,
+      "cleaned": 16800,
+      "rejection": 2.1,
+      "note": "still growing"
+    },
+    "creative_writing": {
+      "raw": 9909,
+      "cleaned": 9363,
+      "rejection": 5.5
+    },
+    "multi_turn": {
+      "raw": 19901,
+      "cleaned": 18708,
+      "rejection": 7.3
+    },
+    "self_inversion": {
+      "raw": 5000,
+      "cleaned": 4975,
+      "rejection": 0.5
+    }
+  },
+  "diversity_metrics": {
+    "vendi_score": 182.75,
+    "avg_pairwise_cosine_dist": 0.951,
+    "scaling_law": "V(N) = 55.4(1-exp(-N/745)) + 109.0, R\u00b2=0.996",
+    "ceiling": 164.5,
+    "tag_space_utilization": 4.1,
+    "cross_source_distance": 0.961,
+    "intrinsic_dimensionality": "50+ PCA components for 90% variance"
+  },
+  "selection_strategies": {
+    "best_at_500": "K-Center-Greedy (+33.3%)",
+    "best_at_5000": "K-Center-Greedy (+8.6%)",
+    "practical_recommendation": "Random for N\u22655000"
+  },
+  "embedding_analysis": {
+    "highest_within_diversity": "Self-Inversion (0.943)",
+    "most_unique": "Code QA (0.677 centroid dist)",
+    "lowest_within_diversity": "Creative Writing (0.699)",
+    "cluster_purity": "7 pure, 6 mixed, 7 diverse (20 clusters)"
+  },
+  "self_inversion": {
+    "angle_shift_mean": 0.458,
+    "pct_above_03": 82.6,
+    "pct_above_05": 36.8,
+    "same_angle_pct": 0.0,
+    "unique_new_angles": 5000,
+    "unique_domains": 2288
+  },
+  "multi_turn": {
+    "total_conversations": 18708,
+    "patterns": 8,
+    "scenarios": 15,
+    "avg_turns": 3.3,
+    "coherence_adjacent": 0.575,
+    "coherence_decay": "0.575\u21920.474\u21920.413",
+    "ttr_stability": "0.846-0.850 across turns"
+  },
+  "question_complexity": {
+    "avg_q_length": 51.3,
+    "avg_a_length": 341.2,
+    "highest_lexical_richness": "Document QA (30.1 bigrams/sample)",
+    "lowest_lexical_richness": "Math QA (5.8 bigrams/sample)"
+  },
+  "correlations": {
+    "ttr_vendi": 0.83,
+    "rejection_vendi": -0.776,
+    "ttr_uniqueness": -0.912,
+    "efficiency_diversity": 0.776
+  },
+  "deliverables": {
+    "figures": 35,
+    "latex_tables": 16,
+    "python_scripts": 18,
+    "git_commits": "70+"
+  },
+  "cost_estimate": {
+    "total": 2245,
+    "per_1k_clean": 15.58,
+    "most_expensive": "Complex QA (00)",
+    "cheapest": "Self-Inversion (0)"
+  }
+}
