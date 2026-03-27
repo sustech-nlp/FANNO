@@ -408,13 +408,33 @@ Vendi(N) = 5.73 × log(N) + 129.1    (R² = 0.9146)
 
 1. **FANNO diversity follows a logarithmic scaling law** (R²=0.91). This means diversity grows with data size but with diminishing returns, which is the expected behavior for well-designed synthesis pipelines.
 
-2. **The practical diversity ceiling is ~195 Vendi Score**. Beyond 50K samples, additional data contributes marginally (<0.1 Vendi per 1K samples). This suggests the diversity is bounded by the prompt template space.
+2. **UPDATED: Saturation model fits even better (R²=0.9884)**:
+   ```
+   Vendi(N) = 141.1 × (1 - e^(-N/362)) + 38.4
+   ```
+   Fine-grained analysis (100 to 20K samples, 11 data points) reveals diversity follows an **exponential saturation** curve. Key parameters:
+   - **Asymptotic ceiling**: 179.5 Vendi Score
+   - **Characteristic scale (τ)**: 362 samples (63% ceiling reached)
+   - **99% ceiling at**: ~1,670 samples
 
-3. **Document-grounded synthesis is provably the most diverse approach**. FANNO Seed QA achieves the highest diversity efficiency (85.09), confirming that using real documents as seeds creates more varied questions than purely prompt-based generation.
+   **Fine-Grained Scaling Curve**:
+   | N | Vendi Score | % of Ceiling |
+   |---|-------------|-------------|
+   | 100 | 67.98 | 37.9% |
+   | 500 | 144.03 | 80.3% |
+   | 1,000 | 164.70 | 91.8% |
+   | 2,000 | 173.63 | 96.7% |
+   | 5,000 | 180.15 | 100.4% |
+   | 10,000 | 181.89 | 101.3% |
+   | 20,000 | 183.29 | 102.1% |
 
-4. **Self-inversion is a genuine diversity amplifier** (Vendi=161.21, efficiency=80.61). It discovers question types not present in original prompts.
+3. **The practical diversity ceiling is ~180 Vendi Score**. Beyond 2K samples, additional data contributes marginally. This suggests diversity is bounded by the prompt template space (tag combinations), not by synthesis quality.
 
-5. **Random selection from FANNO data is near-optimal at scale**. K-Center-Greedy only adds 8% at 5K selection size. This validates FANNO's synthesis-time diversity mechanisms.
+4. **Document-grounded synthesis is provably the most diverse approach**. FANNO Seed QA achieves the highest diversity efficiency (85.09), confirming that using real documents as seeds creates more varied questions than purely prompt-based generation.
+
+5. **Self-inversion is a genuine diversity amplifier** (Vendi=161.21, efficiency=80.61). It discovers question types not present in original prompts.
+
+6. **Implication**: To increase diversity beyond 180, need to expand the prompt template space (more domains, types, styles), not just generate more data.
 
 ---
 
