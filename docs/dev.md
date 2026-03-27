@@ -776,3 +776,83 @@ FANNO-Dev Synthesis Framework
 - Expert (N=500): Vendi=104.1 (moderate — focuses on specific domains)
 
 **Cross-difficulty distance**: Easy↔Hard distance = 0.99 (nearly orthogonal), showing difficulty levels occupy different semantic regions.
+
+### Phase 23: Per-Source Rejection Rate Analysis
+
+**Q: Which pipelines produce the cleanest data?**
+
+**Results** (rejection rate after quality filter + exact dedup + near dedup):
+- Self-Inversion: 0.5% rejection (best — near-zero waste)
+- Document QA (FANNO): 2.1% (excellent)
+- Creative Writing: 5.5%
+- Reasoning QA: 10.7%
+- Complex QA: 36.1% (high due to near-duplicates from limited domain coverage)
+- Math QA: 42.5% (formulaic patterns cause duplicates)
+- Code QA: 48.5% (worst — code templates highly repetitive)
+
+**Key finding**: Pearson r(rejection%, Vendi) = **-0.776** (strong negative). Pipelines that produce diverse data also produce less duplicates. This is NOT because filtering creates diversity — it's because inherently diverse pipelines don't generate duplicates in the first place.
+
+**Deliverables**: Fig 10 (rejection analysis), Fig 11 (scatter plot), Tab 7 (efficiency)
+
+### Phase 24: Pipeline Efficiency Ranking
+
+**Q: Which pipeline gives the best diversity-per-API-call?**
+
+**Efficiency metric**: Vendi × (1 - Rej%) / ln(Raw N)
+
+**Ranking**:
+1. Self-Inversion (18.8) — highest diversity, lowest waste
+2. Document QA / FANNO (17.5) — highest Vendi, very low waste
+3. Creative Writing (11.6)
+4. Reasoning QA (11.5)
+5. Complex QA (7.9) — large volume but high duplication
+6. Math QA (4.6)
+7. Code QA (3.3) — needs template expansion
+
+**Actionable insight**: For budget-constrained synthesis, prioritize Self-Inversion and Document QA. For Code/Math QA, expand template space before generating more data.
+
+### Phase 25: Template Space Utilization Deep Dive
+
+**Q: Why is tag space utilization only 4.1%?**
+
+**Analysis**:
+- 2,297 domains × 25 types = 57,425 possible cells
+- Only 2,353 cells filled (4.1%)
+- Creative Writing types each cover only 1 domain (the "Creative Writing" meta-domain)
+- Complex QA types each cover only 5 domains
+- Document QA spreads across 2,277+ unique domains
+
+**Root cause**: Creative Writing and Code QA use source-level domain labels instead of content-level domain labels. Self-Inversion solves this by generating domain-diverse content from answer trajectories.
+
+**Deliverables**: Fig 12 (template utilization 3-panel)
+
+### Phase 26: Linguistic Diversity Analysis
+
+**Q: Which pipelines produce the most linguistically diverse answers?**
+
+**Metrics** (TTR = Type-Token Ratio, Hapax = words appearing only once):
+
+| Source | TTR | Hapax% | Vocab | AvgLen |
+|--------|-----|--------|-------|--------|
+| Self-Inversion | 0.0259 | 25.3% | 27,503 | 213 |
+| Creative Writing | 0.0195 | 27.5% | 37,501 | 386 |
+| Document QA | 0.0189 | 30.9% | 36,453 | 387 |
+| Complex QA | 0.0151 | 26.1% | 27,220 | 361 |
+| Reasoning QA | 0.0129 | 20.6% | 12,911 | 200 |
+| Code QA | 0.0071 | 13.6% | 13,781 | 388 |
+| Math QA | 0.0062 | 19.1% | 4,278 | 138 |
+
+**Composite ranking**: Document QA (0.921) > Creative Writing (0.807) > Complex QA (0.747) > Self-Inversion (0.680) > Code QA (0.399) > Reasoning QA (0.366) > Math QA (0.064)
+
+**Key finding**: Document QA (FANNO original framework) ranks #1 in linguistic diversity composite — validating that the FANNO 3-stage document→question→answer pipeline produces inherently richer text than direct template-based generation.
+
+**Deliverables**: Fig 13 (linguistic diversity panels), linguistic_diversity.json
+
+### Data Status Update (22:20 UTC)
+
+- Raw total: 201,599 (+468 from last check)
+- Cleaned total: 144,084 (+1,894)
+- fanno_seed_qa: 13,986 (growing slowly, target 30K)
+- multi_turn: 19,061 (growing, 2 processes running)
+- 3 synthesis processes still active
+- All figures (13 total) and tables (7 total) regenerated with latest data
