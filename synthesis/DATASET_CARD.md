@@ -8,9 +8,9 @@
 
 | Metric | Value |
 |--------|-------|
-| Total samples | 144,084 |
-| Single-turn | 126,638 |
-| Multi-turn | 17,446 |
+| Total samples | 147,755+ |
+| Single-turn | 129,047 |
+| Multi-turn | 18,708 |
 | Unique domains | 2,297 |
 | Question types | 25 |
 | Language | English |
@@ -28,7 +28,7 @@
 | Code QA | ~15K | 12% | Coding across 8 languages, 16 topics |
 | Multi-Turn Dialog | ~17K | 12% | 8 conversation patterns, 15 scenarios |
 | Math QA | ~11K | 8% | Elementary to competition-level mathematics |
-| Document-Grounded QA | ~10K | 7% | FANNO-style document→question→answer pipeline |
+| Document-Grounded QA | ~15K | 10% | FANNO-style document→question→answer pipeline |
 | Creative Writing | ~9K | 6% | 12 creative writing tasks |
 | Self-Inversion | ~5K | 3% | Trajectory inversion (question generation from answers) |
 
@@ -44,7 +44,7 @@ Three-stage data cleaning pipeline:
 1. **Quality filter** (99.9% pass rate): Refusal detection, length validation, character ratio
 2. **Exact dedup** (MD5 hash): Removes identical samples
 3. **Near dedup** (80-char prefix): Removes near-duplicate questions
-4. Overall rejection rate: 28.5%
+4. Overall rejection rate: 28.1%
 
 ### Diversity Analysis
 
@@ -53,6 +53,14 @@ Three-stage data cleaning pipeline:
 - **Saturation ceiling**: ~180 Vendi Score (limited by 4.1% tag space utilization)
 - **Cross-source distance**: 0.96 average cosine distance (nearly orthogonal pipelines)
 - **Optimal selection**: K-Center-Greedy yields +33% diversity for small subsets
+- **Pipeline efficiency**: Self-Inversion most API-efficient (Eff=18.8, 0.5% rejection)
+- **Linguistic diversity**: Document QA ranks #1 in composite (TTR + hapax + vocab)
+
+### Efficiency
+
+- **Estimated cost**: ~$2,245 total ($15.58 per 1K clean samples)
+- **Pareto-optimal pipelines**: Self-Inversion and Document QA
+- **Rejection-diversity correlation**: r = -0.776 (efficient pipelines are diverse)
 
 ### Generation
 
