@@ -8,14 +8,14 @@
 
 | Metric | Value |
 |--------|-------|
-| Total samples | 137,624 |
-| Single-turn | 122,159 |
-| Multi-turn | 15,465 |
-| Unique domains | 2,298 |
+| Total samples | 144,084 |
+| Single-turn | 126,638 |
+| Multi-turn | 17,446 |
+| Unique domains | 2,297 |
 | Question types | 25 |
 | Language | English |
 | Avg question length | 51 words |
-| Avg answer length | 337 words |
+| Avg answer length | 338 words |
 | Vendi Score | 182.75 |
 | Avg pairwise cosine distance | 0.9514 |
 
@@ -26,11 +26,11 @@
 | Complex QA | ~50K | 37% | Multi-hop, counterfactual, comparative, analogy questions |
 | Reasoning QA | ~18K | 13% | Deductive, inductive, causal, spatial reasoning |
 | Code QA | ~15K | 12% | Coding across 8 languages, 16 topics |
-| Multi-Turn Dialog | ~15K | 11% | 8 conversation patterns, 15 scenarios |
-| Math QA | ~11K | 9% | Elementary to competition-level mathematics |
-| Document-Grounded QA | ~10K | 8% | FANNO-style document→question→answer pipeline |
-| Creative Writing | ~9K | 7% | 12 creative writing tasks |
-| Self-Inversion | ~5K | 4% | Trajectory inversion (question generation from answers) |
+| Multi-Turn Dialog | ~17K | 12% | 8 conversation patterns, 15 scenarios |
+| Math QA | ~11K | 8% | Elementary to competition-level mathematics |
+| Document-Grounded QA | ~10K | 7% | FANNO-style document→question→answer pipeline |
+| Creative Writing | ~9K | 6% | 12 creative writing tasks |
+| Self-Inversion | ~5K | 3% | Trajectory inversion (question generation from answers) |
 
 ### Format
 
@@ -44,7 +44,7 @@ Three-stage data cleaning pipeline:
 1. **Quality filter** (99.9% pass rate): Refusal detection, length validation, character ratio
 2. **Exact dedup** (MD5 hash): Removes identical samples
 3. **Near dedup** (80-char prefix): Removes near-duplicate questions
-4. Overall rejection rate: 28.6%
+4. Overall rejection rate: 28.5%
 
 ### Diversity Analysis
 

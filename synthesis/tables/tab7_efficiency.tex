@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\caption{Pipeline efficiency analysis. Self-Inversion and Document-Grounded QA (FANNO original) achieve the highest diversity yield per API call, while Code and Math QA suffer from high duplication rates. Pearson correlation between rejection rate and Vendi Score: $r=-0.776$.}
+\label{tab:efficiency}
+\small
+\begin{tabular}{lrrrrc}
+\toprule
+\textbf{Pipeline} & \textbf{Vendi} & \textbf{Clean N} & \textbf{Rej.\%} & \textbf{Eff.} & \textbf{Rank} \\
+\midrule
+Self-Inversion      & 161.2 &  4,975 &  0.5\% & 18.8 & \colorbox{green!20}{1} \\
+Document QA (FANNO) & 170.2 & 13,427 &  2.1\% & 17.5 & \colorbox{green!20}{2} \\
+Creative Writing    & 112.7 &  9,363 &  5.5\% & 11.6 & 3 \\
+Reasoning QA        & 127.3 & 17,789 & 10.7\% & 11.5 & 4 \\
+Complex QA          & 141.2 & 54,223 & 36.1\% &  7.9 & 5 \\
+Math QA             &  79.1 & 11,450 & 42.5\% &  4.6 & 6 \\
+Code QA             &  66.1 & 15,411 & 48.5\% &  3.3 & \colorbox{red!15}{7} \\
+\bottomrule
+\end{tabular}
+\vspace{-0.5em}
+\begin{flushleft}
+\scriptsize\textit{Efficiency} = Vendi $\times$ (1 $-$ Rej\%) / $\ln$(Raw $N$). Higher is better.
+\end{flushleft}
+\end{table}

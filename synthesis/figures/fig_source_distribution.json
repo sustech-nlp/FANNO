@@ -1,45 +1,45 @@
 {
-  "total": 137624,
+  "total": 144084,
   "sources": [
     {
       "source": "Complex QA",
-      "count": 51675,
-      "percentage": 37.5
+      "count": 54223,
+      "percentage": 37.6
     },
     {
       "source": "Reasoning QA",
       "count": 17789,
-      "percentage": 12.9
+      "percentage": 12.3
     },
     {
       "source": "Multi-Turn Dialog",
-      "count": 15465,
-      "percentage": 11.2
+      "count": 17446,
+      "percentage": 12.1
     },
     {
       "source": "Code QA",
       "count": 15411,
-      "percentage": 11.2
+      "percentage": 10.7
     },
     {
       "source": "Document-Grounded QA",
-      "count": 11495,
-      "percentage": 8.4
+      "count": 13427,
+      "percentage": 9.3
     },
     {
       "source": "Math QA",
       "count": 11450,
-      "percentage": 8.3
+      "percentage": 7.9
     },
     {
       "source": "Creative Writing",
       "count": 9363,
-      "percentage": 6.8
+      "percentage": 6.5
     },
     {
       "source": "Self-Inversion",
-      "count": 4976,
-      "percentage": 3.6
+      "count": 4975,
+      "percentage": 3.5
     }
   ]
 }
