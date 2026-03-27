@@ -1,20 +1,95 @@
 """
 Unified API client for large-scale data synthesis.
-Supports Azure OpenAI (GPT-4o, GPT-4.1, GPT-5) with multi-endpoint load balancing.
+Uses a pre-fetched static Azure AD token to avoid CLI contention in subprocesses.
 """
 from __future__ import annotations
 
 import json
+import os
 import random
+import subprocess
+import threading
 import time
-import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
-from azure.identity import AzureCliCredential, get_bearer_token_provider
 from loguru import logger
 from openai import AzureOpenAI
 
+
+# =============================================================================
+# Static token management
+# =============================================================================
+_CACHED_TOKEN = None
+_TOKEN_LOCK = threading.Lock()
+_DEFAULT_API_VERSION = "2024-12-01-preview"
+_TOKEN_FILE = "/tmp/.fanno_azure_token"
+
+
+def _fetch_token_via_cli() -> str:
+    """Fetch a fresh token via Azure CLI."""
+    try:
+        result = subprocess.run(
+            ["az", "account", "get-access-token",
+             "--resource", "https://cognitiveservices.azure.com/",
+             "--query", "accessToken", "-o", "tsv"],
+            capture_output=True, text=True, timeout=30,
+        )
+        if result.returncode == 0:
+            token = result.stdout.strip()
+            if token:
+                # Cache to file for subprocesses
+                with open(_TOKEN_FILE, "w") as f:
+                    f.write(token)
+                return token
+    except Exception as e:
+        logger.warning(f"CLI token fetch failed: {e}")
+    return ""
+
+
+def get_token() -> str:
+    """Get Azure AD token. Try: cached -> file cache -> CLI."""
+    global _CACHED_TOKEN
+    if _CACHED_TOKEN:
+        return _CACHED_TOKEN
+
+    with _TOKEN_LOCK:
+        if _CACHED_TOKEN:
+            return _CACHED_TOKEN
+
+        # Try file cache first (set by parent process or refresh script)
+        if os.path.exists(_TOKEN_FILE):
+            with open(_TOKEN_FILE, "r") as f:
+                token = f.read().strip()
+            if token:
+                _CACHED_TOKEN = token
+                logger.info("Loaded token from file cache")
+                return token
+
+        # Try CLI
+        token = _fetch_token_via_cli()
+        if token:
+            _CACHED_TOKEN = token
+            logger.info("Fetched fresh token from CLI")
+            return token
+
+        raise RuntimeError("Cannot obtain Azure AD token. Run: az login")
+
+
+def refresh_token():
+    """Force refresh the cached token."""
+    global _CACHED_TOKEN
+    with _TOKEN_LOCK:
+        token = _fetch_token_via_cli()
+        if token:
+            _CACHED_TOKEN = token
+            return token
+    return None
+
+
+# =============================================================================
+# Endpoints
+# =============================================================================
 
 def get_endpoints() -> dict:
     gpt_4o = [
@@ -77,18 +152,15 @@ def select_endpoint(model_name: str) -> dict:
 
 def get_client(
     model_name: str = "gpt-4o",
-    tenant_id: str = "72f988bf-86f1-41af-91ab-2d7cd011db47",
-    api_version: str = "2024-12-01-preview",
+    api_version: str = _DEFAULT_API_VERSION,
     max_retries: int = 5,
 ) -> Tuple[AzureOpenAI, str]:
-    azure_ad_token_provider = get_bearer_token_provider(
-        AzureCliCredential(tenant_id=tenant_id),
-        "https://cognitiveservices.azure.com/.default",
-    )
+    """Create an Azure OpenAI client using static token (no CLI dependency)."""
+    token = get_token()
     selected = select_endpoint(model_name)
     client = AzureOpenAI(
         azure_endpoint=selected["endpoints"],
-        azure_ad_token_provider=azure_ad_token_provider,
+        azure_ad_token=token,
         api_version=api_version,
         max_retries=max_retries,
     )
@@ -126,6 +198,11 @@ def call_gpt(
             resp = client.chat.completions.create(**kwargs)
             return resp.choices[0].message.content
         except Exception as e:
+            err_str = str(e)
+            # If token expired, try to refresh
+            if "401" in err_str or "token" in err_str.lower() or "unauthorized" in err_str.lower():
+                logger.warning(f"Possible token expiry, refreshing...")
+                refresh_token()
             if attempt < retries - 1:
                 wait = 2 ** attempt + random.random()
                 logger.warning(f"API call failed (attempt {attempt+1}/{retries}): {e}. Retrying in {wait:.1f}s...")
@@ -148,6 +225,9 @@ def parallel_call_gpt(
     """Parallel GPT calls with load balancing across endpoints."""
     if not prompts:
         return []
+
+    # Ensure token is available before spawning threads
+    get_token()
 
     results: List[Optional[str]] = [None] * len(prompts)
 
@@ -191,6 +271,7 @@ def parallel_call_gpt_chat(
     if not conversations:
         return []
 
+    get_token()
     results: List[Optional[str]] = [None] * len(conversations)
 
     def _infer(idx: int, messages: List[Dict[str, str]]) -> Tuple[int, Optional[str]]:
@@ -225,3 +306,6 @@ def parallel_call_gpt_chat(
     success_count = sum(1 for r in results if r is not None)
     logger.info(f"Chat inference: {success_count}/{len(conversations)} succeeded (model={model_name})")
     return results
+
+
+__all__ = ["call_gpt", "parallel_call_gpt", "parallel_call_gpt_chat", "get_client", "select_endpoint", "get_token", "refresh_token"]
