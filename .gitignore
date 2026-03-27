@@ -29,3 +29,12 @@ build/
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Synthesis outputs (large data files)
+synthesis/outputs/*.jsonl
+synthesis/outputs/*.json
+
+# Large data files (>50MB)
+filtering/data/*.jsonl
+tools/LLaMA-Factory/data/*.jsonl
+tools/data/*.jsonl
