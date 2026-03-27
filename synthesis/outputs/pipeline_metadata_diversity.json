@@ -1,0 +1,132 @@
+{
+  "Complex QA": {
+    "raw_count": 84895,
+    "domains": 20,
+    "types": 12,
+    "difficulties": 6,
+    "domain_examples": [
+      "Biology & Genetics",
+      "Business & Management",
+      "Chemistry & Materials",
+      "Computer Science & AI",
+      "Economics & Finance"
+    ],
+    "type_examples": [
+      "analogy",
+      "case_study",
+      "cause_effect",
+      "comparison",
+      "counterfactual"
+    ]
+  },
+  "Code QA": {
+    "raw_count": 29907,
+    "domains": 8,
+    "types": 16,
+    "difficulties": 3,
+    "domain_examples": [
+      "C++",
+      "Go",
+      "Java",
+      "JavaScript",
+      "Python"
+    ],
+    "type_examples": [
+      "API development",
+      "DevOps and CI/CD",
+      "algorithms and data structures",
+      "cloud architecture",
+      "concurrent programming"
+    ]
+  },
+  "Reasoning QA": {
+    "raw_count": 19913,
+    "domains": 12,
+    "types": 0,
+    "difficulties": 3,
+    "domain_examples": [
+      "abductive reasoning",
+      "analogical reasoning",
+      "causal reasoning",
+      "deductive reasoning",
+      "ethical reasoning"
+    ],
+    "type_examples": []
+  },
+  "Math QA": {
+    "raw_count": 19896,
+    "domains": 15,
+    "types": 5,
+    "difficulties": 0,
+    "domain_examples": [
+      "abstract_algebra",
+      "algebra",
+      "arithmetic",
+      "calculus",
+      "combinatorics"
+    ],
+    "type_examples": [
+      "college",
+      "competition",
+      "elementary",
+      "high_school",
+      "middle_school"
+    ]
+  },
+  "Document QA": {
+    "raw_count": 22776,
+    "domains": 0,
+    "types": 0,
+    "difficulties": 0,
+    "domain_examples": [],
+    "type_examples": []
+  },
+  "Creative Writing": {
+    "raw_count": 9909,
+    "domains": 12,
+    "types": 0,
+    "difficulties": 0,
+    "domain_examples": [
+      "character development",
+      "creative brainstorming",
+      "creative story writing",
+      "dialogue writing",
+      "editing and revision"
+    ],
+    "type_examples": []
+  },
+  "Multi-Turn Dialog": {
+    "raw_count": 19901,
+    "domains": 17,
+    "types": 10,
+    "difficulties": 0,
+    "domain_examples": [
+      "A business analyst exploring data-driven insights with an AI",
+      "A data scientist exploring dataset characteristics and modeling approaches",
+      "A developer debugging code with an AI assistant, iteratively narrowing down the issue",
+      "A researcher discussing methodology choices for an experiment",
+      "A student asking a professor about a complex topic, with follow-up questions that go deeper"
+    ],
+    "type_examples": [
+      "A teacher preparing lesson materials with pedagogical considerations",
+      "A user learning a new programming language through practical examples",
+      "collaborative_problem_solving",
+      "correction_and_refinement",
+      "exploration_to_decision"
+    ]
+  },
+  "Self-Inversion": {
+    "raw_count": 5000,
+    "domains": 2288,
+    "types": 0,
+    "difficulties": 3,
+    "domain_examples": [
+      "3D printing and manufacturing",
+      "AI / robotics / analogical reasoning / chess-based motion planning",
+      "AI Ethics and Development",
+      "AI and Future Technology",
+      "AI and Machine Learning"
+    ],
+    "type_examples": []
+  }
+}

@@ -1,0 +1,428 @@
+{
+  "timestamp": "2026-03-28T06:40:00",
+  "n_topics": 20,
+  "n_documents": 12000,
+  "n_features": 8000,
+  "topics": [
+    {
+      "id": 1,
+      "label": "Function",
+      "top_words": [
+        "function",
+        "list",
+        "test",
+        "factorial",
+        "cases",
+        "numbers",
+        "edge cases",
+        "edge"
+      ],
+      "dominant_source": "Code QA",
+      "purity": 0.52,
+      "source_dist": {
+        "Code QA": 918,
+        "Multi-Turn": 503,
+        "Self-Inversion": 344
+      }
+    },
+    {
+      "id": 2,
+      "label": "Marbles",
+      "top_words": [
+        "marbles",
+        "blue",
+        "red",
+        "marble",
+        "green",
+        "probability",
+        "number",
+        "blue marbles"
+      ],
+      "dominant_source": "Reasoning QA",
+      "purity": 0.439,
+      "source_dist": {
+        "Reasoning QA": 745,
+        "Math QA": 556,
+        "Self-Inversion": 396
+      }
+    },
+    {
+      "id": 3,
+      "label": "Angle",
+      "top_words": [
+        "angle",
+        "triangle",
+        "degrees",
+        "sin",
+        "length",
+        "abc",
+        "triangle abc",
+        "frac"
+      ],
+      "dominant_source": "Math QA",
+      "purity": 0.383,
+      "source_dist": {
+        "Math QA": 592,
+        "Reasoning QA": 519,
+        "Complex QA": 434
+      }
+    },
+    {
+      "id": 4,
+      "label": "City",
+      "top_words": [
+        "city",
+        "world",
+        "write",
+        "story",
+        "life",
+        "character",
+        "like",
+        "time"
+      ],
+      "dominant_source": "Creative Writing",
+      "purity": 0.622,
+      "source_dist": {
+        "Creative Writing": 1360,
+        "Document QA": 445,
+        "Complex QA": 381
+      }
+    },
+    {
+      "id": 5,
+      "label": "Apples",
+      "top_words": [
+        "apples",
+        "number apples",
+        "number",
+        "step",
+        "friend",
+        "gives",
+        "basket",
+        "sarah"
+      ],
+      "dominant_source": "Math QA",
+      "purity": 0.385,
+      "source_dist": {
+        "Math QA": 607,
+        "Reasoning QA": 555,
+        "Self-Inversion": 414
+      }
+    },
+    {
+      "id": 6,
+      "label": "Singleton",
+      "top_words": [
+        "singleton",
+        "java",
+        "thread",
+        "pattern",
+        "singleton design",
+        "instance",
+        "class",
+        "design"
+      ],
+      "dominant_source": "Code QA",
+      "purity": 0.417,
+      "source_dist": {
+        "Code QA": 685,
+        "Document QA": 483,
+        "Self-Inversion": 476
+      }
+    },
+    {
+      "id": 7,
+      "label": "Sql",
+      "top_words": [
+        "sql",
+        "user",
+        "injection",
+        "sql injection",
+        "parameterized",
+        "queries",
+        "prevent sql",
+        "database"
+      ],
+      "dominant_source": "Code QA",
+      "purity": 0.42,
+      "source_dist": {
+        "Code QA": 624,
+        "Multi-Turn": 450,
+        "Document QA": 410
+      }
+    },
+    {
+      "id": 8,
+      "label": "3X",
+      "top_words": [
+        "3x",
+        "equation",
+        "2x",
+        "step",
+        "dx",
+        "derivative",
+        "solve",
+        "continuous"
+      ],
+      "dominant_source": "Math QA",
+      "purity": 0.481,
+      "source_dist": {
+        "Math QA": 914,
+        "Reasoning QA": 579,
+        "Self-Inversion": 408
+      }
+    },
+    {
+      "id": 9,
+      "label": "Meters",
+      "top_words": [
+        "meters",
+        "area",
+        "rectangle",
+        "fencing",
+        "garden",
+        "length",
+        "perimeter",
+        "pen"
+      ],
+      "dominant_source": "Reasoning QA",
+      "purity": 0.403,
+      "source_dist": {
+        "Reasoning QA": 698,
+        "Math QA": 626,
+        "Self-Inversion": 407
+      }
+    },
+    {
+      "id": 10,
+      "label": "Statement",
+      "top_words": [
+        "statement",
+        "false",
+        "true",
+        "sentence",
+        "statement true",
+        "statement false",
+        "sentence false",
+        "true false"
+      ],
+      "dominant_source": "Reasoning QA",
+      "purity": 0.678,
+      "source_dist": {
+        "Reasoning QA": 1316,
+        "Self-Inversion": 331,
+        "Complex QA": 295
+      }
+    },
+    {
+      "id": 11,
+      "label": "Rust",
+      "top_words": [
+        "rust",
+        "ci",
+        "cd",
+        "ci cd",
+        "optimize",
+        "pipeline",
+        "cd pipeline",
+        "large"
+      ],
+      "dominant_source": "Multi-Turn",
+      "purity": 0.344,
+      "source_dist": {
+        "Multi-Turn": 576,
+        "Code QA": 573,
+        "Complex QA": 524
+      }
+    },
+    {
+      "id": 12,
+      "label": "Graph",
+      "top_words": [
+        "graph",
+        "vertices",
+        "edges",
+        "tree",
+        "connected",
+        "graph vertices",
+        "connected graph",
+        "number"
+      ],
+      "dominant_source": "Reasoning QA",
+      "purity": 0.438,
+      "source_dist": {
+        "Reasoning QA": 742,
+        "Math QA": 561,
+        "Self-Inversion": 392
+      }
+    },
+    {
+      "id": 13,
+      "label": "Missing",
+      "top_words": [
+        "missing",
+        "missing values",
+        "model",
+        "values",
+        "dataset",
+        "regression",
+        "scikit",
+        "scikit learn"
+      ],
+      "dominant_source": "Multi-Turn",
+      "purity": 0.43,
+      "source_dist": {
+        "Multi-Turn": 765,
+        "Code QA": 612,
+        "Complex QA": 404
+      }
+    },
+    {
+      "id": 14,
+      "label": "Requests",
+      "top_words": [
+        "requests",
+        "server",
+        "http",
+        "simple",
+        "design",
+        "json",
+        "library",
+        "typescript"
+      ],
+      "dominant_source": "Code QA",
+      "purity": 0.493,
+      "source_dist": {
+        "Code QA": 853,
+        "Multi-Turn": 466,
+        "Self-Inversion": 410
+      }
+    },
+    {
+      "id": 15,
+      "label": "Quantum",
+      "top_words": [
+        "quantum",
+        "state",
+        "particles",
+        "entanglement",
+        "quantum entanglement",
+        "particle",
+        "professor",
+        "state particle"
+      ],
+      "dominant_source": "Multi-Turn",
+      "purity": 0.451,
+      "source_dist": {
+        "Multi-Turn": 939,
+        "Complex QA": 700,
+        "Document QA": 441
+      }
+    },
+    {
+      "id": 16,
+      "label": "Matrix",
+      "top_words": [
+        "matrix",
+        "pmatrix",
+        "determinant",
+        "begin pmatrix",
+        "begin",
+        "end",
+        "end pmatrix",
+        "pmatrix end"
+      ],
+      "dominant_source": "Math QA",
+      "purity": 0.388,
+      "source_dist": {
+        "Math QA": 611,
+        "Reasoning QA": 590,
+        "Self-Inversion": 373
+      }
+    },
+    {
+      "id": 17,
+      "label": "Sylow",
+      "top_words": [
+        "sylow",
+        "order",
+        "group",
+        "subgroup",
+        "subgroups",
+        "sylow theorems",
+        "theorems",
+        "group order"
+      ],
+      "dominant_source": "Math QA",
+      "purity": 0.428,
+      "source_dist": {
+        "Math QA": 708,
+        "Reasoning QA": 562,
+        "Self-Inversion": 385
+      }
+    },
+    {
+      "id": 18,
+      "label": "Wi Fi",
+      "top_words": [
+        "wi fi",
+        "wi",
+        "fi",
+        "laptop",
+        "network",
+        "let",
+        "try",
+        "issue"
+      ],
+      "dominant_source": "Multi-Turn",
+      "purity": 0.645,
+      "source_dist": {
+        "Multi-Turn": 1245,
+        "Document QA": 370,
+        "Reasoning QA": 315
+      }
+    },
+    {
+      "id": 19,
+      "label": "Data",
+      "top_words": [
+        "data",
+        "array",
+        "pipeline",
+        "javascript",
+        "data processing",
+        "processing pipeline",
+        "processing",
+        "filter"
+      ],
+      "dominant_source": "Code QA",
+      "purity": 0.436,
+      "source_dist": {
+        "Code QA": 694,
+        "Multi-Turn": 492,
+        "Self-Inversion": 405
+      }
+    },
+    {
+      "id": 20,
+      "label": "Scores",
+      "top_words": [
+        "scores",
+        "85",
+        "median",
+        "88",
+        "90",
+        "92",
+        "students",
+        "78"
+      ],
+      "dominant_source": "Reasoning QA",
+      "purity": 0.424,
+      "source_dist": {
+        "Reasoning QA": 682,
+        "Math QA": 524,
+        "Multi-Turn": 401
+      }
+    }
+  ]
+}

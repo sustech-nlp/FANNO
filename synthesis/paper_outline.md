@@ -1,6 +1,6 @@
 # FANNO-Dev: Paper Structure & Figure/Table Mapping
 
-## Total Deliverables: 34 Figures (PNG+PDF), 16 LaTeX Tables
+## Total Deliverables: 39 Figures (PNG+PDF), 18 LaTeX Tables
 
 ---
 
@@ -8,8 +8,9 @@
 - Motivation: instruction data diversity matters
 - Problem: no quantitative diversity measurement for synthesized data
 - Contribution summary (5 points from abstract)
-- **Fig 28**: Architecture overview diagram
+- **Fig 28**: Architecture overview diagram (8 pipelines → cleaning → output)
 - **Fig 1**: Source distribution overview
+- **Fig 34**: Dataset composition overview (6-panel)
 
 ## §2 Related Work
 - Self-Instruct, WizardLM, Evol-Instruct, Alpaca, LIMA
@@ -20,8 +21,9 @@
 ## §3 FANNO-Dev Framework
 ### §3.1 Synthesis Pipelines
 - 8 pipeline descriptions with prompt examples
-- **Tab 1**: Dataset statistics
+- **Tab 1**: Dataset statistics (153,351 cleaned from 211K raw)
 - **Tab 12**: Comprehensive pipeline stats (domains, types, Vendi, efficiency)
+- **Tab 18**: Master per-pipeline table (volume, diversity, embedding, efficiency, quality)
 - **Fig 14**: Cross-source distance heatmap (0.961 avg)
 
 ### §3.2 Self-Inversion (Trajectory Reversal)
@@ -31,18 +33,18 @@
 
 ### §3.3 Data Cleaning
 - Three-stage pipeline: quality → exact dedup → near dedup
-- **Fig 10**: Per-source rejection rates
+- **Fig 10**: Per-source rejection rates (0.5% Self-Inversion to 48.5% Code QA)
 - **Tab 7**: Pipeline efficiency ranking
 
 ### §3.4 Multi-Turn Dialog
 - 8 patterns, 15 scenarios, 2-8 turns
-- **Fig 29**: Multi-turn detailed analysis
+- **Fig 29**: Multi-turn detailed analysis (4-panel)
 - **Tab 11**: Multi-turn statistics
 - **Fig 19**: Depth quality analysis (TTR stable at 0.84-0.85)
+- **Fig 35**: Coherence analysis (adjacency sim=0.575, decay curve, Q-A pattern)
 
 ### §3.5 Output Formats
-- Alpaca and ShareGPT format descriptions
-- **Fig 34**: Dataset composition overview
+- Alpaca (125,280 samples) and ShareGPT (141,901 samples) format descriptions
 
 ## §4 Diversity Analysis
 ### §4.1 Vendi Score Measurement
@@ -52,16 +54,16 @@
 - **Fig Dashboard**: 6-panel comprehensive overview
 
 ### §4.2 Scaling Law
-- Exponential saturation model
-- **Fig 30**: Scaling curve with fit (R²=0.996)
+- Exponential saturation model: V(N) = 55.4(1-exp(-N/745)) + 109.0, R²=0.996
+- **Fig 30**: Scaling curve with 12 data points + fit
 - **Fig 2**: Earlier scaling analysis
-- **Tab 4**: Scaling analysis
+- **Tab 4**: Scaling analysis (ceiling at 164.5 for single-turn)
 
 ### §4.3 Template Space Analysis
-- Domain × Type utilization (4.1% used)
+- Domain × Type utilization (4.1% of possible combinations used)
 - **Fig 6**: Domain-Type heatmap
 - **Fig 12**: Template utilization panels
-- **Fig 16**: Domain Zipf distribution (long-tail)
+- **Fig 16**: Domain Zipf distribution (long-tail, 2,297 unique domains)
 - **Fig 18**: Type-difficulty heatmap
 
 ### §4.4 Cross-Source Complementarity
@@ -72,7 +74,7 @@
 
 ## §5 Data Selection Strategies
 - 5 strategies compared across 4 subset sizes
-- **Fig 27**: Selection strategy comparison (3-panel)
+- **Fig 27**: Selection strategy comparison (3-panel: Vendi vs N, relative improvement, quality-speed)
 - **Fig 3**: Earlier selection plot
 - **Tab 3**: Selection strategy table
 - **Tab 14**: Detailed Vendi scores per strategy per size
@@ -83,12 +85,12 @@
 - t-SNE, PCA, cluster analysis
 - **Fig 21**: t-SNE visualization (7 pipelines, 3500 points)
 - **Fig 22**: PCA analysis (50+ components for 90% variance)
-- **Fig 23**: Embedding space bubble chart
+- **Fig 23**: Embedding space bubble chart (within-diversity vs centroid distance)
 - **Tab 13**: Embedding analysis per-pipeline table
 
 ### §6.2 Cluster Analysis
 - 20 K-Means clusters: 7 pure, 6 mixed, 7 diverse
-- **Fig 25**: Cluster composition heatmap
+- **Fig 25**: Cluster composition heatmap + size/purity bars
 - Self-Inversion in all 20 clusters
 
 ### §6.3 Coverage Analysis
@@ -105,29 +107,36 @@
 ### §6.5 Cross-Metric Correlation
 - TTR→Vendi (r=0.830), Efficiency→Diversity (r=0.776)
 - **Fig 31**: 6×6 correlation matrix
-- **Fig 24**: Multi-dimensional radar comparison
+- **Fig 24**: Multi-dimensional radar comparison (5-axis per pipeline)
 
 ### §6.6 Linguistic Diversity
 - TTR, hapax ratio, vocabulary size
 - **Fig 13**: Multi-panel comparison
 - **Fig 15**: Answer quality (length vs TTR)
 - Document QA: #1 composite diversity (0.921)
+- **Fig 38**: Keyword analysis (TF-IDF distinctive terms per pipeline)
 
 ### §6.7 Question Complexity
 - Q/A length ratio, bigrams per sample
 - **Fig 26**: 4-panel complexity analysis
 - **Tab 15**: Question complexity table
 
-### §6.8 Dedup-Diversity Tradeoff
+### §6.8 Quality Scoring
+- Heuristic quality scores (length, TTR, structure)
+- **Fig 36**: Quality score distribution per pipeline (all >72, Code QA 85.1)
+- **Fig 37**: Difficulty-level diversity (inverted-U: easy < expert < hard < medium)
+- **Tab 17**: Difficulty diversity table
+
+### §6.9 Dedup-Diversity Tradeoff
 - **Fig 8**: Dedup aggressiveness curve
 - **Tab 6**: Dedup tradeoff table
 
 ## §7 Discussion
 - Cost analysis: $2,245 total, $15.58/1K (**Tab 9**)
-- Limitations: tag space utilization ceiling (4.1%)
+- Limitations: tag space utilization ceiling (4.1%), Vendi saturation
 - Future work: expanding template space, cross-type hybridization
 - **Tab 8**: Claims and evidence summary (15 claims)
-- **Tab 16**: Key findings with cross-references
+- **Tab 16**: Key findings with cross-references (17 findings)
 
 ## §8 Conclusion
 
@@ -135,7 +144,7 @@
 - **Fig 4**: Length distribution
 - **Fig 7**: Earlier t-SNE plot
 - **Fig 20**: Code language/topic distribution
-- Contamination check results (0 matches)
+- Contamination check results (0 real matches, 416 false positives)
 - Format validation results (100% pass)
 - **Tab 9**: Cost breakdown per pipeline
 - LLaMA-Factory training recipe (see TRAINING_RECIPE.md)

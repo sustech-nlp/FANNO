@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-03-27T23:23:22.561220",
+  "timestamp": "2026-03-28T06:15:00",
   "data_counts": {
-    "raw_total": 209000,
-    "cleaned_total": 151031,
-    "single_turn": 132323,
+    "raw_total": 211093,
+    "cleaned_total": 153351,
+    "single_turn": 134643,
     "multi_turn": 18708,
-    "rejection_rate": 27.6,
-    "alpaca_format": 122960,
-    "sharegpt_format": 139581
+    "rejection_rate": 27.4,
+    "alpaca_format": 125280,
+    "sharegpt_format": 141901
   },
   "per_source": {
     "complex_qa": {
@@ -31,10 +31,9 @@
       "rejection": 42.5
     },
     "document_qa": {
-      "raw": 19600,
-      "cleaned": 16800,
-      "rejection": 2.1,
-      "note": "still growing"
+      "raw": 24500,
+      "cleaned": 21432,
+      "rejection": 12.5
     },
     "creative_writing": {
       "raw": 9909,
@@ -55,7 +54,7 @@
   "diversity_metrics": {
     "vendi_score": 182.75,
     "avg_pairwise_cosine_dist": 0.951,
-    "scaling_law": "V(N) = 55.4(1-exp(-N/745)) + 109.0, R\u00b2=0.996",
+    "scaling_law": "V(N) = 55.4(1-exp(-N/745)) + 109.0, R²=0.996",
     "ceiling": 164.5,
     "tag_space_utilization": 4.1,
     "cross_source_distance": 0.961,
@@ -64,7 +63,7 @@
   "selection_strategies": {
     "best_at_500": "K-Center-Greedy (+33.3%)",
     "best_at_5000": "K-Center-Greedy (+8.6%)",
-    "practical_recommendation": "Random for N\u22655000"
+    "practical_recommendation": "Random for N≥5000"
   },
   "embedding_analysis": {
     "highest_within_diversity": "Self-Inversion (0.943)",
@@ -86,7 +85,7 @@
     "scenarios": 15,
     "avg_turns": 3.3,
     "coherence_adjacent": 0.575,
-    "coherence_decay": "0.575\u21920.474\u21920.413",
+    "coherence_decay": "0.575→0.474→0.413",
     "ttr_stability": "0.846-0.850 across turns"
   },
   "question_complexity": {
@@ -102,10 +101,10 @@
     "efficiency_diversity": 0.776
   },
   "deliverables": {
-    "figures": 35,
-    "latex_tables": 16,
+    "figures": 39,
+    "latex_tables": 18,
     "python_scripts": 18,
-    "git_commits": "70+"
+    "git_commits": "80+"
   },
   "cost_estimate": {
     "total": 2245,

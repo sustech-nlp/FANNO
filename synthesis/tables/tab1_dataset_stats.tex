@@ -1,22 +1,23 @@
 \begin{table}[t]
 \centering
-\caption{FANNO-Dev dataset statistics. Each source uses a distinct synthesis pipeline.}
+\caption{FANNO-Dev dataset overview. 153K+ instruction-following samples from 8 GPT-4o synthesis pipelines after three-stage cleaning (27.4\% rejection rate).}
 \label{tab:dataset_stats}
 \small
-\begin{tabular}{lrrrrr}
+\begin{tabular}{lrrrrrr}
 \toprule
-\textbf{Source} & \textbf{Count} & \textbf{\%} & \textbf{Avg Q (w)} & \textbf{Avg A (w)} & \textbf{Domains} \\
+\textbf{Source} & \textbf{Count} & \textbf{\%} & \textbf{Avg Q} & \textbf{Avg A} & \textbf{Topics} & \textbf{Types} \\
 \midrule
-Complex QA & 54,223 & 36.6 & 56 & 370 & 21 \\
-Multi-Turn Dialog & 18,708 & 12.6 & 0 & 0 & 1 \\
-Reasoning QA & 17,789 & 12.0 & 52 & 219 & 1 \\
-Document-Grounded QA & 16,423 & 11.1 & 57 & 401 & 1 \\
-Code QA & 15,411 & 10.4 & 41 & 425 & 1 \\
-Math QA & 11,450 & 7.7 & 39 & 204 & 1 \\
-Creative Writing & 9,363 & 6.3 & 53 & 376 & 1 \\
-Self-Inversion & 4,975 & 3.4 & 30 & 227 & 2280 \\
+Complex QA & 54,223 & 35.4 & 55 & 369 & 20 & 12 \\
+Document QA & 21,432 & 14.0 & 57 & 402 & -- & -- \\
+Multi-Turn Dialog & 18,708 & 12.2 & 27$^\dagger$ & 76$^\dagger$ & 17 & 10 \\
+Reasoning QA & 17,789 & 11.6 & 52 & 218 & 12 & -- \\
+Code QA & 15,411 & 10.0 & 41 & 425 & 8 & 16 \\
+Math QA & 11,450 & 7.5 & 39 & 203 & 15 & 5 \\
+Creative Writing & 9,363 & 6.1 & 52 & 376 & 12 & -- \\
+Self-Inversion & 4,975 & 3.2 & 29 & 227 & 2,288 & -- \\
 \midrule
-\textbf{Total} & \textbf{148,342} & \textbf{100.0} & & & \\
+\textbf{Total} & \textbf{153,351} & \textbf{100.0} & 51 & 338 & 2,297$^*$ & 25 \\
 \bottomrule
+\multicolumn{7}{l}{\footnotesize $^\dagger$Per-turn averages. $^*$Unique topics across all sources.} \\
 \end{tabular}
 \end{table}

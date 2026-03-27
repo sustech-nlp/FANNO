@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-03-28T06:20:00",
+  "check_type": "benchmark_contamination",
+  "benchmarks_checked": [
+    "MMLU",
+    "GSM8K",
+    "HumanEval",
+    "ARC",
+    "HellaSwag"
+  ],
+  "method": "80-character prefix matching + exact question matching",
+  "results": {
+    "MMLU": {
+      "total_questions": 14042,
+      "exact_matches": 0,
+      "prefix_matches": 0,
+      "false_positives": 416,
+      "false_positive_explanation": "GPT-4o answers containing (A)/(B)/(C)/(D) choice format, not actual MMLU questions",
+      "contamination_rate": 0.0
+    },
+    "GSM8K": {
+      "total_questions": 1319,
+      "exact_matches": 0,
+      "prefix_matches": 0,
+      "contamination_rate": 0.0
+    },
+    "HumanEval": {
+      "total_functions": 164,
+      "exact_matches": 0,
+      "prefix_matches": 0,
+      "contamination_rate": 0.0
+    },
+    "ARC": {
+      "total_questions": 7787,
+      "exact_matches": 0,
+      "prefix_matches": 0,
+      "contamination_rate": 0.0
+    },
+    "HellaSwag": {
+      "total_instances": 10042,
+      "exact_matches": 0,
+      "prefix_matches": 0,
+      "contamination_rate": 0.0
+    }
+  },
+  "overall_contamination_rate": 0.0,
+  "conclusion": "No benchmark contamination detected across 5 major benchmarks (33,354 test instances). 416 MMLU false positives identified as GPT-4o answers with multiple-choice formatting."
+}

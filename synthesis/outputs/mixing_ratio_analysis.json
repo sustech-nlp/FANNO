@@ -1,0 +1,127 @@
+{
+  "timestamp": "2026-03-28T06:30:00",
+  "method": "Composite: 0.3×vendi + 0.25×within_diversity + 0.25×centroid_uniqueness + 0.2×density",
+  "per_source": {
+    "Complex QA": {
+      "count": 54223,
+      "vendi": 141.17567870223309,
+      "avg_pairwise_dist": 0.9161542654037476,
+      "within_diversity": 0.9122073650360107,
+      "centroid_uniqueness": 0.2839505672454834,
+      "diversity_density": 2.603612465231232,
+      "composite_score": 0.6116,
+      "natural_ratio": 0.3536,
+      "optimized_ratio": 0.1371
+    },
+    "Document QA": {
+      "count": 21432,
+      "vendi": 170.17358089215838,
+      "avg_pairwise_dist": 0.9096060991287231,
+      "within_diversity": 0.9071475863456726,
+      "centroid_uniqueness": 0.25240403413772583,
+      "diversity_density": 7.940163348831578,
+      "composite_score": 0.6827,
+      "natural_ratio": 0.1398,
+      "optimized_ratio": 0.153
+    },
+    "Multi-Turn Dialog": {
+      "count": 18708,
+      "vendi": 0,
+      "avg_pairwise_dist": 0,
+      "within_diversity": 0,
+      "centroid_uniqueness": 0,
+      "diversity_density": 0.0,
+      "composite_score": 0.0,
+      "natural_ratio": 0.122,
+      "optimized_ratio": 0.0
+    },
+    "Reasoning QA": {
+      "count": 17789,
+      "vendi": 127.25363804770731,
+      "avg_pairwise_dist": 0.8942865133285522,
+      "within_diversity": 0.9010170102119446,
+      "centroid_uniqueness": 0.32538849115371704,
+      "diversity_density": 7.1535014923664795,
+      "composite_score": 0.6275,
+      "natural_ratio": 0.116,
+      "optimized_ratio": 0.1406
+    },
+    "Code QA": {
+      "count": 15411,
+      "vendi": 66.06112587200568,
+      "avg_pairwise_dist": 0.8689677119255066,
+      "within_diversity": 0.8711357712745667,
+      "centroid_uniqueness": 0.67674720287323,
+      "diversity_density": 4.286621625592478,
+      "composite_score": 0.6238,
+      "natural_ratio": 0.1005,
+      "optimized_ratio": 0.1398
+    },
+    "Math QA": {
+      "count": 11450,
+      "vendi": 79.14374769627375,
+      "avg_pairwise_dist": 0.8261842131614685,
+      "within_diversity": 0.820662260055542,
+      "centroid_uniqueness": 0.49417978525161743,
+      "diversity_density": 6.912117702731332,
+      "composite_score": 0.5823,
+      "natural_ratio": 0.0747,
+      "optimized_ratio": 0.1305
+    },
+    "Creative Writing": {
+      "count": 9363,
+      "vendi": 112.6798901086078,
+      "avg_pairwise_dist": 0.6899830102920532,
+      "within_diversity": 0.6986072063446045,
+      "centroid_uniqueness": 0.2741793394088745,
+      "diversity_density": 12.034592556724105,
+      "composite_score": 0.5594,
+      "natural_ratio": 0.0611,
+      "optimized_ratio": 0.1254
+    },
+    "Self-Inversion": {
+      "count": 4975,
+      "vendi": 161.2104647062626,
+      "avg_pairwise_dist": 0.937555193901062,
+      "within_diversity": 0.94321209192276,
+      "centroid_uniqueness": 0.1105794906616211,
+      "diversity_density": 32.404113508796506,
+      "composite_score": 0.775,
+      "natural_ratio": 0.0324,
+      "optimized_ratio": 0.1737
+    }
+  },
+  "natural_ratios": {
+    "Complex QA": 0.3536,
+    "Document QA": 0.1398,
+    "Multi-Turn Dialog": 0.122,
+    "Reasoning QA": 0.116,
+    "Code QA": 0.1005,
+    "Math QA": 0.0747,
+    "Creative Writing": 0.0611,
+    "Self-Inversion": 0.0324
+  },
+  "optimized_ratios": {
+    "Self-Inversion": 0.1737,
+    "Document QA": 0.153,
+    "Reasoning QA": 0.1406,
+    "Code QA": 0.1398,
+    "Complex QA": 0.1371,
+    "Math QA": 0.1305,
+    "Creative Writing": 0.1254,
+    "Multi-Turn Dialog": 0.0
+  },
+  "recommendations": {
+    "upweight": [
+      "Self-Inversion",
+      "Creative Writing",
+      "Math QA",
+      "Code QA"
+    ],
+    "downweight": [
+      "Complex QA",
+      "Multi-Turn Dialog"
+    ],
+    "insight": "Self-Inversion and Document QA have highest diversity density; oversample for budget-limited training."
+  }
+}
