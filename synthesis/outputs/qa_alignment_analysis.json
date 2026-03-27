@@ -1,0 +1,76 @@
+{
+  "timestamp": "2026-03-28T07:45:00",
+  "sample_size": 1000,
+  "per_source": {
+    "Complex QA": {
+      "n_samples": 1000,
+      "mean_qa_similarity": 0.7842,
+      "std_qa_similarity": 0.0957,
+      "median_qa_similarity": 0.8028,
+      "mean_rank": 1.9,
+      "mrr": 0.8215,
+      "hit_at_1": 0.729,
+      "hit_at_5": 0.946
+    },
+    "Reasoning QA": {
+      "n_samples": 1000,
+      "mean_qa_similarity": 0.7714,
+      "std_qa_similarity": 0.0836,
+      "median_qa_similarity": 0.784,
+      "mean_rank": 2.3,
+      "mrr": 0.8437,
+      "hit_at_1": 0.777,
+      "hit_at_5": 0.92
+    },
+    "Code QA": {
+      "n_samples": 1000,
+      "mean_qa_similarity": 0.811,
+      "std_qa_similarity": 0.0849,
+      "median_qa_similarity": 0.8303,
+      "mean_rank": 6.2,
+      "mrr": 0.5708,
+      "hit_at_1": 0.442,
+      "hit_at_5": 0.729
+    },
+    "Math QA": {
+      "n_samples": 1000,
+      "mean_qa_similarity": 0.7537,
+      "std_qa_similarity": 0.0872,
+      "median_qa_similarity": 0.7692,
+      "mean_rank": 5.0,
+      "mrr": 0.6145,
+      "hit_at_1": 0.487,
+      "hit_at_5": 0.774
+    },
+    "Document QA": {
+      "n_samples": 1000,
+      "mean_qa_similarity": 0.8154,
+      "std_qa_similarity": 0.1078,
+      "median_qa_similarity": 0.8406,
+      "mean_rank": 1.3,
+      "mrr": 0.9793,
+      "hit_at_1": 0.97,
+      "hit_at_5": 0.989
+    },
+    "Creative Writing": {
+      "n_samples": 1000,
+      "mean_qa_similarity": 0.4779,
+      "std_qa_similarity": 0.1631,
+      "median_qa_similarity": 0.4726,
+      "mean_rank": 60.4,
+      "mrr": 0.4068,
+      "hit_at_1": 0.318,
+      "hit_at_5": 0.512
+    },
+    "Self-Inversion": {
+      "n_samples": 1000,
+      "mean_qa_similarity": 0.6504,
+      "std_qa_similarity": 0.1697,
+      "median_qa_similarity": 0.682,
+      "mean_rank": 5.3,
+      "mrr": 0.7715,
+      "hit_at_1": 0.681,
+      "hit_at_5": 0.883
+    }
+  }
+}
