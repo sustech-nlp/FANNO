@@ -524,3 +524,30 @@ Computed pairwise cosine distances between 1K samples from each source (7 source
 4. **FANNO-Dev generates more substantial instructions**. The 49.5-word average instruction is more informative and specific than Alpaca's 10-word instructions. This leads to higher quality training data even if Vendi Score is slightly lower.
 
 5. **Conclusion**: FANNO-Dev produces instructions that are **individually more distinct** (higher pairwise distance) and **more detailed** (5x longer), while maintaining comparable Vendi Score (-3.3%). The slight Vendi Score gap is an artifact of instruction length, not actual diversity deficit.
+
+---
+
+### Phase 14: Tag Space Utilization Analysis (2026-03-27 21:45 UTC)
+
+**Q: Why does diversity saturate at ~180 Vendi Score?**
+
+Analyzed the tag combination space for Complex QA (the largest source, 45.8K samples):
+
+| Dimension | Unique Values | Coverage |
+|-----------|---------------|----------|
+| Domains | 21 | All defined domains |
+| Types | 13 | All 12 types + unknown |
+| Difficulties | 7 | medium/hard/expert/etc. |
+| **Tag Combos** | **164 / 1,911** | **8.6% utilization** |
+
+**Key Finding**: The diversity ceiling is caused by **underutilized tag combination space**:
+- Theoretical maximum: 21 × 13 × 7 = 1,911 unique combinations
+- Actually used: only 164 (8.6%)
+- Average samples per combo: 279.6
+- This means 1,747 possible tag combinations are never generated
+
+**Root Cause**: The random selection of domain/type/difficulty in `generate_mixed_batch_prompts()` doesn't guarantee uniform coverage of the full combinatorial space. Some combinations are naturally rare.
+
+**Proposed Fix**: Use systematic grid enumeration of all domain×type×difficulty combinations instead of random sampling. This should raise the diversity ceiling from ~180 to potentially ~250+ Vendi Score.
+
+**This explains the scaling law**: Diversity saturates not because we're running out of content, but because we're repeating the same ~164 tag combinations. More data just resamples from the same combinations.
