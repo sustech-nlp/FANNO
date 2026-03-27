@@ -1,0 +1,26 @@
+\begin{table*}[t]
+\centering
+\caption{Comparison with existing instruction data synthesis methods. FANNO-Dev is the first to provide quantitative diversity measurement and scaling analysis alongside large-scale multi-pipeline synthesis. Numbers for baselines are from their respective papers.}
+\label{tab:comparison}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Method} & \textbf{Scale} & \textbf{Pipelines} & \textbf{Multi-Turn} & \textbf{Diversity Metric} & \textbf{Selection} & \textbf{Cost Est.} \\
+\midrule
+Self-Instruct \citep{selfinstruct} & 52K & 1 & \xmark & Manual eval & Random & $\sim$\$500 \\
+WizardLM \citep{wizardlm} & 250K & 1 & \xmark & None & None & $\sim$\$5K \\
+Evol-Instruct \citep{evolinstruct} & 70K & 1 & \xmark & Instruction complexity & None & $\sim$\$1K \\
+Alpaca \citep{alpaca} & 52K & 1 & \xmark & None & None & $\sim$\$500 \\
+LIMA \citep{lima} & 1K & Manual & \cmark & Expert curation & Manual & N/A \\
+DataFlow \citep{dataflow} & Varies & Multiple & \xmark & None (task perf.) & Quality filter & Varies \\
+FANNO \citep{fanno} & 30K & 1 & \xmark & Community det. & IFD+PPL & $\sim$\$500 \\
+\midrule
+\textbf{FANNO-Dev} & \textbf{144K} & \textbf{8} & \textbf{\cmark (17K)} & \textbf{Vendi Score (183)} & \textbf{5 strategies} & \textbf{\$2,245} \\
+\bottomrule
+\end{tabular}
+\vspace{-0.5em}
+\begin{flushleft}
+\scriptsize ``Diversity Metric'' indicates whether the method provides an intrinsic, quantitative measure of dataset diversity.\\
+\scriptsize ``Selection'' indicates whether data selection/curation strategies are systematically compared.
+\end{flushleft}
+\end{table*}
