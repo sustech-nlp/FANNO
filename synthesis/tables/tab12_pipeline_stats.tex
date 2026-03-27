@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering
+\caption{Comprehensive pipeline statistics. Each pipeline has distinct characteristics in terms of scale, coverage, linguistic properties, and diversity contribution.}
+\label{tab:pipeline_stats}
+\scriptsize
+\begin{tabular}{lrrrrrrrr}
+\toprule
+\textbf{Pipeline} & \textbf{Clean N} & \textbf{Domains} & \textbf{Types} & \textbf{Avg Q} & \textbf{Avg A} & \textbf{Vendi} & \textbf{Rej\%} & \textbf{Eff.} \\
+\midrule
+Complex QA & 54,223 & 21 & 13 & 55 & 369 & 141.2 & 36.1\% & 7.9 \\
+\midrule
+Reasoning QA & 17,789 & 1 & 13 & 52 & 218 & 127.3 & 10.7\% & 11.5 \\
+\midrule
+Code QA & 15,411 & 17 & 17 & 41 & 425 & 66.1 & 48.5\% & 3.3 \\
+\midrule
+Math QA & 11,450 & 15 & 15 & 39 & 203 & 79.1 & 42.5\% & 4.6 \\
+\midrule
+Creative Writing & 9,363 & 13 & 13 & 52 & 376 & 112.7 & 5.5\% & 11.6 \\
+\midrule
+Document QA & 15,836 & 1 & 1 & 57 & 400 & 170.2 & 2.1\% & 17.5 \\
+\midrule
+Self-Inversion & 4,975 & 2280 & 1 & 29 & 227 & 161.2 & 0.5\% & 18.8 \\
+\midrule
+\textbf{Total} & \textbf{129,047} & \textbf{2,297} & \textbf{25} & \textbf{51} & \textbf{338} & \textbf{182.8} & \textbf{28.1\%} & --- \\
+\bottomrule
+\end{tabular}
+\vspace{-0.5em}
+\begin{flushleft}
+\scriptsize Avg Q/A = average question/answer length in words. Eff. = Vendi $\times$ (1$-$Rej\%) / $\ln$(Raw N).
+\end{flushleft}
+\end{table*}
