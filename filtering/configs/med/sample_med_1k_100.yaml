@@ -1,0 +1,5 @@
+seed: 42
+data_path: data/train_medmcqa_alpaca_10k.jsonl
+output_path: runs/med_1k_100.jsonl
+max_samples: 100
+limit: 1000

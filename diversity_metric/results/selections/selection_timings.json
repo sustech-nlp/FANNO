@@ -1,0 +1,77 @@
+[
+  {
+    "embedding": "bert",
+    "strategy": "random",
+    "seconds": 0.00023669202346354723
+  },
+  {
+    "embedding": "bert",
+    "strategy": "kmeans",
+    "seconds": 1.968545060022734
+  },
+  {
+    "embedding": "bert",
+    "strategy": "community",
+    "seconds": 13.68894421798177
+  },
+  {
+    "embedding": "bert",
+    "strategy": "k_center_greedy_fast",
+    "seconds": 7.977672957000323
+  },
+  {
+    "embedding": "bert",
+    "strategy": "novelsum_fast",
+    "seconds": 24.435486258007586
+  },
+  {
+    "embedding": "qwen2_5_instruct",
+    "strategy": "random",
+    "seconds": 0.00018345203716307878
+  },
+  {
+    "embedding": "qwen2_5_instruct",
+    "strategy": "kmeans",
+    "seconds": 2.179448068025522
+  },
+  {
+    "embedding": "qwen2_5_instruct",
+    "strategy": "community",
+    "seconds": 2.6819280589697883
+  },
+  {
+    "embedding": "qwen2_5_instruct",
+    "strategy": "k_center_greedy_fast",
+    "seconds": 8.96205120603554
+  },
+  {
+    "embedding": "qwen2_5_instruct",
+    "strategy": "novelsum_fast",
+    "seconds": 27.325769157963805
+  },
+  {
+    "embedding": "qwen3_embed",
+    "strategy": "random",
+    "seconds": 0.00018904299940913916
+  },
+  {
+    "embedding": "qwen3_embed",
+    "strategy": "kmeans",
+    "seconds": 2.561708965105936
+  },
+  {
+    "embedding": "qwen3_embed",
+    "strategy": "community",
+    "seconds": 1.856387653038837
+  },
+  {
+    "embedding": "qwen3_embed",
+    "strategy": "k_center_greedy_fast",
+    "seconds": 10.554331218008883
+  },
+  {
+    "embedding": "qwen3_embed",
+    "strategy": "novelsum_fast",
+    "seconds": 30.940233064000495
+  }
+]

@@ -1,0 +1,11 @@
+seed: 42
+train:
+  model_name_or_path: models/Llama-2-7b-hf
+  data_path: runs/med_1k_100.jsonl
+  output_dir: runs/trained/med_sft_100
+  model_max_length: 512
+  per_device_train_batch_size: 1
+  num_train_epochs: 1
+  learning_rate: 0.00002
+  global_batch_size: 1
+  mode: sft

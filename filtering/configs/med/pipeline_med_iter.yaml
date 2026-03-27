@@ -1,0 +1,29 @@
+seed: 42
+base_model: /volume/wzhang/ghchen/zh/models/LLM-Research/Meta-Llama-3-8B
+data_path: data/train_medmcqa_alpaca_10k.jsonl
+output_dir: runs/pipeline_med_iter_fuxian4_DirectPrompt
+iterations: 5
+warmup:
+  sample_size: 1000
+  limit: 10000
+  train:
+    model_max_length: 512
+    per_device_train_batch_size: 4
+    num_train_epochs: 3
+    learning_rate: 0.00002
+    global_batch_size: 64
+    mode: sft
+score:
+  max_samples: 10000
+  prompt_template: DIRECT_PROMPT
+select:
+  nll_reject_ratio: 0.1
+  select_ratio: 0.1
+select_train:
+  train:
+    model_max_length: 512
+    per_device_train_batch_size: 4
+    num_train_epochs: 3
+    learning_rate: 0.00002
+    global_batch_size: 64
+    mode: sft

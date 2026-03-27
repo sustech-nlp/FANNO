@@ -1,0 +1,137 @@
+[
+  {
+    "novelsum": 0.13738914590794593,
+    "g_vendi": 0.043955406988970935,
+    "emb_vendi": 0.041156893013976514,
+    "inertia": 0.2749561310047284,
+    "avg_pairwise_dist": 0.1395981489913538,
+    "dominance": 0.030989068909548223,
+    "config": "bert_random"
+  },
+  {
+    "novelsum": 0.060474499012343585,
+    "g_vendi": 0.04180760798044503,
+    "emb_vendi": 0.040674332063645124,
+    "inertia": 0.3324461280135438,
+    "avg_pairwise_dist": 0.14173897600267082,
+    "dominance": 0.04541809798683971,
+    "config": "bert_kmeans"
+  },
+  {
+    "novelsum": 0.0693909169640392,
+    "g_vendi": 0.05131916608661413,
+    "emb_vendi": 0.049793337006121874,
+    "inertia": 0.2864825810538605,
+    "avg_pairwise_dist": 0.14942460507154465,
+    "dominance": 0.02873851591721177,
+    "config": "bert_community"
+  },
+  {
+    "novelsum": 0.06247512507252395,
+    "g_vendi": 0.04470613901503384,
+    "emb_vendi": 0.24205676501151174,
+    "inertia": 0.5122518369462341,
+    "avg_pairwise_dist": 0.09338794101495296,
+    "dominance": 0.07660037802997977,
+    "config": "bert_k_center_greedy_fast"
+  },
+  {
+    "novelsum": 0.07558678591158241,
+    "g_vendi": 0.051526212017051876,
+    "emb_vendi": 0.04552062100265175,
+    "inertia": 0.2900110490154475,
+    "avg_pairwise_dist": 0.16449901997111738,
+    "dominance": 0.029514905996620655,
+    "config": "bert_novelsum_fast"
+  },
+  {
+    "novelsum": 0.06485250394325703,
+    "g_vendi": 0.048286473960615695,
+    "emb_vendi": 0.04073970299214125,
+    "inertia": 0.4511551900068298,
+    "avg_pairwise_dist": 0.1615736880339682,
+    "dominance": 0.07740354700945318,
+    "config": "qwen2_5_instruct_random"
+  },
+  {
+    "novelsum": 0.06321064801886678,
+    "g_vendi": 0.04121174500323832,
+    "emb_vendi": 0.04072787205222994,
+    "inertia": 0.282957821036689,
+    "avg_pairwise_dist": 0.15980665502138436,
+    "dominance": 0.07723389100283384,
+    "config": "qwen2_5_instruct_kmeans"
+  },
+  {
+    "novelsum": 0.06549921608529985,
+    "g_vendi": 0.05276488501112908,
+    "emb_vendi": 0.05000033392570913,
+    "inertia": 0.28729387605562806,
+    "avg_pairwise_dist": 0.1460367530817166,
+    "dominance": 0.029216106981039047,
+    "config": "qwen2_5_instruct_community"
+  },
+  {
+    "novelsum": 0.06051857897546142,
+    "g_vendi": 0.043477539089508355,
+    "emb_vendi": 0.049904966028407216,
+    "inertia": 0.3082493629772216,
+    "avg_pairwise_dist": 0.09204151201993227,
+    "dominance": 0.07937002892140299,
+    "config": "qwen2_5_instruct_k_center_greedy_fast"
+  },
+  {
+    "novelsum": 0.06648893293458968,
+    "g_vendi": 0.042639574967324734,
+    "emb_vendi": 0.041396553977392614,
+    "inertia": 0.263692680047825,
+    "avg_pairwise_dist": 0.16314072103705257,
+    "dominance": 0.07521376002114266,
+    "config": "qwen2_5_instruct_novelsum_fast"
+  },
+  {
+    "novelsum": 0.0670855570351705,
+    "g_vendi": 0.04666189302224666,
+    "emb_vendi": 0.05990508303511888,
+    "inertia": 0.2701311290729791,
+    "avg_pairwise_dist": 0.15459176211152226,
+    "dominance": 0.04194596002344042,
+    "config": "qwen3_embed_random"
+  },
+  {
+    "novelsum": 0.061257598106749356,
+    "g_vendi": 0.041501799947582185,
+    "emb_vendi": 0.04143640794791281,
+    "inertia": 0.25630105193704367,
+    "avg_pairwise_dist": 0.14054760697763413,
+    "dominance": 0.03558121807873249,
+    "config": "qwen3_embed_kmeans"
+  },
+  {
+    "novelsum": 0.07043129298835993,
+    "g_vendi": 0.050118155078962445,
+    "emb_vendi": 0.043502495042048395,
+    "inertia": 0.2971790679730475,
+    "avg_pairwise_dist": 0.14412635809276253,
+    "dominance": 0.028055630973540246,
+    "config": "qwen3_embed_community"
+  },
+  {
+    "novelsum": 0.057343762018717825,
+    "g_vendi": 0.04439934901893139,
+    "emb_vendi": 0.04187645891215652,
+    "inertia": 0.24025878601241857,
+    "avg_pairwise_dist": 0.09207788994535804,
+    "dominance": 0.06548750004731119,
+    "config": "qwen3_embed_k_center_greedy_fast"
+  },
+  {
+    "novelsum": 0.07014151196926832,
+    "g_vendi": 0.04277645901311189,
+    "emb_vendi": 0.040084194974042475,
+    "inertia": 0.27512560097966343,
+    "avg_pairwise_dist": 0.1667980180354789,
+    "dominance": 0.07340374100022018,
+    "config": "qwen3_embed_novelsum_fast"
+  }
+]

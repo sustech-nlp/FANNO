@@ -1,0 +1,28 @@
+seed: 42
+base_model: /volume/wzhang/ghchen/zh/models/Qwen2.5-7B
+data_path: /volume/wzhang/ghchen/zh/code/Jy/data/numina_cot_10k.jsonl
+output_dir: runs/pipeline_math_iter_fuxian3
+iterations: 3
+warmup:
+  sample_size: 1000
+  limit: 10000
+  train:
+    model_max_length: 2048
+    per_device_train_batch_size: 4
+    num_train_epochs: 3
+    learning_rate: 0.00005
+    global_batch_size: 256
+    mode: sft
+score:
+  max_samples: 10000
+select:
+  nll_reject_ratio: 0.1
+  select_ratio: 0.1
+select_train:
+  train:
+    model_max_length: 2048
+    per_device_train_batch_size: 4
+    num_train_epochs: 3
+    learning_rate: 0.00005
+    global_batch_size: 256
+    mode: sft

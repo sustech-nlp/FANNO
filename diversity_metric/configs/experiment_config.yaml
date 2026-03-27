@@ -1,0 +1,78 @@
+dataset:
+  # Use HF dataset or provide local_path for a JSONL file.
+  hf_id: Magpie-Align/Magpie-Pro-300K-Filtered
+  train_size: 10000
+  test_size: 1000
+  n_select: 1000
+  seed: 42
+
+embedding_cache_dir: data/embeddings
+selection_dir: results/selections
+diversity_scores_path: results/diversity_scores.csv
+reference_embedding: qwen2_5_instruct
+
+embedding_configs:
+  bert:
+    type: semantic
+    model_id: bert-base-uncased
+    batch_size: 128
+    max_length: 512
+  # llama:
+  #   type: semantic
+  #   model_id: /home/v-hezhu2/.cache/huggingface/hub/models--meta-llama--Meta-Llama-3-8B/snapshots/8cde5ca8380496c9a6cc7ef3a8b46a0372a1d920
+  #   batch_size: 16
+  #   max_length: 256
+  qwen2_5_instruct:
+    type: semantic
+    model_id: /home/v-hezhu2/.cache/huggingface/hub/models--Qwen--Qwen2.5-0.5B-Instruct/snapshots/7ae557604adf67be50417f59c2c2f167def9a775
+    batch_size: 128
+    max_length: 512
+  qwen3_embed:
+    type: semantic
+    model_id: /home/v-hezhu2/.cache/huggingface/hub/models--Qwen--Qwen3-Embedding-0.6B/snapshots/c54f2e6e80b2d7b7de06f51cec4959f6b3e03418
+    batch_size: 128
+    max_length: 512
+  # gradient:
+  #   type: gradient
+  #   model_id: Qwen/Qwen2.5-0.5B-Instruct
+  #   proj_dim: 1024
+  #   max_length: 256
+  # hybrid:
+  #   type: hybrid
+  #   proxy_model_id: Qwen/Qwen2.5-0.5B-Instruct
+  #   semantic_model_id: /home/v-hezhu2/.cache/huggingface/hub/models--meta-llama--Meta-Llama-3-8B/snapshots/8cde5ca8380496c9a6cc7ef3a8b46a0372a1d920
+  #   proj_dim: 1024
+  #   max_length: 256
+
+selection_strategies:
+  - name: random
+    params:
+      seed: 42
+  - name: kmeans
+    params:
+      n_clusters: 100
+      seed: 42
+  - name: community
+    params:
+      threshold: 0.8
+  - name: k_center_greedy_fast
+    params:
+      seed: 42
+  - name: novelsum_fast
+    params:
+      alpha: 1.0
+      beta: 0.5
+      K: 10
+  # - name: prismatic
+  #   params:
+  #     k_ratio: 0.01
+  #     sparse_ratio: 0.2
+  #     samples_per_cluster: 5
+  #     seed: 42
+
+metrics:
+  reference_embedding: qwen2_5_instruct
+  kmeans_clusters: 100
+  novelsum_mode: fast        # fast | approx | exact
+  novelsum_sample_size: 5000 # None to disable sampling
+  pairwise_sample_size: 2000

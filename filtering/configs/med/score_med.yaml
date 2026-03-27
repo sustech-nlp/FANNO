@@ -1,0 +1,15 @@
+seed: 42
+data_path: data/train_medmcqa_alpaca_10k.jsonl
+model_path: models/Llama-2-7b-hf
+output_path: runs/score_med_llama2.jsonl
+max_samples: 100
+instruction_key: instruction
+input_key: input
+response_key: response
+prompt_template: |
+  Below is an instruction that describes a task. Write a response that appropriately completes the request.
+
+  ### Instruction:
+  {instruction}
+
+  ### Response:
