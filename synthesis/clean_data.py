@@ -77,7 +77,7 @@ def quality_filter(data: List[Dict]) -> List[Dict]:
 
     for item in data:
         q = get_text_key(item)
-        a_raw = item.get("answer", item.get("output", item.get("response", "")))
+        a_raw = item.get("answer", item.get("output", item.get("response", item.get("solution", ""))))
         a = a_raw if isinstance(a_raw, str) else ""
 
         # Skip empty
