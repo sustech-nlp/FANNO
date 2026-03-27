@@ -1,0 +1,41 @@
+\begin{table*}[t]
+\centering
+\caption{Summary of key claims and supporting evidence from FANNO-Dev experiments.}
+\label{tab:claims}
+\small
+\begin{tabular}{p{0.35\textwidth}p{0.55\textwidth}c}
+\toprule
+\textbf{Claim} & \textbf{Evidence} & \textbf{Fig/Tab} \\
+\midrule
+\multicolumn{3}{l}{\textit{Diversity Measurement}} \\
+\midrule
+FANNO-Dev achieves high semantic diversity & Vendi Score = 182.75 on 15K sample; avg pairwise cosine dist = 0.9514 & Tab~\ref{tab:diversity} \\
+8 pipelines occupy orthogonal spaces & Cross-source avg cosine distance = 0.96; t-SNE shows clear clustering & Fig~7 \\
+Document QA (FANNO) contributes most diversity & Leave-one-out: $\Delta$Vendi = +10.1; highest per-source Vendi (170.2) & Tab~\ref{tab:complementarity} \\
+\midrule
+\multicolumn{3}{l}{\textit{Scaling Laws}} \\
+\midrule
+Diversity follows exponential saturation & Vendi(N) = 141.1$\times$(1$-$e$^{-N/362}$)+38.4, $R^2$=0.99 & Fig~\ref{fig:scaling} \\
+Ceiling at $\sim$180 Vendi Score & Only 4.1\% of domain$\times$type space utilized (2,353/57,425 cells) & Fig~\ref{fig:utilization} \\
+Template expansion, not data volume, breaks ceiling & Adding domains from self-inversion expands to 2,277 new domain labels & Tab~\ref{tab:complementarity} \\
+\midrule
+\multicolumn{3}{l}{\textit{Selection Strategies}} \\
+\midrule
+K-Center-Greedy optimal for small subsets & +33\% diversity gain vs random at N=500 & Fig~\ref{fig:selection} \\
+Random sampling near-optimal at scale & Gap narrows to $<$5\% at N$>$5,000 & Tab~\ref{tab:selection} \\
+\midrule
+\multicolumn{3}{l}{\textit{Pipeline Efficiency}} \\
+\midrule
+Self-Inversion is most API-efficient & Efficiency score 18.8 (highest); only 0.5\% rejection rate & Tab~\ref{tab:efficiency} \\
+Low rejection $\Leftrightarrow$ high diversity & Pearson $r$=-0.776 between rejection rate and Vendi Score & Fig~11 \\
+Code/Math QA need template expansion & 48.5\%/42.5\% rejection; lowest per-source Vendi (66/79) & Fig~10 \\
+\midrule
+\multicolumn{3}{l}{\textit{Data Quality}} \\
+\midrule
+GPT-4o synthesis intrinsically high quality & 99.9\% pass rate on quality filter (only 145/201K rejected) & --- \\
+Near-dedup $p$=80 optimal balance & 74\% data retained, +3\% Vendi over no-dedup & Fig~8 \\
+Medium difficulty most diverse & Vendi: Medium=130.4 $>$ Hard=124.0 $>$ Expert=104.1 $>$ Easy=43.8 & --- \\
+Document QA richest linguistic output & Composite score 0.921; highest hapax ratio (30.9\%) & Fig~13 \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering
+\caption{Estimated generation cost using GPT-4o. FANNO-Dev produces 144K diverse instruction samples for approximately \$2,245, at \$15.58 per 1K clean samples.}
+\label{tab:cost}
+\small
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Pipeline} & \textbf{API Calls} & \textbf{Tokens (M)} & \textbf{Cost (\$)} \\
+\midrule
+Complex QA       & 84,895 & 85.4 & 799.92 \\
+Multi-Turn       & 19,500 & 47.1 & 492.72 \\
+Code QA          & 29,907 & 33.0 & 296.75 \\
+Math QA          & 19,896 & 20.0 & 187.47 \\
+Reasoning QA     & 19,913 & 18.0 & 177.67 \\
+Document QA      & 14,000 & 18.3 & 152.92 \\
+Creative Writing &  9,909 &  9.0 &  88.41 \\
+Self-Inversion   &  5,000 &  5.5 &  49.61 \\
+\midrule
+\textbf{Total}   & \textbf{203,020} & \textbf{236.4} & \textbf{2,245.48} \\
+\bottomrule
+\end{tabular}
+\vspace{-0.5em}
+\begin{flushleft}
+\scriptsize Based on GPT-4o pricing: \$5/M input tokens, \$15/M output tokens.\\
+\scriptsize Cost per clean sample: \$0.016. Cost per 1K samples: \$15.58.
+\end{flushleft}
+\end{table}
