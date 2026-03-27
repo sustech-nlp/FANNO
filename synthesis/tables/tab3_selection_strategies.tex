@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Selection strategy comparison. K-Center-Greedy achieves highest diversity at all selection sizes. Pool size = 10K.}
+\label{tab:selection_strategies}
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Strategy} & \textbf{N=500} & \textbf{N=1,000} & \textbf{N=2,000} & \textbf{N=5,000}  \\
+\midrule
+Herding & 149.2 & 167.5 & 176.6 & 181.8  \\
+K-Center-Greedy & \textbf{187.2} & \textbf{204.2} & \textbf{204.5} & \textbf{192.6}  \\
+K-Means & 141.9 & 158.0 & 166.8 & 173.7  \\
+Random & 140.5 & 161.6 & 172.0 & 177.3  \\
+Stratified & 142.8 & 163.9 & 173.0 & 178.1  \\
+\bottomrule
+\end{tabular}
+\end{table}

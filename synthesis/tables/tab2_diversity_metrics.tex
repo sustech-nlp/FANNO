@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Per-source diversity metrics. Vendi Score measures effective dimensionality of the embedding distribution; higher indicates greater diversity.}
+\label{tab:diversity_metrics}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Source} & \textbf{N} & \textbf{Vendi Score} & \textbf{Avg Dist} & \textbf{Efficiency} \\
+\midrule
+Document QA & 2,000 & 170.2 & 0.9096 & 85.09 \\
+Self-Inversion & 2,000 & 161.2 & 0.9376 & 80.61 \\
+Complex QA & 2,000 & 141.2 & 0.9162 & 70.59 \\
+Reasoning QA & 2,000 & 127.3 & 0.8943 & 63.63 \\
+Creative Writing & 2,000 & 112.7 & 0.6900 & 56.34 \\
+Math QA & 2,000 & 79.1 & 0.8262 & 39.57 \\
+Code QA & 2,000 & 66.1 & 0.8690 & 33.03 \\
+\midrule
+\textbf{Overall (mixed)} & 15,000 & \textbf{182.8} & 0.9514 & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
