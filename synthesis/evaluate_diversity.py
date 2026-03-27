@@ -68,9 +68,9 @@ def compute_basic_stats(data: List[Dict]) -> Dict:
         # Text lengths
         q = item.get("question", item.get("instruction", ""))
         a = item.get("answer", item.get("output", item.get("response", "")))
-        if q:
+        if q and isinstance(q, str):
             question_lengths.append(len(q.split()))
-        if a:
+        if a and isinstance(a, str):
             answer_lengths.append(len(a.split()))
 
     if question_lengths:
@@ -303,11 +303,11 @@ def evaluate_all(output_dir: Path = None) -> Dict:
         # Extract texts
         questions = [
             item.get("question", item.get("instruction", ""))
-            for item in data if item.get("question", item.get("instruction", ""))
+            for item in data if isinstance(item.get("question", item.get("instruction", "")), str) and item.get("question", item.get("instruction", ""))
         ]
         answers = [
             item.get("answer", item.get("output", item.get("response", "")))
-            for item in data if item.get("answer", item.get("output", item.get("response", "")))
+            for item in data if isinstance(item.get("answer", item.get("output", item.get("response", ""))), str) and item.get("answer", item.get("output", item.get("response", "")))
         ]
 
         file_stats = {
