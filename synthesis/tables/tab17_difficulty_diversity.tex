@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Diversity Analysis by Difficulty Level. Medium-difficulty questions exhibit the highest diversity, forming an inverted-U relationship. Easy questions are the least diverse due to limited domain coverage.}
+\label{tab:difficulty_diversity}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Difficulty} & \textbf{N (cleaned)} & \textbf{N (sampled)} & \textbf{Vendi Score} $\uparrow$ & \textbf{Avg Cos. Dist.} \\
+\midrule
+Easy & 634 & 634 & 35.8 & 0.839 \\
+Medium & 51,263 & 2,000 & \textbf{143.1} & \textbf{0.953} \\
+Hard & 37,896 & 2,000 & 128.4 & 0.924 \\
+Expert & 2,280 & 2,000 & 102.1 & 0.908 \\
+\midrule
+Unknown & 41,974 & --- & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
