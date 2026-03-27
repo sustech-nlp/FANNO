@@ -101,17 +101,36 @@ def merge_all_data(
     output_dir: Path = None,
     output_format: str = "both",
     shuffle: bool = True,
+    cleaned_only: bool = False,
 ) -> Dict[str, Path]:
-    """Merge all synthesized data into unified datasets."""
+    """Merge all synthesized data into unified datasets.
+
+    Args:
+        cleaned_only: If True, only load cleaned_single_turn.jsonl and
+                      cleaned_multi_turn.jsonl (recommended for final output).
+    """
     if output_dir is None:
         output_dir = OUTPUT_DIR
 
     all_data = []
     multi_turn_data = []
 
-    for jsonl_file in sorted(output_dir.glob("*.jsonl")):
+    if cleaned_only:
+        # Only load cleaned data files
+        source_files = [
+            output_dir / "cleaned_single_turn.jsonl",
+            output_dir / "cleaned_multi_turn.jsonl",
+        ]
+    else:
+        source_files = sorted(output_dir.glob("*.jsonl"))
+
+    for jsonl_file in source_files:
+        if not jsonl_file.exists():
+            continue
         if jsonl_file.name in ["diversity_report.json", "merged_alpaca.jsonl",
-                               "merged_sharegpt.jsonl", "merged_all.jsonl"]:
+                               "merged_sharegpt.jsonl", "merged_all.jsonl",
+                               "cleaned_merged_alpaca.jsonl",
+                               "cleaned_merged_sharegpt.jsonl"]:
             continue
 
         data = load_jsonl(jsonl_file)
