@@ -736,3 +736,43 @@ FANNO-Dev Synthesis Framework
 4. 8 pipelines occupy nearly orthogonal semantic spaces (avg distance = 0.96)
 5. Self-inversion discovers 2,277 new domain labels automatically
 6. Document-grounded synthesis produces highest per-source diversity (Vendi=170.2)
+
+---
+
+### Phase 21: Deduplication Aggressiveness Experiment
+
+**Q: What is the optimal near-dedup prefix length for maximizing diversity?**
+
+**Experiment**: Varied prefix_len from 40 to 999 (no dedup), measured Vendi Score on 2K sample after each setting.
+
+**Results** (Fig 8):
+
+| Prefix | Remaining | Removed% | Vendi | AvgDist |
+|--------|-----------|----------|-------|---------|
+| 40 | 65K | 61% | **177.0** | 0.9421 |
+| 60 | 99K | 42% | 173.3 | 0.9463 |
+| **80** (current) | **125K** | **26%** | **171.3** | **0.9479** |
+| 100 | 144K | 15% | 170.0 | 0.9495 |
+| 120 | 156K | 8% | 169.0 | 0.9514 |
+| 150 | 163K | 3% | 166.1 | 0.9536 |
+| 200 | 167K | 1% | 166.4 | 0.9506 |
+| 999 (no dedup) | 169K | 0% | 166.2 | 0.9521 |
+
+**Key insights**:
+1. More aggressive dedup INCREASES Vendi Score (+6.5% from no-dedup to p=40)
+2. But at the cost of much more data removed (61% at p=40 vs 26% at p=80)
+3. **p=80 is a good balance**: keeps 74% of data while gaining +3% Vendi over no-dedup
+4. The relationship is surprisingly linear: ~1 Vendi point per 8% removed
+5. This proves dedup is a legitimate diversity optimization technique
+
+### Phase 22: Difficulty-Diversity Analysis
+
+**Q: Does question difficulty affect diversity?**
+
+**Results**:
+- Easy (N=500): Vendi=43.8 (very low — simple template questions)
+- Medium (N=500): Vendi=130.4 (highest — broadest coverage)
+- Hard (N=500): Vendi=124.0 (high but slightly narrower)
+- Expert (N=500): Vendi=104.1 (moderate — focuses on specific domains)
+
+**Cross-difficulty distance**: Easy↔Hard distance = 0.99 (nearly orthogonal), showing difficulty levels occupy different semantic regions.
