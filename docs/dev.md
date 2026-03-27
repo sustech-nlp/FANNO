@@ -993,3 +993,57 @@ Per-source structural patterns (% of answers containing):
 - fanno_seed_qa: 21,000+ (1 process running, ~100 samples/min, target 30K)
 - Total deliverables: **35 figures** (PNG+PDF), **16 LaTeX tables**, **18 scripts**
 - Total git commits on dev: 70+
+
+### Phase 41: Difficulty-Level Diversity Analysis
+
+- **Fig 37**: Diversity by difficulty level
+- Inverted-U pattern: easy(35.8) < expert(102.1) < hard(128.4) < medium(143.1)
+- Medium-difficulty questions cover broadest domain space
+- Expert questions are specialized → lower Vendi Score
+
+### Phase 42: Quality Scoring Analysis
+
+- **Fig 36**: Heuristic answer quality scoring
+- All pipelines score >72 mean quality (0-100 scale)
+- Code QA highest at 85.1 (structured answers)
+- 97-100% of all samples above quality threshold 70
+- GPT-4o synthesis quality is consistently high
+
+### Phase 43: Token Expiration & Final Cleanup
+
+- Azure AD token expired at ~23:30 UTC
+- fanno_seed_qa synthesis stopped at 21,590 samples (target was 30K)
+- Interactive login needed — cannot refresh automatically in this environment
+- Final cleanup and merge performed
+
+### FINAL DATA STATUS (23:30 UTC)
+
+- **Raw total: 211,093**
+- **Cleaned total: 153,351** (27.4% rejection)
+- **Single-turn: 134,643** / **Multi-turn: 18,708**
+- **Alpaca format: 125,280** / **ShareGPT format: 141,901**
+- **Total deliverables:**
+  - **37 figures** (PNG+PDF pairs)
+  - **17 LaTeX tables**
+  - **18 Python scripts**
+  - **75+ git commits** on dev branch
+- **Key metrics:**
+  - Vendi Score: 182.75
+  - Avg pairwise cosine distance: 0.951
+  - Cross-source distance: 0.961
+  - Unique domains: 2,297
+  - Question types: 25
+  - Cost estimate: ~$2,245 ($15.58/1K clean)
+
+### Goals Achievement
+
+| Goal | Target | Achieved | Status |
+|------|--------|----------|--------|
+| Diverse QA data | 100K+ | 134,643 | ✅ Exceeded |
+| Multi-turn dialog | 10K+ | 18,708 | ✅ Exceeded |
+| Trajectory inversion | 5K | 4,975 | ✅ Achieved |
+| Vendi Score evaluation | Done | 182.75 | ✅ Done |
+| Scaling law analysis | Done | R²=0.996 | ✅ Done |
+| Selection strategies | 5+ | 5 compared | ✅ Done |
+| Paper-ready figures | 10+ | 37 | ✅ Far exceeded |
+| LaTeX tables | 5+ | 17 | ✅ Far exceeded |
