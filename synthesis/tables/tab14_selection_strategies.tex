@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Selection Strategy Comparison: Vendi Score at Different Subset Sizes. K-Center-Greedy achieves +33\% diversity at $N$=500 but the gap narrows at scale. Random sampling is near-optimal for $N \geq 5000$.}
+\label{tab:selection_strategies}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Strategy} & \textbf{N=500} & \textbf{N=1K} & \textbf{N=2K} & \textbf{N=5K} \\
+\midrule
+Random & 140.5 & 161.6 & 172.0 & 177.3 \\
+K-Means & 141.9 & 158.0 & 166.8 & 173.7 \\
+K-Center-Greedy & \textbf{187.2} & \textbf{204.2} & \textbf{204.5} & \textbf{192.6} \\
+Herding & 149.2 & 167.5 & 176.6 & 181.8 \\
+Stratified & 142.8 & 163.9 & 173.0 & 178.1 \\
+\midrule
+\multicolumn{5}{l}{\textit{Improvement over Random:}} \\
+K-Center-Greedy & +33.3\% & +26.4\% & +18.9\% & +8.6\% \\
+Herding & +6.2\% & +3.7\% & +2.7\% & +2.5\% \\
+\bottomrule
+\end{tabular}
+\end{table}
