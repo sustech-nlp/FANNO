@@ -1,0 +1,38 @@
+\begin{table*}[t]
+\centering
+\caption{Key Findings Summary. Each finding is supported by quantitative evidence from our analysis pipeline. Numbers in parentheses reference supporting figures and tables.}
+\label{tab:key_findings}
+\small
+\begin{tabular}{clll}
+\toprule
+\textbf{\#} & \textbf{Finding} & \textbf{Evidence} & \textbf{Support} \\
+\midrule
+\multicolumn{4}{l}{\textit{Diversity Measurement}} \\
+1 & Dataset achieves Vendi Score 182.75 & 15K embedding sample, matrix entropy & Fig.~5, Tab.~2 \\
+2 & Avg pairwise cosine distance 0.951 & sentence-transformers embeddings & Tab.~2 \\
+3 & PCA requires 50+ components for 90\% variance & High intrinsic dimensionality & Fig.~22 \\
+\midrule
+\multicolumn{4}{l}{\textit{Scaling Laws}} \\
+4 & $V(N) = 55.4(1-e^{-N/745}) + 109$, $R^2$=0.996 & Exponential fit on 12 data points & Fig.~30, Tab.~4 \\
+5 & Ceiling at $\sim$165 (single-turn only) & Saturation after $N$=5K & Fig.~30 \\
+6 & Tag space utilization is 4.1\% (bottleneck) & 2,353 / 57,425 possible combinations & Fig.~12 \\
+\midrule
+\multicolumn{4}{l}{\textit{Selection Strategies}} \\
+7 & K-Center-Greedy: +33\% at $N$=500 & 5 strategies, 4 subset sizes & Fig.~27, Tab.~14 \\
+8 & Random is near-optimal for $N \geq$5K & <1\% gap vs best strategy & Tab.~14 \\
+\midrule
+\multicolumn{4}{l}{\textit{Pipeline Analysis}} \\
+9 & Self-Inversion: highest within-diversity (0.943) & Embedding analysis, 500 samples & Fig.~23, Tab.~13 \\
+10 & Self-Inversion: appears in all 20 clusters & K-Means cluster composition & Fig.~25 \\
+11 & Code QA: most semantically unique (0.677) & Centroid distance from global center & Fig.~23, Tab.~13 \\
+12 & Document QA: highest Vendi per-source (170.2) & Per-source Vendi decomposition & Fig.~5, Tab.~13 \\
+13 & Creative Writing: lowest within-diversity (0.699) & Dense cluster, limited variation & Fig.~33 \\
+\midrule
+\multicolumn{4}{l}{\textit{Efficiency \& Quality}} \\
+14 & Rejection-diversity: $r$=-0.776 & 7-pipeline Pearson correlation & Fig.~11, Fig.~31 \\
+15 & TTR predicts Vendi: $r$=0.830 & Linguistic-embedding correlation & Fig.~31 \\
+16 & Self-Inversion angle shift: mean dist 0.458 & Embedding-based angle comparison & Fig.~32 \\
+17 & Cost: \$2,245 total (\$15.58/1K clean) & API usage estimation & Tab.~9 \\
+\bottomrule
+\end{tabular}
+\end{table*}
