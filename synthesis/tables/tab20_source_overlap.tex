@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Source isolation and overlap analysis via KNN ($K=20$) in embedding space. Isolation = fraction of K nearest neighbors from same source.}
+\label{tab:source_overlap}
+\small
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Source} & \textbf{Isolation} & \textbf{Most Overlap With} & \textbf{Overlap} \\
+\midrule
+Code & 0.917 & Self-Inversion & 0.064 \\
+Complex QA & 0.575 & Self-Inversion & 0.194 \\
+Creative & 0.953 & Self-Inversion & 0.025 \\
+Document QA & 0.426 & Complex QA & 0.167 \\
+Math & 0.891 & Self-Inversion & 0.095 \\
+Reasoning & 0.685 & Self-Inversion & 0.110 \\
+Self-Inversion & 0.224 & Math & 0.209 \\
+\bottomrule
+\end{tabular}
+\end{table}

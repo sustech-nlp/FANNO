@@ -1,0 +1,41 @@
+\begin{table*}[t]
+\centering
+\caption{Vendi Score per question type within each pipeline. Measured on 500-sample subsets. Higher Vendi indicates greater semantic diversity within that type.}
+\label{tab:per_type_vendi}
+\small
+\begin{tabular}{llrrr}
+\toprule
+\textbf{Pipeline} & \textbf{Type} & \textbf{N} & \textbf{Vendi} & \textbf{Avg Dist} \\
+\midrule
+\multirow{5}{*}{Complex QA} & Case Study & 7,102 & 57.3 & 0.857 \\
+ & Analogy & 7,313 & 52.5 & 0.823 \\
+ & Prediction & 6,633 & 49.4 & 0.828 \\
+ & Step By Step & 7,309 & 48.0 & 0.837 \\
+ & Cause Effect & 7,281 & 43.6 & 0.819 \\
+\midrule
+\multirow{5}{*}{Reasoning QA} & Analogical Reasoning & 1,771 & 64.5 & 0.823 \\
+ & Inductive Reasoning & 1,561 & 51.9 & 0.801 \\
+ & Deductive Reasoning & 1,624 & 50.9 & 0.786 \\
+ & Causal Reasoning & 1,683 & 46.6 & 0.754 \\
+ & Abductive Reasoning & 1,547 & 37.1 & 0.699 \\
+\midrule
+\multirow{5}{*}{Code QA} & Cloud Architecture & 1,821 & 18.8 & 0.593 \\
+ & Algorithms And Data Str.. & 1,976 & 14.4 & 0.617 \\
+ & Object-Oriented Design & 1,815 & 8.6 & 0.445 \\
+ & Web Development & 1,704 & 7.6 & 0.430 \\
+ & Devops And Ci/Cd & 1,784 & 7.4 & 0.368 \\
+\midrule
+\multirow{5}{*}{Math QA} & Calculus & 1,234 & 16.8 & 0.653 \\
+ & Number Theory & 1,333 & 14.6 & 0.556 \\
+ & Graph Theory & 1,318 & 12.7 & 0.514 \\
+ & Algebra & 1,490 & 12.5 & 0.574 \\
+ & Combinatorics & 1,208 & 12.3 & 0.481 \\
+\midrule
+\multirow{5}{*}{Creative Writing} & Technical Writing & 872 & 33.0 & 0.631 \\
+ & Writing Style Transfer & 759 & 27.4 & 0.600 \\
+ & Creative Story Writing & 860 & 22.7 & 0.554 \\
+ & Dialogue Writing & 728 & 21.2 & 0.536 \\
+ & Essay Writing & 815 & 20.4 & 0.525 \\
+\bottomrule
+\end{tabular}
+\end{table*}

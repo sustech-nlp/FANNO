@@ -1023,10 +1023,10 @@ Per-source structural patterns (% of answers containing):
 - **Single-turn: 134,643** / **Multi-turn: 18,708**
 - **Alpaca format: 125,280** / **ShareGPT format: 141,901**
 - **Total deliverables:**
-  - **37 figures** (PNG+PDF pairs)
-  - **17 LaTeX tables**
+  - **43 figures** (PNG+PDF pairs)
+  - **20 LaTeX tables**
   - **18 Python scripts**
-  - **75+ git commits** on dev branch
+  - **85+ git commits** on dev branch
 - **Key metrics:**
   - Vendi Score: 182.75
   - Avg pairwise cosine distance: 0.951
@@ -1045,5 +1045,79 @@ Per-source structural patterns (% of answers containing):
 | Vendi Score evaluation | Done | 182.75 | ✅ Done |
 | Scaling law analysis | Done | R²=0.996 | ✅ Done |
 | Selection strategies | 5+ | 5 compared | ✅ Done |
-| Paper-ready figures | 10+ | 37 | ✅ Far exceeded |
-| LaTeX tables | 5+ | 17 | ✅ Far exceeded |
+| Paper-ready figures | 10+ | 43 | ✅ Far exceeded |
+| LaTeX tables | 5+ | 20 | ✅ Far exceeded |
+
+---
+
+### Phase 44: Source Mixing Ratio Analysis (Session 2, 2026-03-28)
+
+**Q: What are the optimal mixing ratios for training?**
+
+**Analysis:**
+Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×centroid_uniqueness + 0.2×density.
+
+**Key finding**: Self-Inversion has 32.4 Vendi/1K samples (12× more than Complex QA at 2.6) — dramatically more diverse per sample.
+
+**Recommendations:**
+- ↑↑ Self-Inversion: 3.2% → 17.4% (strongly upweight)
+- ↑ Creative Writing: 6.1% → 12.5%
+- ↑ Math QA: 7.5% → 13.0%
+- ↓↓ Complex QA: 35.4% → 13.7% (many samples, low marginal diversity)
+
+**Files created:** `mixing_ratio_analysis.json`, `fig39_mixing_ratios.{png,pdf}`
+
+---
+
+### Phase 45: Topic Modeling (NMF on TF-IDF)
+
+**Q: What latent topics exist across all 8 pipelines?**
+
+**Analysis:**
+- NMF decomposition with 20 topics on 12K sampled documents (1.5K per source)
+- 8,000 TF-IDF features, ngram_range=(1,2)
+
+**Key findings:**
+- Code QA dominates programming topics (T1:function, T6:singleton, T7:sql, T14:requests)
+- Math QA dominates quantitative topics (T3:angle, T5:apples, T8:equation, T16:matrix)
+- Creative Writing concentrated in T4 (city/world/story)
+- Self-Inversion appears across ALL topic clusters — no dominant single topic
+- Multi-Turn dominates T18 (wi-fi/network — practical troubleshooting scenario)
+
+**Files created:** `topic_modeling_analysis.json`, `fig40_topic_modeling.{png,pdf}`
+
+---
+
+### Phase 46: Per-Type Vendi Analysis
+
+**Q: How does diversity vary across question types within each pipeline?**
+
+**Analysis:**
+- Computed Vendi Score for 60+ question types (500-sample subsets each)
+- Complex QA types: mean Vendi=40.9, range [26.1, 57.3]
+- Reasoning QA: mean=33.2, range [10.0, 64.5] — analogical reasoning highest
+- Code QA: mean=7.4, range [3.8, 18.8] — lower because code is structurally similar
+- Math QA: mean=9.5, range [2.6, 16.8] — probability lowest (2.6), number_theory highest (14.6)
+- Creative Writing: mean=19.3, range [10.8, 33.0]
+
+**Files created:** `per_type_vendi.json`, `fig41_per_type_vendi.{png,pdf}`, `tab19_per_type_vendi.tex`
+
+---
+
+### Phase 47: Source Overlap via KNN Analysis
+
+**Q: How much do pipelines overlap in semantic space?**
+
+**Analysis:**
+- KNN (K=20) overlap matrix on 3,500 embeddings (500 per source)
+- Isolation = fraction of KNN from same source
+
+**Key findings:**
+- **Creative Writing** (0.953) and **Code QA** (0.917) most isolated — near-zero overlap with others
+- **Self-Inversion** lowest isolation (0.224) — neighbors from all sources: Math(21%), Complex(16%), Code(14%)
+- **Document QA** moderate isolation (0.426) — overlaps with Complex(17%) and Creative(15%)
+- Most overlapping pair: Complex QA ↔ Self-Inversion (0.177 bidirectional overlap)
+
+**Interpretation:** Self-Inversion literally bridges all other pipelines' semantic spaces, confirming the "universal diversity amplifier" characterization from cluster analysis (appears in all 20 K-Means clusters).
+
+**Files created:** `source_overlap_analysis.json`, `fig42_source_overlap.{png,pdf}`, `tab20_source_overlap.tex`
