@@ -1,0 +1,86 @@
+{
+  "timestamp": "2026-03-28T07:35:00",
+  "sample_size": 5000,
+  "per_source": {
+    "Code QA": {
+      "total_tokens": 2177893,
+      "unique_unigrams": 13330,
+      "unique_bigrams": 317756,
+      "unique_trigrams": 836495,
+      "ttr": 0.0061,
+      "hapax_ratio": 0.1353,
+      "yules_k": 48.0,
+      "hapax_count": 1804
+    },
+    "Complex QA": {
+      "total_tokens": 2073472,
+      "unique_unigrams": 26449,
+      "unique_bigrams": 603194,
+      "unique_trigrams": 1369631,
+      "ttr": 0.0128,
+      "hapax_ratio": 0.2493,
+      "yules_k": 65.92,
+      "hapax_count": 6595
+    },
+    "Creative Writing": {
+      "total_tokens": 2204688,
+      "unique_unigrams": 37451,
+      "unique_bigrams": 767136,
+      "unique_trigrams": 1648997,
+      "ttr": 0.017,
+      "hapax_ratio": 0.2692,
+      "yules_k": 87.07,
+      "hapax_count": 10083
+    },
+    "Document QA": {
+      "total_tokens": 2202419,
+      "unique_unigrams": 37668,
+      "unique_bigrams": 753675,
+      "unique_trigrams": 1619074,
+      "ttr": 0.0171,
+      "hapax_ratio": 0.2847,
+      "yules_k": 65.18,
+      "hapax_count": 10723
+    },
+    "Math QA": {
+      "total_tokens": 917695,
+      "unique_unigrams": 4516,
+      "unique_bigrams": 79660,
+      "unique_trigrams": 236641,
+      "ttr": 0.0049,
+      "hapax_ratio": 0.1858,
+      "yules_k": 126.65,
+      "hapax_count": 839
+    },
+    "Multi-Turn": {
+      "total_tokens": 1577497,
+      "unique_unigrams": 17793,
+      "unique_bigrams": 402491,
+      "unique_trigrams": 942345,
+      "ttr": 0.0113,
+      "hapax_ratio": 0.2348,
+      "yules_k": 57.7,
+      "hapax_count": 4177
+    },
+    "Reasoning QA": {
+      "total_tokens": 1305082,
+      "unique_unigrams": 13182,
+      "unique_bigrams": 287018,
+      "unique_trigrams": 693150,
+      "ttr": 0.0101,
+      "hapax_ratio": 0.1981,
+      "yules_k": 91.09,
+      "hapax_count": 2612
+    },
+    "Self-Inversion": {
+      "total_tokens": 1213655,
+      "unique_unigrams": 27784,
+      "unique_bigrams": 436773,
+      "unique_trigrams": 848798,
+      "ttr": 0.0229,
+      "hapax_ratio": 0.2456,
+      "yules_k": 66.65,
+      "hapax_count": 6823
+    }
+  }
+}
