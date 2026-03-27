@@ -1,0 +1,45 @@
+{
+  "total": 132752,
+  "sources": [
+    {
+      "source": "Complex QA",
+      "count": 49551,
+      "percentage": 37.3
+    },
+    {
+      "source": "Reasoning QA",
+      "count": 17789,
+      "percentage": 13.4
+    },
+    {
+      "source": "Code QA",
+      "count": 15411,
+      "percentage": 11.6
+    },
+    {
+      "source": "Multi-Turn Dialog",
+      "count": 14130,
+      "percentage": 10.6
+    },
+    {
+      "source": "Math QA",
+      "count": 11450,
+      "percentage": 8.6
+    },
+    {
+      "source": "Document-Grounded QA",
+      "count": 10082,
+      "percentage": 7.6
+    },
+    {
+      "source": "Creative Writing",
+      "count": 9363,
+      "percentage": 7.1
+    },
+    {
+      "source": "Self-Inversion",
+      "count": 4976,
+      "percentage": 3.7
+    }
+  ]
+}

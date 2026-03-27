@@ -1,0 +1,61 @@
+{
+  "per_source": [
+    {
+      "source": "Document QA",
+      "raw_name": "fanno_seed_qa",
+      "count": 7826,
+      "vendi_score": 170.17358089215838,
+      "avg_pairwise_distance": 0.9096060991287231,
+      "diversity_efficiency": 85.08679044607919
+    },
+    {
+      "source": "Self-Inversion",
+      "raw_name": "self_inversion",
+      "count": 4978,
+      "vendi_score": 161.2104647062626,
+      "avg_pairwise_distance": 0.937555193901062,
+      "diversity_efficiency": 80.6052323531313
+    },
+    {
+      "source": "Complex QA",
+      "raw_name": "fanno_complex_qa",
+      "count": 38804,
+      "vendi_score": 141.17567870223309,
+      "avg_pairwise_distance": 0.9161542654037476,
+      "diversity_efficiency": 70.58783935111654
+    },
+    {
+      "source": "Reasoning QA",
+      "raw_name": "fanno_reasoning_qa",
+      "count": 17789,
+      "vendi_score": 127.25363804770731,
+      "avg_pairwise_distance": 0.8942865133285522,
+      "diversity_efficiency": 63.626819023853656
+    },
+    {
+      "source": "Creative Writing",
+      "raw_name": "fanno_creative_writing",
+      "count": 9363,
+      "vendi_score": 112.6798901086078,
+      "avg_pairwise_distance": 0.6899830102920532,
+      "diversity_efficiency": 56.3399450543039
+    },
+    {
+      "source": "Math QA",
+      "raw_name": "fanno_math_qa",
+      "count": 11450,
+      "vendi_score": 79.14374769627375,
+      "avg_pairwise_distance": 0.8261842131614685,
+      "diversity_efficiency": 39.571873848136875
+    },
+    {
+      "source": "Code QA",
+      "raw_name": "fanno_code_qa",
+      "count": 15411,
+      "vendi_score": 66.06112587200568,
+      "avg_pairwise_distance": 0.8689677119255066,
+      "diversity_efficiency": 33.03056293600284
+    }
+  ],
+  "overall_vendi": 182.75201109210434
+}

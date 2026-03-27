@@ -1,0 +1,36 @@
+{
+  "total_vendi": 182.75201109210434,
+  "total_avg_dist": 0.951373815536499,
+  "points": [
+    {
+      "n_samples": 1500,
+      "fraction": 0.1,
+      "vendi_score": 169.42992284425506,
+      "avg_pairwise_distance": 0.951284646987915
+    },
+    {
+      "n_samples": 3750,
+      "fraction": 0.25,
+      "vendi_score": 178.4596910058266,
+      "avg_pairwise_distance": 0.9501805901527405
+    },
+    {
+      "n_samples": 7500,
+      "fraction": 0.5,
+      "vendi_score": 181.26321997584992,
+      "avg_pairwise_distance": 0.9511451721191406
+    },
+    {
+      "n_samples": 11250,
+      "fraction": 0.75,
+      "vendi_score": 182.47550740787293,
+      "avg_pairwise_distance": 0.9516904354095459
+    },
+    {
+      "n_samples": 15000,
+      "fraction": 1.0,
+      "vendi_score": 182.75201106756325,
+      "avg_pairwise_distance": 0.9519393444061279
+    }
+  ]
+}
