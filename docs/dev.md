@@ -459,3 +459,29 @@ Synthesis processes still running. Updated totals:
 **Final Cleaned Dataset:**
 - `cleaned_merged_alpaca.jsonl`: 96,258 samples (Alpaca format)
 - `cleaned_merged_sharegpt.jsonl`: 104,743 samples (ShareGPT format)
+
+---
+
+### Phase 12: Cross-Source Diversity Analysis (2026-03-27 21:30 UTC)
+
+**Q: How different are the data sources from each other?**
+
+Computed pairwise cosine distances between 1K samples from each source (7 sources × 1K = 7K embeddings).
+
+#### Cross-Source Distance Matrix (higher = more different):
+
+| | Code | Complex | Creative | Seed | Math | Reasoning | Self-Inv |
+|---|------|---------|----------|------|------|-----------|----------|
+| **Code** | 0.86 | 0.99 | 0.99 | **1.00** | **1.00** | **1.00** | 0.96 |
+| **Complex** | 0.99 | 0.92 | 0.93 | 0.94 | 0.98 | 0.96 | 0.94 |
+| **Creative** | 0.99 | 0.93 | **0.69** | 0.90 | 0.97 | 0.94 | 0.93 |
+| **Seed** | 1.00 | 0.94 | 0.90 | 0.91 | 0.99 | 0.96 | 0.95 |
+| **Math** | 1.00 | 0.98 | 0.97 | 0.99 | 0.83 | 0.92 | 0.97 |
+| **Reasoning** | 1.00 | 0.96 | 0.94 | 0.96 | 0.92 | 0.89 | 0.96 |
+| **Self-Inv** | 0.96 | 0.94 | 0.93 | 0.95 | 0.97 | 0.96 | 0.94 |
+
+**Key Findings:**
+1. **Code QA is nearly orthogonal to all other sources** (distances ≥ 0.96, with Code↔Reasoning = 1.00). Programming language semantics occupy a fundamentally different embedding space.
+2. **Creative Writing has the lowest intra-source diversity** (0.69 diagonal) — creative tasks share narrative structures.
+3. **Self-Inversion maintains high cross-source distance** (0.93-0.97) — it genuinely explores different question spaces.
+4. **The portfolio effect**: Combining 7 diverse sources creates a dataset where the average cross-source distance is 0.96, meaning the data types complement each other maximally.
