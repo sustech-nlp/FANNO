@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-03-28T07:00:00",
+  "method": "KNN overlap (K=20) on 384-dim MiniLM embeddings",
+  "n_samples": 3500,
+  "sources": [
+    "Code",
+    "Complex QA",
+    "Creative",
+    "Document QA",
+    "Math",
+    "Reasoning",
+    "Self-Inversion"
+  ],
+  "overlap_matrix": [
+    [
+      0.9166,
+      0.0005,
+      0.0005,
+      0.0116,
+      0.002,
+      0.0047,
+      0.0641
+    ],
+    [
+      0.0053,
+      0.5752,
+      0.0607,
+      0.0834,
+      0.0137,
+      0.0673,
+      0.1944
+    ],
+    [
+      0.0006,
+      0.0089,
+      0.9533,
+      0.0097,
+      0.0,
+      0.0024,
+      0.0251
+    ],
+    [
+      0.0283,
+      0.1666,
+      0.1482,
+      0.4263,
+      0.0235,
+      0.0628,
+      0.1443
+    ],
+    [
+      0.0,
+      0.0013,
+      0.0,
+      0.0016,
+      0.8913,
+      0.0104,
+      0.0954
+    ],
+    [
+      0.0052,
+      0.0625,
+      0.0378,
+      0.029,
+      0.0702,
+      0.6851,
+      0.1102
+    ],
+    [
+      0.1393,
+      0.1591,
+      0.1021,
+      0.0629,
+      0.2092,
+      0.1032,
+      0.2242
+    ]
+  ],
+  "top_overlapping_pairs": [
+    {
+      "source1": "Complex QA",
+      "source2": "Self-Inversion",
+      "overlap": 0.1768
+    },
+    {
+      "source1": "Math",
+      "source2": "Self-Inversion",
+      "overlap": 0.1523
+    },
+    {
+      "source1": "Complex QA",
+      "source2": "Document QA",
+      "overlap": 0.125
+    },
+    {
+      "source1": "Reasoning",
+      "source2": "Self-Inversion",
+      "overlap": 0.1067
+    },
+    {
+      "source1": "Document QA",
+      "source2": "Self-Inversion",
+      "overlap": 0.1036
+    },
+    {
+      "source1": "Code",
+      "source2": "Self-Inversion",
+      "overlap": 0.1017
+    },
+    {
+      "source1": "Creative",
+      "source2": "Document QA",
+      "overlap": 0.0789
+    },
+    {
+      "source1": "Complex QA",
+      "source2": "Reasoning",
+      "overlap": 0.0649
+    },
+    {
+      "source1": "Creative",
+      "source2": "Self-Inversion",
+      "overlap": 0.0636
+    },
+    {
+      "source1": "Document QA",
+      "source2": "Reasoning",
+      "overlap": 0.0459
+    }
+  ],
+  "isolation_scores": {
+    "Code": 0.9166,
+    "Complex QA": 0.5752,
+    "Creative": 0.9533,
+    "Document QA": 0.4263,
+    "Math": 0.8913,
+    "Reasoning": 0.6851,
+    "Self-Inversion": 0.2242
+  }
+}

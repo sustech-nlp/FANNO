@@ -1,0 +1,407 @@
+{
+  "timestamp": "2026-03-28T06:50:00",
+  "results": {
+    "analogy": {
+      "count": 7313,
+      "sampled": 500,
+      "vendi_score": 52.55,
+      "avg_pairwise_distance": 0.8227
+    },
+    "case_study": {
+      "count": 7102,
+      "sampled": 500,
+      "vendi_score": 57.33,
+      "avg_pairwise_distance": 0.8565
+    },
+    "cause_effect": {
+      "count": 7281,
+      "sampled": 500,
+      "vendi_score": 43.65,
+      "avg_pairwise_distance": 0.8192
+    },
+    "code:API development": {
+      "count": 1908,
+      "sampled": 500,
+      "vendi_score": 5.49,
+      "avg_pairwise_distance": 0.3251
+    },
+    "code:DevOps and CI/CD": {
+      "count": 1784,
+      "sampled": 500,
+      "vendi_score": 7.43,
+      "avg_pairwise_distance": 0.368
+    },
+    "code:algorithms and data structures": {
+      "count": 1976,
+      "sampled": 500,
+      "vendi_score": 14.4,
+      "avg_pairwise_distance": 0.6173
+    },
+    "code:cloud architecture": {
+      "count": 1821,
+      "sampled": 500,
+      "vendi_score": 18.78,
+      "avg_pairwise_distance": 0.5925
+    },
+    "code:concurrent programming": {
+      "count": 1822,
+      "sampled": 500,
+      "vendi_score": 4.81,
+      "avg_pairwise_distance": 0.3033
+    },
+    "code:data processing pipelines": {
+      "count": 1820,
+      "sampled": 500,
+      "vendi_score": 5.6,
+      "avg_pairwise_distance": 0.3395
+    },
+    "code:database design": {
+      "count": 1943,
+      "sampled": 500,
+      "vendi_score": 6.84,
+      "avg_pairwise_distance": 0.3523
+    },
+    "code:design patterns": {
+      "count": 1808,
+      "sampled": 500,
+      "vendi_score": 3.76,
+      "avg_pairwise_distance": 0.2723
+    },
+    "code:functional programming": {
+      "count": 1825,
+      "sampled": 500,
+      "vendi_score": 7.22,
+      "avg_pairwise_distance": 0.3898
+    },
+    "code:machine learning implementation": {
+      "count": 1822,
+      "sampled": 500,
+      "vendi_score": 5.86,
+      "avg_pairwise_distance": 0.3851
+    },
+    "code:object-oriented design": {
+      "count": 1815,
+      "sampled": 500,
+      "vendi_score": 8.63,
+      "avg_pairwise_distance": 0.4447
+    },
+    "code:performance optimization": {
+      "count": 1976,
+      "sampled": 500,
+      "vendi_score": 5.3,
+      "avg_pairwise_distance": 0.3095
+    },
+    "code:security best practices": {
+      "count": 1939,
+      "sampled": 500,
+      "vendi_score": 4.5,
+      "avg_pairwise_distance": 0.305
+    },
+    "code:system design": {
+      "count": 1967,
+      "sampled": 500,
+      "vendi_score": 6.66,
+      "avg_pairwise_distance": 0.4132
+    },
+    "code:testing and debugging": {
+      "count": 1970,
+      "sampled": 500,
+      "vendi_score": 5.45,
+      "avg_pairwise_distance": 0.3442
+    },
+    "code:web development": {
+      "count": 1704,
+      "sampled": 500,
+      "vendi_score": 7.56,
+      "avg_pairwise_distance": 0.4301
+    },
+    "comparison": {
+      "count": 7128,
+      "sampled": 500,
+      "vendi_score": 30.03,
+      "avg_pairwise_distance": 0.7623
+    },
+    "counterfactual": {
+      "count": 7209,
+      "sampled": 500,
+      "vendi_score": 35.38,
+      "avg_pairwise_distance": 0.7612
+    },
+    "creative:character development": {
+      "count": 794,
+      "sampled": 500,
+      "vendi_score": 16.1,
+      "avg_pairwise_distance": 0.4825
+    },
+    "creative:creative brainstorming": {
+      "count": 915,
+      "sampled": 500,
+      "vendi_score": 14.08,
+      "avg_pairwise_distance": 0.438
+    },
+    "creative:creative story writing": {
+      "count": 860,
+      "sampled": 500,
+      "vendi_score": 22.68,
+      "avg_pairwise_distance": 0.5542
+    },
+    "creative:dialogue writing": {
+      "count": 728,
+      "sampled": 500,
+      "vendi_score": 21.21,
+      "avg_pairwise_distance": 0.5361
+    },
+    "creative:editing and revision": {
+      "count": 857,
+      "sampled": 500,
+      "vendi_score": 17.55,
+      "avg_pairwise_distance": 0.4953
+    },
+    "creative:essay writing": {
+      "count": 815,
+      "sampled": 500,
+      "vendi_score": 20.45,
+      "avg_pairwise_distance": 0.5254
+    },
+    "creative:persuasive writing": {
+      "count": 851,
+      "sampled": 500,
+      "vendi_score": 11.28,
+      "avg_pairwise_distance": 0.4327
+    },
+    "creative:plot analysis": {
+      "count": 745,
+      "sampled": 500,
+      "vendi_score": 16.44,
+      "avg_pairwise_distance": 0.4849
+    },
+    "creative:poetry composition": {
+      "count": 890,
+      "sampled": 500,
+      "vendi_score": 10.76,
+      "avg_pairwise_distance": 0.4103
+    },
+    "creative:technical writing": {
+      "count": 872,
+      "sampled": 500,
+      "vendi_score": 32.95,
+      "avg_pairwise_distance": 0.6307
+    },
+    "creative:world-building": {
+      "count": 818,
+      "sampled": 500,
+      "vendi_score": 20.17,
+      "avg_pairwise_distance": 0.5604
+    },
+    "creative:writing style transfer": {
+      "count": 759,
+      "sampled": 500,
+      "vendi_score": 27.36,
+      "avg_pairwise_distance": 0.5996
+    },
+    "debate_style": {
+      "count": 7118,
+      "sampled": 500,
+      "vendi_score": 39.01,
+      "avg_pairwise_distance": 0.8092
+    },
+    "definition_with_examples": {
+      "count": 6829,
+      "sampled": 500,
+      "vendi_score": 26.13,
+      "avg_pairwise_distance": 0.7904
+    },
+    "evaluation": {
+      "count": 6879,
+      "sampled": 500,
+      "vendi_score": 30.17,
+      "avg_pairwise_distance": 0.7908
+    },
+    "math:abstract_algebra": {
+      "count": 1177,
+      "sampled": 500,
+      "vendi_score": 10.38,
+      "avg_pairwise_distance": 0.4959
+    },
+    "math:algebra": {
+      "count": 1490,
+      "sampled": 500,
+      "vendi_score": 12.53,
+      "avg_pairwise_distance": 0.5738
+    },
+    "math:arithmetic": {
+      "count": 1493,
+      "sampled": 500,
+      "vendi_score": 4.62,
+      "avg_pairwise_distance": 0.3099
+    },
+    "math:calculus": {
+      "count": 1234,
+      "sampled": 500,
+      "vendi_score": 16.78,
+      "avg_pairwise_distance": 0.6529
+    },
+    "math:combinatorics": {
+      "count": 1208,
+      "sampled": 500,
+      "vendi_score": 12.28,
+      "avg_pairwise_distance": 0.4811
+    },
+    "math:differential_equations": {
+      "count": 1383,
+      "sampled": 500,
+      "vendi_score": 11.57,
+      "avg_pairwise_distance": 0.5074
+    },
+    "math:geometry": {
+      "count": 1481,
+      "sampled": 500,
+      "vendi_score": 5.69,
+      "avg_pairwise_distance": 0.3357
+    },
+    "math:graph_theory": {
+      "count": 1318,
+      "sampled": 500,
+      "vendi_score": 12.73,
+      "avg_pairwise_distance": 0.514
+    },
+    "math:linear_algebra": {
+      "count": 1127,
+      "sampled": 500,
+      "vendi_score": 9.12,
+      "avg_pairwise_distance": 0.4556
+    },
+    "math:number_theory": {
+      "count": 1333,
+      "sampled": 500,
+      "vendi_score": 14.58,
+      "avg_pairwise_distance": 0.5564
+    },
+    "math:optimization": {
+      "count": 1377,
+      "sampled": 500,
+      "vendi_score": 4.85,
+      "avg_pairwise_distance": 0.3088
+    },
+    "math:probability": {
+      "count": 1382,
+      "sampled": 500,
+      "vendi_score": 2.58,
+      "avg_pairwise_distance": 0.1854
+    },
+    "math:real_analysis": {
+      "count": 1152,
+      "sampled": 500,
+      "vendi_score": 7.77,
+      "avg_pairwise_distance": 0.4631
+    },
+    "math:statistics": {
+      "count": 1382,
+      "sampled": 500,
+      "vendi_score": 5.52,
+      "avg_pairwise_distance": 0.358
+    },
+    "math:trigonometry": {
+      "count": 1359,
+      "sampled": 500,
+      "vendi_score": 11.4,
+      "avg_pairwise_distance": 0.5596
+    },
+    "multi_hop_reasoning": {
+      "count": 7295,
+      "sampled": 500,
+      "vendi_score": 36.21,
+      "avg_pairwise_distance": 0.8099
+    },
+    "prediction": {
+      "count": 6633,
+      "sampled": 500,
+      "vendi_score": 49.42,
+      "avg_pairwise_distance": 0.8276
+    },
+    "reasoning:abductive reasoning": {
+      "count": 1547,
+      "sampled": 500,
+      "vendi_score": 37.13,
+      "avg_pairwise_distance": 0.6987
+    },
+    "reasoning:analogical reasoning": {
+      "count": 1771,
+      "sampled": 500,
+      "vendi_score": 64.46,
+      "avg_pairwise_distance": 0.823
+    },
+    "reasoning:causal reasoning": {
+      "count": 1683,
+      "sampled": 500,
+      "vendi_score": 46.57,
+      "avg_pairwise_distance": 0.7544
+    },
+    "reasoning:deductive reasoning": {
+      "count": 1624,
+      "sampled": 500,
+      "vendi_score": 50.87,
+      "avg_pairwise_distance": 0.7861
+    },
+    "reasoning:ethical reasoning": {
+      "count": 1472,
+      "sampled": 500,
+      "vendi_score": 24.17,
+      "avg_pairwise_distance": 0.6722
+    },
+    "reasoning:inductive reasoning": {
+      "count": 1561,
+      "sampled": 500,
+      "vendi_score": 51.87,
+      "avg_pairwise_distance": 0.8012
+    },
+    "reasoning:logical puzzles": {
+      "count": 1671,
+      "sampled": 500,
+      "vendi_score": 22.28,
+      "avg_pairwise_distance": 0.6496
+    },
+    "reasoning:paradox analysis": {
+      "count": 1538,
+      "sampled": 500,
+      "vendi_score": 9.98,
+      "avg_pairwise_distance": 0.5391
+    },
+    "reasoning:probabilistic reasoning": {
+      "count": 1829,
+      "sampled": 500,
+      "vendi_score": 16.63,
+      "avg_pairwise_distance": 0.5913
+    },
+    "reasoning:spatial reasoning": {
+      "count": 1739,
+      "sampled": 500,
+      "vendi_score": 24.82,
+      "avg_pairwise_distance": 0.6311
+    },
+    "reasoning:systems thinking": {
+      "count": 1449,
+      "sampled": 500,
+      "vendi_score": 22.66,
+      "avg_pairwise_distance": 0.6053
+    },
+    "reasoning:temporal reasoning": {
+      "count": 1616,
+      "sampled": 500,
+      "vendi_score": 26.37,
+      "avg_pairwise_distance": 0.6222
+    },
+    "step_by_step": {
+      "count": 7309,
+      "sampled": 500,
+      "vendi_score": 47.96,
+      "avg_pairwise_distance": 0.8372
+    },
+    "synthesis": {
+      "count": 6795,
+      "sampled": 500,
+      "vendi_score": 43.12,
+      "avg_pairwise_distance": 0.8504
+    }
+  }
+}
