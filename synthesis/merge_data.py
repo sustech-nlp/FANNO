@@ -63,21 +63,28 @@ def normalize_to_sharegpt(item: Dict) -> Dict:
     # Multi-turn conversation
     if "conversation" in item:
         conversations = item["conversation"]
-        return {
-            "conversations": [
-                {"from": "human" if t.get("role") == "user" else "gpt",
-                 "value": t.get("content", "")}
-                for t in conversations
-            ],
-            "source": item.get("source", "unknown"),
-            "topic": item.get("topic_summary", ""),
-        }
+        if not isinstance(conversations, list):
+            return None
+        normalized_conv = []
+        for t in conversations:
+            if isinstance(t, dict):
+                role = "human" if t.get("role") == "user" else "gpt"
+                content = t.get("content", "")
+                if isinstance(content, str) and content.strip():
+                    normalized_conv.append({"from": role, "value": content})
+        if len(normalized_conv) >= 2:
+            return {
+                "conversations": normalized_conv,
+                "source": item.get("source", "unknown"),
+                "topic": item.get("topic_summary", ""),
+            }
+        return None
 
     # Single-turn QA -> convert to conversation
     q = item.get("question", item.get("instruction", ""))
     a = item.get("answer", item.get("output", item.get("response", "")))
 
-    if q and a:
+    if q and a and isinstance(q, str) and isinstance(a, str):
         return {
             "conversations": [
                 {"from": "human", "value": q},
