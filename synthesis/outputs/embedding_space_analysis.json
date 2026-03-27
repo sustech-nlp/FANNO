@@ -1,0 +1,44 @@
+{
+  "Complex QA": {
+    "n": 500,
+    "within_cosine_dist": 0.9122073650360107,
+    "centroid_to_global_dist": 0.2839505672454834,
+    "spread_l2": 0.95486980676651
+  },
+  "Reasoning": {
+    "n": 500,
+    "within_cosine_dist": 0.9010170102119446,
+    "centroid_to_global_dist": 0.32538849115371704,
+    "spread_l2": 0.9463229179382324
+  },
+  "Code": {
+    "n": 500,
+    "within_cosine_dist": 0.8711357712745667,
+    "centroid_to_global_dist": 0.67674720287323,
+    "spread_l2": 0.9300953149795532
+  },
+  "Math": {
+    "n": 500,
+    "within_cosine_dist": 0.820662260055542,
+    "centroid_to_global_dist": 0.49417978525161743,
+    "spread_l2": 0.9073530435562134
+  },
+  "Document QA": {
+    "n": 500,
+    "within_cosine_dist": 0.9071475863456726,
+    "centroid_to_global_dist": 0.25240403413772583,
+    "spread_l2": 0.9492381811141968
+  },
+  "Creative": {
+    "n": 500,
+    "within_cosine_dist": 0.6986072063446045,
+    "centroid_to_global_dist": 0.2741793394088745,
+    "spread_l2": 0.8326506614685059
+  },
+  "Self-Inversion": {
+    "n": 500,
+    "within_cosine_dist": 0.94321209192276,
+    "centroid_to_global_dist": 0.1105794906616211,
+    "spread_l2": 0.9689205288887024
+  }
+}
