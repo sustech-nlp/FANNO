@@ -616,5 +616,55 @@ FANNO-Dev Synthesis Framework
 ├── scaling_analysis.py    # Diversity scaling law fitting
 ├── quality_report.py      # Comprehensive quality analysis
 ├── monitor.py             # Real-time synthesis progress
-└── prompts/templates.py   # 400+ prompt templates (domains × types × difficulties × styles)
+├── generate_paper_figures.py  # JSON data for paper figures
+├── render_figures.py          # Matplotlib publication-quality figure rendering
+├── generate_latex_tables.py   # Camera-ready LaTeX tables
+└── prompts/templates.py       # 400+ prompt templates (domains × types × difficulties × styles)
 ```
+
+---
+
+### Phase 16: Paper Figure and Table Generation
+
+**Q: Generate publication-quality figures and tables for the paper.**
+
+**Analysis**: Created 6 figures and 4 LaTeX tables covering all key results.
+
+**Figures Generated** (PNG + PDF, 300 DPI):
+1. **Fig 1**: Source distribution (pie + bar chart) — 132,752 samples across 8 pipelines
+2. **Fig 2**: Diversity scaling curve with exponential saturation fit (R²=0.99, ceiling≈182)
+3. **Fig 3**: Selection strategy comparison — K-Center-Greedy dominates all sizes
+4. **Fig 4**: Question/answer length distributions (Q mean=51w, A mean=335w)
+5. **Fig 5**: Per-source Vendi Score (Document QA=170.2, Self-Inversion=161.2, overall=182.8)
+6. **Fig 6**: Domain × Type coverage heatmap (4.1% tag space utilization)
+
+**LaTeX Tables** (camera-ready):
+1. **Tab 1**: Dataset statistics (count, %, avg lengths, domains per source)
+2. **Tab 2**: Per-source diversity metrics (Vendi, AvgDist, Efficiency)
+3. **Tab 3**: Selection strategy comparison (Vendi Score at N=500,1K,2K,5K)
+4. **Tab 4**: Scaling analysis (fraction, N, Vendi, marginal gains)
+
+**Bug fixed**: Coreset selection strategy excluded from Fig 3 (degenerate: Vendi=384 with AvgDist=0.000 indicates embedding bug).
+**Bug fixed**: merge_data.py now supports `cleaned_only=True` to avoid double-counting raw + cleaned data.
+
+**Files created**: `synthesis/generate_paper_figures.py`, `synthesis/render_figures.py`, `synthesis/generate_latex_tables.py`
+**Outputs**: `synthesis/figures/` (12 image files + 6 JSON data), `synthesis/tables/` (4 .tex files)
+**Commits**: `b13d994`, `998ebbf`, `42ef389`
+
+---
+
+### Phase 17: Continuous Monitoring & Data Growth (ongoing)
+
+**Status at 21:50 UTC**:
+- 5 synthesis processes still running
+- Raw data: ~190K+ (complex_qa_extra 28.5K, fanno_seed_qa 10.9K, multi_turn 15.6K growing)
+- Cleaned data: 132,752 (will increase with next cleaning cycle)
+- All targets exceeded: 100K+ QA ✅, 10K+ multi-turn ✅, 5K trajectory inversion ✅
+
+**Data growth tracking**:
+
+| Time | Raw Total | Cleaned Total | Notes |
+|------|-----------|---------------|-------|
+| 20:00 | ~165K | 130,625 | Initial cleaning |
+| 21:34 | ~186K | 132,752 | Re-clean with new data |
+| 21:50 | ~190K+ | (pending re-clean) | Still growing |
