@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Near-dedup aggressiveness trade-off. More aggressive deduplication (shorter prefix) increases per-sample diversity but removes more data.}
+\label{tab:dedup}
+\small
+\begin{tabular}{rrrrrr}
+\toprule
+\textbf{Prefix} & \textbf{Remaining} & \textbf{Removed\%} & \textbf{Vendi} & \textbf{AvgDist} & \textbf{Efficiency} \\
+\midrule
+40 & 65K & 61.3\% & \textbf{177.0} & 0.9421 & 2.72 \\
+60 & 99K & 41.6\% & 173.3 & 0.9463 & 1.75 \\
+\textbf{80} & \textbf{125K} & \textbf{26.2\%} & \textbf{171.3} & \textbf{0.9479} & \textbf{1.37} \\
+100 & 144K & 14.8\% & 170.0 & 0.9495 & 1.18 \\
+120 & 156K & 7.8\% & 169.0 & 0.9514 & 1.09 \\
+150 & 163K & 3.2\% & 166.1 & 0.9536 & 1.02 \\
+None & 169K & 0.0\% & 166.2 & 0.9521 & 0.98 \\
+\bottomrule
+\end{tabular}
+\end{table}

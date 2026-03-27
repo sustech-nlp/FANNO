@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Source complementarity analysis. Marginal contribution measures Vendi Score change when each source is removed (leave-one-out).}
+\label{tab:complementarity}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Source} & \textbf{N} & \textbf{Marginal} & \textbf{\%} & \textbf{Coverage by Self-Inv} \\
+\midrule
+Document QA & 10K & \textbf{+10.1} & +5.8\% & 0.6\% \\
+Complex QA & 50K & +8.8 & +5.1\% & 5.2\% \\
+Reasoning QA & 18K & +7.1 & +4.1\% & 6.2\% \\
+Self-Inversion & 5K & +2.5 & +1.4\% & --- \\
+Math QA & 11K & +2.2 & +1.3\% & 32.0\% \\
+Code QA & 15K & +0.8 & +0.5\% & 21.4\% \\
+Creative Writing & 9K & $-$2.2 & $-$1.3\% & 3.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
