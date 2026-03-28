@@ -1,0 +1,54 @@
+{
+  "figure": "fig174_interpolation_analysis",
+  "total_pairs": 21,
+  "mean_smoothness": 0.114,
+  "std_smoothness": 0.0251,
+  "smoothest_pair": {
+    "pair": [
+      "Creative",
+      "Document QA"
+    ],
+    "score": 0.0684
+  },
+  "sharpest_pair": {
+    "pair": [
+      "Code",
+      "Document QA"
+    ],
+    "score": 0.1526
+  },
+  "easiest_pipeline": "Creative",
+  "hardest_pipeline": "Code",
+  "avg_difficulty_per_pipeline": {
+    "Code": 0.1298,
+    "Complex QA": 0.1061,
+    "Creative": 0.0965,
+    "Document QA": 0.1158,
+    "Math": 0.1272,
+    "Reasoning": 0.1202,
+    "Self-Inversion": 0.1026
+  },
+  "all_pair_smoothness": {
+    "Code-Complex QA": 0.1263,
+    "Code-Creative": 0.1368,
+    "Code-Document QA": 0.1526,
+    "Code-Math": 0.1263,
+    "Code-Reasoning": 0.1211,
+    "Code-Self-Inversion": 0.1158,
+    "Complex QA-Creative": 0.0895,
+    "Complex QA-Document QA": 0.0895,
+    "Complex QA-Math": 0.1421,
+    "Complex QA-Reasoning": 0.1211,
+    "Complex QA-Self-Inversion": 0.0684,
+    "Creative-Document QA": 0.0684,
+    "Creative-Math": 0.1105,
+    "Creative-Reasoning": 0.1053,
+    "Creative-Self-Inversion": 0.0684,
+    "Document QA-Math": 0.1474,
+    "Document QA-Reasoning": 0.1368,
+    "Document QA-Self-Inversion": 0.1,
+    "Math-Reasoning": 0.1053,
+    "Math-Self-Inversion": 0.1316,
+    "Reasoning-Self-Inversion": 0.1316
+  }
+}
