@@ -265,3 +265,43 @@
 | Fig 98 | Multi-turn flow | 19,901 conversations, 11 patterns, 18 scenarios |
 | Fig 99 | Ecosystem | Complete synthesis ecosystem infographic |
 | Fig 100 | Claims evidence | 20 key claims with quantitative evidence |
+
+## Session 5 New Figures (fig101-129)
+| Figure | Description | Key Finding |
+|--------|-------------|-------------|
+| Fig 101 | Detailed baseline comparison | Radar + table vs 7 baselines |
+| Fig 102 | Practical training guide | Budget-specific recommendations |
+| Fig 103 | Ablation study | LOO impact, composite ranking |
+| Fig 104 | Formatting diversity | Markdown feature usage heatmap |
+| Fig 105 | Domain analysis | 2,340 total, 2,323 single-source |
+| Fig 106 | Cluster quality | K=20, Self-Inv in 20/20 |
+| Fig 107 | Sample efficiency curves | Diminishing returns analysis |
+| Fig 108 | Self-Inversion mechanism | Angles, domains, Zipf |
+| Fig 109 | Comprehensive statistics | Dashboard overview |
+| Fig 110 | Length vs diversity | Tradeoff analysis |
+| Fig 111 | Error analysis | Short/repetitive/apology rates |
+| Fig 112 | Contamination verification | 0 matches across 5 benchmarks |
+| Fig 113 | Diversity ceiling | 4.1% tag space utilization |
+| Fig 114 | Temporal batch analysis | Domain discovery rate, TTR drift, novelty |
+| Fig 115 | Topic migration | Keyword Jaccard overlap, exclusive vocabulary |
+| Fig 116 | Answer coherence | Discourse markers, paragraph/sentence structure |
+| Fig 117 | Complexity fingerprint | Multi-dimensional profiling, expansion ratios |
+| Fig 118 | Subspace alignment | Pipeline PCs vs global PCs, effective dimensionality |
+| Fig 119 | Template patterns | Question starter diversity, complexity markers |
+| Fig 120 | Quality gradient | Quality metrics across difficulty levels |
+| Fig 121 | Grand overview | 12-panel comprehensive paper figure |
+| Fig 122 | Density maps | Per-pipeline KDE in t-SNE space |
+| Fig 123 | Multi-turn quality | Turn counts, length ratios, patterns, scenarios |
+| Fig 124 | Deliverables dashboard | Key metrics and rankings |
+| Fig 125 | Radar comparison | 10-dimension all-pipeline radar |
+| Fig 126 | Bootstrap CI | Confidence intervals for diversity metrics |
+| Fig 127 | Architecture | Synthesis pipeline flow diagram |
+| Fig 128 | Knowledge transfer | KNN mixing, synergy potential, top pairs |
+| Fig 129 | Final summary | 8-panel abstract/teaser figure |
+
+## Total Deliverables (Updated)
+- **129 figures** (PNG+PDF pairs)
+- **26 LaTeX tables**
+- **57 JSON analysis reports**
+- **1 LaTeX paper draft** (synthesis/paper/main.tex)
+- **1 comprehensive inventory** (synthesis/outputs/final_inventory.json)

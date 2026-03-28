@@ -1434,3 +1434,71 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
 4. **Creative Writing**: Negative marginal contribution (-0.4 Vendi), most isolated (95.6% self-overlap), lowest answer diversity
 5. **Efficiency**: Self-Inversion composite score 0.924 vs Code QA 0.146 (6.3× more efficient)
 6. **Semantic stability**: Within-batch diversity is stable across sequential batches for all pipelines
+7. **Contamination**: 0 true matches across 26,739 test instances from 5 benchmarks
+8. **Error rates**: Short answers <0.2%, apology <0.4%; Math 22% repetitive (expected for step-by-step)
+9. **Format diversity**: Code QA highest format entropy (2.43 bits), Creative lowest (0.67)
+10. **Tag space ceiling**: Only 4.1% utilized (2,354/57,425 possible domain×type combinations)
+
+### Phases 101-113: Extended Suite (continued)
+
+| Phase | Analysis | Key Finding | Output |
+|-------|----------|-------------|--------|
+| 101 | Baseline Comparison | FANNO-Dev dominates all 8 dimensions vs 7 baselines | fig101 |
+| 102 | Training Guide | Budget-specific recommendations with allocation tables | fig102 |
+| 103 | Ablation Study | Self-Inv and DocQA are must-include; Creative optional | fig103 |
+| 104 | Formatting Diversity | Code QA format entropy 2.43 bits; Creative 0.67 | fig104 |
+| 105 | Domain Analysis | 2,340 total domains; 2,323 single-source (99.3%) | fig105 |
+| 106 | Cluster Quality | Self-Inv in ALL 20/20 clusters; 12 pure, 5 mixed, 3 diverse | fig106 |
+| 107 | Sample Efficiency | K-Center optimal at small N; diminishing returns at scale | fig107 |
+| 108 | Self-Inv Mechanism | 5,000 samples, 2,288 domains, 5,000 unique angles | fig108 |
+| 109 | Stats Dashboard | THE reference dashboard with all key numbers | fig109 |
+| 110 | Length-Diversity | Longer answers ≠ more diverse; Self-Inv moderate length + highest diversity | fig110 |
+| 111 | Error Analysis | Short <0.2%, apology <0.4%; Math 22% repetitive (expected) | fig111 |
+| 112 | Contamination | 0 matches across 26,739 test instances; 416 false positives | fig112 |
+| 113 | Ceiling Analysis | 4.1% tag space utilized; Self-Inv contributes 2,288/2,297 domains | fig113 |
+
+### Session 5: Extended Analysis Suite (fig114-129)
+
+| Phase | Analysis | Key Finding | Output |
+|-------|----------|-------------|--------|
+| 114 | Temporal Batch Analysis | Domain discovery rate, TTR drift, length drift, novelty rate | fig114 |
+| 115 | Topic Migration | Keyword Jaccard overlap, exclusive vocabulary per pipeline | fig115 |
+| 116 | Answer Coherence | Discourse markers per 1K words; paragraph/sentence structure | fig116 |
+| 117 | Complexity Fingerprint | Multi-dimensional profiling; expansion ratios per pipeline | fig117 |
+| 118 | Subspace Alignment | Pipeline PC1 vs global PCs; effective dimensionality (participation ratio) | fig118 |
+| 119 | Template Patterns | Question starter diversity; complexity markers heatmap | fig119 |
+| 120 | Quality Gradient | Quality metrics across difficulty levels for 4 pipelines | fig120 |
+| 121 | Grand Overview | 12-panel comprehensive paper figure with all key results | fig121 |
+| 122 | Density Maps | Per-pipeline KDE in t-SNE embedding space (8-panel) | fig122 |
+| 123 | Multi-Turn Quality | Turn counts, user/assistant lengths, patterns, scenarios, depth | fig123 |
+| 124 | Deliverables Dashboard | Key metrics cards + pipeline ranking table | fig124 |
+| 125 | Radar Comparison | 10-dimension radar for all 7 pipelines | fig125 |
+| 126 | Bootstrap CI | Within-source distance confidence intervals, measurement stability | fig126 |
+| 127 | Architecture Diagram | Full synthesis pipeline flow from GPT-4o → cleaning → output | fig127 |
+| 128 | Knowledge Transfer | KNN mixing matrix, synergy potential, top pipeline pairs | fig128 |
+| 129 | Final Summary | 8-panel abstract/teaser figure for paper | fig129 |
+
+### Additional Deliverables (Session 5)
+- **LaTeX paper draft**: `synthesis/paper/main.tex` + `references.bib` — complete draft with abstract, 8 sections, appendix
+- **Final inventory**: `synthesis/outputs/final_inventory.json` — machine-readable index of all 129 figures, 26 tables, 57 reports
+
+### Session 5 Key Findings
+1. **Temporal stability**: TTR and answer lengths remain stable across synthesis batches — no quality degradation over time
+2. **Keyword exclusivity**: Each pipeline has highly distinctive vocabulary; Jaccard overlap between pipelines is low
+3. **Discourse structure**: Reasoning QA uses most discourse markers; Creative Writing uses fewest transitional phrases
+4. **Subspace alignment**: Code QA's primary PC aligns with global PC3 (unique subspace); Self-Inv aligns broadly across PCs
+5. **Question starters**: Code QA 78% "How"; Creative 43% "Write"; Complex QA diverse starters (entropy=3.1 bits)
+6. **Bootstrap stability**: All within-source diversity measurements have CV < 0.01 — highly stable estimates
+7. **KNN knowledge transfer**: Self-Inversion has lowest self-containment (draws from all pipelines equally)
+8. **Pipeline synergy**: Code+Creative and Math+Reasoning are highest-synergy pairs in embedding space
+
+### Grand Total (Session 5 Final, 2026-03-27)
+- **129 figures** (PNG+PDF pairs) — fig1 through fig129 + fig_dashboard
+- **26 LaTeX tables** — tab1 through tab26
+- **57 JSON analysis reports** + 1 comprehensive inventory
+- **1 LaTeX paper draft** — complete with abstract, 8 sections, references, appendix
+- **130+ git commits** on dev branch
+- **153,351 cleaned instruction samples** (211K raw, 27.4% rejection)
+- **Vendi Score: 182.75** | Cross-source distance: 0.961 | 2,297 unique domains
+- **0 benchmark contamination** across MMLU, GSM8K, HumanEval, ARC, HellaSwag
+- **Azure token still expired** — synthesis stalled at 21,432/30,000 Document QA
