@@ -1,0 +1,91 @@
+{
+  "figure": "fig173_information_density",
+  "ranking": [
+    [
+      "Creative",
+      63.65
+    ],
+    [
+      "Complex QA",
+      61.83
+    ],
+    [
+      "Document QA",
+      60.89
+    ],
+    [
+      "Self-Inversion",
+      59.43
+    ],
+    [
+      "Code",
+      57.25
+    ],
+    [
+      "Reasoning",
+      53.61
+    ],
+    [
+      "Math",
+      42.54
+    ]
+  ],
+  "per_pipeline": {
+    "Complex QA": {
+      "avg_density_score": 61.83,
+      "avg_ttr": 0.5966,
+      "avg_content_ratio": 0.629,
+      "avg_hapax_ratio": 0.4584,
+      "avg_word_length": 5.958,
+      "avg_vocab_entropy": 7.23
+    },
+    "Document QA": {
+      "avg_density_score": 60.89,
+      "avg_ttr": 0.5955,
+      "avg_content_ratio": 0.6123,
+      "avg_hapax_ratio": 0.456,
+      "avg_word_length": 5.963,
+      "avg_vocab_entropy": 6.993
+    },
+    "Reasoning": {
+      "avg_density_score": 53.61,
+      "avg_ttr": 0.5469,
+      "avg_content_ratio": 0.5498,
+      "avg_hapax_ratio": 0.372,
+      "avg_word_length": 5.065,
+      "avg_vocab_entropy": 6.171
+    },
+    "Code": {
+      "avg_density_score": 57.25,
+      "avg_ttr": 0.5408,
+      "avg_content_ratio": 0.5814,
+      "avg_hapax_ratio": 0.3781,
+      "avg_word_length": 5.766,
+      "avg_vocab_entropy": 7.214
+    },
+    "Math": {
+      "avg_density_score": 42.54,
+      "avg_ttr": 0.4697,
+      "avg_content_ratio": 0.3643,
+      "avg_hapax_ratio": 0.2931,
+      "avg_word_length": 3.779,
+      "avg_vocab_entropy": 5.83
+    },
+    "Creative": {
+      "avg_density_score": 63.65,
+      "avg_ttr": 0.6589,
+      "avg_content_ratio": 0.6014,
+      "avg_hapax_ratio": 0.5593,
+      "avg_word_length": 5.324,
+      "avg_vocab_entropy": 7.313
+    },
+    "Self-Inversion": {
+      "avg_density_score": 59.43,
+      "avg_ttr": 0.6332,
+      "avg_content_ratio": 0.565,
+      "avg_hapax_ratio": 0.4859,
+      "avg_word_length": 5.352,
+      "avg_vocab_entropy": 6.483
+    }
+  }
+}
