@@ -1,0 +1,160 @@
+{
+  "timestamp": "2026-03-28T08:50:00",
+  "n_clusters": 50,
+  "overall_entropy": 3.7727,
+  "max_entropy": 3.912,
+  "uniformity": 0.9644,
+  "per_source": {
+    "Code": {
+      "n_unique_clusters": 16,
+      "entropy": 2.6914,
+      "coverage_pct": 32.0,
+      "max_entropy": 2.7726
+    },
+    "Complex QA": {
+      "n_unique_clusters": 20,
+      "entropy": 2.7579,
+      "coverage_pct": 40.0,
+      "max_entropy": 2.9957
+    },
+    "Creative": {
+      "n_unique_clusters": 9,
+      "entropy": 1.6891,
+      "coverage_pct": 18.0,
+      "max_entropy": 2.1972
+    },
+    "Document QA": {
+      "n_unique_clusters": 26,
+      "entropy": 2.7065,
+      "coverage_pct": 52.0,
+      "max_entropy": 3.2581
+    },
+    "Math": {
+      "n_unique_clusters": 13,
+      "entropy": 2.3557,
+      "coverage_pct": 26.0,
+      "max_entropy": 2.5649
+    },
+    "Reasoning": {
+      "n_unique_clusters": 23,
+      "entropy": 2.5697,
+      "coverage_pct": 46.0,
+      "max_entropy": 3.1355
+    },
+    "Self-Inversion": {
+      "n_unique_clusters": 48,
+      "entropy": 3.6363,
+      "coverage_pct": 96.0,
+      "max_entropy": 3.8712
+    }
+  },
+  "pairwise_divergence": {
+    "Code_vs_Complex QA": {
+      "jsd": 0.6846,
+      "kl_12": 20.2514,
+      "kl_21": 18.4124
+    },
+    "Code_vs_Creative": {
+      "jsd": 0.6931,
+      "kl_12": 20.3345,
+      "kl_21": 21.3367
+    },
+    "Code_vs_Document QA": {
+      "jsd": 0.6146,
+      "kl_12": 17.1771,
+      "kl_21": 18.1399
+    },
+    "Code_vs_Math": {
+      "jsd": 0.6772,
+      "kl_12": 17.6038,
+      "kl_21": 20.5065
+    },
+    "Code_vs_Reasoning": {
+      "jsd": 0.6372,
+      "kl_12": 18.9428,
+      "kl_21": 18.4673
+    },
+    "Code_vs_Self-Inversion": {
+      "jsd": 0.4412,
+      "kl_12": 1.8434,
+      "kl_21": 14.3055
+    },
+    "Complex QA_vs_Creative": {
+      "jsd": 0.5707,
+      "kl_12": 15.6459,
+      "kl_21": 8.0346
+    },
+    "Complex QA_vs_Document QA": {
+      "jsd": 0.1804,
+      "kl_12": 2.1054,
+      "kl_21": 2.6959
+    },
+    "Complex QA_vs_Math": {
+      "jsd": 0.6487,
+      "kl_12": 19.3808,
+      "kl_21": 18.2118
+    },
+    "Complex QA_vs_Reasoning": {
+      "jsd": 0.3994,
+      "kl_12": 4.3636,
+      "kl_21": 12.4254
+    },
+    "Complex QA_vs_Self-Inversion": {
+      "jsd": 0.2292,
+      "kl_12": 0.8553,
+      "kl_21": 8.318
+    },
+    "Creative_vs_Document QA": {
+      "jsd": 0.5239,
+      "kl_12": 2.5627,
+      "kl_21": 14.8025
+    },
+    "Creative_vs_Math": {
+      "jsd": 0.6931,
+      "kl_12": 21.3367,
+      "kl_21": 20.6701
+    },
+    "Creative_vs_Reasoning": {
+      "jsd": 0.6162,
+      "kl_12": 18.0634,
+      "kl_21": 17.5277
+    },
+    "Creative_vs_Self-Inversion": {
+      "jsd": 0.5076,
+      "kl_12": 2.4338,
+      "kl_21": 14.6297
+    },
+    "Document QA_vs_Math": {
+      "jsd": 0.6598,
+      "kl_12": 18.8193,
+      "kl_21": 15.7597
+    },
+    "Document QA_vs_Reasoning": {
+      "jsd": 0.4098,
+      "kl_12": 4.1719,
+      "kl_21": 5.6537
+    },
+    "Document QA_vs_Self-Inversion": {
+      "jsd": 0.2472,
+      "kl_12": 3.2093,
+      "kl_21": 6.0275
+    },
+    "Math_vs_Reasoning": {
+      "jsd": 0.5945,
+      "kl_12": 14.4361,
+      "kl_21": 16.9983
+    },
+    "Math_vs_Self-Inversion": {
+      "jsd": 0.3825,
+      "kl_12": 1.5018,
+      "kl_21": 13.2655
+    },
+    "Reasoning_vs_Self-Inversion": {
+      "jsd": 0.3135,
+      "kl_12": 2.312,
+      "kl_21": 7.5509
+    }
+  },
+  "redundancy": 14.6339,
+  "synergy_ratio": 0.205
+}
