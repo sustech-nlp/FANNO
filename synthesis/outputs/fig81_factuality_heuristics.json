@@ -1,0 +1,80 @@
+{
+  "Complex QA": {
+    "hedging_mean": 1.1402,
+    "hedging_frac": 0.6448,
+    "numerical_mean": 0.9748,
+    "numerical_frac": 0.2516,
+    "citation_mean": 2.4304,
+    "citation_frac": 0.876,
+    "definitional_mean": 0.3686,
+    "definitional_frac": 0.3268,
+    "structure_mean": 2.2532,
+    "structure_frac": 0.317,
+    "n_samples": 5000
+  },
+  "Document QA": {
+    "hedging_mean": 1.079,
+    "hedging_frac": 0.587,
+    "numerical_mean": 0.3492,
+    "numerical_frac": 0.0972,
+    "citation_mean": 1.2094,
+    "citation_frac": 0.555,
+    "definitional_mean": 0.2326,
+    "definitional_frac": 0.2186,
+    "structure_mean": 8.2438,
+    "structure_frac": 0.8592,
+    "n_samples": 5000
+  },
+  "Reasoning": {
+    "hedging_mean": 0.7194,
+    "hedging_frac": 0.4112,
+    "numerical_mean": 1.1666,
+    "numerical_frac": 0.2084,
+    "citation_mean": 0.4634,
+    "citation_frac": 0.3074,
+    "definitional_mean": 0.2186,
+    "definitional_frac": 0.2118,
+    "structure_mean": 4.6326,
+    "structure_frac": 0.5466,
+    "n_samples": 5000
+  },
+  "Code QA": {
+    "hedging_mean": 0.2354,
+    "hedging_frac": 0.2024,
+    "numerical_mean": 0.2334,
+    "numerical_frac": 0.1156,
+    "citation_mean": 0.6476,
+    "citation_frac": 0.4402,
+    "definitional_mean": 0.0992,
+    "definitional_frac": 0.0974,
+    "structure_mean": 5.7044,
+    "structure_frac": 0.9464,
+    "n_samples": 5000
+  },
+  "Math QA": {
+    "hedging_mean": 0.0312,
+    "hedging_frac": 0.0266,
+    "numerical_mean": 1.143,
+    "numerical_frac": 0.328,
+    "citation_mean": 0.0996,
+    "citation_frac": 0.0918,
+    "definitional_mean": 0.0842,
+    "definitional_frac": 0.0834,
+    "structure_mean": 2.221,
+    "structure_frac": 0.3788,
+    "n_samples": 5000
+  },
+  "Creative": {
+    "hedging_mean": 0.463,
+    "hedging_frac": 0.3492,
+    "numerical_mean": 0.0604,
+    "numerical_frac": 0.0286,
+    "citation_mean": 0.1258,
+    "citation_frac": 0.1034,
+    "definitional_mean": 0.0444,
+    "definitional_frac": 0.0436,
+    "structure_mean": 0.307,
+    "structure_frac": 0.0382,
+    "n_samples": 5000
+  }
+}

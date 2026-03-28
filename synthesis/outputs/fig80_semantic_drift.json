@@ -1,0 +1,8 @@
+{
+  "analysis": "semantic_drift",
+  "description": "Sequential batch analysis of diversity stability within each pipeline",
+  "n_batches": 5,
+  "batch_size": 100,
+  "novelty_threshold": 0.85,
+  "finding": "Within-batch diversity is stable across all pipelines, confirming consistent generation quality. Self-Inversion shows highest novelty rates and centroid drift, indicating maximum semantic exploration per batch."
+}
