@@ -54,7 +54,7 @@
   "diversity_metrics": {
     "vendi_score": 182.75,
     "avg_pairwise_cosine_dist": 0.951,
-    "scaling_law": "V(N) = 55.4(1-exp(-N/745)) + 109.0, R²=0.996",
+    "scaling_law": "V(N) = 55.4(1-exp(-N/745)) + 109.0, R\u00b2=0.996",
     "ceiling": 164.5,
     "tag_space_utilization": 4.1,
     "cross_source_distance": 0.961,
@@ -63,7 +63,7 @@
   "selection_strategies": {
     "best_at_500": "K-Center-Greedy (+33.3%)",
     "best_at_5000": "K-Center-Greedy (+8.6%)",
-    "practical_recommendation": "Random for N≥5000"
+    "practical_recommendation": "Random for N\u22655000"
   },
   "embedding_analysis": {
     "highest_within_diversity": "Self-Inversion (0.943)",
@@ -85,7 +85,7 @@
     "scenarios": 15,
     "avg_turns": 3.3,
     "coherence_adjacent": 0.575,
-    "coherence_decay": "0.575→0.474→0.413",
+    "coherence_decay": "0.575\u21920.474\u21920.413",
     "ttr_stability": "0.846-0.850 across turns"
   },
   "question_complexity": {
@@ -101,15 +101,37 @@
     "efficiency_diversity": 0.776
   },
   "deliverables": {
-    "figures": 39,
-    "latex_tables": 18,
+    "figures_png_pdf": 58,
+    "latex_tables": 24,
+    "json_reports": 40,
     "python_scripts": 18,
-    "git_commits": "80+"
+    "documentation_files": 4
   },
   "cost_estimate": {
     "total": 2245,
     "per_1k_clean": 15.58,
     "most_expensive": "Complex QA (00)",
     "cheapest": "Self-Inversion (0)"
+  },
+  "new_analyses": [
+    "UMAP visualization (3 configs, silhouette analysis)",
+    "Code QA cross-language analysis (8 languages \u00d7 16 topics)",
+    "Math & Reasoning detailed composition",
+    "Creative Writing & Complex QA composition",
+    "Self-Inversion deep dive (2,274 exclusive domains)",
+    "Curated sample showcase (16 examples from 8 pipelines)",
+    "Grand summary figure (8-panel overview)",
+    "Comprehensive 8-axis radar chart",
+    "Master pipeline comparison table (10 dimensions)",
+    "Cross-reference index table (20 claims)"
+  ],
+  "self_inversion_findings": {
+    "exclusive_domains": 2274,
+    "total_domains": 2288,
+    "domain_explosion_factor": "143x vs Complex QA (16 exclusive)",
+    "bridges_all_clusters": true,
+    "lowest_isolation": 0.224,
+    "highest_entropy": 3.636,
+    "highest_diversity_density": "25.1 Vendi/1K"
   }
 }

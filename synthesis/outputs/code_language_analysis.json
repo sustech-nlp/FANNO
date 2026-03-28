@@ -1,0 +1,160 @@
+{
+  "description": "Cross-language analysis of Code QA pipeline",
+  "total_samples": 29907,
+  "n_languages": 9,
+  "n_topics": 17,
+  "language_stats": {
+    "Python": {
+      "count": 3798,
+      "pct": 12.7,
+      "avg_answer_length": 412.7,
+      "median_answer_length": 344.0,
+      "top_topics": {
+        "algorithms and data structures": 1976,
+        "machine learning implementation": 1822
+      },
+      "difficulty_dist": {
+        "medium": 3497,
+        "easy": 301
+      }
+    },
+    "Go": {
+      "count": 3783,
+      "pct": 12.6,
+      "avg_answer_length": 499.4,
+      "median_answer_length": 394.0,
+      "top_topics": {
+        "testing and debugging": 1970,
+        "object-oriented design": 1813
+      },
+      "difficulty_dist": {
+        "medium": 3693,
+        "easy": 90
+      }
+    },
+    "Java": {
+      "count": 3775,
+      "pct": 12.6,
+      "avg_answer_length": 483.3,
+      "median_answer_length": 361.0,
+      "top_topics": {
+        "system design": 1967,
+        "design patterns": 1808
+      },
+      "difficulty_dist": {
+        "medium": 3745,
+        "easy": 30
+      }
+    },
+    "TypeScript": {
+      "count": 3765,
+      "pct": 12.6,
+      "avg_answer_length": 474.5,
+      "median_answer_length": 370.0,
+      "top_topics": {
+        "database design": 1943,
+        "concurrent programming": 1822
+      },
+      "difficulty_dist": {
+        "medium": 3704,
+        "easy": 61
+      }
+    },
+    "SQL": {
+      "count": 3759,
+      "pct": 12.6,
+      "avg_answer_length": 363.9,
+      "median_answer_length": 284.0,
+      "top_topics": {
+        "security best practices": 1939,
+        "cloud architecture": 1820
+      },
+      "difficulty_dist": {
+        "medium": 3665,
+        "easy": 86,
+        "hard": 8
+      }
+    },
+    "Rust": {
+      "count": 3758,
+      "pct": 12.6,
+      "avg_answer_length": 409.4,
+      "median_answer_length": 329.0,
+      "top_topics": {
+        "performance optimization": 1976,
+        "DevOps and CI/CD": 1782
+      },
+      "difficulty_dist": {
+        "medium": 3459,
+        "easy": 299
+      }
+    },
+    "C++": {
+      "count": 3733,
+      "pct": 12.5,
+      "avg_answer_length": 433.7,
+      "median_answer_length": 364.0,
+      "top_topics": {
+        "API development": 1908,
+        "functional programming": 1825
+      },
+      "difficulty_dist": {
+        "medium": 3527,
+        "easy": 206
+      }
+    },
+    "JavaScript": {
+      "count": 3524,
+      "pct": 11.8,
+      "avg_answer_length": 417.8,
+      "median_answer_length": 315.0,
+      "top_topics": {
+        "data processing pipelines": 1820,
+        "web development": 1704
+      },
+      "difficulty_dist": {
+        "medium": 3454,
+        "easy": 70
+      }
+    },
+    "unknown": {
+      "count": 12,
+      "pct": 0.0,
+      "avg_answer_length": 418.3,
+      "median_answer_length": 231.5,
+      "top_topics": {
+        "unknown": 7,
+        "object-oriented design": 2,
+        "DevOps and CI/CD": 2,
+        "cloud architecture": 1
+      },
+      "difficulty_dist": {
+        "medium": 5,
+        "unknown": 7
+      }
+    }
+  },
+  "top_topics_overall": {
+    "algorithms and data structures": 1976,
+    "performance optimization": 1976,
+    "testing and debugging": 1970,
+    "system design": 1967,
+    "database design": 1943,
+    "security best practices": 1939,
+    "API development": 1908,
+    "functional programming": 1825,
+    "machine learning implementation": 1822,
+    "concurrent programming": 1822,
+    "cloud architecture": 1821,
+    "data processing pipelines": 1820,
+    "object-oriented design": 1815,
+    "design patterns": 1808,
+    "DevOps and CI/CD": 1784,
+    "web development": 1704
+  },
+  "key_findings": [
+    "9 programming languages covered",
+    "Most common: Python (3,798 samples, 12.7%)",
+    "17 distinct code topics"
+  ]
+}

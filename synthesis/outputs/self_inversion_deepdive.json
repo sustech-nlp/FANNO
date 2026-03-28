@@ -1,0 +1,61 @@
+{
+  "description": "Self-Inversion trajectory reversal deep dive",
+  "total_samples": 5000,
+  "unique_new_domains": 2288,
+  "domain_frequency_stats": {
+    "max": 157,
+    "min": 1,
+    "mean": 2.2,
+    "median": 1.0
+  },
+  "length_stats": {
+    "q_mean": 29.6,
+    "q_median": 21.0,
+    "a_mean": 227.1,
+    "a_median": 223.0
+  },
+  "domain_exclusivity": {
+    "Complex QA": {
+      "total": 20,
+      "exclusive": 16
+    },
+    "Code QA": {
+      "total": 17,
+      "exclusive": 15
+    },
+    "Reasoning": {
+      "total": 1,
+      "exclusive": 0
+    },
+    "Math QA": {
+      "total": 15,
+      "exclusive": 6
+    },
+    "Self-Inversion": {
+      "total": 2288,
+      "exclusive": 2274
+    }
+  },
+  "top_20_domains": {
+    "mathematics": 157,
+    "Software Development": 154,
+    "software development": 93,
+    "literature": 81,
+    "geometry": 64,
+    "Mathematics": 63,
+    "programming": 50,
+    "Programming": 49,
+    "probability": 44,
+    "Literature": 41,
+    "Calculus": 41,
+    "statistics": 38,
+    "Computer Science": 37,
+    "combinatorics": 37,
+    "graph theory": 37,
+    "software engineering": 35,
+    "calculus": 34,
+    "linear algebra": 32,
+    "Web Development": 32,
+    "trigonometry": 32
+  }
+}

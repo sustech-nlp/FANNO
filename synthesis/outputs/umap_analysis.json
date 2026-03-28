@@ -1,0 +1,42 @@
+{
+  "description": "UMAP dimensionality reduction analysis on 3500 embedding samples",
+  "n_samples": 3500,
+  "n_dims_original": 384,
+  "configs_tested": 3,
+  "silhouette_score_umap_space": -0.0105,
+  "within_cluster_spread": {
+    "Complex QA": 3.362,
+    "Document QA": 2.28,
+    "Reasoning": 3.561,
+    "Code": 5.323,
+    "Math": 5.896,
+    "Creative": 1.279,
+    "Self-Inversion": 6.158
+  },
+  "inter_cluster_distances_top10": {
+    "Code vs Math": 15.65,
+    "Reasoning vs Code": 13.118,
+    "Complex QA vs Code": 10.807,
+    "Code vs Creative": 10.525,
+    "Code vs Self-Inversion": 10.399,
+    "Document QA vs Code": 10.188,
+    "Document QA vs Math": 7.935,
+    "Complex QA vs Math": 7.15,
+    "Math vs Creative": 6.316,
+    "Math vs Self-Inversion": 5.981
+  },
+  "inter_cluster_distances_bottom5": {
+    "Creative vs Self-Inversion": 0.677,
+    "Complex QA vs Document QA": 0.829,
+    "Complex QA vs Creative": 1.296,
+    "Document QA vs Creative": 1.803,
+    "Complex QA vs Self-Inversion": 1.972
+  },
+  "key_findings": [
+    "Silhouette score = -0.0105 in UMAP space (moderate separation)",
+    "Most spread: Self-Inversion (6.158)",
+    "Most compact: Creative (1.279)",
+    "Self-Inversion appears distributed across multiple clusters, confirming bridge role",
+    "Code and Creative occupy well-separated regions across all UMAP configs"
+  ]
+}

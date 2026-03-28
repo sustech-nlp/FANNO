@@ -1221,3 +1221,60 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
   - Q-A alignment: Document QA Hit@1=97%, overall >68% for most pipelines
   - Quality: 100% valid JSON, 0.01% refusals, 0 contamination
   - Token expired ~23:30 UTC 3/27; synthesis stalled at 21,432 Document QA samples
+
+---
+
+## Session 3: Extended Analysis (2026-03-27 continued)
+
+### Phase 53: UMAP Visualization
+- **Task**: Alternative dimensionality reduction to t-SNE
+- **Method**: UMAP with 3 configs (n=15/30/50, cosine metric) on 3,500 384-dim embeddings
+- **Results**:
+  - Silhouette score: -0.0105 (moderate overlap, expected for diverse data)
+  - Self-Inversion most spread (6.158), Creative most compact (1.279)
+  - Code and Creative form well-separated regions across all configs
+- **Files**: fig51_umap_visualization.png/pdf, umap_analysis.json
+- **Commit**: pending (batch)
+
+### Phase 54: Code QA Cross-Language Analysis
+- **Task**: Detailed breakdown of Code QA by programming language
+- **Results**: 8 languages (Python 3,798, Go 3,783, Java 3,775, TypeScript 3,765, SQL 3,759, Rust 3,758, C++ 3,733, JS 3,524)
+  - 16 code topics (algorithms, performance optimization, testing, system design, etc.)
+  - Balanced difficulty distribution across languages
+- **Files**: fig52_code_language_analysis.png/pdf, code_language_analysis.json
+
+### Phase 55: Math & Reasoning Composition
+- **Task**: Detailed breakdown of Math QA (15 topics) and Reasoning QA (12 types)
+- **Math QA**: 15 topics (arithmetic, algebra, geometry, differential_equations, probability, statistics, optimization, trigonometry, number_theory, graph_theory, calculus, combinatorics, abstract_algebra, real_analysis, linear_algebra)
+- **Reasoning QA**: 12 types (probabilistic 1,829, analogical 1,771, spatial 1,739, causal 1,683, logical puzzles 1,671, deductive 1,624, temporal 1,616, inductive 1,561, abductive 1,547, paradox 1,538, ethical 1,472, systems thinking 1,449)
+- **Files**: fig53_math_reasoning_analysis.png/pdf, math_reasoning_analysis.json
+
+### Phase 56: Creative Writing & Complex QA Composition
+- **Creative Writing**: 12 task types (creative brainstorming 915, poetry 890, technical writing 872, story writing 860, editing 857, persuasive 851, world-building 818, essay 815, character development 794, style transfer 759, plot analysis 745, dialogue 728)
+- **Complex QA**: 20 domains (balanced ~2,500 each), 12 question types (analogy, step_by_step, multi_hop, cause_effect, counterfactual, debate, case_study, comparison, evaluation, definition, synthesis, prediction)
+- **Files**: fig54_creative_complex_analysis.png/pdf, creative_complex_analysis.json
+
+### Phase 57: Self-Inversion Deep Dive
+- **Key finding**: 2,274 EXCLUSIVE domains (not in any other pipeline)
+  - Complex QA: 16 exclusive, Code QA: 15, Math: 6, Reasoning: 0
+  - Self-Inversion: 2,274 exclusive → 143× more than Complex QA
+- **Domain distribution**: Long-tail with 2,288 unique domains, mean freq 2.2
+- **Files**: fig55_self_inversion_deepdive.png/pdf, self_inversion_deepdive.json
+
+### Phase 58: Sample Showcase
+- **Task**: Curate 2 high-quality examples from each pipeline for appendix
+- **Result**: 16 examples total, all with metadata (domain, type, difficulty)
+- **LaTeX**: tab22_sample_showcase.tex
+- **Files**: sample_showcase.json
+
+### Phase 59: Grand Summary & Comprehensive Figures
+- **Fig 56**: 8-panel grand summary (composition, Vendi, density, isolation, scaling, mixing, selection, metrics table)
+- **Fig 57**: Comprehensive 8-axis radar chart (Volume, Vendi, Density, Isolation, TTR, Entropy, Domains, Efficiency) per pipeline + overlay
+- **Tab 23**: Master pipeline comparison table (10 dimensions)
+- **Tab 24**: Cross-reference index (20 claims with evidence pointers)
+
+### Updated Deliverables (Session 3)
+- **58 figures** (PNG+PDF) — +7 new
+- **24 LaTeX tables** — +3 new
+- **40 JSON reports** — +6 new
+- Paper outline updated with §6.12-§6.14 (UMAP, Self-Inv deep dive, per-pipeline composition)

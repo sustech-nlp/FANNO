@@ -91,12 +91,21 @@ Three-stage data cleaning pipeline:
 - **Parallel workers**: 30-50 concurrent API calls per pipeline
 - **Templates**: 400+ prompt templates (domains × types × difficulties × styles)
 
+### Self-Inversion as Tag-Space Discoverer
+
+- **2,288 unique domains** generated via trajectory reversal (vs 20 for Complex QA)
+- **2,274 exclusive domains** not found in any other pipeline
+- Domain explosion factor: 143× more exclusive domains than Complex QA
+- Bridges all 20 K-Means clusters (only pipeline with 100% coverage)
+- Highest entropy (3.636 nats) and diversity density (25.1 Vendi/1K)
+
 ### Deliverables
 
-- 47 publication-quality figures (PNG+PDF)
-- 21 LaTeX tables
-- 29 JSON analysis reports
+- 58 publication-quality figures (PNG+PDF)
+- 24 LaTeX tables
+- 40 JSON analysis reports
 - Comprehensive training recipe (LLaMA-Factory compatible)
+- Curated sample showcase (16 examples from 8 pipelines)
 
 ### Intended Use
 

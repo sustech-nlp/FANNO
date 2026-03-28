@@ -1,0 +1,33 @@
+\begin{table*}[t]
+\centering
+\caption{Cross-reference index: mapping between key claims, supporting evidence, and figure/table locations.}
+\label{tab:crossref}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{clll}
+\toprule
+\textbf{\#} & \textbf{Claim} & \textbf{Evidence} & \textbf{Reference} \\
+\midrule
+1 & Diverse multi-pipeline synthesis & 8 pipelines, 153K samples, 2,297 domains & Tab~\ref{tab:master_pipeline}, Fig~1 \\
+2 & High overall diversity & Vendi Score = 182.75 on 15K sample & Tab~2, Fig~5 \\
+3 & Diversity scaling law & $V(N) = 55.4(1-e^{-N/745}) + 109.0$, $R^2=0.996$ & Fig~30, Tab~4 \\
+4 & Near-orthogonal pipelines & Avg cosine distance = 0.961 & Fig~14 \\
+5 & Self-Inversion as bridge & Isolation = 0.224, in all 20 clusters, 2,288 domains & Fig~42, Fig~55 \\
+6 & Effective data selection & K-Center-Greedy +33\% at N=500 & Fig~27, Tab~3 \\
+7 & Random near-optimal at scale & $<$2\% gap at N=10K & Fig~27 \\
+8 & Document QA most valuable & Leave-one-out: +6.2\% Vendi when removed & Fig~48 \\
+9 & Creative Writing redundant & Leave-one-out: $-$3.2\% (helps when removed) & Fig~48 \\
+10 & Mixing ratio matters & Self-Inv 3.2\%$\rightarrow$17.4\% (12$\times$ density) & Fig~39, Tab~\ref{tab:master_pipeline} \\
+11 & 2 sources = 96\% diversity & Self-Inv + Doc QA greedy order & Fig~49 \\
+12 & Trajectory reversal works & 0\% same angle, 82.6\% $>$ 0.3 dist, 5K unique & Fig~32 \\
+13 & Rich template space & 2,297 domains, 25 types, 4.1\% utilized & Fig~6, Fig~12 \\
+14 & Multi-turn quality & TTR stable 0.84--0.85, coherence 0.575 & Fig~19, Fig~35 \\
+15 & No contamination & 0 matches across 5 benchmarks & Appendix \\
+16 & Cost-effective & \$2,245 total, \$15.58/1K & Tab~9 \\
+17 & Self-Inv highest entropy & 3.636 nats, 96\% cluster coverage & Fig~50 \\
+18 & Code/Creative most isolated & 0.917 and 0.953 isolation scores & Fig~42 \\
+19 & Linguistic diversity varies & Doc QA \#1 composite (TTR + hapax + vocab) & Fig~13, Fig~45 \\
+20 & Q-A alignment spectrum & Doc QA Hit@1=97\%, Creative 32\% & Fig~46 \\
+\bottomrule
+\end{tabular}
+\end{table*}

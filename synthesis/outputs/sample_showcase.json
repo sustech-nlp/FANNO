@@ -1,0 +1,182 @@
+{
+  "complex_qa": {
+    "count": 49895,
+    "good_examples": 35177,
+    "examples": [
+      {
+        "question": "How do quantum computing principles, such as superposition and entanglement, enhance machine learning algorithms, and what are the potential implications for solving complex problems like climate modeling?",
+        "answer": "Quantum computing, grounded in principles like superposition and entanglement, offers significant advantages over classical computing, particularly in the domain of machine learning. These principles allow quantum computers to process information in fundamentally different ways, enabling more efficient algorithmic operations that can potentially revolutionize machine learning tasks, including complex problem-solving such as climate modeling.\n\nSuperposition, a core quantum principle, allows quantum bits (qubits) to exist in multiple states simultaneously, unlike classical bits that are either 0 or 1. This property enables quantum computers to perform numerous calculations at once, dramatically increasing computational speed and efficiency. In machine learning, this can accelerate the traini",
+        "domain": "Science & Technology",
+        "type": "multi_hop_reasoning",
+        "difficulty": "hard"
+      },
+      {
+        "question": "Imagine a newly discovered exoplanet named XZ-101, which orbits its star at a distance where the temperature on the planet's surface could allow liquid water to exist. The star is similar to our Sun and has a mass of 2 x 10^30 kg. The orbital radius of the planet around the star is 1.5 x 10^11 meters. Calculate the orbital period of the exoplanet in Earth years, and discuss the potential implications for the planet's ability to support life based on this orbital period.",
+        "answer": "To calculate the orbital period of the exoplanet XZ-101, we can use Kepler’s Third Law of Planetary Motion, which states that the square of the orbital period (T) is proportional to the cube of the semi-major axis of its orbit (a). Mathematically, this can be expressed as:\n\nT^2 = (4π^2/GM) * a^3\n\nwhere G is the gravitational constant, approximately 6.674 x 10^(-11) N(m/kg)^2, M is the mass of the star, and a is the orbital radius in meters.\n\nGiven:\n- M (mass of the star) = 2 x 10^30 kg\n- a (distance from the star) = 1.5 x 10^11 meters\n\nFirst, calculate the right side of the equation:\nGM = (6.674 x 10^(-11) N(m/kg)^2) * (2 x 10^30 kg)\n   = 1.3348 x 10^20 m^3/s^2\n\nNow substitute the values into Kepler’s Third Law:\nT^2 = (4π^2 / 1.3348 x 10^20) * (1.5 x 10^11)^3\n   = (39.4784 / 1.3348 x 10^20",
+        "domain": "Physics & Astronomy",
+        "type": "case_study",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  "fanno_seed_qa": {
+    "count": 24286,
+    "good_examples": 16605,
+    "examples": [
+      {
+        "question": "Why might musicians like Brian Ellis choose to collaborate with various artists and groups across different genres and labels instead of focusing on a single musical style or partnership?",
+        "answer": "Musicians like Brian Ellis might choose to collaborate with various artists and groups across different genres and labels for several reasons:\n\n1. **Creative Exploration**: Collaborating with different artists allows musicians to explore new sounds, techniques, and ideas. This can foster creativity and keep their work fresh and exciting.\n\n2. **Skill Development**: Working with artists from different genres can help musicians develop new skills and broaden their musical expertise. Exposure to diverse styles can enhance their versatility and adaptability.\n\n3. **Expanding Audience**: Collaborations can introduce musicians to new audiences who might not have discovered their music otherwise. This can increase their fan base and reach.\n\n4. **Networking Opportunities**: Collaborating with variou",
+        "doc_preview": "Welcome to the new brianellismusic.com\n<09.23.2008> This is the first update in quite some time, and there is lots of news to tell! 2009 will be my busiest year yet. I'm really excited to get all this"
+      },
+      {
+        "question": "Hey, I'm curious about this research on rolling correlations for soybean and soybean oil prices over different time periods. What are the key characteristics and considerations that define this kind of analysis, especially in terms of its implications for trading, statistical significance of short-term vs. long-term correlations, and the challenges faced by newcomers in interpreting such data?",
+        "answer": "Rolling correlations are a valuable tool in financial analysis, particularly when examining the relationship between two time series, such as soybean and soybean oil prices. Here are some key characteristics and considerations for this kind of analysis:\n\n1. **Definition and Purpose**:\n   - **Rolling Correlation**: This is a statistical method used to measure the strength and direction of a linear relationship between two variables over a specified rolling window of time. It allows for the dynamic observation of how correlations evolve.\n   - **Purpose**: The primary purpose is to capture changing relationships over time, which can be crucial for traders and analysts looking to understand market dynamics and potential causations or co-movements.\n\n2. **Time Periods**:\n   - **Short-term vs. Lo",
+        "doc_preview": "Have been researching correlations and how they change over time. Took soybean and soybean oil price data from 2000 - present and calculated rolling correlations for 40 days, 120 days, and 1 year. The"
+      }
+    ]
+  },
+  "reasoning_qa": {
+    "count": 19913,
+    "good_examples": 15894,
+    "examples": [
+      {
+        "question": "Consider a city with a growing population that is experiencing increasing traffic congestion. The city council is debating whether to expand road capacity by adding more lanes to major roads. Use a systems thinking approach to evaluate whether this is an effective long-term solution. Consider potential long-term impacts and interdependencies.",
+        "answer": "Premises: 1) The city has a growing population, leading to increased traffic congestion. 2) The city council is considering expanding road capacity by adding lanes as a potential solution. \n\nReasoning Steps: \n1) Initial Impact: Expanding road capacity can temporarily reduce traffic congestion by accommodating more vehicles. This seems like a straightforward solution to the problem. \n2) Systems Perspective: However, applying systems thinking requires considering long-term impacts and interdependencies. \n3) Induced Demand: Increasing road capacity can lead to induced demand, where the availability of more road space encourages more people to use vehicles, potentially returning congestion levels to their previous state or worse. \n4) Environmental Impact: Expanding roads might lead to more veh",
+        "difficulty": "hard",
+        "reasoning_type": "systems thinking"
+      },
+      {
+        "question": "In a small ecosystem, there's a sudden increase in the population of rabbits. This change leads to an alteration in the grass growth rate and the population of foxes, the primary predator of rabbits. Explain how these changes are interconnected and what could be the long-term effects on the ecosystem.",
+        "answer": "To understand this scenario, we need to apply systems thinking and consider the interdependencies within this ecosystem. \n\nPremises: \n1. An increase in the rabbit population raises the demand for resources, primarily grass, which is their main source of food. \n2. The higher rabbit population provides more food for foxes, potentially increasing their population as well. \n3. Grass is a finite resource that regrows over time depending on environmental conditions and consumption rates.\n\nReasoning steps:\n1. **Impact on grass:** As the rabbit population increases, more grass is consumed, leading to a decrease in its availability. This might cause a temporary overgrazing situation, reducing the grass growth rate over time. If the grass cannot regenerate fast enough, it might lead to soil erosion ",
+        "difficulty": "hard",
+        "reasoning_type": "systems thinking"
+      }
+    ]
+  },
+  "code_qa": {
+    "count": 29907,
+    "good_examples": 18118,
+    "examples": [
+      {
+        "question": "How can you safely access a nested property in a JavaScript object without causing a runtime error if a property in the path is undefined?",
+        "answer": "To safely access nested properties in a JavaScript object, you can use optional chaining, which allows you to read the value of deeply nested properties without having to explicitly check each level for the existence of the property. If any part of the chain is undefined or null, it will short-circuit and return undefined, preventing runtime errors.\n\nHere's an example:\n\n```javascript\n// Let's consider a user object with nested properties\nconst user = {\n    name: 'Alice',\n    address: {\n        street: '123 Main St',\n        city: 'Wonderland'\n    }\n};\n\n// Traditional way with manual checks\nlet streetName = user && user.address && user.address.street;\nconsole.log(streetName); // Outputs: '123 Main St'\n\n// Using optional chaining\nstreetName = user?.address?.street;\nconsole.log(streetName); /",
+        "difficulty": "easy",
+        "language": "JavaScript",
+        "topic": "web development"
+      },
+      {
+        "question": "How can you implement a simple Rust application that reads a configuration file and logs messages to a file, suitable for integration into a CI/CD pipeline for testing and deployment in a DevOps environment?",
+        "answer": "In this task, we will create a simple Rust application that reads a configuration file and logs messages to a file. This kind of application can be useful in a CI/CD pipeline where configuration might change based on the environment (development, testing, production). The Rust application will handle edge cases such as missing configuration files or invalid data. We will use the 'serde' library to parse the configuration and 'log' with 'simplelog' for logging. First, make sure to include dependencies in your 'Cargo.toml':\n\n```toml\n[dependencies]\nserde = { version = \"1.0\", features = [\"derive\"] }\nserde_json = \"1.0\"\nlog = \"0.4\"\nsimplelog = \"0.11\"\n```\n\nHere's the implementation:\n\n```rust\nuse serde::Deserialize;\nuse simplelog::*;\nuse std::fs::File;\nuse std::io::Read;\nuse std::path::Path;\n\n#[de",
+        "difficulty": "medium",
+        "language": "Rust",
+        "topic": "DevOps and CI/CD"
+      }
+    ]
+  },
+  "math_qa": {
+    "count": 19896,
+    "good_examples": 14447,
+    "examples": [
+      {
+        "question": "Consider the function f(x) = x^3 - 3x^2 + 2x + 1. Find the x-value at which the function has a local minimum.",
+        "answer": "To find the local minimum, we first need to find the critical points by taking the derivative of the function and setting it equal to zero.\n\n1. Take the derivative of the function:\n   f'(x) = d/dx (x^3 - 3x^2 + 2x + 1)\n         = 3x^2 - 6x + 2.\n\n2. Set the derivative equal to zero to find the critical points:\n   3x^2 - 6x + 2 = 0.\n\n3. Solve this quadratic equation using the quadratic formula, x = [-b ± sqrt(b^2 - 4ac)] / 2a, where a = 3, b = -6, and c = 2.\n   \n   x = [6 ± sqrt((-6)^2 - 4 * 3 * 2)] / (2 * 3)\n     = [6 ± sqrt(36 - 24)] / 6\n     = [6 ± sqrt(12)] / 6\n     = [6 ± 2sqrt(3)] / 6\n     = 1 ± sqrt(3)/3.\n\n4. Evaluate the second derivative to determine the nature of the critical points:\n   f''(x) = d/dx (3x^2 - 6x + 2)\n          = 6x - 6.\n\n5. Evaluate f''(x) at x = 1 + sqrt(3)/3:\n   f",
+        "topic": "calculus",
+        "level": "competition",
+        "key_concept": "Critical points and the second derivative test to determine local minima and maxima."
+      },
+      {
+        "question": "Consider a simple graph G with 6 vertices and 9 edges. Is this graph G connected? If it is, determine if it contains a cycle.",
+        "answer": "To determine if the graph G is connected, we first note the number of vertices (n) and edges (e). Here, n = 6 and e = 9. A simple connected graph with n vertices must satisfy the condition: e >= n - 1. For G, we have 9 edges and 6 - 1 = 5. Since 9 > 5, the graph can be connected. \n\nNext, we check if the graph contains a cycle. A simple connected graph with n vertices and e edges contains a cycle if e > n - 1. Since 9 > 5, G must contain a cycle. \n\nTo summarize, G is connected and contains a cycle.",
+        "topic": "graph_theory",
+        "level": "high_school",
+        "key_concept": "Understanding the relationship between vertices, edges, connectivity, and cycles in simple graphs."
+      }
+    ]
+  },
+  "creative_writing": {
+    "count": 9909,
+    "good_examples": 8895,
+    "examples": [
+      {
+        "question": "Write a short story where the protagonist discovers a secret library hidden within their own home. The library is filled with books that have not been written yet, and each book holds glimpses of possible futures. Describe their emotions and the decisions they must make upon uncovering this mysterious place.",
+        "answer": "Elena had always been drawn to the mystique of her family's grand old estate, a sprawling labyrinth of rooms and corridors whose secrets whispered through her childhood nights. She spent her youth exploring its dusty corners, yet it was only when she stumbled upon the hidden library, well into her adulthood, that the house truly unveiled its greatest enigma.\n\nThe discovery was purely accidental. Elena had been tracing a curious draft that seemed to emanate from nowhere, carrying a scent of aged paper and ink. It led her to a section of the wall in the west wing that felt different—a slight echo when tapped, almost as if it were hollow. She pushed gently, and with a creak that resonated through her bones, the wall swung open to reveal a dim, narrow passage leading downward.\n\nThe air was thi",
+        "type": "creative story writing"
+      },
+      {
+        "question": "Imagine you are an astronaut tasked with writing an essay for a distant civilization who knows nothing about Earth or humans. Your essay should vividly describe a day in the life of an Earthling. Focus on engaging sensory details and emotions to truly bring the experience to life for your extraterrestrial audience.",
+        "answer": "The universe beyond your celestial sphere is a tapestry woven with stories, and as an Earthling, I find my narrative deeply rooted in the rhythm of my planet. Allow me to guide you through a typical day on Earth—imagine it as a kaleidoscope of sensory experiences, a symphony of activities, and a palette of emotions.\n\nThe day begins as the sun, a fiery orb suspended in our sky, gently nudges the horizon, infusing the morning with a tender, golden embrace. My eyes flutter open as the first light dances across the floor. Rubbing the dreams from my eyelids, I am greeted by the earthy aroma of freshly brewed coffee wafting from the kitchen—an elixir that awakens both the body and the soul.\n\nAs I step outside, the air is crisply cool, kissing my cheeks in a refreshing salutation. The symphony of",
+        "type": "essay writing"
+      }
+    ]
+  },
+  "self_inverted": {
+    "count": 5000,
+    "good_examples": 2131,
+    "examples": [
+      {
+        "question": "In a group of 9 people, how many unique pairs can be formed for a game where each pair competes against one another?",
+        "answer": "To solve this problem, we need to find the number of ways to choose 2 people out of 9 to form a pair for the game. This is a combination problem, where the order of selection does not matter. The formula for combinations is given by: \\( \\binom{n}{r} = \\frac{n!}{r!(n-r)!} \\) where \\(n\\) is the total number of items to choose from, and \\(r\\) is the number of items to choose. Here, \\(n = 9\\) and \\(r = 2\\), since we are selecting 2 people out of 9. Applying the formula, we get: \\[ \\binom{9}{2} = \\frac{9!}{2!(9-2)!} = \\frac{9!}{2! \\times 7!} \\] Now, simplify the factorials: \\[ 9! = 9 \\times 8 \\times 7! \\] Substitute back into the equation: \\[ \\binom{9}{2} = \\frac{9 \\times 8 \\times 7!}{2! \\times 7!} \\] The \\(7!\\) terms cancel out: \\[ \\binom{9}{2} = \\frac{9 \\times 8}{2!} = \\frac{72}{2} = 36 \\] Th",
+        "domain": "combinatorics",
+        "difficulty": "medium"
+      },
+      {
+        "question": "How do you determine the effect of a linear operator on polynomial functions up to cubic degree when expressed relative to a given basis?",
+        "answer": "To find the matrix representation of the linear transformation T with respect to the basis B = {1, x, x^2, x^3}, we need to evaluate T on each basis element and express the result in terms of B.\n\n1. Compute T(1):\n   T(1) = 1((x+1)) - 1(x) = 1 - 1 = 0. \n   Thus, T(1) = 0.\n\n2. Compute T(x):\n   T(x) = (x+1) - x = 1.\n   Thus, T(x) = 1.\n\n3. Compute T(x^2):\n   T(x^2) = (x+1)^2 - x^2 = x^2 + 2x + 1 - x^2 = 2x + 1.\n   Thus, T(x^2) = 2x + 1.\n\n4. Compute T(x^3):\n   T(x^3) = (x+1)^3 - x^3 = x^3 + 3x^2 + 3x + 1 - x^3 = 3x^2 + 3x + 1.\n   Thus, T(x^3) = 3x^2 + 3x + 1.\n\nNow express each T(b_i) in terms of the basis B:\n- T(1) = 0 corresponds to the vector \\begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\\\ 0 \\end{bmatrix}.\n- T(x) = 1 corresponds to \\begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \\end{bmatrix}.\n- T(x^2) = 2x + 1 corresponds ",
+        "domain": "linear algebra",
+        "difficulty": "hard"
+      }
+    ]
+  },
+  "multi_turn": {
+    "count": 19901,
+    "good_examples": 13167,
+    "examples": [
+      {
+        "turns": [
+          {
+            "role": "user",
+            "content": "I'm trying to prepare my lesson on photosynthesis for my 7th-grade class. I'm not sure how much detail I should go into. Any suggestions?"
+          },
+          {
+            "role": "assistant",
+            "content": "When teaching photosynthesis to 7th graders, it's important to balance clarity with complexity. How familiar are they with basic biology concepts like cells and their functions?"
+          },
+          {
+            "role": "user",
+            "content": "They've learned about cells and basic plant structures, but not much beyond that."
+          },
+          {
+            "role": "assistant",
+            "content": "In that case, introducing them to the basic photosynthesis process—how plants convert sunlight into energy using water and carbon dioxide—should be sufficient. Visual aids and simple experiments can help reinforce these concepts. Are you planning to include any interactive elements?"
+          }
+        ],
+        "n_turns": 8,
+        "scenario": "A teacher preparing lesson materials with pedagogical considerations",
+        "pattern": "socratic_method"
+      },
+      {
+        "turns": [
+          {
+            "role": "user",
+            "content": "I'm getting a 'TypeError' when trying to execute my Python script. It's saying that a 'NoneType' object is not subscriptable. Any idea why that might be?"
+          },
+          {
+            "role": "assistant",
+            "content": "A 'NoneType' error typically means you're trying to access elements in a variable that is set to None. Could you check if there's any function or operation in your code that might be returning None unexpectedly?"
+          },
+          {
+            "role": "user",
+            "content": "I see, there's a function that processes some data and I'm trying to use it with indexing right after. But I expected it to return a list. If it returns None, what might that indicate?"
+          },
+          {
+            "role": "assistant",
+            "content": "It could mean that the function is hitting an edge case or exception and not reaching the return statement for the list. Can you verify if there are conditional paths or error handling inside that function which might bypass the list return?"
+          }
+        ],
+        "n_turns": 5,
+        "scenario": "A developer debugging code with an AI assistant, iteratively narrowing down the issue",
+        "pattern": "socratic_method"
+      }
+    ]
+  }
+}

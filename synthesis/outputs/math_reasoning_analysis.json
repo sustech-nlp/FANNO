@@ -1,0 +1,52 @@
+{
+  "description": "Math QA and Reasoning QA pipeline detailed analysis",
+  "math_qa": {
+    "total": 19896,
+    "n_topics": 15,
+    "topics": {
+      "arithmetic": 1493,
+      "algebra": 1490,
+      "geometry": 1481,
+      "differential_equations": 1383,
+      "probability": 1382,
+      "statistics": 1382,
+      "optimization": 1377,
+      "trigonometry": 1359,
+      "number_theory": 1333,
+      "graph_theory": 1318,
+      "calculus": 1234,
+      "combinatorics": 1208,
+      "abstract_algebra": 1177,
+      "real_analysis": 1152,
+      "linear_algebra": 1127
+    },
+    "difficulties": {
+      "unknown": 19896
+    }
+  },
+  "reasoning_qa": {
+    "total": 19913,
+    "n_types": 13,
+    "types": {
+      "probabilistic reasoning": 1829,
+      "analogical reasoning": 1771,
+      "spatial reasoning": 1739,
+      "causal reasoning": 1683,
+      "logical puzzles": 1671,
+      "deductive reasoning": 1624,
+      "temporal reasoning": 1616,
+      "inductive reasoning": 1561,
+      "abductive reasoning": 1547,
+      "paradox analysis": 1538,
+      "ethical reasoning": 1472,
+      "systems thinking": 1449,
+      "unknown": 413
+    },
+    "difficulties": {
+      "hard": 10832,
+      "medium": 8004,
+      "expert": 740,
+      "unknown": 337
+    }
+  }
+}

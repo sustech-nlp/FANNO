@@ -1,0 +1,27 @@
+\begin{table*}[t]
+\centering
+\caption{Curated examples from each synthesis pipeline, illustrating the diversity of question styles, domains, and response formats in FANNO-Dev.}
+\label{tab:showcase}
+\small
+\begin{tabular}{p{1.8cm}p{5.5cm}p{6.5cm}}
+\toprule
+\textbf{Pipeline} & \textbf{Question (truncated)} & \textbf{Answer (truncated)} \\
+\midrule
+Complex QA & \textit{domain: Science & Technology; type: multi_hop_reasoning} --- How do quantum computing principles, such as superposition and entanglement, enhance machine learning algorithms, and what are the potential implicati... & Quantum computing, grounded in principles like superposition and entanglement, offers significant advantages over classical computing, particularly in... \\
+\midrule
+Document QA & Why might musicians like Brian Ellis choose to collaborate with various artists and groups across different genres and labels instead of focusing on a... & Musicians like Brian Ellis might choose to collaborate with various artists and groups across different genres and labels for several reasons:  1. **C... \\
+\midrule
+Reasoning & \textit{difficulty: hard; reasoning_type: systems thinking} --- Consider a city with a growing population that is experiencing increasing traffic congestion. The city council is debating whether to expand road capa... & Premises: 1) The city has a growing population, leading to increased traffic congestion. 2) The city council is considering expanding road capacity by... \\
+\midrule
+Code QA & \textit{difficulty: easy; language: JavaScript} --- How can you safely access a nested property in a JavaScript object without causing a runtime error if a property in the path is undefined?... & To safely access nested properties in a JavaScript object, you can use optional chaining, which allows you to read the value of deeply nested properti... \\
+\midrule
+Math QA & \textit{topic: calculus} --- Consider the function f(x) = x\^3 - 3x\^2 + 2x + 1. Find the x-value at which the function has a local minimum.... & To find the local minimum, we first need to find the critical points by taking the derivative of the function and setting it equal to zero.  1. Take t... \\
+\midrule
+Creative & \textit{type: creative story writing} --- Write a short story where the protagonist discovers a secret library hidden within their own home. The library is filled with books that have not been... & Elena had always been drawn to the mystique of her family's grand old estate, a sprawling labyrinth of rooms and corridors whose secrets whispered thr... \\
+\midrule
+Self-Inv. & \textit{domain: combinatorics; difficulty: medium} --- In a group of 9 people, how many unique pairs can be formed for a game where each pair competes against one another?... & To solve this problem, we need to find the number of ways to choose 2 people out of 9 to form a pair for the game. This is a combination problem, wher... \\
+\midrule
+Multi-Turn & I'm trying to prepare my lesson on photosynthesis for my 7th-grade class. I'm not sure how much detail I should go into. Any suggestions? [8 turns, socratic\_method]... & When teaching photosynthesis to 7th graders, it's important to balance clarity with complexity. How familiar are they with basic biology concepts like... \\
+\bottomrule
+\end{tabular}
+\end{table*}
