@@ -1,0 +1,121 @@
+{
+  "figure": "fig204",
+  "title": "Cross-Pipeline Transfer Learning Potential",
+  "centroid_distances": {
+    "Code-Complex QA": 0.9376,
+    "Code-Creative": 0.9508,
+    "Code-Document QA": 0.9616,
+    "Code-Math": 0.9835,
+    "Code-Reasoning": 0.9841,
+    "Code-Self-Inversion": 0.6533,
+    "Complex QA-Creative": 0.5427,
+    "Complex QA-Document QA": 0.2422,
+    "Complex QA-Math": 0.8933,
+    "Complex QA-Reasoning": 0.6498,
+    "Complex QA-Self-Inversion": 0.2354,
+    "Creative-Document QA": 0.3661,
+    "Creative-Math": 0.8993,
+    "Creative-Reasoning": 0.6784,
+    "Creative-Self-Inversion": 0.5082,
+    "Document QA-Math": 0.9226,
+    "Document QA-Reasoning": 0.6872,
+    "Document QA-Self-Inversion": 0.3062,
+    "Math-Reasoning": 0.424,
+    "Math-Self-Inversion": 0.6122,
+    "Reasoning-Self-Inversion": 0.4295
+  },
+  "transfer_scores": {
+    "Code->Complex QA": 0.03,
+    "Code->Creative": 0.0,
+    "Code->Document QA": 0.11,
+    "Code->Math": 0.0,
+    "Code->Reasoning": 0.01,
+    "Code->Self-Inversion": 4.83,
+    "Complex QA->Code": 0.0,
+    "Complex QA->Creative": 0.41,
+    "Complex QA->Document QA": 12.62,
+    "Complex QA->Math": 0.01,
+    "Complex QA->Reasoning": 2.19,
+    "Complex QA->Self-Inversion": 12.17,
+    "Creative->Code": 0.0,
+    "Creative->Complex QA": 2.78,
+    "Creative->Document QA": 9.39,
+    "Creative->Math": 0.0,
+    "Creative->Reasoning": 1.22,
+    "Creative->Self-Inversion": 5.02,
+    "Document QA->Code": 0.04,
+    "Document QA->Complex QA": 6.32,
+    "Document QA->Creative": 0.61,
+    "Document QA->Math": 0.01,
+    "Document QA->Reasoning": 0.91,
+    "Document QA->Self-Inversion": 4.36,
+    "Math->Code": 0.0,
+    "Math->Complex QA": 0.15,
+    "Math->Creative": 0.0,
+    "Math->Document QA": 0.18,
+    "Math->Reasoning": 4.04,
+    "Math->Self-Inversion": 8.11,
+    "Reasoning->Code": 0.01,
+    "Reasoning->Complex QA": 2.36,
+    "Reasoning->Creative": 0.08,
+    "Reasoning->Document QA": 1.96,
+    "Reasoning->Math": 0.6,
+    "Reasoning->Self-Inversion": 5.89,
+    "Self-Inversion->Code": 2.22,
+    "Self-Inversion->Complex QA": 14.86,
+    "Self-Inversion->Creative": 1.23,
+    "Self-Inversion->Document QA": 10.01,
+    "Self-Inversion->Math": 3.7,
+    "Self-Inversion->Reasoning": 6.29
+  },
+  "outgoing_avg": {
+    "Code": 0.83,
+    "Complex QA": 4.57,
+    "Creative": 3.07,
+    "Document QA": 2.04,
+    "Math": 2.08,
+    "Reasoning": 1.82,
+    "Self-Inversion": 6.39
+  },
+  "incoming_avg": {
+    "Code": 0.38,
+    "Complex QA": 4.42,
+    "Creative": 0.39,
+    "Document QA": 5.71,
+    "Math": 0.72,
+    "Reasoning": 2.44,
+    "Self-Inversion": 6.73
+  },
+  "top_transfer_pairs": [
+    {
+      "from": "Self-Inversion",
+      "to": "Complex QA",
+      "score": 14.86
+    },
+    {
+      "from": "Complex QA",
+      "to": "Document QA",
+      "score": 12.62
+    },
+    {
+      "from": "Complex QA",
+      "to": "Self-Inversion",
+      "score": 12.17
+    },
+    {
+      "from": "Self-Inversion",
+      "to": "Document QA",
+      "score": 10.01
+    },
+    {
+      "from": "Creative",
+      "to": "Document QA",
+      "score": 9.39
+    }
+  ],
+  "findings": [
+    "Best transfer: Self-Inversion->Complex QA (14.9)",
+    "Transfer hub: Self-Inversion",
+    "Transfer receiver: Self-Inversion"
+  ]
+}
