@@ -1329,3 +1329,33 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
 - **24 LaTeX tables**
 - **46 JSON reports**
 - **95+ git commits** on dev branch
+
+### Phase 69: Overlap Network Analysis
+- **Files**: fig71_overlap_network.png/pdf, overlap_network_analysis.json
+- Built NetworkX graph of pipeline semantic overlap
+- Self-Inversion: only 26.4% self-overlap (rest bridges to other pipelines)
+- Creative: 95.6% self-overlap (most isolated)
+- Self-Inversion has highest betweenness centrality (confirmed bridge role)
+
+### Phase 70: Difficulty & Complexity Stratification
+- **Files**: fig72_difficulty_complexity.png/pdf
+- Complex QA: medium (53%) + hard (45%) + expert (1.5%)
+- Code QA: mostly medium (96%), some easy (3.8%)
+- Math QA: 5 balanced levels (elementary through competition)
+- Reasoning QA: hard (54%) + medium (40%) + expert (3.7%)
+
+### Phase 71: Dimensionality Analysis
+- **Files**: fig73_dimensionality_analysis.png/pdf, dimensionality_analysis.json
+- L2-normalized embeddings (sentence-transformers): centering before PCA
+- Overall 90% variance: >100 components (high intrinsic dimensionality)
+- Code QA: 68 dims for 90% (lowest = most structured)
+- Math QA: 78 dims (second lowest)
+- Complex QA, Creative, Doc QA, Reasoning, Self-Inv: all >100 dims
+- Confirms dataset spans a truly high-dimensional semantic space
+
+### Final Deliverables Inventory (Session 3 Complete)
+- **73 figures** (PNG+PDF pairs) — from fig1 to fig73
+- **24 LaTeX tables** — from tab1 to tab24
+- **48 JSON analysis reports**
+- **97 git commits** on dev branch, all pushed
+- **Key data**: 153,351 cleaned samples, Vendi=182.75, 2,297 unique domains
