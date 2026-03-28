@@ -1,0 +1,27 @@
+\begin{table*}[t]
+\centering
+\caption{Session 4 Key Findings: Extended Analysis Suite (fig80--fig111)}
+\label{tab:session4_findings}
+\small
+\begin{tabular}{clp{6cm}l}
+\toprule
+\textbf{\#} & \textbf{Analysis} & \textbf{Key Finding} & \textbf{Reference} \\
+\midrule
+1 & Semantic Drift & Within-batch diversity stable across all pipelines; Self-Inv highest batch novelty rate & Fig~80 \\
+2 & Factuality & Complex QA most evidential (2.43 citations/answer); Math most numerical (32.8\%) & Fig~81 \\
+3 & Verb Taxonomy & Code QA dominated by ``How'' (78\%); Creative by ``Write'' (43\%); unique verb profiles per pipeline & Fig~84 \\
+4 & Diversity Decomposition & Greedy order: Self-Inv first; Creative has negative marginal Vendi ($-$0.4) & Fig~85 \\
+5 & Sentence Analysis & Creative: most sentences (18.2/ans); Code: longest sentences (57.9 words) & Fig~86 \\
+6 & Efficiency Frontier & Self-Inv composite efficiency 0.924 (6.3$\times$ better than Code QA 0.146) & Fig~87 \\
+7 & Cross-Pipeline Synergy & Code+Math best pair (Vendi gain=4.5); distance correlates with synergy & Fig~89 \\
+8 & Spectral Analysis & Self-Inv slowest eigenvalue decay = most diverse spectrum; 90\% energy at k=90 & Fig~90 \\
+9 & Source Ordering & Greedy optimal: Self-Inv $\to$ DocQA $\to$ Reasoning first 3 sources & Fig~92 \\
+10 & Hull Coverage & Self-Inv covers 87.6\% of PCA convex hull (highest spatial coverage of any source) & Fig~93 \\
+11 & Answer Patterns & Self-Inv pattern entropy=2.55 (most diverse structure); Code=0.02 (99.8\% code blocks) & Fig~94 \\
+12 & Domain Explosion & Self-Inv 2,272 exclusive domains (99.3\% unique); only 17 domains shared across pipelines & Fig~96 \\
+13 & Cluster Quality & Self-Inv in ALL 20/20 K-Means clusters; 12 pure, 5 mixed, 3 diverse & Fig~106 \\
+14 & Format Diversity & Code QA highest format entropy (2.43 bits); Creative lowest (0.67) & Fig~104 \\
+15 & Error Analysis & Short answers $<$0.2\%, apology $<$0.4\%; Math 22\% repetitive (expected for step-by-step) & Fig~111 \\
+\bottomrule
+\end{tabular}
+\end{table*}
