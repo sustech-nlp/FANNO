@@ -1,0 +1,77 @@
+{
+  "figure": "fig166_quality_scorecard",
+  "title": "Data Quality Scorecard",
+  "quality": {
+    "Code": {
+      "total": 29907,
+      "short_pct": 0.0,
+      "long_pct": 0.0,
+      "repetitive_pct": 0.003343698799612131,
+      "refusal_pct": 0.010031096398836392,
+      "empty_q_pct": 0.0,
+      "mean_ttr": 0.5410302815963743,
+      "score": 99.98662520480156
+    },
+    "Complex QA": {
+      "total": 49895,
+      "short_pct": 0.0,
+      "long_pct": 0.0,
+      "repetitive_pct": 0.012025253031365868,
+      "refusal_pct": 0.046096803286902494,
+      "empty_q_pct": 0.0,
+      "mean_ttr": 0.5966872725208909,
+      "score": 99.94187794368173
+    },
+    "Creative": {
+      "total": 9908,
+      "short_pct": 0.020185708518368994,
+      "long_pct": 0.0,
+      "repetitive_pct": 0.0,
+      "refusal_pct": 1.1909568025837707,
+      "empty_q_pct": 0.0,
+      "mean_ttr": 0.6577523462192147,
+      "score": 98.78885748889786
+    },
+    "Document QA": {
+      "total": 24286,
+      "short_pct": 0.7494029482006094,
+      "long_pct": 0.0,
+      "repetitive_pct": 0.08646957094622416,
+      "refusal_pct": 0.32117269208597543,
+      "empty_q_pct": 0.0,
+      "mean_ttr": 0.593989499602297,
+      "score": 98.84295478876719
+    },
+    "Math": {
+      "total": 19889,
+      "short_pct": 0.0,
+      "long_pct": 0.0,
+      "repetitive_pct": 4.424556287395043,
+      "refusal_pct": 0.0,
+      "empty_q_pct": 0.0,
+      "mean_ttr": 0.470611365562756,
+      "score": 95.57544371260495
+    },
+    "Reasoning": {
+      "total": 19912,
+      "short_pct": 0.020088388911209322,
+      "long_pct": 0.0,
+      "repetitive_pct": 1.4815186822016875,
+      "refusal_pct": 0.03013258336681398,
+      "empty_q_pct": 0.0,
+      "mean_ttr": 0.5485113883493652,
+      "score": 98.46826034552029
+    },
+    "Self-Inversion": {
+      "total": 5000,
+      "short_pct": 0.42,
+      "long_pct": 0.0,
+      "repetitive_pct": 0.24,
+      "refusal_pct": 0.13999999999999999,
+      "empty_q_pct": 0.0,
+      "mean_ttr": 0.6327034151859319,
+      "score": 99.2
+    }
+  },
+  "mean_score": 98.68628849775337
+}
