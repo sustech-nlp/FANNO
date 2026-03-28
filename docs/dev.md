@@ -1492,9 +1492,22 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
 7. **KNN knowledge transfer**: Self-Inversion has lowest self-containment (draws from all pipelines equally)
 8. **Pipeline synergy**: Code+Creative and Math+Reasoning are highest-synergy pairs in embedding space
 
-### Grand Total (Session 5 Final, 2026-03-27)
-- **129 figures** (PNG+PDF pairs) — fig1 through fig129 + fig_dashboard
-- **26 LaTeX tables** — tab1 through tab26
+### Phases 130-137: Final Extended Suite
+
+| Phase | Analysis | Key Finding | Output |
+|-------|----------|-------------|--------|
+| 130 | Training Curriculum | Staged curriculum, budget allocation, 10 recommendations | fig130 |
+| 131 | Evidence Patterns | Evidence types per answer; Math highest numerical density | fig131 |
+| 132 | Data Completeness | Field coverage heatmap, capability coverage matrix | fig132 |
+| 133 | Reproducibility | Split-half r≈0.98, all checks PASS | fig133 |
+| 134 | Comparative Positioning | FANNO-Dev vs 7 baselines on 8 dimensions | fig134 |
+| 135 | Poster Figure | 36×24 comprehensive poster with all key results | fig135 |
+| 136 | Vocabulary Ecosystem | Zipf law, hapax rates, exclusive vocabulary per pipeline | fig136 |
+| 137 | Hierarchical Structure | Ward/Average dendrograms, MDS centroid map, proximity network | fig137 |
+
+### Grand Total (Session 5 Final — Updated, 2026-03-27)
+- **138 figures** (PNG+PDF pairs) — fig1 through fig137 + fig_dashboard
+- **27 LaTeX tables** — tab1 through tab27
 - **57 JSON analysis reports** + 1 comprehensive inventory
 - **1 LaTeX paper draft** — complete with abstract, 8 sections, references, appendix
 - **130+ git commits** on dev branch

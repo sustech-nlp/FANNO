@@ -213,9 +213,45 @@
       "png": "synthesis/figures/fig128_knowledge_transfer.png",
       "pdf": "synthesis/figures/fig128_knowledge_transfer.pdf"
     },
+    "fig129_final_summary": {
+      "png": "synthesis/figures/fig129_final_summary.png",
+      "pdf": "synthesis/figures/fig129_final_summary.pdf"
+    },
     "fig12_template_utilization": {
       "png": "synthesis/figures/fig12_template_utilization.png",
       "pdf": "synthesis/figures/fig12_template_utilization.pdf"
+    },
+    "fig130_training_curriculum": {
+      "png": "synthesis/figures/fig130_training_curriculum.png",
+      "pdf": "synthesis/figures/fig130_training_curriculum.pdf"
+    },
+    "fig131_evidence_patterns": {
+      "png": "synthesis/figures/fig131_evidence_patterns.png",
+      "pdf": "synthesis/figures/fig131_evidence_patterns.pdf"
+    },
+    "fig132_data_completeness": {
+      "png": "synthesis/figures/fig132_data_completeness.png",
+      "pdf": "synthesis/figures/fig132_data_completeness.pdf"
+    },
+    "fig133_reproducibility": {
+      "png": "synthesis/figures/fig133_reproducibility.png",
+      "pdf": "synthesis/figures/fig133_reproducibility.pdf"
+    },
+    "fig134_comparative_positioning": {
+      "png": "synthesis/figures/fig134_comparative_positioning.png",
+      "pdf": "synthesis/figures/fig134_comparative_positioning.pdf"
+    },
+    "fig135_poster": {
+      "png": "synthesis/figures/fig135_poster.png",
+      "pdf": "synthesis/figures/fig135_poster.pdf"
+    },
+    "fig136_vocabulary_ecosystem": {
+      "png": "synthesis/figures/fig136_vocabulary_ecosystem.png",
+      "pdf": "synthesis/figures/fig136_vocabulary_ecosystem.pdf"
+    },
+    "fig137_hierarchical_structure": {
+      "png": "synthesis/figures/fig137_hierarchical_structure.png",
+      "pdf": "synthesis/figures/fig137_hierarchical_structure.pdf"
     },
     "fig13_linguistic_diversity": {
       "png": "synthesis/figures/fig13_linguistic_diversity.png",
@@ -693,8 +729,8 @@
     "vocabulary_overlap_analysis": "synthesis/outputs/vocabulary_overlap_analysis.json"
   },
   "summary": {
-    "total_figures": 129,
-    "total_tables": 26,
-    "total_reports": 56
+    "total_figures": 138,
+    "total_tables": 27,
+    "total_reports": 57
   }
 }
