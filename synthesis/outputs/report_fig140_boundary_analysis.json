@@ -1,0 +1,28 @@
+{
+  "figure": "fig140_boundary_analysis",
+  "title": "Embedding Space Boundary Analysis",
+  "total_hull_area": 0.6133745461468546,
+  "sum_individual_areas": 1.7942357405758014,
+  "overlap_ratio": 1.9251878022115123,
+  "uncovered_grid_pct": 93.71000000000001,
+  "frontier_count": 175,
+  "frontier_by_pipeline": {
+    "Complex QA": 12,
+    "Reasoning": 23,
+    "Code": 72,
+    "Math": 21,
+    "Document QA": 16,
+    "Creative": 1,
+    "Self-Inversion": 30
+  },
+  "hull_areas": {
+    "Code": 0.1476417584888127,
+    "Complex QA": 0.22092243786772128,
+    "Creative": 0.14064006592355105,
+    "Document QA": 0.37567729812297207,
+    "Math": 0.1335118910461457,
+    "Reasoning": 0.2384368997383845,
+    "Self-Inversion": 0.5374053893882141
+  },
+  "pca_explained_variance": 0.09224336594343185
+}

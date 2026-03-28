@@ -1,0 +1,247 @@
+{
+  "figure": "fig141_topic_coherence",
+  "title": "Topic Coherence & Pipeline-Topic Analysis",
+  "n_topics": 15,
+  "nmf_reconstruction_error": 79.8006584754355,
+  "mean_coherence": 0.2984391643533789,
+  "topic_coherence": [
+    0.2052100533732907,
+    0.4634766082060331,
+    0.18455126241124067,
+    0.3590026142469247,
+    0.46045500096040975,
+    0.2336701593413471,
+    0.26201895550245996,
+    0.31794590575889514,
+    0.4655906844849501,
+    0.24320054779147585,
+    0.23920010951706303,
+    0.06377614172287793,
+    0.4459200514949766,
+    0.20888308355312543,
+    0.323686286935613
+  ],
+  "topic_keywords": {
+    "T0": [
+      "implement",
+      "function",
+      "simple",
+      "cases",
+      "using",
+      "edge",
+      "python",
+      "list"
+    ],
+    "T1": [
+      "angle",
+      "triangle",
+      "degrees",
+      "length",
+      "abc",
+      "units",
+      "measures",
+      "opposite"
+    ],
+    "T2": [
+      "write",
+      "character",
+      "story",
+      "life",
+      "vivid",
+      "short",
+      "use",
+      "world"
+    ],
+    "T3": [
+      "dx",
+      "int_0",
+      "mathbb",
+      "continuous",
+      "function",
+      "let",
+      "prove",
+      "exists"
+    ],
+    "T4": [
+      "marbles",
+      "marble",
+      "red",
+      "blue",
+      "bag",
+      "green",
+      "probability",
+      "box"
+    ],
+    "T5": [
+      "apples",
+      "sarah",
+      "friend",
+      "does",
+      "gives",
+      "samantha",
+      "basket",
+      "left"
+    ],
+    "T6": [
+      "graph",
+      "vertices",
+      "edges",
+      "connected",
+      "consider",
+      "simple",
+      "tree",
+      "determine"
+    ],
+    "T7": [
+      "matrix",
+      "pmatrix",
+      "begin",
+      "end",
+      "let",
+      "times",
+      "determinant",
+      "given"
+    ],
+    "T8": [
+      "java",
+      "singleton",
+      "design",
+      "thread",
+      "pattern",
+      "implement",
+      "safety",
+      "lazy"
+    ],
+    "T9": [
+      "statement",
+      "false",
+      "true",
+      "consider",
+      "paradox",
+      "sentence",
+      "following",
+      "analyze"
+    ],
+    "T10": [
+      "user",
+      "sql",
+      "database",
+      "typescript",
+      "data",
+      "injection",
+      "prevent",
+      "table"
+    ],
+    "T11": [
+      "does",
+      "potential",
+      "city",
+      "impact",
+      "influence",
+      "considering",
+      "systems",
+      "evaluate"
+    ],
+    "T12": [
+      "pen",
+      "fencing",
+      "area",
+      "meters",
+      "farmer",
+      "garden",
+      "rectangular",
+      "dimensions"
+    ],
+    "T13": [
+      "number",
+      "students",
+      "books",
+      "read",
+      "test",
+      "median",
+      "scores",
+      "mode"
+    ],
+    "T14": [
+      "order",
+      "group",
+      "subgroup",
+      "let",
+      "normal",
+      "prove",
+      "56",
+      "sylow"
+    ]
+  },
+  "topic_purity": [
+    0.6086615665173175,
+    0.529170029680132,
+    0.7090993592388078,
+    0.600088128580311,
+    0.43670954709571985,
+    0.3660037169771457,
+    0.3843787597745653,
+    0.47125529116751086,
+    0.61625937896256,
+    0.7166726345123957,
+    0.5821601376756421,
+    0.3575004728525072,
+    0.2709340321360626,
+    0.2556628862541675,
+    0.42321365401590855
+  ],
+  "topic_dominant_pipeline": [
+    "Code",
+    "Math",
+    "Creative",
+    "Math",
+    "Reasoning",
+    "Math",
+    "Math",
+    "Math",
+    "Code",
+    "Reasoning",
+    "Code",
+    "Complex QA",
+    "Math",
+    "Math",
+    "Math"
+  ],
+  "pipeline_topic_entropy": {
+    "Code": {
+      "top_topic": 10,
+      "top_share": 0.31841423758791954,
+      "entropy": 1.7822438358494312
+    },
+    "Complex QA": {
+      "top_topic": 11,
+      "top_share": 0.6388814449476325,
+      "entropy": 1.5611536712066203
+    },
+    "Creative": {
+      "top_topic": 2,
+      "top_share": 0.6715645786855012,
+      "entropy": 1.3237502754935986
+    },
+    "Document QA": {
+      "top_topic": 11,
+      "top_share": 0.5510397321984899,
+      "entropy": 1.7640060809367069
+    },
+    "Math": {
+      "top_topic": 13,
+      "top_share": 0.1404168768950575,
+      "entropy": 2.30337955197898
+    },
+    "Reasoning": {
+      "top_topic": 9,
+      "top_share": 0.28146183518631823,
+      "entropy": 2.1331016176923234
+    },
+    "Self-Inversion": {
+      "top_topic": 11,
+      "top_share": 0.23076679035638656,
+      "entropy": 2.5111340764019516
+    }
+  }
+}
