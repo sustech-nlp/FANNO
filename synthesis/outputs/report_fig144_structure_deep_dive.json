@@ -1,0 +1,101 @@
+{
+  "figure": "fig144_structure_deep_dive",
+  "title": "Response Structure Deep Dive",
+  "feature_prevalence": {
+    "Code": {
+      "Code Blocks": 0.998,
+      "Numbered Lists": 0.733,
+      "Bullet Lists": 0.609,
+      "Headers": 0.7375,
+      "Bold Text": 0.8395,
+      "Inline Code": 0.999,
+      "Math ($)": 0.13,
+      "Paragraphs (>3)": 0.9855,
+      "Tables": 0.0335
+    },
+    "Complex QA": {
+      "Code Blocks": 0.0,
+      "Numbered Lists": 0.3495,
+      "Bullet Lists": 0.1765,
+      "Headers": 0.014,
+      "Bold Text": 0.381,
+      "Inline Code": 0.0005,
+      "Math ($)": 0.0265,
+      "Paragraphs (>3)": 0.9405,
+      "Tables": 0.0055
+    },
+    "Creative": {
+      "Code Blocks": 0.002,
+      "Numbered Lists": 0.039,
+      "Bullet Lists": 0.0295,
+      "Headers": 0.025,
+      "Bold Text": 0.06,
+      "Inline Code": 0.008,
+      "Math ($)": 0.0,
+      "Paragraphs (>3)": 0.9595,
+      "Tables": 0.0
+    },
+    "Document QA": {
+      "Code Blocks": 0.0495,
+      "Numbered Lists": 0.73,
+      "Bullet Lists": 0.2785,
+      "Headers": 0.2985,
+      "Bold Text": 0.825,
+      "Inline Code": 0.0555,
+      "Math ($)": 0.014,
+      "Paragraphs (>3)": 0.8855,
+      "Tables": 0.001
+    },
+    "Math": {
+      "Code Blocks": 0.0,
+      "Numbered Lists": 0.2765,
+      "Bullet Lists": 0.1825,
+      "Headers": 0.0035,
+      "Bold Text": 0.086,
+      "Inline Code": 0.0,
+      "Math ($)": 0.0175,
+      "Paragraphs (>3)": 0.669,
+      "Tables": 0.0305
+    },
+    "Reasoning": {
+      "Code Blocks": 0.0,
+      "Numbered Lists": 0.5635,
+      "Bullet Lists": 0.26,
+      "Headers": 0.003,
+      "Bold Text": 0.088,
+      "Inline Code": 0.0,
+      "Math ($)": 0.004,
+      "Paragraphs (>3)": 0.413,
+      "Tables": 0.025
+    },
+    "Self-Inversion": {
+      "Code Blocks": 0.151,
+      "Numbered Lists": 0.2445,
+      "Bullet Lists": 0.15,
+      "Headers": 0.075,
+      "Bold Text": 0.214,
+      "Inline Code": 0.166,
+      "Math ($)": 0.025,
+      "Paragraphs (>3)": 0.5265,
+      "Tables": 0.017
+    }
+  },
+  "avg_feature_count": {
+    "Code": 5.0915,
+    "Complex QA": 0.979,
+    "Creative": 0.1545,
+    "Document QA": 2.2945,
+    "Math": 0.633,
+    "Reasoning": 0.9655,
+    "Self-Inversion": 1.013
+  },
+  "avg_paragraphs": {
+    "Code": 15.191666666666666,
+    "Complex QA": 6.75,
+    "Creative": 8.602666666666666,
+    "Document QA": 11.643333333333333,
+    "Math": 8.275333333333334,
+    "Reasoning": 4.101,
+    "Self-Inversion": 4.915333333333334
+  }
+}
