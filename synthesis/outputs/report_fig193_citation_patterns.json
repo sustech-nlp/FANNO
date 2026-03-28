@@ -1,0 +1,135 @@
+{
+  "figure": "fig193",
+  "title": "Answer Citation & Reference Pattern Analysis",
+  "patterns_analyzed": [
+    "academic_cite",
+    "url_reference",
+    "example_marker",
+    "step_reference",
+    "formula_ref",
+    "definition_ref",
+    "analogy",
+    "contrast",
+    "evidence",
+    "caveat"
+  ],
+  "pattern_rates_per_1K": {
+    "Code": {
+      "academic_cite": 163.2,
+      "url_reference": 206.6,
+      "example_marker": 702.6,
+      "step_reference": 247.0,
+      "formula_ref": 0.0,
+      "definition_ref": 30.8,
+      "analogy": 482.6,
+      "contrast": 18.0,
+      "evidence": 9.4,
+      "caveat": 11.8
+    },
+    "Complex QA": {
+      "academic_cite": 67.8,
+      "url_reference": 0.0,
+      "example_marker": 2461.0,
+      "step_reference": 111.6,
+      "formula_ref": 2.2,
+      "definition_ref": 17.6,
+      "analogy": 1509.2,
+      "contrast": 776.6,
+      "evidence": 151.8,
+      "caveat": 88.8
+    },
+    "Creative": {
+      "academic_cite": 10.8,
+      "url_reference": 0.6,
+      "example_marker": 163.4,
+      "step_reference": 46.6,
+      "formula_ref": 0.0,
+      "definition_ref": 2.8,
+      "analogy": 1627.2,
+      "contrast": 202.8,
+      "evidence": 30.2,
+      "caveat": 19.8
+    },
+    "Document QA": {
+      "academic_cite": 40.6,
+      "url_reference": 1.6,
+      "example_marker": 1277.8,
+      "step_reference": 84.6,
+      "formula_ref": 1.6,
+      "definition_ref": 5.0,
+      "analogy": 1127.2,
+      "contrast": 236.2,
+      "evidence": 210.6,
+      "caveat": 108.8
+    },
+    "Math": {
+      "academic_cite": 79.0,
+      "url_reference": 0.0,
+      "example_marker": 96.2,
+      "step_reference": 1660.0,
+      "formula_ref": 39.8,
+      "definition_ref": 22.6,
+      "analogy": 71.0,
+      "contrast": 56.6,
+      "evidence": 2.2,
+      "caveat": 41.4
+    },
+    "Reasoning": {
+      "academic_cite": 94.6,
+      "url_reference": 0.0,
+      "example_marker": 527.2,
+      "step_reference": 480.0,
+      "formula_ref": 1.6,
+      "definition_ref": 11.8,
+      "analogy": 626.0,
+      "contrast": 278.6,
+      "evidence": 171.2,
+      "caveat": 34.0
+    },
+    "Self-Inversion": {
+      "academic_cite": 37.8,
+      "url_reference": 23.4,
+      "example_marker": 695.6,
+      "step_reference": 283.0,
+      "formula_ref": 6.4,
+      "definition_ref": 15.6,
+      "analogy": 699.6,
+      "contrast": 204.4,
+      "evidence": 63.6,
+      "caveat": 31.4
+    }
+  },
+  "total_reference_density": {
+    "Code": 1872.0,
+    "Complex QA": 5186.6,
+    "Creative": 2104.2,
+    "Document QA": 3094.0,
+    "Math": 2068.8,
+    "Reasoning": 2225.0,
+    "Self-Inversion": 2060.8
+  },
+  "pattern_diversity_active": {
+    "Code": 9,
+    "Complex QA": 9,
+    "Creative": 8,
+    "Document QA": 10,
+    "Math": 9,
+    "Reasoning": 9,
+    "Self-Inversion": 10
+  },
+  "samples_analyzed": {
+    "Code": 5000,
+    "Complex QA": 5000,
+    "Creative": 5000,
+    "Document QA": 5000,
+    "Math": 5000,
+    "Reasoning": 5000,
+    "Self-Inversion": 5000
+  },
+  "findings": [
+    "Highest ref density: Complex QA (5187/1K)",
+    "Lowest ref density: Code (1872/1K)",
+    "Most diverse: Document QA (10/10 types)",
+    "Top global pattern: analogy (6143 total rate)"
+  ]
+}
