@@ -1,0 +1,115 @@
+{
+  "figure": "fig207",
+  "title": "Prompt Template Diversity & Question Patterns",
+  "field_diversity": {
+    "Code": {
+      "language": 8,
+      "topic": 16,
+      "difficulty": 3
+    },
+    "Complex QA": {
+      "domain": 20,
+      "type": 12,
+      "difficulty": 6
+    },
+    "Creative": {
+      "type": 12
+    },
+    "Document QA": {
+      "domain": 0
+    },
+    "Math": {
+      "topic": 15,
+      "level": 5
+    },
+    "Reasoning": {
+      "reasoning_type": 12,
+      "difficulty": 3
+    },
+    "Self-Inversion": {
+      "domain": 2288,
+      "original_angle": 4964,
+      "new_angle": 5000
+    }
+  },
+  "field_entropy": {
+    "Code": {
+      "language": 2.9996434175652307,
+      "topic": 3.998619463468706,
+      "difficulty": 0.23765137263603847
+    },
+    "Complex QA": {
+      "domain": 4.321362555293535,
+      "type": 3.584231248427052,
+      "difficulty": 1.0955498127538743
+    },
+    "Creative": {
+      "type": 3.5815183658116814
+    },
+    "Document QA": {},
+    "Math": {
+      "topic": 3.901190485923359,
+      "level": 2.317800303347896
+    },
+    "Reasoning": {
+      "reasoning_type": 3.5814734322830115,
+      "difficulty": 1.178612946476169
+    },
+    "Self-Inversion": {
+      "domain": 9.761654340153601,
+      "original_angle": 12.272307753394081,
+      "new_angle": 12.287711658202111
+    }
+  },
+  "question_patterns": {
+    "Code": {
+      "unique_starters": 176,
+      "starter_entropy": 3.18,
+      "avg_length": 41.2
+    },
+    "Complex QA": {
+      "unique_starters": 2743,
+      "starter_entropy": 7.95,
+      "avg_length": 52.6
+    },
+    "Creative": {
+      "unique_starters": 678,
+      "starter_entropy": 5.87,
+      "avg_length": 53.9
+    },
+    "Document QA": {
+      "unique_starters": 4486,
+      "starter_entropy": 8.54,
+      "avg_length": 57.8
+    },
+    "Math": {
+      "unique_starters": 1016,
+      "starter_entropy": 6.93,
+      "avg_length": 40.8
+    },
+    "Reasoning": {
+      "unique_starters": 3073,
+      "starter_entropy": 8.92,
+      "avg_length": 52.7
+    },
+    "Self-Inversion": {
+      "unique_starters": 1734,
+      "starter_entropy": 8.52,
+      "avg_length": 29.6
+    }
+  },
+  "template_utilization_pct": {
+    "Code": 0.59,
+    "Complex QA": 5.5,
+    "Creative": 6.84,
+    "Document QA": 18.05,
+    "Math": 5.11,
+    "Reasoning": 15.43,
+    "Self-Inversion": 34.68
+  },
+  "findings": [
+    "Most diverse starters: Document QA (4,486)",
+    "Highest entropy: Reasoning (8.9 bits)",
+    "Best utilization: Self-Inversion (34.7%)"
+  ]
+}
