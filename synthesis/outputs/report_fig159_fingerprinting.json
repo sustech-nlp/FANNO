@@ -1,0 +1,156 @@
+{
+  "figure": "fig159_fingerprinting",
+  "title": "Answer Diversity Fingerprinting",
+  "mean_fingerprints": {
+    "Code": {
+      "words": 444.666,
+      "sentences": 40.0875,
+      "paragraphs": 15.58,
+      "avg_sentence_len": 12.91655561037888,
+      "avg_paragraph_len": 35.10648334861973,
+      "code_blocks": 1.2925,
+      "numbered_items": 3.335,
+      "bullet_items": 3.1665,
+      "bold_text": 4.778,
+      "headers": 1.8845,
+      "math_symbols": 1.9755,
+      "question_marks": 0.516,
+      "unique_word_ratio": 0.565500280193455,
+      "long_words": 0.11018216320043828,
+      "newlines": 84.115
+    },
+    "Complex QA": {
+      "words": 371.2935,
+      "sentences": 21.3525,
+      "paragraphs": 6.788,
+      "avg_sentence_len": 18.881603155108518,
+      "avg_paragraph_len": 68.12103721090604,
+      "code_blocks": 0.0,
+      "numbered_items": 1.7115,
+      "bullet_items": 1.517,
+      "bold_text": 2.9195,
+      "headers": 0.0405,
+      "math_symbols": 1.7645,
+      "question_marks": 0.045,
+      "unique_word_ratio": 0.6169683472513903,
+      "long_words": 0.10520272278886401,
+      "newlines": 15.409
+    },
+    "Creative": {
+      "words": 378.4955,
+      "sentences": 23.5025,
+      "paragraphs": 8.5745,
+      "avg_sentence_len": 18.3184253818138,
+      "avg_paragraph_len": 56.16436447615744,
+      "code_blocks": 0.012,
+      "numbered_items": 0.243,
+      "bullet_items": 0.133,
+      "bold_text": 0.4065,
+      "headers": 0.132,
+      "math_symbols": 0.1505,
+      "question_marks": 0.925,
+      "unique_word_ratio": 0.6778034544127165,
+      "long_words": 0.05286077981883945,
+      "newlines": 18.2185
+    },
+    "Document QA": {
+      "words": 395.443,
+      "sentences": 24.8205,
+      "paragraphs": 11.315,
+      "avg_sentence_len": 18.12964674754528,
+      "avg_paragraph_len": 43.03989871290552,
+      "code_blocks": 0.111,
+      "numbered_items": 4.508,
+      "bullet_items": 3.9355,
+      "bold_text": 9.72,
+      "headers": 1.648,
+      "math_symbols": 1.22,
+      "question_marks": 0.1505,
+      "unique_word_ratio": 0.6181896408976782,
+      "long_words": 0.10894726480210472,
+      "newlines": 33.021
+    },
+    "Math": {
+      "words": 215.2395,
+      "sentences": 12.471,
+      "paragraphs": 7.904,
+      "avg_sentence_len": 21.18903858081056,
+      "avg_paragraph_len": 56.58932003734242,
+      "code_blocks": 0.0,
+      "numbered_items": 1.291,
+      "bullet_items": 1.211,
+      "bold_text": 0.3595,
+      "headers": 0.0125,
+      "math_symbols": 26.3435,
+      "question_marks": 0.031,
+      "unique_word_ratio": 0.4884022993356297,
+      "long_words": 0.03289695336195065,
+      "newlines": 22.05
+    },
+    "Reasoning": {
+      "words": 221.7865,
+      "sentences": 17.2395,
+      "paragraphs": 4.219,
+      "avg_sentence_len": 14.246961040216734,
+      "avg_paragraph_len": 91.89436257901713,
+      "code_blocks": 0.0,
+      "numbered_items": 3.147,
+      "bullet_items": 2.1445,
+      "bold_text": 0.745,
+      "headers": 0.011,
+      "math_symbols": 0.0875,
+      "question_marks": 0.064,
+      "unique_word_ratio": 0.5707032906935849,
+      "long_words": 0.05883794831068329,
+      "newlines": 14.615
+    },
+    "Self-Inversion": {
+      "words": 223.718,
+      "sentences": 14.5925,
+      "paragraphs": 4.9055,
+      "avg_sentence_len": 18.052257227596982,
+      "avg_paragraph_len": 84.39299731646216,
+      "code_blocks": 0.163,
+      "numbered_items": 1.0895,
+      "bullet_items": 0.8225,
+      "bold_text": 1.218,
+      "headers": 0.1955,
+      "math_symbols": 3.2165,
+      "question_marks": 0.2005,
+      "unique_word_ratio": 0.6543971479091788,
+      "long_words": 0.07852479398977522,
+      "newlines": 15.419
+    }
+  },
+  "structural_complexity": {
+    "Code": 4.035958865854424,
+    "Complex QA": 1.086975212435979,
+    "Creative": 0.20884953897238798,
+    "Document QA": 3.9603825979319227,
+    "Math": 0.6377102788136746,
+    "Reasoning": 1.3254871641738104,
+    "Self-Inversion": 0.8058383733251333
+  },
+  "top_discriminative_features": [
+    [
+      "headers",
+      0.16593830674351803
+    ],
+    [
+      "code_blocks",
+      0.11575601155090022
+    ],
+    [
+      "math_symbols",
+      0.11121610570246146
+    ],
+    [
+      "question_marks",
+      0.10995830115830116
+    ],
+    [
+      "bold_text",
+      0.10611817805413078
+    ]
+  ]
+}

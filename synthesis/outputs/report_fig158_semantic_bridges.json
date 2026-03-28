@@ -1,0 +1,33 @@
+{
+  "figure": "fig158_semantic_bridges",
+  "title": "Cross-Pipeline Semantic Bridge Analysis",
+  "bridge_score_stats": {
+    "mean": 2.6585714285714284,
+    "std": 1.208185517583272,
+    "max": 7,
+    "min": 1
+  },
+  "top_bridges_by_pipeline": {
+    "Reasoning": 34,
+    "Document QA": 31,
+    "Complex QA": 15,
+    "Self-Inversion": 20
+  },
+  "top_isolates_by_pipeline": {
+    "Reasoning": 4,
+    "Creative": 13,
+    "Math": 60,
+    "Complex QA": 1,
+    "Code": 20,
+    "Self-Inversion": 2
+  },
+  "median_bridge_by_pipeline": {
+    "Code": 2.0,
+    "Complex QA": 4.0,
+    "Creative": 1.0,
+    "Document QA": 4.0,
+    "Math": 2.0,
+    "Reasoning": 3.0,
+    "Self-Inversion": 3.0
+  }
+}
