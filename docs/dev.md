@@ -1648,3 +1648,126 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
 - **Vendi Score: 182.75** | Cross-source distance: 0.961 | 2,297 unique domains
 - **0 benchmark contamination** across MMLU, GSM8K, HumanEval, ARC, HellaSwag
 - **Azure token still expired** — synthesis stalled at 21,432/30,000 Document QA
+
+---
+
+## Session: 2026-03-28 (Quality Assurance & Fixes)
+
+### Goal
+Address critical quality gaps in synthesized data pipeline. Implement answer quality verification, fix systematic over-rejection, improve diversity filtering.
+
+---
+
+### Quality Audit Results
+
+**Q: How to ensure synthesized data quality? (User asked: "如何确保合成数据的质量不错呢")**
+
+**Analysis — 3 Critical Issues Found:**
+
+1. **No Answer Verification**: The entire pipeline (both `src/fanno/evaluator.py` and `synthesis/clean_data.py`) only evaluates question/instruction quality. Answer correctness is NEVER checked. `faithfulness_eval` template exists in `eval_template.py` (L147-166) but is not wired into any pipeline.
+
+2. **Code/Math Systematic Over-rejection**: `quality_filter()` in `clean_data.py` had a uniform `alpha_ratio < 0.3` rule that killed Code QA (~48.5%) and Math QA (~42.5%) because code/formulas naturally contain non-letter characters. However, deeper analysis showed the primary rejection came from exact/near dedup, not alpha_ratio.
+
+3. **words_num=4 Truncation**: Diversity filter in `evaluator.py` uses only the first 4 words of each instruction for embedding (`config.py` L83), making semantic clustering extremely coarse.
+
+**5 Medium Issues:**
+- General answer min length only 20 chars (too lenient)
+- Multi-turn dialog: NO quality filtering (only dedup)
+- Math QA repetition rate: 4.42% (highest)
+- Self-Inversion: 0.5% rejection rate (suspiciously low)
+- Refusal pattern list too short (6 patterns)
+
+---
+
+### Fix P1a: LLM-as-Judge Answer Quality Evaluation
+
+**File created**: `synthesis/evaluate_answer_quality.py`
+
+**Approach**:
+- Stratified sampling: proportional to source size with minimum 50 per source
+- Uses gpt-4o with 5-point faithfulness scale (adapted from Humpback)
+- Evaluates answer correctness, completeness, relevance
+- Domain-specific criteria: code syntax, math reasoning, logic validity
+- Generates per-source quality report + detailed results
+
+**Key design decisions**:
+- `temperature=0.0` for deterministic scoring
+- `max_tokens=10` (only need a digit)
+- Answer truncated to 3000 chars to save tokens
+- 30 workers, batch_size=50
+
+---
+
+### Fix P1b: Source-Aware Quality Filter
+
+**File modified**: `synthesis/clean_data.py`
+
+**Changes**:
+- Added `_detect_source()` function to detect code/math/general from source field + content heuristics
+- Source-aware alpha_ratio: `code/math >= 0.15`, `general >= 0.3`
+- Source-aware min answer length: `code/math >= 20`, `general >= 50`
+- Added code-specific filter: reject if code answer has no code blocks
+- Added math-specific filter: reject if math answer has no numbers/symbols
+- Expanded refusal patterns: added "i apologize", "as a language model"
+- Extended refusal detection window from 100 to 150 chars
+
+**Result**: Single-turn cleaned data: 134,643 → 141,445 (+6,802)
+- seed_qa: +6,774 (main beneficiary)
+- math_qa: +41
+- code_qa: +0 (rejection was from dedup, not alpha_ratio)
+
+---
+
+### Fix P2a: Remove words_num=4 Truncation
+
+**Files modified**:
+- `src/fanno/config.py`: `words_num: int = 4` → `words_num: int = 0`
+- `src/fanno/evaluator.py`: `_embed()` now skips truncation when `words_num=0`
+
+**Impact**: Diversity filter now uses full instruction text for embedding instead of just first 4 words. This makes community detection-based diversity filtering actually meaningful.
+
+---
+
+### Fix P2b: Multi-turn Quality Filtering
+
+**File modified**: `synthesis/clean_data.py`
+
+**Added checks** (previously only dedup):
+1. Minimum turn count: at least 4 turns (2 complete exchanges)
+2. Check first user message length ≥ 10 chars
+3. Refusal detection in first assistant response
+4. Empty/garbage assistant turn detection (>50% empty = reject)
+5. Minimum total content length ≥ 200 chars
+6. Repetitive assistant response detection (unique_ratio < 0.5 = reject)
+7. Dedup by first user message (kept from before)
+
+**Result**: Multi-turn data unchanged at 18,708 (new filters found no additional issues, which validates the original data was okay on these basic criteria)
+
+---
+
+### Cleanup Pipeline Re-run Results
+
+| Metric | Before | After | Change |
+|--------|--------|-------|--------|
+| Single-turn cleaned | 134,643 | 141,445 | +6,802 |
+| Multi-turn cleaned | 18,708 | 18,708 | 0 |
+| **Total cleaned** | **153,351** | **160,153** | **+6,802** |
+| Overall rejection rate | 27.4% | 26.5% | -0.9pp |
+
+Per-source delta:
+| Source | Before | After | Delta |
+|--------|--------|-------|-------|
+| fanno_seed_qa | 21,432 | 28,206 | +6,774 |
+| fanno_math_qa | 11,450 | 11,491 | +41 |
+| fanno_code_qa | 15,411 | 15,411 | 0 |
+| fanno_complex_qa | 54,223 | 54,223 | 0 |
+| fanno_reasoning_qa | 17,789 | 17,785 | -4 |
+| fanno_creative_writing | 9,363 | 9,360 | -3 |
+| self_inversion | 4,975 | 4,969 | -6 |
+
+---
+
+### P4: Answer Quality Evaluation (LLM-as-Judge)
+
+*Running with 1000 samples across all sources via gpt-4o...*
+

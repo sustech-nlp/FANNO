@@ -80,7 +80,7 @@ class EvaluatorConfig:
 
     min_community_size: int = 1
     threshold: float = 0.8
-    words_num: int = 4
+    words_num: int = 0  # 0 = use full instruction text (was 4, causing coarse diversity filtering)
     device: str = os.getenv("FANNO_DEVICE", "cuda")
     batch_size: int = 64
     encode_model_path: str = os.getenv("FANNO_EMB_MODEL", "sentence-transformers/all-MiniLM-L6-v2")

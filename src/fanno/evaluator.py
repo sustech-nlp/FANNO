@@ -76,10 +76,15 @@ class Evaluator(InstructionQualityStrategy):
         return remaining
 
     def _embed(self, instructions: Sequence[str]):
-        truncated = [
-            " ".join(inst.split()[: self.ev_cfg.words_num]) if len(inst.split()) > self.ev_cfg.words_num else inst
-            for inst in instructions
-        ]
+        # When words_num > 0, truncate to first N words (legacy behavior)
+        # When words_num = 0, use full instruction text (recommended for better diversity filtering)
+        if self.ev_cfg.words_num > 0:
+            truncated = [
+                " ".join(inst.split()[: self.ev_cfg.words_num]) if len(inst.split()) > self.ev_cfg.words_num else inst
+                for inst in instructions
+            ]
+        else:
+            truncated = list(instructions)
         return self.encoder.encode(
             truncated,
             convert_to_tensor=True,
