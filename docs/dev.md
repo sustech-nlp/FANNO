@@ -1790,3 +1790,39 @@ Per-source delta:
 
 **Action**: Implement answer quality-based filtering for self_inversion data
 
+---
+
+### P4b: Self-Inversion Full LLM Quality Filter
+
+**File created**: `synthesis/filter_self_inversion.py`
+
+**Method**: gpt-4o-mini evaluation of ALL 4,998 valid self_inversion items, score 1-5, reject score < 3.
+
+**Results**:
+| Score | Count | Percentage |
+|-------|-------|------------|
+| 5 | 2,945 | 58.9% |
+| 4 | 1,522 | 30.5% |
+| 3 | 227 | 4.5% |
+| 2 | 243 | 4.9% |
+| 1 | 61 | 1.2% |
+
+- **Kept**: 4,694 (93.9%)
+- **Rejected**: 304 (6.1%)
+- Saved to: `outputs/self_inverted_qa_filtered.jsonl`
+- Rejected items saved to: `reports/self_inversion_rejected.jsonl`
+
+**Notes**: gpt-4o-mini is more lenient than gpt-4o (6.1% vs 29.8% rejection). Content filter triggered on ~20 items (hate/sexual/self-harm/violence at low severity), all recovered on retry.
+
+---
+
+### Updated Grand Totals (Session 9 - Quality Fixes)
+
+- **160,153 cleaned instruction samples** (was 153,351, +6,802 from filter fix)
+  - Single-turn: 141,445 (was 134,643)
+  - Multi-turn: 18,708 (unchanged)
+- **Answer quality verified**: 92.9% good (4-5), mean 4.56/5.0 across 998 samples
+- **Self-inversion filtered**: 4,694/5,000 (6.1% rejected by LLM quality check)
+- **words_num fixed**: 4 → 0 (full instruction embedding for diversity)
+- **Quality filters upgraded**: source-aware alpha ratio, multi-turn checks, expanded refusal patterns
+

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-03-28T04:53:35.249058",
+  "total_items": 5000,
+  "valid_items": 4998,
+  "kept": 4694,
+  "rejected": 304,
+  "failed_parse": 0,
+  "min_score": 3,
+  "score_distribution": {
+    "1": 61,
+    "2": 243,
+    "3": 227,
+    "4": 1522,
+    "5": 2945
+  },
+  "rejection_rate": 6.1
+}
