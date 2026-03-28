@@ -1,0 +1,700 @@
+{
+  "project": "FANNO-Dev",
+  "description": "Diversity-Verified Large-Scale Instruction Data Synthesis",
+  "total_samples": 153351,
+  "raw_samples": 211000,
+  "rejection_rate": 0.274,
+  "vendi_score": 182.75,
+  "unique_domains": 2297,
+  "total_cost_usd": 2245,
+  "cost_per_1k": 15.58,
+  "pipelines": {
+    "complex_qa": {
+      "samples": 54223,
+      "pct": 35.4,
+      "vendi": 141.4,
+      "density": 2.6,
+      "domains": 20,
+      "rejection": 23.2
+    },
+    "document_qa": {
+      "samples": 21432,
+      "pct": 14.0,
+      "vendi": 93.2,
+      "density": 4.4,
+      "domains": 15,
+      "rejection": 4.8
+    },
+    "multi_turn": {
+      "samples": 18708,
+      "pct": 12.2,
+      "avg_turns": 3.3,
+      "patterns": 8,
+      "scenarios": 15,
+      "rejection": 24.6
+    },
+    "reasoning_qa": {
+      "samples": 17789,
+      "pct": 11.6,
+      "vendi": 73.3,
+      "density": 4.1,
+      "domains": 12,
+      "rejection": 12.1
+    },
+    "code_qa": {
+      "samples": 15411,
+      "pct": 10.0,
+      "vendi": 58.3,
+      "density": 3.8,
+      "languages": 8,
+      "topics": 16,
+      "rejection": 48.5
+    },
+    "math_qa": {
+      "samples": 11450,
+      "pct": 7.5,
+      "vendi": 46.3,
+      "density": 4.0,
+      "topics": 15,
+      "levels": 5,
+      "rejection": 33.2
+    },
+    "creative_writing": {
+      "samples": 9363,
+      "pct": 6.1,
+      "vendi": 31.1,
+      "density": 3.3,
+      "types": 12,
+      "rejection": 41.2
+    },
+    "self_inversion": {
+      "samples": 4975,
+      "pct": 3.2,
+      "vendi": 161.5,
+      "density": 32.4,
+      "domains": 2288,
+      "rejection": 0.5
+    }
+  },
+  "key_findings": [
+    "Exponential saturation: V(N) = 55.4(1-e^(-N/745))+109, R²=0.996",
+    "Cross-source distance 0.961 (nearly orthogonal)",
+    "Self-Inversion: 2,288 domains (143× more), 87.6% hull coverage",
+    "K-Center-Greedy: +33% diversity at N=500",
+    "Self-Inv diversity density 32.4 Vendi/1K (12× > Complex QA)",
+    "Tag space utilization only 4.1% — 24× room for growth",
+    "0 benchmark contamination across 26,739 test instances",
+    "Document QA: #1 linguistic diversity (0.921 composite)",
+    "Code QA: most semantically unique (0.677 centroid distance)",
+    "Rejection-diversity correlation r=-0.776"
+  ],
+  "figures": {
+    "fig100_claims_evidence": {
+      "png": "synthesis/figures/fig100_claims_evidence.png",
+      "pdf": "synthesis/figures/fig100_claims_evidence.pdf"
+    },
+    "fig101_baseline_detailed": {
+      "png": "synthesis/figures/fig101_baseline_detailed.png",
+      "pdf": "synthesis/figures/fig101_baseline_detailed.pdf"
+    },
+    "fig102_training_guide": {
+      "png": "synthesis/figures/fig102_training_guide.png",
+      "pdf": "synthesis/figures/fig102_training_guide.pdf"
+    },
+    "fig103_ablation_study": {
+      "png": "synthesis/figures/fig103_ablation_study.png",
+      "pdf": "synthesis/figures/fig103_ablation_study.pdf"
+    },
+    "fig104_formatting_diversity": {
+      "png": "synthesis/figures/fig104_formatting_diversity.png",
+      "pdf": "synthesis/figures/fig104_formatting_diversity.pdf"
+    },
+    "fig105_domain_analysis": {
+      "png": "synthesis/figures/fig105_domain_analysis.png",
+      "pdf": "synthesis/figures/fig105_domain_analysis.pdf"
+    },
+    "fig106_cluster_quality": {
+      "png": "synthesis/figures/fig106_cluster_quality.png",
+      "pdf": "synthesis/figures/fig106_cluster_quality.pdf"
+    },
+    "fig107_sample_efficiency": {
+      "png": "synthesis/figures/fig107_sample_efficiency.png",
+      "pdf": "synthesis/figures/fig107_sample_efficiency.pdf"
+    },
+    "fig108_self_inversion_mechanism": {
+      "png": "synthesis/figures/fig108_self_inversion_mechanism.png",
+      "pdf": "synthesis/figures/fig108_self_inversion_mechanism.pdf"
+    },
+    "fig109_comprehensive_dashboard": {
+      "png": "synthesis/figures/fig109_comprehensive_dashboard.png",
+      "pdf": "synthesis/figures/fig109_comprehensive_dashboard.pdf"
+    },
+    "fig10_rejection_analysis": {
+      "png": "synthesis/figures/fig10_rejection_analysis.png",
+      "pdf": "synthesis/figures/fig10_rejection_analysis.pdf"
+    },
+    "fig110_length_diversity": {
+      "png": "synthesis/figures/fig110_length_diversity.png",
+      "pdf": "synthesis/figures/fig110_length_diversity.pdf"
+    },
+    "fig111_error_analysis": {
+      "png": "synthesis/figures/fig111_error_analysis.png",
+      "pdf": "synthesis/figures/fig111_error_analysis.pdf"
+    },
+    "fig112_contamination": {
+      "png": "synthesis/figures/fig112_contamination.png",
+      "pdf": "synthesis/figures/fig112_contamination.pdf"
+    },
+    "fig113_ceiling_analysis": {
+      "png": "synthesis/figures/fig113_ceiling_analysis.png",
+      "pdf": "synthesis/figures/fig113_ceiling_analysis.pdf"
+    },
+    "fig114_temporal_batch_analysis": {
+      "png": "synthesis/figures/fig114_temporal_batch_analysis.png",
+      "pdf": "synthesis/figures/fig114_temporal_batch_analysis.pdf"
+    },
+    "fig115_topic_migration": {
+      "png": "synthesis/figures/fig115_topic_migration.png",
+      "pdf": "synthesis/figures/fig115_topic_migration.pdf"
+    },
+    "fig116_answer_coherence": {
+      "png": "synthesis/figures/fig116_answer_coherence.png",
+      "pdf": "synthesis/figures/fig116_answer_coherence.pdf"
+    },
+    "fig117_complexity_fingerprint": {
+      "png": "synthesis/figures/fig117_complexity_fingerprint.png",
+      "pdf": "synthesis/figures/fig117_complexity_fingerprint.pdf"
+    },
+    "fig118_subspace_alignment": {
+      "png": "synthesis/figures/fig118_subspace_alignment.png",
+      "pdf": "synthesis/figures/fig118_subspace_alignment.pdf"
+    },
+    "fig119_template_patterns": {
+      "png": "synthesis/figures/fig119_template_patterns.png",
+      "pdf": "synthesis/figures/fig119_template_patterns.pdf"
+    },
+    "fig11_rejection_vs_diversity": {
+      "png": "synthesis/figures/fig11_rejection_vs_diversity.png",
+      "pdf": "synthesis/figures/fig11_rejection_vs_diversity.pdf"
+    },
+    "fig120_quality_gradient": {
+      "png": "synthesis/figures/fig120_quality_gradient.png",
+      "pdf": "synthesis/figures/fig120_quality_gradient.pdf"
+    },
+    "fig121_grand_overview": {
+      "png": "synthesis/figures/fig121_grand_overview.png",
+      "pdf": "synthesis/figures/fig121_grand_overview.pdf"
+    },
+    "fig122_density_maps": {
+      "png": "synthesis/figures/fig122_density_maps.png",
+      "pdf": "synthesis/figures/fig122_density_maps.pdf"
+    },
+    "fig123_multiturn_quality": {
+      "png": "synthesis/figures/fig123_multiturn_quality.png",
+      "pdf": "synthesis/figures/fig123_multiturn_quality.pdf"
+    },
+    "fig124_deliverables_dashboard": {
+      "png": "synthesis/figures/fig124_deliverables_dashboard.png",
+      "pdf": "synthesis/figures/fig124_deliverables_dashboard.pdf"
+    },
+    "fig125_radar_comparison": {
+      "png": "synthesis/figures/fig125_radar_comparison.png",
+      "pdf": "synthesis/figures/fig125_radar_comparison.pdf"
+    },
+    "fig126_bootstrap_ci": {
+      "png": "synthesis/figures/fig126_bootstrap_ci.png",
+      "pdf": "synthesis/figures/fig126_bootstrap_ci.pdf"
+    },
+    "fig127_architecture": {
+      "png": "synthesis/figures/fig127_architecture.png",
+      "pdf": "synthesis/figures/fig127_architecture.pdf"
+    },
+    "fig128_knowledge_transfer": {
+      "png": "synthesis/figures/fig128_knowledge_transfer.png",
+      "pdf": "synthesis/figures/fig128_knowledge_transfer.pdf"
+    },
+    "fig12_template_utilization": {
+      "png": "synthesis/figures/fig12_template_utilization.png",
+      "pdf": "synthesis/figures/fig12_template_utilization.pdf"
+    },
+    "fig13_linguistic_diversity": {
+      "png": "synthesis/figures/fig13_linguistic_diversity.png",
+      "pdf": "synthesis/figures/fig13_linguistic_diversity.pdf"
+    },
+    "fig14_cross_source_distance": {
+      "png": "synthesis/figures/fig14_cross_source_distance.png",
+      "pdf": "synthesis/figures/fig14_cross_source_distance.pdf"
+    },
+    "fig15_answer_quality": {
+      "png": "synthesis/figures/fig15_answer_quality.png",
+      "pdf": "synthesis/figures/fig15_answer_quality.pdf"
+    },
+    "fig16_domain_zipf": {
+      "png": "synthesis/figures/fig16_domain_zipf.png",
+      "pdf": "synthesis/figures/fig16_domain_zipf.pdf"
+    },
+    "fig17_efficiency_frontier": {
+      "png": "synthesis/figures/fig17_efficiency_frontier.png",
+      "pdf": "synthesis/figures/fig17_efficiency_frontier.pdf"
+    },
+    "fig18_type_difficulty": {
+      "png": "synthesis/figures/fig18_type_difficulty.png",
+      "pdf": "synthesis/figures/fig18_type_difficulty.pdf"
+    },
+    "fig19_multiturn_depth": {
+      "png": "synthesis/figures/fig19_multiturn_depth.png",
+      "pdf": "synthesis/figures/fig19_multiturn_depth.pdf"
+    },
+    "fig1_source_distribution": {
+      "png": "synthesis/figures/fig1_source_distribution.png",
+      "pdf": "synthesis/figures/fig1_source_distribution.pdf"
+    },
+    "fig20_code_distribution": {
+      "png": "synthesis/figures/fig20_code_distribution.png",
+      "pdf": "synthesis/figures/fig20_code_distribution.pdf"
+    },
+    "fig21_tsne_pipelines": {
+      "png": "synthesis/figures/fig21_tsne_pipelines.png",
+      "pdf": "synthesis/figures/fig21_tsne_pipelines.pdf"
+    },
+    "fig22_pca_analysis": {
+      "png": "synthesis/figures/fig22_pca_analysis.png",
+      "pdf": "synthesis/figures/fig22_pca_analysis.pdf"
+    },
+    "fig23_embedding_space": {
+      "png": "synthesis/figures/fig23_embedding_space.png",
+      "pdf": "synthesis/figures/fig23_embedding_space.pdf"
+    },
+    "fig24_radar_comparison": {
+      "png": "synthesis/figures/fig24_radar_comparison.png",
+      "pdf": "synthesis/figures/fig24_radar_comparison.pdf"
+    },
+    "fig25_cluster_analysis": {
+      "png": "synthesis/figures/fig25_cluster_analysis.png",
+      "pdf": "synthesis/figures/fig25_cluster_analysis.pdf"
+    },
+    "fig26_question_complexity": {
+      "png": "synthesis/figures/fig26_question_complexity.png",
+      "pdf": "synthesis/figures/fig26_question_complexity.pdf"
+    },
+    "fig27_selection_strategies": {
+      "png": "synthesis/figures/fig27_selection_strategies.png",
+      "pdf": "synthesis/figures/fig27_selection_strategies.pdf"
+    },
+    "fig28_architecture_overview": {
+      "png": "synthesis/figures/fig28_architecture_overview.png",
+      "pdf": "synthesis/figures/fig28_architecture_overview.pdf"
+    },
+    "fig29_multiturn_detailed": {
+      "png": "synthesis/figures/fig29_multiturn_detailed.png",
+      "pdf": "synthesis/figures/fig29_multiturn_detailed.pdf"
+    },
+    "fig2_scaling_curve": {
+      "png": "synthesis/figures/fig2_scaling_curve.png",
+      "pdf": "synthesis/figures/fig2_scaling_curve.pdf"
+    },
+    "fig30_scaling_law": {
+      "png": "synthesis/figures/fig30_scaling_law.png",
+      "pdf": "synthesis/figures/fig30_scaling_law.pdf"
+    },
+    "fig31_metric_correlation": {
+      "png": "synthesis/figures/fig31_metric_correlation.png",
+      "pdf": "synthesis/figures/fig31_metric_correlation.pdf"
+    },
+    "fig32_self_inversion_quality": {
+      "png": "synthesis/figures/fig32_self_inversion_quality.png",
+      "pdf": "synthesis/figures/fig32_self_inversion_quality.pdf"
+    },
+    "fig33_coverage_analysis": {
+      "png": "synthesis/figures/fig33_coverage_analysis.png",
+      "pdf": "synthesis/figures/fig33_coverage_analysis.pdf"
+    },
+    "fig34_dataset_composition": {
+      "png": "synthesis/figures/fig34_dataset_composition.png",
+      "pdf": "synthesis/figures/fig34_dataset_composition.pdf"
+    },
+    "fig35_coherence_analysis": {
+      "png": "synthesis/figures/fig35_coherence_analysis.png",
+      "pdf": "synthesis/figures/fig35_coherence_analysis.pdf"
+    },
+    "fig36_quality_scores": {
+      "png": "synthesis/figures/fig36_quality_scores.png",
+      "pdf": "synthesis/figures/fig36_quality_scores.pdf"
+    },
+    "fig37_difficulty_diversity": {
+      "png": "synthesis/figures/fig37_difficulty_diversity.png",
+      "pdf": "synthesis/figures/fig37_difficulty_diversity.pdf"
+    },
+    "fig38_keyword_analysis": {
+      "png": "synthesis/figures/fig38_keyword_analysis.png",
+      "pdf": "synthesis/figures/fig38_keyword_analysis.pdf"
+    },
+    "fig39_mixing_ratios": {
+      "png": "synthesis/figures/fig39_mixing_ratios.png",
+      "pdf": "synthesis/figures/fig39_mixing_ratios.pdf"
+    },
+    "fig3_selection_strategies": {
+      "png": "synthesis/figures/fig3_selection_strategies.png",
+      "pdf": "synthesis/figures/fig3_selection_strategies.pdf"
+    },
+    "fig40_topic_modeling": {
+      "png": "synthesis/figures/fig40_topic_modeling.png",
+      "pdf": "synthesis/figures/fig40_topic_modeling.pdf"
+    },
+    "fig41_per_type_vendi": {
+      "png": "synthesis/figures/fig41_per_type_vendi.png",
+      "pdf": "synthesis/figures/fig41_per_type_vendi.pdf"
+    },
+    "fig42_source_overlap": {
+      "png": "synthesis/figures/fig42_source_overlap.png",
+      "pdf": "synthesis/figures/fig42_source_overlap.pdf"
+    },
+    "fig43_poster_summary": {
+      "png": "synthesis/figures/fig43_poster_summary.png",
+      "pdf": "synthesis/figures/fig43_poster_summary.pdf"
+    },
+    "fig44_response_structure": {
+      "png": "synthesis/figures/fig44_response_structure.png",
+      "pdf": "synthesis/figures/fig44_response_structure.pdf"
+    },
+    "fig45_ngram_diversity": {
+      "png": "synthesis/figures/fig45_ngram_diversity.png",
+      "pdf": "synthesis/figures/fig45_ngram_diversity.pdf"
+    },
+    "fig46_qa_alignment": {
+      "png": "synthesis/figures/fig46_qa_alignment.png",
+      "pdf": "synthesis/figures/fig46_qa_alignment.pdf"
+    },
+    "fig47_per_domain_vendi": {
+      "png": "synthesis/figures/fig47_per_domain_vendi.png",
+      "pdf": "synthesis/figures/fig47_per_domain_vendi.pdf"
+    },
+    "fig48_leave_one_out": {
+      "png": "synthesis/figures/fig48_leave_one_out.png",
+      "pdf": "synthesis/figures/fig48_leave_one_out.pdf"
+    },
+    "fig49_cumulative_sources": {
+      "png": "synthesis/figures/fig49_cumulative_sources.png",
+      "pdf": "synthesis/figures/fig49_cumulative_sources.pdf"
+    },
+    "fig4_length_distribution": {
+      "png": "synthesis/figures/fig4_length_distribution.png",
+      "pdf": "synthesis/figures/fig4_length_distribution.pdf"
+    },
+    "fig50_information_theory": {
+      "png": "synthesis/figures/fig50_information_theory.png",
+      "pdf": "synthesis/figures/fig50_information_theory.pdf"
+    },
+    "fig51_umap_visualization": {
+      "png": "synthesis/figures/fig51_umap_visualization.png",
+      "pdf": "synthesis/figures/fig51_umap_visualization.pdf"
+    },
+    "fig52_code_language_analysis": {
+      "png": "synthesis/figures/fig52_code_language_analysis.png",
+      "pdf": "synthesis/figures/fig52_code_language_analysis.pdf"
+    },
+    "fig53_math_reasoning_analysis": {
+      "png": "synthesis/figures/fig53_math_reasoning_analysis.png",
+      "pdf": "synthesis/figures/fig53_math_reasoning_analysis.pdf"
+    },
+    "fig54_creative_complex_analysis": {
+      "png": "synthesis/figures/fig54_creative_complex_analysis.png",
+      "pdf": "synthesis/figures/fig54_creative_complex_analysis.pdf"
+    },
+    "fig55_self_inversion_deepdive": {
+      "png": "synthesis/figures/fig55_self_inversion_deepdive.png",
+      "pdf": "synthesis/figures/fig55_self_inversion_deepdive.pdf"
+    },
+    "fig56_grand_summary": {
+      "png": "synthesis/figures/fig56_grand_summary.png",
+      "pdf": "synthesis/figures/fig56_grand_summary.pdf"
+    },
+    "fig57_comprehensive_radar": {
+      "png": "synthesis/figures/fig57_comprehensive_radar.png",
+      "pdf": "synthesis/figures/fig57_comprehensive_radar.pdf"
+    },
+    "fig58_document_qa_deepdive": {
+      "png": "synthesis/figures/fig58_document_qa_deepdive.png",
+      "pdf": "synthesis/figures/fig58_document_qa_deepdive.pdf"
+    },
+    "fig59_multiturn_patterns": {
+      "png": "synthesis/figures/fig59_multiturn_patterns.png",
+      "pdf": "synthesis/figures/fig59_multiturn_patterns.pdf"
+    },
+    "fig5_per_source_vendi": {
+      "png": "synthesis/figures/fig5_per_source_vendi.png",
+      "pdf": "synthesis/figures/fig5_per_source_vendi.pdf"
+    },
+    "fig60_robustness_analysis": {
+      "png": "synthesis/figures/fig60_robustness_analysis.png",
+      "pdf": "synthesis/figures/fig60_robustness_analysis.pdf"
+    },
+    "fig61_efficiency_roi": {
+      "png": "synthesis/figures/fig61_efficiency_roi.png",
+      "pdf": "synthesis/figures/fig61_efficiency_roi.pdf"
+    },
+    "fig62_quality_analysis": {
+      "png": "synthesis/figures/fig62_quality_analysis.png",
+      "pdf": "synthesis/figures/fig62_quality_analysis.pdf"
+    },
+    "fig63_similarity_distributions": {
+      "png": "synthesis/figures/fig63_similarity_distributions.png",
+      "pdf": "synthesis/figures/fig63_similarity_distributions.pdf"
+    },
+    "fig64_density_analysis": {
+      "png": "synthesis/figures/fig64_density_analysis.png",
+      "pdf": "synthesis/figures/fig64_density_analysis.pdf"
+    },
+    "fig65_baseline_comparison": {
+      "png": "synthesis/figures/fig65_baseline_comparison.png",
+      "pdf": "synthesis/figures/fig65_baseline_comparison.pdf"
+    },
+    "fig66_pareto_frontier": {
+      "png": "synthesis/figures/fig66_pareto_frontier.png",
+      "pdf": "synthesis/figures/fig66_pareto_frontier.pdf"
+    },
+    "fig67_length_statistics": {
+      "png": "synthesis/figures/fig67_length_statistics.png",
+      "pdf": "synthesis/figures/fig67_length_statistics.pdf"
+    },
+    "fig68_data_provenance": {
+      "png": "synthesis/figures/fig68_data_provenance.png",
+      "pdf": "synthesis/figures/fig68_data_provenance.pdf"
+    },
+    "fig69_tag_taxonomy": {
+      "png": "synthesis/figures/fig69_tag_taxonomy.png",
+      "pdf": "synthesis/figures/fig69_tag_taxonomy.pdf"
+    },
+    "fig6_domain_type_heatmap": {
+      "png": "synthesis/figures/fig6_domain_type_heatmap.png",
+      "pdf": "synthesis/figures/fig6_domain_type_heatmap.pdf"
+    },
+    "fig70_synthesis_timeline": {
+      "png": "synthesis/figures/fig70_synthesis_timeline.png",
+      "pdf": "synthesis/figures/fig70_synthesis_timeline.pdf"
+    },
+    "fig71_overlap_network": {
+      "png": "synthesis/figures/fig71_overlap_network.png",
+      "pdf": "synthesis/figures/fig71_overlap_network.pdf"
+    },
+    "fig72_difficulty_complexity": {
+      "png": "synthesis/figures/fig72_difficulty_complexity.png",
+      "pdf": "synthesis/figures/fig72_difficulty_complexity.pdf"
+    },
+    "fig73_dimensionality_analysis": {
+      "png": "synthesis/figures/fig73_dimensionality_analysis.png",
+      "pdf": "synthesis/figures/fig73_dimensionality_analysis.pdf"
+    },
+    "fig74_vocabulary_overlap": {
+      "png": "synthesis/figures/fig74_vocabulary_overlap.png",
+      "pdf": "synthesis/figures/fig74_vocabulary_overlap.pdf"
+    },
+    "fig75_structure_analysis": {
+      "png": "synthesis/figures/fig75_structure_analysis.png",
+      "pdf": "synthesis/figures/fig75_structure_analysis.pdf"
+    },
+    "fig76_metric_correlation": {
+      "png": "synthesis/figures/fig76_metric_correlation.png",
+      "pdf": "synthesis/figures/fig76_metric_correlation.pdf"
+    },
+    "fig77_key_results": {
+      "png": "synthesis/figures/fig77_key_results.png",
+      "pdf": "synthesis/figures/fig77_key_results.pdf"
+    },
+    "fig78_question_patterns": {
+      "png": "synthesis/figures/fig78_question_patterns.png",
+      "pdf": "synthesis/figures/fig78_question_patterns.pdf"
+    },
+    "fig79_readability": {
+      "png": "synthesis/figures/fig79_readability.png",
+      "pdf": "synthesis/figures/fig79_readability.pdf"
+    },
+    "fig7_tsne_embedding_space": {
+      "png": "synthesis/figures/fig7_tsne_embedding_space.png",
+      "pdf": "synthesis/figures/fig7_tsne_embedding_space.pdf"
+    },
+    "fig80_semantic_drift": {
+      "png": "synthesis/figures/fig80_semantic_drift.png",
+      "pdf": "synthesis/figures/fig80_semantic_drift.pdf"
+    },
+    "fig81_factuality_heuristics": {
+      "png": "synthesis/figures/fig81_factuality_heuristics.png",
+      "pdf": "synthesis/figures/fig81_factuality_heuristics.pdf"
+    },
+    "fig82_template_effectiveness": {
+      "png": "synthesis/figures/fig82_template_effectiveness.png",
+      "pdf": "synthesis/figures/fig82_template_effectiveness.pdf"
+    },
+    "fig83_neighbor_analysis": {
+      "png": "synthesis/figures/fig83_neighbor_analysis.png",
+      "pdf": "synthesis/figures/fig83_neighbor_analysis.pdf"
+    },
+    "fig84_verb_taxonomy": {
+      "png": "synthesis/figures/fig84_verb_taxonomy.png",
+      "pdf": "synthesis/figures/fig84_verb_taxonomy.pdf"
+    },
+    "fig85_diversity_decomposition": {
+      "png": "synthesis/figures/fig85_diversity_decomposition.png",
+      "pdf": "synthesis/figures/fig85_diversity_decomposition.pdf"
+    },
+    "fig86_sentence_analysis": {
+      "png": "synthesis/figures/fig86_sentence_analysis.png",
+      "pdf": "synthesis/figures/fig86_sentence_analysis.pdf"
+    },
+    "fig87_efficiency_frontier": {
+      "png": "synthesis/figures/fig87_efficiency_frontier.png",
+      "pdf": "synthesis/figures/fig87_efficiency_frontier.pdf"
+    },
+    "fig88_token_analysis": {
+      "png": "synthesis/figures/fig88_token_analysis.png",
+      "pdf": "synthesis/figures/fig88_token_analysis.pdf"
+    },
+    "fig89_cross_synergy": {
+      "png": "synthesis/figures/fig89_cross_synergy.png",
+      "pdf": "synthesis/figures/fig89_cross_synergy.pdf"
+    },
+    "fig8_dedup_tradeoff": {
+      "png": "synthesis/figures/fig8_dedup_tradeoff.png",
+      "pdf": "synthesis/figures/fig8_dedup_tradeoff.pdf"
+    },
+    "fig90_spectral_analysis": {
+      "png": "synthesis/figures/fig90_spectral_analysis.png",
+      "pdf": "synthesis/figures/fig90_spectral_analysis.pdf"
+    },
+    "fig91_quality_scorecard": {
+      "png": "synthesis/figures/fig91_quality_scorecard.png",
+      "pdf": "synthesis/figures/fig91_quality_scorecard.pdf"
+    },
+    "fig92_source_ordering": {
+      "png": "synthesis/figures/fig92_source_ordering.png",
+      "pdf": "synthesis/figures/fig92_source_ordering.pdf"
+    },
+    "fig93_hull_coverage": {
+      "png": "synthesis/figures/fig93_hull_coverage.png",
+      "pdf": "synthesis/figures/fig93_hull_coverage.pdf"
+    },
+    "fig94_answer_patterns": {
+      "png": "synthesis/figures/fig94_answer_patterns.png",
+      "pdf": "synthesis/figures/fig94_answer_patterns.pdf"
+    },
+    "fig95_difficulty_diversity": {
+      "png": "synthesis/figures/fig95_difficulty_diversity.png",
+      "pdf": "synthesis/figures/fig95_difficulty_diversity.pdf"
+    },
+    "fig96_domain_explosion": {
+      "png": "synthesis/figures/fig96_domain_explosion.png",
+      "pdf": "synthesis/figures/fig96_domain_explosion.pdf"
+    },
+    "fig97_main_results": {
+      "png": "synthesis/figures/fig97_main_results.png",
+      "pdf": "synthesis/figures/fig97_main_results.pdf"
+    },
+    "fig98_multiturn_flow": {
+      "png": "synthesis/figures/fig98_multiturn_flow.png",
+      "pdf": "synthesis/figures/fig98_multiturn_flow.pdf"
+    },
+    "fig99_ecosystem": {
+      "png": "synthesis/figures/fig99_ecosystem.png",
+      "pdf": "synthesis/figures/fig99_ecosystem.pdf"
+    },
+    "fig9_source_complementarity": {
+      "png": "synthesis/figures/fig9_source_complementarity.png",
+      "pdf": "synthesis/figures/fig9_source_complementarity.pdf"
+    },
+    "fig_dashboard": {
+      "png": "synthesis/figures/fig_dashboard.png",
+      "pdf": "synthesis/figures/fig_dashboard.pdf"
+    }
+  },
+  "tables": {
+    "tab10_baseline_comparison": "synthesis/tables/tab10_baseline_comparison.tex",
+    "tab11_multiturn": "synthesis/tables/tab11_multiturn.tex",
+    "tab12_pipeline_stats": "synthesis/tables/tab12_pipeline_stats.tex",
+    "tab13_embedding_analysis": "synthesis/tables/tab13_embedding_analysis.tex",
+    "tab14_selection_strategies": "synthesis/tables/tab14_selection_strategies.tex",
+    "tab15_question_complexity": "synthesis/tables/tab15_question_complexity.tex",
+    "tab16_key_findings": "synthesis/tables/tab16_key_findings.tex",
+    "tab17_difficulty_diversity": "synthesis/tables/tab17_difficulty_diversity.tex",
+    "tab18_comprehensive_per_pipeline": "synthesis/tables/tab18_comprehensive_per_pipeline.tex",
+    "tab19_per_type_vendi": "synthesis/tables/tab19_per_type_vendi.tex",
+    "tab1_dataset_stats": "synthesis/tables/tab1_dataset_stats.tex",
+    "tab20_source_overlap": "synthesis/tables/tab20_source_overlap.tex",
+    "tab21_evidence_summary": "synthesis/tables/tab21_evidence_summary.tex",
+    "tab22_sample_showcase": "synthesis/tables/tab22_sample_showcase.tex",
+    "tab23_master_pipeline": "synthesis/tables/tab23_master_pipeline.tex",
+    "tab24_crossref_index": "synthesis/tables/tab24_crossref_index.tex",
+    "tab25_deliverables_index": "synthesis/tables/tab25_deliverables_index.tex",
+    "tab26_session4_findings": "synthesis/tables/tab26_session4_findings.tex",
+    "tab2_diversity_metrics": "synthesis/tables/tab2_diversity_metrics.tex",
+    "tab3_selection_strategies": "synthesis/tables/tab3_selection_strategies.tex",
+    "tab4_scaling_analysis": "synthesis/tables/tab4_scaling_analysis.tex",
+    "tab5_complementarity": "synthesis/tables/tab5_complementarity.tex",
+    "tab6_dedup_tradeoff": "synthesis/tables/tab6_dedup_tradeoff.tex",
+    "tab7_efficiency": "synthesis/tables/tab7_efficiency.tex",
+    "tab8_claims_evidence": "synthesis/tables/tab8_claims_evidence.tex",
+    "tab9_cost": "synthesis/tables/tab9_cost.tex"
+  },
+  "reports": {
+    "ceiling_breaking_analysis": "synthesis/outputs/ceiling_breaking_analysis.json",
+    "code_language_analysis": "synthesis/outputs/code_language_analysis.json",
+    "comprehensive_correlation": "synthesis/outputs/comprehensive_correlation.json",
+    "comprehensive_summary": "synthesis/outputs/comprehensive_summary.json",
+    "contamination_report": "synthesis/outputs/contamination_report.json",
+    "cost_analysis": "synthesis/outputs/cost_analysis.json",
+    "creative_complex_analysis": "synthesis/outputs/creative_complex_analysis.json",
+    "cumulative_source_analysis": "synthesis/outputs/cumulative_source_analysis.json",
+    "dataflow_comparison": "synthesis/outputs/dataflow_comparison.json",
+    "dedup_experiment": "synthesis/outputs/dedup_experiment.json",
+    "deliverables_index": "synthesis/outputs/deliverables_index.json",
+    "density_analysis": "synthesis/outputs/density_analysis.json",
+    "dimensionality_analysis": "synthesis/outputs/dimensionality_analysis.json",
+    "diversity_report": "synthesis/outputs/diversity_report.json",
+    "document_qa_deepdive": "synthesis/outputs/document_qa_deepdive.json",
+    "efficiency_roi_analysis": "synthesis/outputs/efficiency_roi_analysis.json",
+    "embedding_space_analysis": "synthesis/outputs/embedding_space_analysis.json",
+    "evidence_summary": "synthesis/outputs/evidence_summary.json",
+    "fig80_semantic_drift": "synthesis/outputs/fig80_semantic_drift.json",
+    "fig81_factuality_heuristics": "synthesis/outputs/fig81_factuality_heuristics.json",
+    "fig85_diversity_decomposition": "synthesis/outputs/fig85_diversity_decomposition.json",
+    "information_theoretic_analysis": "synthesis/outputs/information_theoretic_analysis.json",
+    "leave_one_out_vendi": "synthesis/outputs/leave_one_out_vendi.json",
+    "linguistic_diversity": "synthesis/outputs/linguistic_diversity.json",
+    "live_scaling_data": "synthesis/outputs/live_scaling_data.json",
+    "master_inventory": "synthesis/outputs/master_inventory.json",
+    "math_reasoning_analysis": "synthesis/outputs/math_reasoning_analysis.json",
+    "mixing_ratio_analysis": "synthesis/outputs/mixing_ratio_analysis.json",
+    "multi_turn_analysis": "synthesis/outputs/multi_turn_analysis.json",
+    "multiturn_pattern_analysis": "synthesis/outputs/multiturn_pattern_analysis.json",
+    "ngram_diversity_analysis": "synthesis/outputs/ngram_diversity_analysis.json",
+    "overlap_network_analysis": "synthesis/outputs/overlap_network_analysis.json",
+    "paper_statistics": "synthesis/outputs/paper_statistics.json",
+    "per_domain_vendi": "synthesis/outputs/per_domain_vendi.json",
+    "per_source_rejection": "synthesis/outputs/per_source_rejection.json",
+    "per_type_vendi": "synthesis/outputs/per_type_vendi.json",
+    "pipeline_architecture": "synthesis/outputs/pipeline_architecture.json",
+    "pipeline_metadata_diversity": "synthesis/outputs/pipeline_metadata_diversity.json",
+    "qa_alignment_analysis": "synthesis/outputs/qa_alignment_analysis.json",
+    "quality_report": "synthesis/outputs/quality_report.json",
+    "quality_score_analysis": "synthesis/outputs/quality_score_analysis.json",
+    "quality_validation_report": "synthesis/outputs/quality_validation_report.json",
+    "response_structure_analysis": "synthesis/outputs/response_structure_analysis.json",
+    "robustness_analysis": "synthesis/outputs/robustness_analysis.json",
+    "sample_showcase": "synthesis/outputs/sample_showcase.json",
+    "scaling_analysis": "synthesis/outputs/scaling_analysis.json",
+    "scaling_curve": "synthesis/outputs/scaling_curve.json",
+    "selection_comparison": "synthesis/outputs/selection_comparison.json",
+    "self_inversion_deepdive": "synthesis/outputs/self_inversion_deepdive.json",
+    "similarity_distribution_analysis": "synthesis/outputs/similarity_distribution_analysis.json",
+    "source_overlap_analysis": "synthesis/outputs/source_overlap_analysis.json",
+    "structure_analysis": "synthesis/outputs/structure_analysis.json",
+    "topic_modeling_analysis": "synthesis/outputs/topic_modeling_analysis.json",
+    "umap_analysis": "synthesis/outputs/umap_analysis.json",
+    "vendi_diversity_report": "synthesis/outputs/vendi_diversity_report.json",
+    "vocabulary_overlap_analysis": "synthesis/outputs/vocabulary_overlap_analysis.json"
+  },
+  "summary": {
+    "total_figures": 129,
+    "total_tables": 26,
+    "total_reports": 56
+  }
+}
