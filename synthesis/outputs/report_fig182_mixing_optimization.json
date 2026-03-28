@@ -1,0 +1,77 @@
+{
+  "figure": "fig182_mixing_optimization",
+  "strategies": {
+    "Current": {
+      "vendi": 116.9,
+      "ratios": {
+        "Code": 0.1,
+        "Complex QA": 0.354,
+        "Creative": 0.061,
+        "Document QA": 0.14,
+        "Math": 0.075,
+        "Reasoning": 0.116,
+        "Self-Inversion": 0.032
+      }
+    },
+    "Uniform": {
+      "vendi": 113.2,
+      "ratios": {
+        "Code": 0.1429,
+        "Complex QA": 0.1429,
+        "Creative": 0.1429,
+        "Document QA": 0.1429,
+        "Math": 0.1429,
+        "Reasoning": 0.1429,
+        "Self-Inversion": 0.1429
+      }
+    },
+    "Diversity-weighted": {
+      "vendi": 115.3,
+      "ratios": {
+        "Code": 0.08,
+        "Complex QA": 0.15,
+        "Creative": 0.1,
+        "Document QA": 0.2,
+        "Math": 0.05,
+        "Reasoning": 0.1,
+        "Self-Inversion": 0.32
+      }
+    },
+    "Inv-Rejection": {
+      "vendi": 118.2,
+      "ratios": {
+        "Code": 0.05,
+        "Complex QA": 0.12,
+        "Creative": 0.08,
+        "Document QA": 0.15,
+        "Math": 0.1,
+        "Reasoning": 0.15,
+        "Self-Inversion": 0.35
+      }
+    },
+    "Pareto Optimal": {
+      "vendi": 117.9,
+      "ratios": {
+        "Code": 0.08,
+        "Complex QA": 0.1,
+        "Creative": 0.125,
+        "Document QA": 0.2,
+        "Math": 0.05,
+        "Reasoning": 0.07,
+        "Self-Inversion": 0.325
+      }
+    }
+  },
+  "optimal_self_inversion_ratio": 0.11,
+  "optimal_vendi": 120.3,
+  "current_vendi": 116.9,
+  "efficiency_per_pipeline": {
+    "Code": 0.81,
+    "Complex QA": 4.65,
+    "Creative": 0.63,
+    "Document QA": 6.26,
+    "Math": 1.28,
+    "Reasoning": 3.41,
+    "Self-Inversion": 10.4
+  }
+}
