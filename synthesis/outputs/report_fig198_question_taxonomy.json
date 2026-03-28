@@ -1,0 +1,148 @@
+{
+  "figure": "fig198",
+  "title": "Question Taxonomy & Bloom's Cognitive Level",
+  "bloom_distribution_pct": {
+    "Code": {
+      "Remember": 16.2,
+      "Understand": 5.2,
+      "Apply": 51.5,
+      "Analyze": 0.1,
+      "Evaluate": 5.1,
+      "Create": 45.0
+    },
+    "Complex QA": {
+      "Remember": 12.9,
+      "Understand": 21.9,
+      "Apply": 15.1,
+      "Analyze": 12.0,
+      "Evaluate": 18.9,
+      "Create": 7.2
+    },
+    "Creative": {
+      "Remember": 5.0,
+      "Understand": 33.5,
+      "Apply": 26.8,
+      "Analyze": 8.9,
+      "Evaluate": 0.9,
+      "Create": 72.0
+    },
+    "Document QA": {
+      "Remember": 11.0,
+      "Understand": 18.3,
+      "Apply": 11.3,
+      "Analyze": 15.1,
+      "Evaluate": 8.8,
+      "Create": 14.1
+    },
+    "Math": {
+      "Remember": 16.9,
+      "Understand": 3.1,
+      "Apply": 16.7,
+      "Analyze": 0.0,
+      "Evaluate": 6.9,
+      "Create": 7.7
+    },
+    "Reasoning": {
+      "Remember": 23.1,
+      "Understand": 5.6,
+      "Apply": 6.6,
+      "Analyze": 3.9,
+      "Evaluate": 6.4,
+      "Create": 1.7
+    },
+    "Self-Inversion": {
+      "Remember": 9.1,
+      "Understand": 7.7,
+      "Apply": 10.8,
+      "Analyze": 2.0,
+      "Evaluate": 5.6,
+      "Create": 9.8
+    }
+  },
+  "cognitive_complexity_score": {
+    "Code": 3.875,
+    "Complex QA": 3.271,
+    "Creative": 4.245,
+    "Document QA": 3.441,
+    "Math": 3.002,
+    "Reasoning": 2.368,
+    "Self-Inversion": 3.374
+  },
+  "question_type_distribution": {
+    "Code": {
+      "How": 68.7,
+      "Imperative": 8.7,
+      "Other": 22.3,
+      "What": 0.2
+    },
+    "Complex QA": {
+      "Other": 38.9,
+      "How": 30.8,
+      "Imperative": 14.5,
+      "What": 15.6,
+      "When": 0.0,
+      "Is/Are": 0.1,
+      "Can/Could": 0.1
+    },
+    "Creative": {
+      "Other": 42.2,
+      "Imperative": 57.8,
+      "How": 0.0
+    },
+    "Document QA": {
+      "Other": 44.4,
+      "How": 33.1,
+      "Imperative": 15.8,
+      "Why": 2.2,
+      "What": 3.3,
+      "Can/Could": 0.7,
+      "When": 0.2,
+      "Is/Are": 0.5
+    },
+    "Math": {
+      "Other": 94.9,
+      "Imperative": 5.1,
+      "How": 0.0
+    },
+    "Reasoning": {
+      "Other": 96.5,
+      "Why": 0.2,
+      "Is/Are": 3.0,
+      "Can/Could": 0.0,
+      "Imperative": 0.1,
+      "How": 0.1
+    },
+    "Self-Inversion": {
+      "How": 58.3,
+      "Other": 28.4,
+      "What": 9.1,
+      "Imperative": 3.0,
+      "Why": 0.6,
+      "Is/Are": 0.2,
+      "Can/Could": 0.4,
+      "When": 0.1
+    }
+  },
+  "dominant_question_types": {
+    "Code": "How",
+    "Complex QA": "Other",
+    "Creative": "Imperative",
+    "Document QA": "Other",
+    "Math": "Other",
+    "Reasoning": "Other",
+    "Self-Inversion": "How"
+  },
+  "samples_analyzed": {
+    "Code": 5000,
+    "Complex QA": 5000,
+    "Creative": 5000,
+    "Document QA": 5000,
+    "Math": 5000,
+    "Reasoning": 5000,
+    "Self-Inversion": 5000
+  },
+  "findings": [
+    "Highest cognitive complexity: Creative (4.25)",
+    "Lowest cognitive complexity: Reasoning (2.37)"
+  ]
+}
