@@ -1,0 +1,156 @@
+{
+  "figure": "fig203",
+  "title": "Emotional Tone & Modality Analysis",
+  "tone_rates_per_1K": {
+    "Code": {
+      "formal": 0.004,
+      "conversational": 0.168,
+      "enthusiastic": 0.184,
+      "cautious": 0.765,
+      "authoritative": 1.516,
+      "empathetic": 0.212,
+      "technical": 11.001,
+      "narrative": 1.136
+    },
+    "Complex QA": {
+      "formal": 0.93,
+      "conversational": 0.173,
+      "enthusiastic": 0.572,
+      "cautious": 6.295,
+      "authoritative": 1.114,
+      "empathetic": 2.574,
+      "technical": 2.65,
+      "narrative": 3.141
+    },
+    "Creative": {
+      "formal": 0.314,
+      "conversational": 0.509,
+      "enthusiastic": 0.583,
+      "cautious": 2.046,
+      "authoritative": 1.7,
+      "empathetic": 1.932,
+      "technical": 0.351,
+      "narrative": 6.953
+    },
+    "Document QA": {
+      "formal": 0.02,
+      "conversational": 0.225,
+      "enthusiastic": 0.415,
+      "cautious": 6.235,
+      "authoritative": 0.636,
+      "empathetic": 4.357,
+      "technical": 1.86,
+      "narrative": 4.13
+    },
+    "Math": {
+      "formal": 0.031,
+      "conversational": 0.631,
+      "enthusiastic": 0.173,
+      "cautious": 0.171,
+      "authoritative": 1.68,
+      "empathetic": 0.233,
+      "technical": 1.841,
+      "narrative": 0.437
+    },
+    "Reasoning": {
+      "formal": 0.099,
+      "conversational": 0.848,
+      "enthusiastic": 0.297,
+      "cautious": 4.492,
+      "authoritative": 4.089,
+      "empathetic": 0.954,
+      "technical": 1.113,
+      "narrative": 0.916
+    },
+    "Self-Inversion": {
+      "formal": 0.329,
+      "conversational": 0.36,
+      "enthusiastic": 0.397,
+      "cautious": 2.834,
+      "authoritative": 1.607,
+      "empathetic": 1.485,
+      "technical": 4.408,
+      "narrative": 2.803
+    }
+  },
+  "modality_rates_per_1K": {
+    "Code": {
+      "certainty": 0.038,
+      "possibility": 0.66,
+      "obligation": 2.617,
+      "permission": 3.77
+    },
+    "Complex QA": {
+      "certainty": 0.115,
+      "possibility": 6.572,
+      "obligation": 2.06,
+      "permission": 9.901
+    },
+    "Creative": {
+      "certainty": 0.082,
+      "possibility": 2.729,
+      "obligation": 0.77,
+      "permission": 2.031
+    },
+    "Document QA": {
+      "certainty": 0.242,
+      "possibility": 5.359,
+      "obligation": 1.62,
+      "permission": 12.568
+    },
+    "Math": {
+      "certainty": 0.057,
+      "possibility": 0.18,
+      "obligation": 4.067,
+      "permission": 2.531
+    },
+    "Reasoning": {
+      "certainty": 0.123,
+      "possibility": 4.574,
+      "obligation": 5.985,
+      "permission": 4.712
+    },
+    "Self-Inversion": {
+      "certainty": 0.092,
+      "possibility": 3.083,
+      "obligation": 2.696,
+      "permission": 5.741
+    }
+  },
+  "dominant_tone": {
+    "Code": "technical",
+    "Complex QA": "cautious",
+    "Creative": "narrative",
+    "Document QA": "cautious",
+    "Math": "technical",
+    "Reasoning": "cautious",
+    "Self-Inversion": "technical"
+  },
+  "formal_score": {
+    "Code": 12.52,
+    "Complex QA": 4.69,
+    "Creative": 2.37,
+    "Document QA": 2.52,
+    "Math": 3.55,
+    "Reasoning": 5.3,
+    "Self-Inversion": 6.34
+  },
+  "casual_score": {
+    "Code": 0.56,
+    "Complex QA": 3.32,
+    "Creative": 3.02,
+    "Document QA": 5.0,
+    "Math": 1.04,
+    "Reasoning": 2.1,
+    "Self-Inversion": 2.24
+  },
+  "findings": [
+    "Code: technical (11.0/1K)",
+    "Complex QA: cautious (6.3/1K)",
+    "Creative: narrative (7.0/1K)",
+    "Document QA: cautious (6.2/1K)",
+    "Math: technical (1.8/1K)",
+    "Reasoning: cautious (4.5/1K)",
+    "Self-Inversion: technical (4.4/1K)"
+  ]
+}
