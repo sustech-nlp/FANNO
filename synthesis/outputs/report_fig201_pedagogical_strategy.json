@@ -1,0 +1,195 @@
+{
+  "figure": "fig201",
+  "title": "Answer Pedagogical Strategy Analysis",
+  "strategy_rates_pct": {
+    "Code": {
+      "scaffolding": 6.3,
+      "elaboration": 0.4,
+      "example_driven": 5.5,
+      "socratic": 0.02,
+      "summary_first": 0.0,
+      "analogy": 1.84,
+      "contrast": 0.74,
+      "prerequisite": 0.18,
+      "warning": 3.3,
+      "encouragement": 0.0
+    },
+    "Complex QA": {
+      "scaffolding": 2.38,
+      "elaboration": 3.56,
+      "example_driven": 62.18,
+      "socratic": 0.5,
+      "summary_first": 0.24,
+      "analogy": 11.1,
+      "contrast": 20.18,
+      "prerequisite": 2.4,
+      "warning": 7.86,
+      "encouragement": 0.28
+    },
+    "Creative": {
+      "scaffolding": 2.78,
+      "elaboration": 0.24,
+      "example_driven": 4.2,
+      "socratic": 1.18,
+      "summary_first": 0.08,
+      "analogy": 27.62,
+      "contrast": 6.46,
+      "prerequisite": 2.48,
+      "warning": 5.36,
+      "encouragement": 1.26
+    },
+    "Document QA": {
+      "scaffolding": 2.74,
+      "elaboration": 2.08,
+      "example_driven": 10.48,
+      "socratic": 0.94,
+      "summary_first": 0.06,
+      "analogy": 4.16,
+      "contrast": 4.22,
+      "prerequisite": 0.74,
+      "warning": 13.92,
+      "encouragement": 0.86
+    },
+    "Math": {
+      "scaffolding": 3.32,
+      "elaboration": 4.44,
+      "example_driven": 0.6,
+      "socratic": 0.08,
+      "summary_first": 0.0,
+      "analogy": 0.58,
+      "contrast": 0.04,
+      "prerequisite": 1.26,
+      "warning": 4.06,
+      "encouragement": 0.0
+    },
+    "Reasoning": {
+      "scaffolding": 4.08,
+      "elaboration": 3.24,
+      "example_driven": 2.88,
+      "socratic": 0.3,
+      "summary_first": 0.02,
+      "analogy": 8.06,
+      "contrast": 3.7,
+      "prerequisite": 1.06,
+      "warning": 6.04,
+      "encouragement": 0.06
+    },
+    "Self-Inversion": {
+      "scaffolding": 4.14,
+      "elaboration": 1.82,
+      "example_driven": 13.88,
+      "socratic": 0.32,
+      "summary_first": 0.16,
+      "analogy": 7.78,
+      "contrast": 4.94,
+      "prerequisite": 1.06,
+      "warning": 3.54,
+      "encouragement": 0.16
+    }
+  },
+  "total_pedagogical_density": {
+    "Code": 18.3,
+    "Complex QA": 110.7,
+    "Creative": 51.7,
+    "Document QA": 40.2,
+    "Math": 14.4,
+    "Reasoning": 29.4,
+    "Self-Inversion": 37.8
+  },
+  "dominant_strategy": {
+    "Code": "scaffolding",
+    "Complex QA": "example_driven",
+    "Creative": "analogy",
+    "Document QA": "warning",
+    "Math": "elaboration",
+    "Reasoning": "analogy",
+    "Self-Inversion": "example_driven"
+  },
+  "most_distinctive": {
+    "Code": {
+      "strategy": "scaffolding",
+      "excess": 3.06
+    },
+    "Complex QA": {
+      "strategy": "example_driven",
+      "excess": 55.92
+    },
+    "Creative": {
+      "strategy": "analogy",
+      "excess": 22.03
+    },
+    "Document QA": {
+      "strategy": "warning",
+      "excess": 8.89
+    },
+    "Math": {
+      "strategy": "elaboration",
+      "excess": 2.55
+    },
+    "Reasoning": {
+      "strategy": "elaboration",
+      "excess": 1.15
+    },
+    "Self-Inversion": {
+      "strategy": "scaffolding",
+      "excess": 0.54
+    }
+  },
+  "opening_patterns": {
+    "Code": {
+      "Other": 4500,
+      "Direct answer": 188,
+      "Definition": 277,
+      "Narrative": 31,
+      "Procedural": 4
+    },
+    "Complex QA": {
+      "Direct answer": 1346,
+      "Other": 3453,
+      "Narrative": 146,
+      "Definition": 32,
+      "Procedural": 21,
+      "Context": 2
+    },
+    "Creative": {
+      "Other": 4016,
+      "Direct answer": 700,
+      "Narrative": 278,
+      "Definition": 4,
+      "Procedural": 2
+    },
+    "Document QA": {
+      "Direct answer": 1244,
+      "Other": 3626,
+      "Context": 41,
+      "Narrative": 60,
+      "Definition": 12,
+      "Enumeration": 9,
+      "Procedural": 8
+    },
+    "Math": {
+      "Direct answer": 121,
+      "Other": 3861,
+      "Procedural": 1014,
+      "Narrative": 4
+    },
+    "Reasoning": {
+      "Other": 4850,
+      "Direct answer": 132,
+      "Procedural": 10,
+      "Narrative": 8
+    },
+    "Self-Inversion": {
+      "Other": 4020,
+      "Direct answer": 674,
+      "Narrative": 71,
+      "Procedural": 146,
+      "Definition": 88,
+      "Context": 1
+    }
+  },
+  "findings": [
+    "Most pedagogical: Complex QA (111%)",
+    "Least pedagogical: Math (14%)"
+  ]
+}
