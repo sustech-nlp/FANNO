@@ -1,0 +1,62 @@
+{
+  "figure": "fig199",
+  "title": "Knowledge Entity Overlap & Coverage",
+  "total_unique_entities": 52525,
+  "core_entities_all7": 197,
+  "avg_jaccard": 0.0939,
+  "entity_vocabulary": {
+    "Code": 6670,
+    "Complex QA": 9845,
+    "Creative": 12633,
+    "Document QA": 28852,
+    "Math": 1074,
+    "Reasoning": 3729,
+    "Self-Inversion": 8473
+  },
+  "exclusive_entities": {
+    "Code": 3902,
+    "Complex QA": 4528,
+    "Creative": 8205,
+    "Document QA": 22092,
+    "Math": 259,
+    "Reasoning": 1287,
+    "Self-Inversion": 2357
+  },
+  "exclusive_pct": {
+    "Code": 58.5,
+    "Complex QA": 46.0,
+    "Creative": 64.9,
+    "Document QA": 76.6,
+    "Math": 24.1,
+    "Reasoning": 34.5,
+    "Self-Inversion": 27.8
+  },
+  "top_similar_pairs": [
+    {
+      "pair": "Complex QA-Self-Inversion",
+      "jaccard": 0.2062
+    },
+    {
+      "pair": "Code-Self-Inversion",
+      "jaccard": 0.1635
+    },
+    {
+      "pair": "Reasoning-Self-Inversion",
+      "jaccard": 0.1547
+    },
+    {
+      "pair": "Creative-Self-Inversion",
+      "jaccard": 0.1519
+    },
+    {
+      "pair": "Complex QA-Reasoning",
+      "jaccard": 0.1298
+    }
+  ],
+  "findings": [
+    "Total entities: 52,525, Core: 197",
+    "Avg Jaccard: 0.094",
+    "Most entities: Document QA (28,852)",
+    "Most exclusive: Document QA (22,092)"
+  ]
+}
