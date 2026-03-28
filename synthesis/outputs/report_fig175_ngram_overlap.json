@@ -1,0 +1,58 @@
+{
+  "figure": "fig175_ngram_overlap",
+  "total_unique_bigrams": 1188513,
+  "core_bigrams_all_7": 2434,
+  "avg_jaccard_overlap": 0.0694,
+  "most_overlapping": {
+    "pair": [
+      "Complex QA",
+      "Self-Inversion"
+    ],
+    "jaccard": 0.1342
+  },
+  "least_overlapping": {
+    "pair": [
+      "Math",
+      "Creative"
+    ],
+    "jaccard": 0.0172
+  },
+  "exclusive_bigram_pct": {
+    "Complex QA": 60.33,
+    "Document QA": 66.31,
+    "Reasoning": 53.04,
+    "Code": 70.06,
+    "Math": 46.74,
+    "Creative": 74.13,
+    "Self-Inversion": 38.34
+  },
+  "ngram_sizes": {
+    "1": {
+      "Complex QA": 20128,
+      "Document QA": 25075,
+      "Reasoning": 9773,
+      "Code": 9604,
+      "Math": 3171,
+      "Creative": 27460,
+      "Self-Inversion": 20061
+    },
+    "2": {
+      "Complex QA": 296090,
+      "Document QA": 343629,
+      "Reasoning": 137291,
+      "Code": 176887,
+      "Math": 42354,
+      "Creative": 357447,
+      "Self-Inversion": 205090
+    },
+    "3": {
+      "Complex QA": 558702,
+      "Document QA": 625653,
+      "Reasoning": 275193,
+      "Code": 394883,
+      "Math": 108190,
+      "Creative": 648996,
+      "Self-Inversion": 335914
+    }
+  }
+}
