@@ -1,0 +1,161 @@
+{
+  "figure": "fig170_response_format_classification",
+  "format_distribution": {
+    "Complex QA": {
+      "Prose/Narrative": 1681,
+      "List-based": 1051,
+      "Expository": 93,
+      "Mathematical": 156,
+      "Structured (headers+lists)": 18,
+      "Other": 1
+    },
+    "Document QA": {
+      "List-based": 1539,
+      "Mixed (code+text)": 143,
+      "Structured (headers+lists)": 729,
+      "Expository": 244,
+      "Mathematical": 124,
+      "Prose/Narrative": 111,
+      "Concise": 56,
+      "Code-heavy": 42,
+      "Other": 12
+    },
+    "Reasoning": {
+      "List-based": 1730,
+      "Expository": 1223,
+      "Prose/Narrative": 25,
+      "Structured (headers+lists)": 9,
+      "Mathematical": 12,
+      "Other": 1
+    },
+    "Code": {
+      "Mixed (code+text)": 2585,
+      "Code-heavy": 399,
+      "List-based": 4,
+      "Expository": 5,
+      "Mathematical": 4,
+      "Prose/Narrative": 3
+    },
+    "Math": {
+      "Mathematical": 956,
+      "Expository": 850,
+      "List-based": 756,
+      "Other": 374,
+      "Concise": 8,
+      "Prose/Narrative": 53,
+      "Structured (headers+lists)": 3
+    },
+    "Creative": {
+      "Prose/Narrative": 2523,
+      "Expository": 225,
+      "Other": 129,
+      "List-based": 58,
+      "Structured (headers+lists)": 60,
+      "Code-heavy": 3,
+      "Mixed (code+text)": 2
+    },
+    "Self-Inversion": {
+      "Expository": 1242,
+      "Prose/Narrative": 538,
+      "Mixed (code+text)": 359,
+      "List-based": 521,
+      "Mathematical": 159,
+      "Concise": 40,
+      "Code-heavy": 40,
+      "Structured (headers+lists)": 38,
+      "Other": 61
+    }
+  },
+  "structural_features": {
+    "Complex QA": {
+      "code_blocks": 0.0,
+      "has_bullets": 0.2237,
+      "has_numbered": 0.3513,
+      "has_headers": 0.01,
+      "has_math": 0.052,
+      "has_table": 0.0013,
+      "long_paragraphs": 5.4183,
+      "total_paragraphs": 6.7223
+    },
+    "Document QA": {
+      "code_blocks": 0.093,
+      "has_bullets": 0.5603,
+      "has_numbered": 0.722,
+      "has_headers": 0.312,
+      "has_math": 0.042,
+      "has_table": 0.0023,
+      "long_paragraphs": 6.5913,
+      "total_paragraphs": 11.4503
+    },
+    "Reasoning": {
+      "code_blocks": 0.0,
+      "has_bullets": 0.3233,
+      "has_numbered": 0.5597,
+      "has_headers": 0.003,
+      "has_math": 0.004,
+      "has_table": 0.02,
+      "long_paragraphs": 2.1733,
+      "total_paragraphs": 4.177
+    },
+    "Code": {
+      "code_blocks": 1.2687,
+      "has_bullets": 0.6783,
+      "has_numbered": 0.7377,
+      "has_headers": 0.7343,
+      "has_math": 0.143,
+      "has_table": 0.0367,
+      "long_paragraphs": 5.677,
+      "total_paragraphs": 15.515
+    },
+    "Math": {
+      "code_blocks": 0.0,
+      "has_bullets": 0.27,
+      "has_numbered": 0.2747,
+      "has_headers": 0.002,
+      "has_math": 0.3187,
+      "has_table": 0.0293,
+      "long_paragraphs": 1.3433,
+      "total_paragraphs": 8.487
+    },
+    "Creative": {
+      "code_blocks": 0.0037,
+      "has_bullets": 0.03,
+      "has_numbered": 0.0337,
+      "has_headers": 0.0247,
+      "has_math": 0.0,
+      "has_table": 0.0,
+      "long_paragraphs": 5.4133,
+      "total_paragraphs": 8.5473
+    },
+    "Self-Inversion": {
+      "code_blocks": 0.1574,
+      "has_bullets": 0.1975,
+      "has_numbered": 0.2422,
+      "has_headers": 0.0734,
+      "has_math": 0.069,
+      "has_table": 0.0143,
+      "long_paragraphs": 2.5781,
+      "total_paragraphs": 4.8923
+    }
+  },
+  "format_categories": [
+    "Code-heavy",
+    "Mixed (code+text)",
+    "Mathematical",
+    "Prose/Narrative",
+    "Structured (headers+lists)",
+    "List-based",
+    "Expository",
+    "Concise",
+    "Other"
+  ],
+  "dominant_format": {
+    "Complex QA": "Prose/Narrative",
+    "Document QA": "List-based",
+    "Reasoning": "List-based",
+    "Code": "Mixed (code+text)",
+    "Math": "Mathematical",
+    "Creative": "Prose/Narrative",
+    "Self-Inversion": "Expository"
+  }
+}
