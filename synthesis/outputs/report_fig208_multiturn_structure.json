@@ -1,0 +1,44 @@
+{
+  "figure": "fig208",
+  "title": "Multi-Turn Dialog Structure Analysis",
+  "total_conversations": 19901,
+  "total_turns": 123504,
+  "avg_turns": 6.21,
+  "median_turns": 6,
+  "max_turns": 12,
+  "total_words": 6281096,
+  "user_words": 1748405,
+  "assistant_words": 4532691,
+  "unique_patterns": 10,
+  "unique_scenarios": 17,
+  "top_patterns": {
+    "socratic_method": 2751,
+    "iterative_refinement": 2508,
+    "topic_shift": 2503,
+    "collaborative_problem_solving": 2480,
+    "exploration_to_decision": 2447
+  },
+  "top_scenarios": {
+    "A user learning a new skill step by step with an AI tutor": 1491,
+    "A user troubleshooting a technical problem with systematic elimination": 1447,
+    "A user seeking medical information (general, not diagnosis) with clarifying questions": 1422,
+    "A student asking a professor about a complex topic, with follow-up questions that go deeper": 1401,
+    "A user learning a new programming language through practical examples": 1381
+  },
+  "turn_distribution": {
+    "8": 4406,
+    "4": 3340,
+    "6": 7881,
+    "7": 2517,
+    "5": 1511,
+    "9": 47,
+    "10": 187,
+    "12": 11,
+    "11": 1
+  },
+  "findings": [
+    "19,901 conversations, avg 6.2 turns",
+    "10 patterns, 17 scenarios",
+    "User:Asst word ratio = 0.39"
+  ]
+}
