@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-03-28T08:30:00",
+  "full_vendi": 155.65,
+  "n_samples": 3500,
+  "per_source": {
+    "Code": {
+      "n_removed": 500,
+      "n_remaining": 3000,
+      "vendi_without": 150.16,
+      "vendi_drop": 5.49,
+      "vendi_drop_pct": 3.53
+    },
+    "Complex QA": {
+      "n_removed": 500,
+      "n_remaining": 3000,
+      "vendi_without": 146.78,
+      "vendi_drop": 8.87,
+      "vendi_drop_pct": 5.7
+    },
+    "Creative": {
+      "n_removed": 500,
+      "n_remaining": 3000,
+      "vendi_without": 160.6,
+      "vendi_drop": -4.95,
+      "vendi_drop_pct": -3.18
+    },
+    "Document QA": {
+      "n_removed": 500,
+      "n_remaining": 3000,
+      "vendi_without": 146.06,
+      "vendi_drop": 9.59,
+      "vendi_drop_pct": 6.16
+    },
+    "Math": {
+      "n_removed": 500,
+      "n_remaining": 3000,
+      "vendi_without": 152.37,
+      "vendi_drop": 3.28,
+      "vendi_drop_pct": 2.11
+    },
+    "Reasoning": {
+      "n_removed": 500,
+      "n_remaining": 3000,
+      "vendi_without": 148.42,
+      "vendi_drop": 7.23,
+      "vendi_drop_pct": 4.65
+    },
+    "Self-Inversion": {
+      "n_removed": 500,
+      "n_remaining": 3000,
+      "vendi_without": 151.89,
+      "vendi_drop": 3.76,
+      "vendi_drop_pct": 2.41
+    }
+  }
+}
