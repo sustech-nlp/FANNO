@@ -1,0 +1,154 @@
+{
+  "description": "Cross-metric correlation analysis (10 metrics \u00d7 7 pipelines)",
+  "metrics": [
+    "Volume",
+    "Vendi",
+    "Vendi/1K",
+    "Rejection%",
+    "Within-Sim",
+    "Isolation",
+    "Vocab",
+    "Quality",
+    "Paragraphs",
+    "A/Q Ratio"
+  ],
+  "raw_data": {
+    "Volume": [
+      54223.0,
+      21432.0,
+      17789.0,
+      15411.0,
+      11450.0,
+      9363.0,
+      4975.0
+    ],
+    "Vendi": [
+      141.2,
+      80.7,
+      124.9,
+      68.2,
+      65.3,
+      40.3,
+      125.0
+    ],
+    "Vendi/1K": [
+      2.6041,
+      3.7654,
+      7.0212,
+      4.4254,
+      5.7031,
+      4.3042,
+      25.1256
+    ],
+    "Rejection%": [
+      8.4,
+      11.8,
+      10.6,
+      48.5,
+      42.4,
+      5.5,
+      0.5
+    ],
+    "Within-Sim": [
+      0.0835,
+      0.0936,
+      0.1005,
+      0.1366,
+      0.1693,
+      0.3019,
+      0.0599
+    ],
+    "Isolation": [
+      0.5752,
+      0.4263,
+      0.6851,
+      0.9166,
+      0.8913,
+      0.9533,
+      0.2242
+    ],
+    "Vocab": [
+      17287.0,
+      21251.0,
+      9362.0,
+      11445.0,
+      4206.0,
+      22767.0,
+      18105.0
+    ],
+    "Quality": [
+      0.6741,
+      0.7078,
+      0.603,
+      0.8086,
+      0.5,
+      0.5918,
+      0.5894
+    ],
+    "Paragraphs": [
+      6.4623,
+      10.887,
+      3.454,
+      13.3527,
+      7.3382,
+      8.2417,
+      4.8363
+    ],
+    "A/Q Ratio": [
+      12.7,
+      8.9,
+      4.8,
+      13.1,
+      6.1,
+      8.4,
+      9.8
+    ]
+  },
+  "top_correlations": [
+    [
+      "Vendi",
+      "Within-Sim",
+      -0.8171
+    ],
+    [
+      "Within-Sim",
+      "Isolation",
+      0.7608
+    ],
+    [
+      "Quality",
+      "A/Q Ratio",
+      0.7328
+    ],
+    [
+      "Quality",
+      "Paragraphs",
+      0.7081
+    ],
+    [
+      "Rejection%",
+      "Vocab",
+      -0.701
+    ],
+    [
+      "Vendi",
+      "Isolation",
+      -0.6756
+    ],
+    [
+      "Vendi/1K",
+      "Isolation",
+      -0.6558
+    ],
+    [
+      "Vendi",
+      "Paragraphs",
+      -0.6204
+    ]
+  ],
+  "key_findings": [
+    "Strongest positive: Vendi vs Within-Sim (r=-0.817)",
+    "Volume negatively correlated with Diversity Density (r=-0.482): more \u2260 diverse",
+    "Isolation and Within-Similarity are strongly positively correlated"
+  ]
+}
