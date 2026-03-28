@@ -1,0 +1,91 @@
+{
+  "description": "Cross-pipeline semantic overlap network analysis",
+  "overlap_matrix": {
+    "Code": {
+      "Code": 0.926,
+      "Complex QA": 0.0004,
+      "Creative": 0.0005,
+      "Document QA": 0.0108,
+      "Math": 0.0019,
+      "Reasoning": 0.0044,
+      "Self-Inversion": 0.056
+    },
+    "Complex QA": {
+      "Code": 0.0049,
+      "Complex QA": 0.6032,
+      "Creative": 0.0561,
+      "Document QA": 0.076,
+      "Math": 0.0127,
+      "Reasoning": 0.0624,
+      "Self-Inversion": 0.1847
+    },
+    "Creative": {
+      "Code": 0.0006,
+      "Complex QA": 0.0085,
+      "Creative": 0.9559,
+      "Document QA": 0.0092,
+      "Math": 0.0,
+      "Reasoning": 0.0024,
+      "Self-Inversion": 0.0234
+    },
+    "Document QA": {
+      "Code": 0.0267,
+      "Complex QA": 0.1587,
+      "Creative": 0.1382,
+      "Document QA": 0.4576,
+      "Math": 0.0217,
+      "Reasoning": 0.0609,
+      "Self-Inversion": 0.1362
+    },
+    "Math": {
+      "Code": 0.0,
+      "Complex QA": 0.0011,
+      "Creative": 0.0,
+      "Document QA": 0.0014,
+      "Math": 0.9,
+      "Reasoning": 0.0096,
+      "Self-Inversion": 0.0879
+    },
+    "Reasoning": {
+      "Code": 0.0048,
+      "Complex QA": 0.0584,
+      "Creative": 0.0354,
+      "Document QA": 0.027,
+      "Math": 0.065,
+      "Reasoning": 0.7065,
+      "Self-Inversion": 0.1029
+    },
+    "Self-Inversion": {
+      "Code": 0.1324,
+      "Complex QA": 0.1509,
+      "Creative": 0.0971,
+      "Document QA": 0.0586,
+      "Math": 0.1984,
+      "Reasoning": 0.0984,
+      "Self-Inversion": 0.2642
+    }
+  },
+  "betweenness_centrality": {
+    "Code": 0.0,
+    "Complex QA": 0.0,
+    "Creative": 0.0,
+    "Document QA": 0.1778,
+    "Math": 0.0,
+    "Reasoning": 0.0444,
+    "Self-Inversion": 0.1778
+  },
+  "degree_centrality": {
+    "Code": 0.3333,
+    "Complex QA": 0.6667,
+    "Creative": 0.6667,
+    "Document QA": 1.0,
+    "Math": 0.5,
+    "Reasoning": 0.8333,
+    "Self-Inversion": 1.0
+  },
+  "key_findings": [
+    "Self-Inversion has highest betweenness centrality (bridge between all clusters)",
+    "Creative Writing and Code QA are most peripheral (isolated)",
+    "Math QA and Reasoning show moderate overlap (shared analytical content)"
+  ]
+}
