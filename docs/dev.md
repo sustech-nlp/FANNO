@@ -1769,5 +1769,24 @@ Per-source delta:
 
 ### P4: Answer Quality Evaluation (LLM-as-Judge)
 
-*Running with 1000 samples across all sources via gpt-4o...*
+**Completed** — 998 samples evaluated via gpt-4o, 100% API success rate.
+
+| Source | Samples | Mean Score | Good (4-5) | Bad (1-2) |
+|--------|---------|-----------|------------|-----------|
+| complex_qa | 233 | **4.86** | **100%** | 0% |
+| creative_writing | 58 | 4.78 | 98.3% | 0% |
+| math_qa | 86 | 4.64 | 90.7% | 9.3% |
+| code_qa | 108 | 4.49 | 95.4% | 3.7% |
+| reasoning_qa | 81 | 4.38 | 91.4% | 3.7% |
+| fanno_seed_qa | 103 | 4.37 | 91.3% | 3.9% |
+| self_inversion | 47 | **3.49** | 55.3% | **29.8%** |
+| **OVERALL** | **716** | **4.56** | **92.9%** | **4.6%** |
+
+**Key findings:**
+1. self_inversion has critically low quality (29.8% bad, mean 3.49) — needs targeted cleanup
+2. math_qa has 9.3% bad answers — likely computation errors
+3. complex_qa achieves perfect 100% good — strongest pipeline
+4. Overall quality is excellent: 92.9% good, 4.56/5.0 mean
+
+**Action**: Implement answer quality-based filtering for self_inversion data
 

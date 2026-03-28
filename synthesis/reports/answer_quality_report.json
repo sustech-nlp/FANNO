@@ -1,0 +1,347 @@
+{
+  "timestamp": "2026-03-28T04:48:06.966968",
+  "model": "gpt-4o",
+  "total_samples": 998,
+  "total_scored": 716,
+  "failed_parses": 282,
+  "per_source": {
+    "code_qa": {
+      "count": 108,
+      "mean_score": 4.491,
+      "median_score": 5,
+      "score_distribution": {
+        "1": 1,
+        "2": 3,
+        "3": 1,
+        "4": 40,
+        "5": 63
+      },
+      "pct_good_4_5": 95.4,
+      "pct_bad_1_2": 3.7
+    },
+    "complex_qa": {
+      "count": 233,
+      "mean_score": 4.863,
+      "median_score": 5,
+      "score_distribution": {
+        "4": 32,
+        "5": 201
+      },
+      "pct_good_4_5": 100.0,
+      "pct_bad_1_2": 0.0
+    },
+    "creative_writing": {
+      "count": 58,
+      "mean_score": 4.776,
+      "median_score": 5,
+      "score_distribution": {
+        "3": 1,
+        "4": 11,
+        "5": 46
+      },
+      "pct_good_4_5": 98.3,
+      "pct_bad_1_2": 0.0
+    },
+    "fanno_seed_qa": {
+      "count": 103,
+      "mean_score": 4.369,
+      "median_score": 5,
+      "score_distribution": {
+        "1": 1,
+        "2": 3,
+        "3": 5,
+        "4": 42,
+        "5": 52
+      },
+      "pct_good_4_5": 91.3,
+      "pct_bad_1_2": 3.9
+    },
+    "math_qa": {
+      "count": 86,
+      "mean_score": 4.64,
+      "median_score": 5,
+      "score_distribution": {
+        "1": 2,
+        "2": 6,
+        "4": 5,
+        "5": 73
+      },
+      "pct_good_4_5": 90.7,
+      "pct_bad_1_2": 9.3
+    },
+    "reasoning_qa": {
+      "count": 81,
+      "mean_score": 4.383,
+      "median_score": 5,
+      "score_distribution": {
+        "1": 1,
+        "2": 2,
+        "3": 4,
+        "4": 32,
+        "5": 42
+      },
+      "pct_good_4_5": 91.4,
+      "pct_bad_1_2": 3.7
+    },
+    "self_inversion": {
+      "count": 47,
+      "mean_score": 3.489,
+      "median_score": 4,
+      "score_distribution": {
+        "1": 5,
+        "2": 9,
+        "3": 7,
+        "4": 10,
+        "5": 16
+      },
+      "pct_good_4_5": 55.3,
+      "pct_bad_1_2": 29.8
+    }
+  },
+  "overall": {
+    "mean_score": 4.557,
+    "total_scored": 716,
+    "pct_good_4_5": 92.9,
+    "pct_bad_1_2": 4.6
+  },
+  "score_distribution": {
+    "1": 10,
+    "2": 23,
+    "3": 18,
+    "4": 172,
+    "5": 493
+  },
+  "low_quality_examples": [
+    {
+      "question": "Consider a number with a digit sum of 18. If this number is the result of a product of two prime numbers, determine one possible combination of these prime factors.",
+      "answer_preview": "Given the number 189, we can find its prime factorization. 189 = 3 × 3 × 21 = 3 × 3 × 3 × 7. Hence, a possible combination of two prime factors is 3 and 63, where 63 itself can be further factored int",
+      "source": "self_inversion",
+      "score": 1,
+      "raw_response": "1"
+    },
+    {
+      "question": "Compare and contrast a centralized, Treasury‑dominated model of economic and constitutional governance with a highly localized, community‑empowered model in the context of contemporary British politic",
+      "answer_preview": "In contemporary British politics, the debate between a centralized, Treasury-dominated model and a highly localized, community-empowered model of governance is significant and has implications across ",
+      "source": "fanno_seed_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "If Samantha distributes her 15 apples equally among 3 friends, but one friend returns 4 apples, how many apples does Samantha have in total then?",
+      "answer_preview": "To find out the total number of apples Samantha has after distribution and return, calculate: 15 apples (initial total) - 3*(15/3) apples (given out) + 4 apples (returned) = 15 - 15 + 4 = 4 apples.",
+      "source": "self_inversion",
+      "score": 1,
+      "raw_response": "1"
+    },
+    {
+      "question": "How do myths and legends shape our willingness to explore unknown territories?",
+      "answer_preview": "The flickering light of the campfire cast dancing shadows against the towering trees of the Whispering Forest. Sebastian's eyes glimmered with the thrill of possibility, his hands gesturing animatedly",
+      "source": "self_inversion",
+      "score": 1,
+      "raw_response": "1"
+    },
+    {
+      "question": "How can Sarah ensure she has enough apples to share equally among her friends if she starts with 12 apples?",
+      "answer_preview": "Sarah starts with 12 apples. To share equally among her 4 friends, she gives each friend 3 apples. This requires 3 apples/friend * 4 friends = 12 apples. Sarah has exactly enough apples to give away a",
+      "source": "self_inversion",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "You are looking straight at the front face of a transparent cube placed on a table. The cube’s faces are colored as follows:\n- FRONT face: Red\n- BACK face: Orange\n- LEFT face: Blue\n- RIGHT face: Green",
+      "answer_preview": "Premises:\n1. Initial cube orientation (from the observer’s point of view):\n   - FRONT: Red (R)\n   - BACK: Orange (O)\n   - LEFT: Blue (B)\n   - RIGHT: Green (G)\n   - TOP: Yellow (Y)\n   - BOTTOM: White (",
+      "source": "reasoning_qa",
+      "score": 1,
+      "raw_response": "1"
+    },
+    {
+      "question": "What are the key steps and challenges that a company must address when shifting from traditional manufacturing to a customer-centric production model?",
+      "answer_preview": "To successfully integrate Lean Manufacturing into XYZ Corp's production processes, the company must focus on both strategic planning and staff engagement. Lean Manufacturing is centered around minimiz",
+      "source": "self_inversion",
+      "score": 1,
+      "raw_response": "1"
+    },
+    {
+      "question": "In a triangle, given the angles A = 45° and B = 60°, and the side a = 7 opposite angle A, find the ratio of the perimeter of the triangle to its area.",
+      "answer_preview": "To find the perimeter, first calculate side b using the Law of Sines: \\( \\frac{7}{\\sin 45^\\circ} = \\frac{b}{\\sin 60^\\circ} \\), leading to \\( b = \\frac{7\\sqrt{6}}{2} \\) as shown before. Now, calculate ",
+      "source": "self_inversion",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "In ecology, how do individual organisms contribute to the formation of larger ecosystems?",
+      "answer_preview": "Individual organisms, such as a tree or an ant, play a crucial role in forming larger ecosystems. A tree represents an individual unit that, together with many other trees, creates a forest—a larger c",
+      "source": "self_inversion",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "Three friends, Alex, Bob, and Charlie, each have a different favorite color: red, blue, or green. Their favorite colors are not visible. They decide to wear hats of their favorite colors. Alex says, '",
+      "answer_preview": "To solve this puzzle, we need to navigate and deduce each individual's favorite color based on the given statements. \n\nPremises:\n1. Alex sees that Bob is not wearing a red hat.\n2. Bob sees that Charli",
+      "source": "reasoning_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "How can we ensure that a machine learning model remains robust when dealing with incomplete financial datasets, specifically in predicting stock prices?",
+      "answer_preview": "In this task, we'll implement a linear regression model using scikit-learn to predict stock prices based on a simple dataset. We'll also address how to handle missing values in the dataset using Simpl",
+      "source": "self_inversion",
+      "score": 1,
+      "raw_response": "1"
+    },
+    {
+      "question": "How can the principles of compound interest be applied to model the growth of a plant's height over time?",
+      "answer_preview": "Much like compound interest, the height of a plant can be modeled using exponential growth principles. In both scenarios, the change over time depends on the current state, represented by a differenti",
+      "source": "self_inversion",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "Let \\( f: [0, 2] \\to \\mathbb{R} \\) be a continuous function such that \\( \\int_0^2 f(x) \\, dx = 3 \\). Suppose \\( g(x) = \\int_0^x f(t) \\, dt \\) for \\( x \\in [0, 2] \\). Prove that there exists a point \\(",
+      "answer_preview": "To solve this problem, we use the Mean Value Theorem for integrals and the Intermediate Value Theorem.\n\n1. **Step 1:** Define \\( h(x) = g(x) - \\frac{3}{2}x \\). We need to show that there exists \\( c \\",
+      "source": "math_qa",
+      "score": 1,
+      "raw_response": "1"
+    },
+    {
+      "question": "How can we verify if a graph with a specific degree sequence and number of vertices is feasible?",
+      "answer_preview": "To determine if such a graph with a specific degree sequence can be constructed, apply the handshaking lemma: the sum of the degrees of all vertices should be twice the number of edges. Begin by calcu",
+      "source": "self_inversion",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "Let A be a 3x3 matrix with integer entries such that det(A) = 5 and the eigenvalues of A are λ1 = 1, λ2 = 2, and λ3 = p. Determine the value of p and a possible matrix A.",
+      "answer_preview": "To solve this problem, we start by using the properties of eigenvalues and determinants. The determinant of a matrix is equal to the product of its eigenvalues. Therefore, for the matrix A, we have:\n\n",
+      "source": "math_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "Let \\( A \\) be a \\( 3 \\times 3 \\) matrix given by \\( A = \\begin{pmatrix} 2 & -1 & 0 \\\\ -1 & 2 & -1 \\\\ 0 & -1 & 2 \\end{pmatrix} \\). Find the eigenvalues of \\( A \\).",
+      "answer_preview": "To find the eigenvalues of matrix \\( A \\), we need to solve the characteristic equation \\( \\det(A - \\lambda I) = 0 \\), where \\( I \\) is the identity matrix and \\( \\lambda \\) represents the eigenvalues",
+      "source": "math_qa",
+      "score": 1,
+      "raw_response": "1"
+    },
+    {
+      "question": "A charity event sold a combination of student and adult tickets, but an error occurred in recording the total revenue. If 85 tickets were sold and each student and adult ticket was priced at $4 and $7",
+      "answer_preview": "Step 1: Define the variables Let: - x = number of student tickets - y = number of adult tickets Step 2: Write the equations We are told two things: 1) The total number of tickets is 85. This gives: x ",
+      "source": "self_inversion",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "Let \\( f(x) = \\frac{x^3 - x + 1}{x^2 + 1} \\). Find the value of \\( c \\) for which the function \\( f(x) \\) has a local extremum at \\( x = c \\).",
+      "answer_preview": "To find the local extremum, we need to calculate the derivative \\( f'(x) \\) and set it equal to zero to find critical points.\\n\\nFirst, use the quotient rule to find \\( f'(x) \\):\\n\\n\\( f'(x) = \\frac{(",
+      "source": "math_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "Let \\( f(x) = \\frac{x^3 - 3x + 1}{x^2 + 1} \\). Find all critical points of \\( f(x) \\) and determine their nature (local minima, local maxima, or saddle points).",
+      "answer_preview": "To find the critical points of \\( f(x) \\), we first need to find the derivative \\( f'(x) \\). Using the quotient rule, \\( f'(x) = \\frac{(x^2 + 1)(3x^2 - 3) - (x^3 - 3x + 1)(2x)}{(x^2 + 1)^2} \\). Simpli",
+      "source": "math_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "How can a company ensure the reliability and integrity of their customer data when transitioning from a legacy database system to a modern cloud database?",
+      "answer_preview": "To migrate data from an on-premises SQL database to a cloud-based SQL database, ensure you have established connectivity between the two databases. Use SQL scripts to transform and migrate the data, h",
+      "source": "self_inversion",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "Let \\( G \\) be a group of order 60. Prove that \\( G \\) has a normal subgroup of order 15.",
+      "answer_preview": "To solve this problem, we will use the Sylow theorems which give us information about the number of subgroups of prime power order in a finite group.\n\n1. **Identify the prime factors of the group orde",
+      "source": "math_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "Design and implement a simple in-memory rate limiter in Java for a microservice endpoint. The rate limiter should allow at most N requests per user within a sliding time window of T seconds. Show:\n1. ",
+      "answer_preview": "### Approach\nWe want a **per-user sliding window rate limiter** that:\n- Allows at most `maxRequests` in the last `windowSizeInMillis` milliseconds.\n- Is **thread-safe** to be used in a multi-threaded ",
+      "source": "code_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "What are the key steps a U.S.-based tech company should take when preparing for a major project involving personal data of EU citizens, to ensure it aligns with international data protection standards",
+      "answer_preview": "Sarah's situation is a common challenge faced by U.S.-based companies that operate or target markets in the European Union. The General Data Protection Regulation (GDPR) is a comprehensive data protec",
+      "source": "self_inversion",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "Find the smallest positive integer \\( n \\) such that \\( n^2 - 1 \\) is divisible by 24.",
+      "answer_preview": "To solve this problem, we need to find the smallest positive integer \\( n \\) such that \\( n^2 - 1 \\equiv 0 \\pmod{24} \\). This means \\( n^2 \\equiv 1 \\pmod{24} \\). \n\nFirst, note that \\( n^2 - 1 = (n-1)(",
+      "source": "math_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "In a cloud-based database, how do you write an SQL query to retrieve the top 5 customers by sales, ensuring that ties in sales are handled properly?",
+      "answer_preview": "To retrieve the top 5 customers by sales from a cloud-based database, we use the SQL SELECT statement combined with the ORDER BY clause to sort the customers by sales in descending order. We then use ",
+      "source": "code_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "Imagine a near-future scenario in which a powerful national “Public Agency for Algorithmic Security” is created and given broad authority to audit, modify, or even temporarily shut down large-scale so",
+      "answer_preview": "Creating a governance framework for a \"Public Agency for Algorithmic Security\" involves careful consideration of democratic oversight, innovation incentives, civil liberties, and the complexity of mac",
+      "source": "fanno_seed_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "A department has 7 distinct research projects and 10 distinct graduate students. Each project must be assigned to exactly 3 distinct students, and each student may work on any number of projects (incl",
+      "answer_preview": "We proceed in parts.\n\n----------------------\nPart (a): Ignoring the fairness constraint\n----------------------\nWe have 7 distinct projects and 10 distinct students. Each project must be assigned exact",
+      "source": "math_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "Calculate the total box office revenue for three screenings of \"Back to the Future\" in 1985, given that each screening, on average, earned one-tenth of the movie's lifetime gross.",
+      "answer_preview": "I can’t calculate that from reliable data, because the question is based on an incorrect premise.\n\n“Back to the Future” (1985) had a worldwide box office gross on the order of hundreds of millions of ",
+      "source": "fanno_seed_qa",
+      "score": 1,
+      "raw_response": "1"
+    },
+    {
+      "question": "How can the concept of cognitive dissonance be utilized to improve musical performance and creativity?",
+      "answer_preview": "The concepts of cognitive dissonance and musical performance are interconnected through the idea of seeking harmony and resolving conflicts. In music, an off-note or disharmony can create an unpleasan",
+      "source": "self_inversion",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "A city is deciding how to regulate a new AI-powered facial recognition system for public spaces. One proposal argues:\n\n\"We should regulate facial recognition the same way we regulate CCTV cameras, bec",
+      "answer_preview": "Premises:\n1. Proposal’s analogy: Facial recognition (FR) should be regulated like CCTV because both involve watching people in public.\n2. Known regulatory fact: CCTV is generally allowed with relative",
+      "source": "reasoning_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "In a Java desktop application, you need a single, lazily-created configuration manager that is globally accessible, thread-safe, and testable. Implement this using an appropriate design pattern. Your ",
+      "answer_preview": "### Approach\nWe’ll use a **Singleton** pattern with the **Initialization-on-demand holder idiom** for lazy, thread-safe creation, and add a controlled backdoor for test injection.\n\nKey points:\n1. **La",
+      "source": "code_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "How would you compare and contrast the Taliban’s post-2021 governance approach in Afghanistan with both (a) the US-backed regime that preceded it and (b) the Taliban’s own rule in the 1990s, specifica",
+      "answer_preview": "The Taliban's governance approach in Afghanistan post-2021 can be compared and contrasted with both the US-backed regime that preceded it and the Taliban's own rule in the 1990s across several dimensi",
+      "source": "fanno_seed_qa",
+      "score": 2,
+      "raw_response": "2"
+    },
+    {
+      "question": "In JavaScript, implement a reusable data processing pipeline function that processes an array of user records in stages. Each user record looks like this:\n\n```js\n{\n  id: number,\n  name: string,\n  emai",
+      "answer_preview": "Approach:\n\nWe'll build a small, reusable pipeline utility:\n\n1. **`createPipeline(...steps)`**: accepts a list of functions. Each step receives the output of the previous one. It returns a function tha",
+      "source": "code_qa",
+      "score": 1,
+      "raw_response": "1"
+    }
+  ]
+}
