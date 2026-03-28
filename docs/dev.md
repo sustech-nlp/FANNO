@@ -1581,12 +1581,27 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
 11. **Composite ranking**: DocQA > Self-Inv > Complex QA > Code > Creative > Reasoning > Math across 12 normalized metrics
 12. **Key takeaway**: Pipelines are genuinely complementary — each excels in different dimensions, confirming multi-pipeline design
 
-### Grand Total (Session 7 — 180 FIGURES)
-- **180 figures** (PNG+PDF pairs) — fig1 through fig180 + fig_dashboard
+### Additional Figures (fig181-190)
+
+| Figure | Description | Key Finding |
+|--------|-------------|-------------|
+| fig181 | Readability profiles | ComplexQA grade 15.1 (hardest), Math 7.3 (easiest); Flesch-Kincaid, Fog, polysyllabic analysis |
+| fig182 | Mixing optimization simulation | Optimal Self-Inv ratio 11% (up from 3.2%); 5 mixing strategies compared; Vendi 120.3 achievable |
+| fig183 | Semantic coherence within answers | Reasoning most coherent (0.413); Creative most topic-drifting (0.917) |
+| fig184 | Random walk analysis | Self-Inv exits pipeline in 1.4 steps (fastest); Creative 98.3% confined; DocQA 15.1% return |
+| fig185 | KNN graph connectivity | Creative 0.953 isolation; Self-Inv 0.224 most connected; full connectivity at K≥5 |
+| fig186 | Discourse markers | ComplexQA 22.1/1K words (most); Code 7.7/1K (fewest); 8 marker categories analyzed |
+| fig187 | Bootstrap stability | Rankings stable across 30 resamples; Self-Inv/DocQA consistently top-2; CV < 5% for all |
+| fig188 | Publication-ready main figure | 6-panel: composition, t-SNE, Vendi, cross-distance, scaling, key stats (200dpi) |
+| fig189 | Sample uniqueness & bridge potential | DocQA most within-unique; Self-Inv best bridge potential; Creative most isolated |
+| fig190 | Grand summary | 190 figures across 7 sessions, 10 key claims with quantitative evidence |
+
+### Grand Total (Session 7 — 190 FIGURES)
+- **190 figures** (PNG+PDF pairs) — fig1 through fig190 + fig_dashboard
 - **27 LaTeX tables** — tab1 through tab27
-- **70+ JSON analysis reports** + 1 comprehensive inventory
+- **75+ JSON analysis reports** + 1 comprehensive inventory
 - **1 LaTeX paper draft** — complete with abstract, 8 sections, references, appendix
-- **160+ git commits** on dev branch
+- **170+ git commits** on dev branch
 - **153,351 cleaned instruction samples** (211K raw, 27.4% rejection)
 - **Vendi Score: 182.75** | Cross-source distance: 0.961 | 2,297 unique domains
 - **0 benchmark contamination** across MMLU, GSM8K, HumanEval, ARC, HellaSwag

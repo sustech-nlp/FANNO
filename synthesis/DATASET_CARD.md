@@ -101,9 +101,9 @@ Three-stage data cleaning pipeline:
 
 ### Deliverables
 
-- 180 publication-quality figures (PNG+PDF)
+- 190 publication-quality figures (PNG+PDF)
 - 27 LaTeX tables
-- 70+ JSON analysis reports + 1 comprehensive inventory
+- 75+ JSON analysis reports + 1 comprehensive inventory
 - Complete LaTeX paper draft (synthesis/paper/main.tex)
 - Comprehensive training recipe (LLaMA-Factory compatible)
 - Curated sample showcase (16 examples from 8 pipelines)
