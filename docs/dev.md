@@ -1505,12 +1505,41 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
 | 136 | Vocabulary Ecosystem | Zipf law, hapax rates, exclusive vocabulary per pipeline | fig136 |
 | 137 | Hierarchical Structure | Ward/Average dendrograms, MDS centroid map, proximity network | fig137 |
 
-### Grand Total (Session 5 Final — Updated, 2026-03-27)
-- **138 figures** (PNG+PDF pairs) — fig1 through fig137 + fig_dashboard
+### Session 6: Extended Deep Analysis (fig138-150)
+
+| Phase | Analysis | Key Finding | Output |
+|-------|----------|-------------|--------|
+| 138 | Semantic Overlap Network | KNN-based overlap, isolation scores, directed overlap heatmap | fig138 |
+| 139 | Length Distribution Modeling | All pipelines fit Log-Normal; Math best fit (KS=0.037) | fig139 |
+| 140 | Boundary Analysis | Self-Inv covers 87.6% of total PCA hull; Code dominates frontier (72/175) | fig140 |
+| 141 | Topic Coherence (NMF K=15) | Clear pipeline-specific topics; Code→T0, Creative→T2, Math→T1/T3 | fig141 |
+| 142 | Transfer Analysis | Self-Inv most irreplaceable (gap=0.605); highest coverage uniqueness (87.4%) | fig142 |
+| 143 | Eigenspectrum Analysis | Self-Inv: eff_dim=61.6, Vendi=125.1; Creative lowest eff_dim=9.3 | fig143 |
+| 144 | Structure Deep Dive | Code: 99.8% code blocks, 99.9% inline code; Creative: minimal structure | fig144 |
+| 145 | Complexity Profiling | Document QA highest complexity (1.62); Self-Inv lowest (1.03) | fig145 |
+| 146 | Saturation Analysis | Per-pipeline ceilings: Self-Inv 130.2, Doc QA 124.8, Code 45.3 | fig146 |
+| 147 | Taxonomy Analysis | Balanced distributions: 8 languages, 16 topics, 15 math topics, 12 reasoning types | fig147 |
+| 148 | Pairwise Diversity | Doc QA + Self-Inv: best pair (Vendi=135.1, synergy=+31.9) | fig148 |
+| 149 | Template Effectiveness | 7,394 tag combinations; TTR analysis per template parameter | fig149 |
+| 150 | Paper Highlights | 9-panel comprehensive figure with all key results (MILESTONE) | fig150 |
+
+### Session 6 Key Findings
+1. **Best pipeline pair**: Document QA + Self-Inversion (Vendi=135.1, synergy=+31.9)
+2. **Most irreplaceable pipeline**: Self-Inversion (transfer gap=0.605, no single substitute)
+3. **Length distributions**: All pipelines follow Log-Normal distribution; Math QA has tightest fit (KS=0.037)
+4. **Eigenspectrum**: Self-Inversion has highest effective dimensionality (61.6) and Vendi (125.1); strong correlation (r=0.964)
+5. **Saturation ceilings**: Self-Inv 130.2 > Doc QA 124.8 > Complex QA 102.7 > Reasoning 92.1 > Math 46.6 > Code 45.3 > Creative 43.6
+6. **Hull coverage**: Self-Inv covers 87.6% of total PCA convex hull; Code has 72/175 frontier samples (most)
+7. **Topic model**: 15 NMF topics with clear pipeline specificity; Code → algorithms/patterns, Math → geometry/equations
+8. **Teamwork score**: Reasoning has highest avg synergy (+18.9) across all pairs
+9. **Structure signatures**: Code QA uniquely rich (5+ features/response); Creative nearly featureless (plain text)
+
+### Grand Total (Session 6 — 150 FIGURES MILESTONE)
+- **150 figures** (PNG+PDF pairs) — fig1 through fig150 + fig_dashboard
 - **27 LaTeX tables** — tab1 through tab27
-- **57 JSON analysis reports** + 1 comprehensive inventory
+- **60 JSON analysis reports** + 1 comprehensive inventory
 - **1 LaTeX paper draft** — complete with abstract, 8 sections, references, appendix
-- **130+ git commits** on dev branch
+- **140+ git commits** on dev branch
 - **153,351 cleaned instruction samples** (211K raw, 27.4% rejection)
 - **Vendi Score: 182.75** | Cross-source distance: 0.961 | 2,297 unique domains
 - **0 benchmark contamination** across MMLU, GSM8K, HumanEval, ARC, HellaSwag
