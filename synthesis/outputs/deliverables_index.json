@@ -1,0 +1,579 @@
+{
+  "figures": [
+    {
+      "id": "Fig 1",
+      "section": "\u00a71",
+      "description": "Source distribution overview"
+    },
+    {
+      "id": "Fig 2",
+      "section": "\u00a74.2",
+      "description": "Scaling analysis (early version)"
+    },
+    {
+      "id": "Fig 3",
+      "section": "\u00a75",
+      "description": "Selection strategy comparison (early version)"
+    },
+    {
+      "id": "Fig 4",
+      "section": "App.",
+      "description": "Length distribution per pipeline"
+    },
+    {
+      "id": "Fig 5",
+      "section": "\u00a74.1",
+      "description": "Per-source Vendi Score bar chart"
+    },
+    {
+      "id": "Fig 6",
+      "section": "\u00a74.3",
+      "description": "Domain \u00d7 Type utilization heatmap"
+    },
+    {
+      "id": "Fig 7",
+      "section": "App.",
+      "description": "Earlier t-SNE visualization"
+    },
+    {
+      "id": "Fig 8",
+      "section": "\u00a76.11",
+      "description": "Dedup aggressiveness vs diversity curve"
+    },
+    {
+      "id": "Fig 9",
+      "section": "\u00a74.4",
+      "description": "Marginal contribution + coverage matrix"
+    },
+    {
+      "id": "Fig 10",
+      "section": "\u00a73.3",
+      "description": "Per-source rejection rates (0.5%\u201348.5%)"
+    },
+    {
+      "id": "Fig 11",
+      "section": "\u00a76.5",
+      "description": "Rejection vs Vendi scatter (r=-0.776)"
+    },
+    {
+      "id": "Fig 12",
+      "section": "\u00a74.3",
+      "description": "Template utilization panels"
+    },
+    {
+      "id": "Fig 13",
+      "section": "\u00a76.7",
+      "description": "Linguistic diversity multi-panel"
+    },
+    {
+      "id": "Fig 14",
+      "section": "\u00a73.1",
+      "description": "Cross-source cosine distance heatmap (0.961)"
+    },
+    {
+      "id": "Fig 15",
+      "section": "\u00a76.7",
+      "description": "Answer quality: length vs TTR"
+    },
+    {
+      "id": "Fig 16",
+      "section": "\u00a74.3",
+      "description": "Domain Zipf distribution (2,297 domains)"
+    },
+    {
+      "id": "Fig 17",
+      "section": "\u00a76.5",
+      "description": "Pareto efficiency frontier"
+    },
+    {
+      "id": "Fig 18",
+      "section": "\u00a74.3",
+      "description": "Type-difficulty heatmap"
+    },
+    {
+      "id": "Fig 19",
+      "section": "\u00a73.4",
+      "description": "Multi-turn depth quality (TTR stable 0.84-0.85)"
+    },
+    {
+      "id": "Fig 20",
+      "section": "App.",
+      "description": "Code language/topic distribution"
+    },
+    {
+      "id": "Fig 21",
+      "section": "\u00a76.1",
+      "description": "t-SNE visualization (3500 points)"
+    },
+    {
+      "id": "Fig 22",
+      "section": "\u00a76.1",
+      "description": "PCA analysis (50+ components for 90%)"
+    },
+    {
+      "id": "Fig 23",
+      "section": "\u00a76.1",
+      "description": "Embedding space bubble chart"
+    },
+    {
+      "id": "Fig 24",
+      "section": "\u00a76.6",
+      "description": "Multi-dimensional radar (5-axis)"
+    },
+    {
+      "id": "Fig 25",
+      "section": "\u00a76.2",
+      "description": "Cluster composition heatmap (20 clusters)"
+    },
+    {
+      "id": "Fig 26",
+      "section": "\u00a76.8",
+      "description": "Question complexity 4-panel"
+    },
+    {
+      "id": "Fig 27",
+      "section": "\u00a75",
+      "description": "Selection strategy comparison 3-panel"
+    },
+    {
+      "id": "Fig 28",
+      "section": "\u00a71",
+      "description": "Architecture overview diagram"
+    },
+    {
+      "id": "Fig 29",
+      "section": "\u00a73.4",
+      "description": "Multi-turn detailed analysis 4-panel"
+    },
+    {
+      "id": "Fig 30",
+      "section": "\u00a74.2",
+      "description": "Vendi scaling curve with fit (R\u00b2=0.996)"
+    },
+    {
+      "id": "Fig 31",
+      "section": "\u00a76.6",
+      "description": "6\u00d76 cross-metric correlation matrix"
+    },
+    {
+      "id": "Fig 32",
+      "section": "\u00a73.2",
+      "description": "Self-Inversion angle shift (mean 0.458)"
+    },
+    {
+      "id": "Fig 33",
+      "section": "\u00a76.3",
+      "description": "Semantic space coverage convex hulls"
+    },
+    {
+      "id": "Fig 34",
+      "section": "\u00a71",
+      "description": "Dataset composition overview 6-panel"
+    },
+    {
+      "id": "Fig 35",
+      "section": "\u00a73.4",
+      "description": "Multi-turn coherence analysis"
+    },
+    {
+      "id": "Fig 36",
+      "section": "\u00a76.9",
+      "description": "Quality score distribution per pipeline"
+    },
+    {
+      "id": "Fig 37",
+      "section": "\u00a76.9",
+      "description": "Difficulty-level diversity (inverted-U)"
+    },
+    {
+      "id": "Fig 38",
+      "section": "\u00a76.7",
+      "description": "TF-IDF keyword analysis per pipeline"
+    },
+    {
+      "id": "Fig 39",
+      "section": "\u00a77",
+      "description": "Mixing ratio optimization"
+    },
+    {
+      "id": "Fig 40",
+      "section": "\u00a77",
+      "description": "NMF topic modeling (20 topics)"
+    },
+    {
+      "id": "Fig 41",
+      "section": "\u00a77",
+      "description": "Per-type diversity analysis"
+    },
+    {
+      "id": "Fig 42",
+      "section": "\u00a76.4",
+      "description": "KNN overlap heatmap & isolation scores"
+    },
+    {
+      "id": "Fig 43",
+      "section": "App.",
+      "description": "8-panel poster summary"
+    },
+    {
+      "id": "Fig 44",
+      "section": "\u00a76.9",
+      "description": "Response structure distribution"
+    },
+    {
+      "id": "Fig 45",
+      "section": "\u00a76.7",
+      "description": "N-gram diversity analysis"
+    },
+    {
+      "id": "Fig 46",
+      "section": "\u00a76.8",
+      "description": "Q-A alignment (Doc QA 97%, Creative 32%)"
+    },
+    {
+      "id": "Fig 47",
+      "section": "\u00a77",
+      "description": "Per-domain diversity (Complex QA domains)"
+    },
+    {
+      "id": "Fig 48",
+      "section": "\u00a77",
+      "description": "Leave-one-out analysis (Doc QA +6.2%)"
+    },
+    {
+      "id": "Fig 49",
+      "section": "\u00a77",
+      "description": "Optimal source ordering"
+    },
+    {
+      "id": "Fig 50",
+      "section": "\u00a76.10",
+      "description": "Information-theoretic analysis 3-panel"
+    },
+    {
+      "id": "Fig 51",
+      "section": "\u00a76.12",
+      "description": "UMAP 3-config visualization"
+    },
+    {
+      "id": "Fig 52",
+      "section": "\u00a76.14",
+      "description": "Code QA cross-language analysis"
+    },
+    {
+      "id": "Fig 53",
+      "section": "\u00a76.14",
+      "description": "Math & Reasoning composition"
+    },
+    {
+      "id": "Fig 54",
+      "section": "\u00a76.14",
+      "description": "Creative & Complex QA composition"
+    },
+    {
+      "id": "Fig 55",
+      "section": "\u00a76.13",
+      "description": "Self-Inversion deep dive (2,274 exclusive domains)"
+    },
+    {
+      "id": "Fig 56",
+      "section": "App.",
+      "description": "Grand summary figure 8-panel"
+    },
+    {
+      "id": "Fig 57",
+      "section": "App.",
+      "description": "Comprehensive 8-axis radar"
+    },
+    {
+      "id": "Fig 58",
+      "section": "\u00a76.13",
+      "description": "Document QA deep dive"
+    },
+    {
+      "id": "Fig 59",
+      "section": "\u00a73.4",
+      "description": "Multi-turn pattern analysis"
+    },
+    {
+      "id": "Fig 60",
+      "section": "\u00a76.10",
+      "description": "Bootstrap robustness analysis"
+    },
+    {
+      "id": "Fig 61",
+      "section": "\u00a76.5",
+      "description": "Efficiency ROI analysis"
+    },
+    {
+      "id": "Fig 62",
+      "section": "\u00a76.9",
+      "description": "Heuristic quality analysis"
+    },
+    {
+      "id": "Fig 63",
+      "section": "\u00a76.1",
+      "description": "Within vs between similarity distributions"
+    },
+    {
+      "id": "Fig 64",
+      "section": "\u00a76.3",
+      "description": "KNN density analysis"
+    },
+    {
+      "id": "Fig 65",
+      "section": "\u00a72",
+      "description": "Baseline comparison radar"
+    },
+    {
+      "id": "Fig 66",
+      "section": "\u00a72",
+      "description": "Pareto frontier (scale \u00d7 diversity)"
+    },
+    {
+      "id": "Fig 67",
+      "section": "\u00a76.7",
+      "description": "Length statistics detailed"
+    },
+    {
+      "id": "Fig 68",
+      "section": "\u00a73.3",
+      "description": "Data provenance flow diagram"
+    },
+    {
+      "id": "Fig 69",
+      "section": "\u00a74.3",
+      "description": "Tag taxonomy heatmaps"
+    },
+    {
+      "id": "Fig 70",
+      "section": "App.",
+      "description": "Synthesis timeline analysis"
+    },
+    {
+      "id": "Fig 71",
+      "section": "\u00a76.4",
+      "description": "Overlap network graph"
+    },
+    {
+      "id": "Fig 72",
+      "section": "\u00a76.9",
+      "description": "Difficulty complexity analysis"
+    },
+    {
+      "id": "Fig 73",
+      "section": "\u00a76.1",
+      "description": "PCA dimensionality analysis"
+    },
+    {
+      "id": "Fig 74",
+      "section": "\u00a76.7",
+      "description": "Vocabulary overlap heatmap"
+    },
+    {
+      "id": "Fig 75",
+      "section": "\u00a76.9",
+      "description": "Response structure analysis"
+    },
+    {
+      "id": "Fig 76",
+      "section": "\u00a76.6",
+      "description": "10\u00d710 cross-metric correlation"
+    },
+    {
+      "id": "Fig 77",
+      "section": "App.",
+      "description": "Key results summary 6-panel"
+    },
+    {
+      "id": "Fig 78",
+      "section": "\u00a76.8",
+      "description": "Question starter patterns"
+    },
+    {
+      "id": "Fig 79",
+      "section": "\u00a76.7",
+      "description": "Readability analysis (FK grades)"
+    },
+    {
+      "id": "Fig 80",
+      "section": "\u00a76.1",
+      "description": "Semantic drift & stability analysis"
+    },
+    {
+      "id": "Fig 81",
+      "section": "\u00a76.9",
+      "description": "Answer factuality heuristics"
+    },
+    {
+      "id": "Fig 82",
+      "section": "\u00a74.3",
+      "description": "Template space utilization per pipeline"
+    },
+    {
+      "id": "Fig 83",
+      "section": "\u00a76.1",
+      "description": "Embedding nearest neighbor distributions"
+    },
+    {
+      "id": "Fig 84",
+      "section": "\u00a76.8",
+      "description": "Instruction verb taxonomy"
+    },
+    {
+      "id": "Fig 85",
+      "section": "\u00a74.4",
+      "description": "Diversity decomposition (within vs between)"
+    },
+    {
+      "id": "Fig 86",
+      "section": "\u00a76.7",
+      "description": "Sentence-level analysis"
+    },
+    {
+      "id": "Fig 87",
+      "section": "\u00a76.5",
+      "description": "Diversity-efficiency frontier"
+    },
+    {
+      "id": "Fig 88",
+      "section": "\u00a76.7",
+      "description": "Token-level & formatting analysis"
+    },
+    {
+      "id": "Fig 89",
+      "section": "\u00a74.4",
+      "description": "Cross-pipeline synergy analysis"
+    },
+    {
+      "id": "Fig 90",
+      "section": "\u00a76.1",
+      "description": "Spectral analysis of similarity kernel"
+    }
+  ],
+  "tables": [
+    {
+      "id": "Tab 1",
+      "section": "\u00a73.1",
+      "description": "153,351 cleaned from 211K raw samples"
+    },
+    {
+      "id": "Tab 2",
+      "section": "\u00a74.1",
+      "description": "Diversity metrics per source"
+    },
+    {
+      "id": "Tab 3",
+      "section": "\u00a75",
+      "description": "Selection strategy comparison table"
+    },
+    {
+      "id": "Tab 4",
+      "section": "\u00a74.2",
+      "description": "Scaling analysis (ceiling 164.5)"
+    },
+    {
+      "id": "Tab 5",
+      "section": "\u00a74.4",
+      "description": "Cross-source complementarity"
+    },
+    {
+      "id": "Tab 6",
+      "section": "\u00a76.11",
+      "description": "Dedup-diversity tradeoff"
+    },
+    {
+      "id": "Tab 7",
+      "section": "\u00a73.3",
+      "description": "Pipeline efficiency ranking"
+    },
+    {
+      "id": "Tab 8",
+      "section": "\u00a77",
+      "description": "Claims and evidence summary"
+    },
+    {
+      "id": "Tab 9",
+      "section": "\u00a77",
+      "description": "Cost breakdown ($2,245 total)"
+    },
+    {
+      "id": "Tab 10",
+      "section": "\u00a72",
+      "description": "Baseline comparison (7 methods)"
+    },
+    {
+      "id": "Tab 11",
+      "section": "\u00a73.4",
+      "description": "Multi-turn statistics"
+    },
+    {
+      "id": "Tab 12",
+      "section": "\u00a73.1",
+      "description": "Comprehensive pipeline stats"
+    },
+    {
+      "id": "Tab 13",
+      "section": "\u00a76.1",
+      "description": "Embedding analysis per-pipeline"
+    },
+    {
+      "id": "Tab 14",
+      "section": "\u00a75",
+      "description": "Detailed Vendi per strategy per size"
+    },
+    {
+      "id": "Tab 15",
+      "section": "\u00a76.8",
+      "description": "Question complexity table"
+    },
+    {
+      "id": "Tab 16",
+      "section": "\u00a77",
+      "description": "Key findings with cross-references"
+    },
+    {
+      "id": "Tab 17",
+      "section": "\u00a76.9",
+      "description": "Difficulty diversity table"
+    },
+    {
+      "id": "Tab 18",
+      "section": "\u00a73.1",
+      "description": "Master per-pipeline table"
+    },
+    {
+      "id": "Tab 19",
+      "section": "\u00a77",
+      "description": "Per-type diversity analysis"
+    },
+    {
+      "id": "Tab 20",
+      "section": "\u00a76.4",
+      "description": "Source isolation summary"
+    },
+    {
+      "id": "Tab 21",
+      "section": "\u00a77",
+      "description": "Comprehensive evidence summary"
+    },
+    {
+      "id": "Tab 22",
+      "section": "App.",
+      "description": "Curated sample showcase (16 examples)"
+    },
+    {
+      "id": "Tab 23",
+      "section": "\u00a77",
+      "description": "Master pipeline comparison (10 dims)"
+    },
+    {
+      "id": "Tab 24",
+      "section": "\u00a77",
+      "description": "Cross-reference index (20 claims)"
+    }
+  ],
+  "total_figures": 90,
+  "total_tables": 24,
+  "total_deliverables": 114
+}
