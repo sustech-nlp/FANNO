@@ -1,0 +1,23 @@
+{
+  "figure": "fig162_contribution_analysis",
+  "title": "Per-Pipeline Contribution & Scaling Analysis",
+  "marginal_contributions": {
+    "Code": 1.7310867309570312,
+    "Complex QA": 10.375213623046875,
+    "Creative": -1.3282241821289062,
+    "Document QA": 12.307319641113281,
+    "Math": 4.011085510253906,
+    "Reasoning": 9.844001770019531,
+    "Self-Inversion": 10.126472473144531
+  },
+  "cost_efficiency": {
+    "Code": 4.516271079458842,
+    "Complex QA": 16.367715975133382,
+    "Creative": 4.607416112372215,
+    "Document QA": 15.766097315099856,
+    "Math": 6.6389239673883145,
+    "Reasoning": 13.193255793439212,
+    "Self-Inversion": 29.4289945714614
+  },
+  "base_vendi": 94.24918365478516
+}

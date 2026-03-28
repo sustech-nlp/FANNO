@@ -1,0 +1,32 @@
+{
+  "figure": "fig161_manifold_geometry",
+  "title": "Embedding Manifold Geometry Analysis",
+  "mean_lid": {
+    "Code": 3.3013358116149902,
+    "Complex QA": 6.444089412689209,
+    "Creative": 8.292959213256836,
+    "Document QA": 15.415210723876953,
+    "Math": 4.3035197257995605,
+    "Reasoning": 7.674462795257568,
+    "Self-Inversion": 9.458693504333496
+  },
+  "overall_mean_lid": 7.84146785736084,
+  "mean_knn_distance": {
+    "Code": 0.2425718456506729,
+    "Complex QA": 0.45970824360847473,
+    "Creative": 0.37724828720092773,
+    "Document QA": 0.5834607481956482,
+    "Math": 0.27027320861816406,
+    "Reasoning": 0.4477384686470032,
+    "Self-Inversion": 0.4622753858566284
+  },
+  "hubness_scores": {
+    "Code": 21.906,
+    "Complex QA": 19.482,
+    "Creative": 26.052,
+    "Document QA": 12.49,
+    "Math": 24.198,
+    "Reasoning": 18.718,
+    "Self-Inversion": 17.154
+  }
+}
