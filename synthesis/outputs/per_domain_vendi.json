@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-03-28T08:15:00",
+  "pipeline": "Complex QA",
+  "results": {
+    "Biology & Genetics": {
+      "count": 4255,
+      "vendi": 16.93,
+      "avg_dist": 0.6467
+    },
+    "Business & Management": {
+      "count": 4278,
+      "vendi": 27.24,
+      "avg_dist": 0.6618
+    },
+    "Chemistry & Materials": {
+      "count": 4347,
+      "vendi": 32.8,
+      "avg_dist": 0.7458
+    },
+    "Computer Science & AI": {
+      "count": 4333,
+      "vendi": 32.62,
+      "avg_dist": 0.7135
+    },
+    "Economics & Finance": {
+      "count": 4313,
+      "vendi": 19.4,
+      "avg_dist": 0.6387
+    },
+    "Education & Learning": {
+      "count": 4279,
+      "vendi": 16.28,
+      "avg_dist": 0.6161
+    },
+    "Engineering & Architecture": {
+      "count": 4351,
+      "vendi": 17.35,
+      "avg_dist": 0.6441
+    },
+    "Environmental Science": {
+      "count": 4334,
+      "vendi": 16.16,
+      "avg_dist": 0.5898
+    },
+    "History & Culture": {
+      "count": 3962,
+      "vendi": 19.76,
+      "avg_dist": 0.6543
+    },
+    "Law & Governance": {
+      "count": 4045,
+      "vendi": 34.19,
+      "avg_dist": 0.7394
+    },
+    "Linguistics": {
+      "count": 4235,
+      "vendi": 17.96,
+      "avg_dist": 0.5482
+    },
+    "Literature & Arts": {
+      "count": 4138,
+      "vendi": 30.07,
+      "avg_dist": 0.6515
+    },
+    "Mathematics & Logic": {
+      "count": 4357,
+      "vendi": 49.64,
+      "avg_dist": 0.8271
+    },
+    "Medicine & Health": {
+      "count": 4337,
+      "vendi": 28.59,
+      "avg_dist": 0.7368
+    },
+    "Philosophy & Ethics": {
+      "count": 4051,
+      "vendi": 16.49,
+      "avg_dist": 0.5824
+    },
+    "Physics & Astronomy": {
+      "count": 4351,
+      "vendi": 31.35,
+      "avg_dist": 0.7419
+    },
+    "Political Science": {
+      "count": 4127,
+      "vendi": 21.61,
+      "avg_dist": 0.663
+    },
+    "Psychology & Sociology": {
+      "count": 4094,
+      "vendi": 18.83,
+      "avg_dist": 0.6356
+    },
+    "Science & Technology": {
+      "count": 4358,
+      "vendi": 40.39,
+      "avg_dist": 0.8491
+    },
+    "Sports & Fitness": {
+      "count": 4346,
+      "vendi": 12.83,
+      "avg_dist": 0.5234
+    }
+  }
+}
