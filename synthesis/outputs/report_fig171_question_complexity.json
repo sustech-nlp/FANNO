@@ -1,0 +1,114 @@
+{
+  "figure": "fig171_question_complexity",
+  "complexity_ranking": [
+    [
+      "Document QA",
+      22.72
+    ],
+    [
+      "Code",
+      20.89
+    ],
+    [
+      "Reasoning",
+      20.31
+    ],
+    [
+      "Complex QA",
+      19.97
+    ],
+    [
+      "Creative",
+      18.96
+    ],
+    [
+      "Math",
+      16.74
+    ],
+    [
+      "Self-Inversion",
+      12.94
+    ]
+  ],
+  "avg_scores": {
+    "Complex QA": 19.97,
+    "Document QA": 22.72,
+    "Reasoning": 20.31,
+    "Code": 20.89,
+    "Math": 16.74,
+    "Creative": 18.96,
+    "Self-Inversion": 12.94
+  },
+  "avg_features": {
+    "Complex QA": {
+      "word_count": 53.452,
+      "sentence_count": 2.94,
+      "constraints": 0.401,
+      "conditionals": 0.303,
+      "tech_terms": 0.273,
+      "multi_parts": 0.059,
+      "depth_markers": 0.433,
+      "complexity_score": 19.974
+    },
+    "Document QA": {
+      "word_count": 58.081,
+      "sentence_count": 1.725,
+      "constraints": 0.416,
+      "conditionals": 0.434,
+      "tech_terms": 0.205,
+      "multi_parts": 0.115,
+      "depth_markers": 0.279,
+      "complexity_score": 22.72
+    },
+    "Reasoning": {
+      "word_count": 52.696,
+      "sentence_count": 3.702,
+      "constraints": 0.418,
+      "conditionals": 0.523,
+      "tech_terms": 0.087,
+      "multi_parts": 0.211,
+      "depth_markers": 0.116,
+      "complexity_score": 20.31
+    },
+    "Code": {
+      "word_count": 41.985,
+      "sentence_count": 2.759,
+      "constraints": 0.427,
+      "conditionals": 0.353,
+      "tech_terms": 1.661,
+      "multi_parts": 0.095,
+      "depth_markers": 0.054,
+      "complexity_score": 20.889
+    },
+    "Math": {
+      "word_count": 42.336,
+      "sentence_count": 2.953,
+      "constraints": 0.318,
+      "conditionals": 0.402,
+      "tech_terms": 0.259,
+      "multi_parts": 0.057,
+      "depth_markers": 0.045,
+      "complexity_score": 16.741
+    },
+    "Creative": {
+      "word_count": 54.176,
+      "sentence_count": 3.204,
+      "constraints": 0.476,
+      "conditionals": 0.172,
+      "tech_terms": 0.036,
+      "multi_parts": 0.075,
+      "depth_markers": 0.185,
+      "complexity_score": 18.955
+    },
+    "Self-Inversion": {
+      "word_count": 29.147,
+      "sentence_count": 1.407,
+      "constraints": 0.299,
+      "conditionals": 0.305,
+      "tech_terms": 0.146,
+      "multi_parts": 0.045,
+      "depth_markers": 0.087,
+      "complexity_score": 12.938
+    }
+  }
+}
