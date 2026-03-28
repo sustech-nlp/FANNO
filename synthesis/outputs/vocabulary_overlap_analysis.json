@@ -1,0 +1,31 @@
+{
+  "total_vocabulary": 45099,
+  "vocab_sizes": {
+    "Complex QA": 17287,
+    "Document QA": 21251,
+    "Reasoning": 9362,
+    "Code QA": 11445,
+    "Math QA": 4206,
+    "Creative": 22767,
+    "Self-Inv": 18105
+  },
+  "exclusive_vocab": {
+    "Complex QA": 2860,
+    "Document QA": 6143,
+    "Reasoning": 605,
+    "Code QA": 5009,
+    "Math QA": 687,
+    "Creative": 6750,
+    "Self-Inv": 466
+  },
+  "jaccard_mean": 0.2716,
+  "word_sharing": {
+    "1": 22520,
+    "6": 2091,
+    "7": 1550,
+    "2": 8191,
+    "4": 3426,
+    "5": 3229,
+    "3": 4092
+  }
+}
