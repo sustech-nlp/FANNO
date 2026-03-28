@@ -1,0 +1,84 @@
+{
+  "figure": "fig183_semantic_coherence",
+  "coherence_ranking": [
+    [
+      "Reasoning",
+      0.4135
+    ],
+    [
+      "Math",
+      0.3874
+    ],
+    [
+      "Document QA",
+      0.379
+    ],
+    [
+      "Self-Inversion",
+      0.3714
+    ],
+    [
+      "Complex QA",
+      0.3705
+    ],
+    [
+      "Code",
+      0.3642
+    ],
+    [
+      "Creative",
+      0.3442
+    ]
+  ],
+  "per_pipeline": {
+    "Complex QA": {
+      "avg_coherence": 0.3705,
+      "avg_adjacency_sim": 0.1053,
+      "avg_topic_drift": 0.8696,
+      "avg_new_word_rate": 0.7087,
+      "avg_topic_stability": 0.9643
+    },
+    "Document QA": {
+      "avg_coherence": 0.379,
+      "avg_adjacency_sim": 0.1001,
+      "avg_topic_drift": 0.822,
+      "avg_new_word_rate": 0.6304,
+      "avg_topic_stability": 0.9517
+    },
+    "Reasoning": {
+      "avg_coherence": 0.4135,
+      "avg_adjacency_sim": 0.1885,
+      "avg_topic_drift": 0.8261,
+      "avg_new_word_rate": 0.7096,
+      "avg_topic_stability": 0.953
+    },
+    "Code": {
+      "avg_coherence": 0.3642,
+      "avg_adjacency_sim": 0.1199,
+      "avg_topic_drift": 0.8502,
+      "avg_new_word_rate": 0.5142,
+      "avg_topic_stability": 0.9043
+    },
+    "Math": {
+      "avg_coherence": 0.3874,
+      "avg_adjacency_sim": 0.1754,
+      "avg_topic_drift": 0.8426,
+      "avg_new_word_rate": 0.5628,
+      "avg_topic_stability": 0.9
+    },
+    "Creative": {
+      "avg_coherence": 0.3442,
+      "avg_adjacency_sim": 0.0651,
+      "avg_topic_drift": 0.9169,
+      "avg_new_word_rate": 0.7822,
+      "avg_topic_stability": 0.9773
+    },
+    "Self-Inversion": {
+      "avg_coherence": 0.3714,
+      "avg_adjacency_sim": 0.1201,
+      "avg_topic_drift": 0.875,
+      "avg_new_word_rate": 0.7179,
+      "avg_topic_stability": 0.9529
+    }
+  }
+}
