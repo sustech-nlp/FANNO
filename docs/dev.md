@@ -1359,3 +1359,24 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
 - **48 JSON analysis reports**
 - **97 git commits** on dev branch, all pushed
 - **Key data**: 153,351 cleaned samples, Vendi=182.75, 2,297 unique domains
+
+### Phase 72-77: Extended Analysis Suite
+
+| Phase | Analysis | Key Finding | Figures |
+|-------|----------|-------------|---------|
+| 72 | Overlap Network | Self-Inv 26.4% self-overlap (bridge role confirmed) | fig71 |
+| 73 | Difficulty Stratification | Complex QA: 53% medium + 45% hard; Math: 5 balanced levels | fig72 |
+| 74 | Dimensionality (PCA) | >100 components for 90% variance (high intrinsic dim) | fig73 |
+| 75 | Vocabulary Overlap | Total 45,099 words; Jaccard mean 0.27; Code most exclusive | fig74 |
+| 76 | Answer Structure | Code QA: 100% code blocks; Creative: minimal formatting | fig75 |
+| 77 | 10-Metric Correlation | Vendi ↔ Within-Sim r=-0.817; Quality ↔ A/Q Ratio r=0.733 | fig76 |
+| 78 | Key Results Figure | 6-panel paper-ready summary of all key findings | fig77 |
+
+### Grand Total (Session 3, 2026-03-28)
+- **78 figures** (PNG+PDF) — fig1 through fig77 + fig_dashboard
+- **24 LaTeX tables** — tab1 through tab24
+- **53 JSON analysis reports**
+- **102 git commits** on dev branch, all pushed to remote
+- **153,351 cleaned instruction samples** (211K raw, 27.4% rejection)
+- **Vendi Score: 182.75** | Cross-source distance: 0.961 | 2,297 unique domains
+- **Azure token still expired** — synthesis stalled at 21,432/30,000 Document QA
