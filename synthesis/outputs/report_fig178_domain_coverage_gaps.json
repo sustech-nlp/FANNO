@@ -1,0 +1,130 @@
+{
+  "figure": "fig178_domain_coverage_gaps",
+  "total_domains": 2366,
+  "single_source": 2361,
+  "multi_source": 5,
+  "avg_domain_size": 67.1,
+  "median_domain_size": 1.0,
+  "domains_per_pipeline": {
+    "Complex QA": 21,
+    "Document QA": 1,
+    "Self-Inversion": 2288,
+    "Code": 20,
+    "Math": 15,
+    "Reasoning": 13,
+    "Creative": 13
+  },
+  "exclusive_domains_per_pipeline": {
+    "Complex QA": 16,
+    "Document QA": 0,
+    "Self-Inversion": 2284,
+    "Code": 20,
+    "Math": 15,
+    "Reasoning": 13,
+    "Creative": 13
+  },
+  "broad_domain_coverage": {
+    "Science": 10483,
+    "Technology": 2703,
+    "Health": 2639,
+    "Education": 2612,
+    "Business": 2632,
+    "Law": 2420,
+    "Philosophy": 2488,
+    "Art": 2496,
+    "History": 2424,
+    "Psychology": 2544,
+    "Environment": 2696,
+    "Politics": 11,
+    "Sports": 2604,
+    "Religion": 1,
+    "Economics": 2653,
+    "Engineering": 2736,
+    "Medicine": 2567,
+    "Literature": 2675,
+    "Mathematics": 2906,
+    "Computer Science": 2632
+  },
+  "top_20_domains": [
+    [
+      "unknown",
+      24288
+    ],
+    [
+      "Environmental Science",
+      2574
+    ],
+    [
+      "Science & Technology",
+      2560
+    ],
+    [
+      "Mathematics & Logic",
+      2559
+    ],
+    [
+      "Sports & Fitness",
+      2554
+    ],
+    [
+      "Engineering & Architecture",
+      2553
+    ],
+    [
+      "Chemistry & Materials",
+      2551
+    ],
+    [
+      "Computer Science & AI",
+      2549
+    ],
+    [
+      "Physics & Astronomy",
+      2549
+    ],
+    [
+      "Medicine & Health",
+      2545
+    ],
+    [
+      "Economics & Finance",
+      2532
+    ],
+    [
+      "Business & Management",
+      2516
+    ],
+    [
+      "Education & Learning",
+      2512
+    ],
+    [
+      "Biology & Genetics",
+      2502
+    ],
+    [
+      "Linguistics",
+      2501
+    ],
+    [
+      "Political Science",
+      2458
+    ],
+    [
+      "Literature & Arts",
+      2425
+    ],
+    [
+      "Psychology & Sociology",
+      2413
+    ],
+    [
+      "Philosophy & Ethics",
+      2388
+    ],
+    [
+      "Law & Governance",
+      2378
+    ]
+  ]
+}
