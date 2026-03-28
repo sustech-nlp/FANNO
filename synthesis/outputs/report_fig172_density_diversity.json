@@ -1,0 +1,50 @@
+{
+  "figure": "fig172_density_diversity",
+  "overall_density_diversity_correlation": -0.7242,
+  "densest_pipeline": "Math",
+  "most_locally_diverse": "Document QA",
+  "per_pipeline": {
+    "Code": {
+      "avg_density": 4.01,
+      "avg_local_diversity": 0.3215,
+      "density_diversity_corr": -0.7448,
+      "median_knn_distance": 0.2873
+    },
+    "Complex QA": {
+      "avg_density": 1.958,
+      "avg_local_diversity": 0.6154,
+      "density_diversity_corr": -0.7676,
+      "median_knn_distance": 0.5343
+    },
+    "Creative": {
+      "avg_density": 2.55,
+      "avg_local_diversity": 0.4611,
+      "density_diversity_corr": -0.8106,
+      "median_knn_distance": 0.4164
+    },
+    "Document QA": {
+      "avg_density": 1.656,
+      "avg_local_diversity": 0.681,
+      "density_diversity_corr": -0.7067,
+      "median_knn_distance": 0.6184
+    },
+    "Math": {
+      "avg_density": 4.284,
+      "avg_local_diversity": 0.3479,
+      "density_diversity_corr": -0.7349,
+      "median_knn_distance": 0.333
+    },
+    "Reasoning": {
+      "avg_density": 2.196,
+      "avg_local_diversity": 0.5682,
+      "density_diversity_corr": -0.841,
+      "median_knn_distance": 0.53
+    },
+    "Self-Inversion": {
+      "avg_density": 2.191,
+      "avg_local_diversity": 0.5321,
+      "density_diversity_corr": -0.7566,
+      "median_knn_distance": 0.5185
+    }
+  }
+}
