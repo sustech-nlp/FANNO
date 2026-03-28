@@ -1,0 +1,371 @@
+{
+  "figure": "fig169_vocabulary_transfer",
+  "total_vocabulary": 69119,
+  "core_vocabulary_size": 2214,
+  "core_vocabulary_pct": 3.2,
+  "avg_jaccard_similarity": 0.2654,
+  "avg_transfer_coverage": 0.5048,
+  "vocab_sizes": {
+    "Complex QA": 26507,
+    "Document QA": 37391,
+    "Reasoning": 12841,
+    "Code": 13379,
+    "Math": 4051,
+    "Creative": 37196,
+    "Self-Inversion": 27491
+  },
+  "exclusive_vocab": {
+    "Complex QA": {
+      "count": 4076,
+      "pct": 15.38
+    },
+    "Document QA": {
+      "count": 12659,
+      "pct": 33.86
+    },
+    "Reasoning": {
+      "count": 485,
+      "pct": 3.78
+    },
+    "Code": {
+      "count": 5104,
+      "pct": 38.15
+    },
+    "Math": {
+      "count": 218,
+      "pct": 5.38
+    },
+    "Creative": {
+      "count": 11156,
+      "pct": 29.99
+    },
+    "Self-Inversion": {
+      "count": 1523,
+      "pct": 5.54
+    }
+  },
+  "greedy_vocab_order": [
+    "Document QA",
+    "Creative",
+    "Code",
+    "Complex QA",
+    "Self-Inversion",
+    "Reasoning",
+    "Math"
+  ],
+  "greedy_growth": [
+    0,
+    37391,
+    54785,
+    61248,
+    66695,
+    68408,
+    68901,
+    69119
+  ],
+  "word_sharing_distribution": {
+    "1": 35221,
+    "2": 11786,
+    "3": 6279,
+    "4": 5472,
+    "5": 5042,
+    "6": 3105,
+    "7": 2214
+  },
+  "distinctive_words": {
+    "Complex QA": [
+      [
+        "economic",
+        0.00042
+      ],
+      [
+        "periodization",
+        0.00041
+      ],
+      [
+        "carbon",
+        0.00033
+      ],
+      [
+        "energy",
+        0.00031
+      ],
+      [
+        "emissions",
+        0.0003
+      ],
+      [
+        "bim",
+        0.0003
+      ],
+      [
+        "environmental",
+        0.00029
+      ],
+      [
+        "cultural",
+        0.00029
+      ],
+      [
+        "learning",
+        0.00025
+      ],
+      [
+        "cognitive",
+        0.00025
+      ]
+    ],
+    "Document QA": [
+      [
+        "cultural",
+        0.00051
+      ],
+      [
+        "emotional",
+        0.0004
+      ],
+      [
+        "economic",
+        0.00037
+      ],
+      [
+        "community",
+        0.00032
+      ],
+      [
+        "legal",
+        0.00032
+      ],
+      [
+        "engagement",
+        0.00031
+      ],
+      [
+        "feel",
+        0.00029
+      ],
+      [
+        "public",
+        0.00027
+      ],
+      [
+        "political",
+        0.00026
+      ],
+      [
+        "social",
+        0.00023
+      ]
+    ],
+    "Reasoning": [
+      [
+        "barber",
+        0.00126
+      ],
+      [
+        "premises",
+        0.00078
+      ],
+      [
+        "shave",
+        0.00071
+      ],
+      [
+        "casey",
+        0.00059
+      ],
+      [
+        "disease",
+        0.00047
+      ],
+      [
+        "shaves",
+        0.00047
+      ],
+      [
+        "gs",
+        0.00046
+      ],
+      [
+        "ethical",
+        0.00037
+      ],
+      [
+        "paradox",
+        0.00036
+      ],
+      [
+        "cube",
+        0.00034
+      ]
+    ],
+    "Code": [
+      [
+        "const",
+        0.00373
+      ],
+      [
+        "std",
+        0.00298
+      ],
+      [
+        "func",
+        0.00227
+      ],
+      [
+        "singleton",
+        0.00178
+      ],
+      [
+        "println",
+        0.00159
+      ],
+      [
+        "import",
+        0.00139
+      ],
+      [
+        "nil",
+        0.00136
+      ],
+      [
+        "fmt",
+        0.00126
+      ],
+      [
+        "sql",
+        0.00117
+      ],
+      [
+        "err",
+        0.00116
+      ]
+    ],
+    "Math": [
+      [
+        "sylow",
+        0.00357
+      ],
+      [
+        "pmatrix",
+        0.00243
+      ],
+      [
+        "circ",
+        0.00225
+      ],
+      [
+        "frac",
+        0.00202
+      ],
+      [
+        "equiv",
+        0.00143
+      ],
+      [
+        "vmatrix",
+        0.00136
+      ],
+      [
+        "cos",
+        0.00129
+      ],
+      [
+        "det",
+        0.00129
+      ],
+      [
+        "pmod",
+        0.00129
+      ],
+      [
+        "cdot",
+        0.00119
+      ]
+    ],
+    "Creative": [
+      [
+        "her",
+        0.00175
+      ],
+      [
+        "elara",
+        0.00088
+      ],
+      [
+        "she",
+        0.00088
+      ],
+      [
+        "his",
+        0.00068
+      ],
+      [
+        "dreams",
+        0.00049
+      ],
+      [
+        "eyes",
+        0.00046
+      ],
+      [
+        "whispering",
+        0.00046
+      ],
+      [
+        "fingers",
+        0.00045
+      ],
+      [
+        "tapestry",
+        0.00045
+      ],
+      [
+        "gentle",
+        0.00044
+      ]
+    ],
+    "Self-Inversion": [
+      [
+        "const",
+        0.00068
+      ],
+      [
+        "singleton",
+        0.00066
+      ],
+      [
+        "std",
+        0.0006
+      ],
+      [
+        "func",
+        0.00057
+      ],
+      [
+        "her",
+        0.0004
+      ],
+      [
+        "import",
+        0.00034
+      ],
+      [
+        "sql",
+        0.00033
+      ],
+      [
+        "sylow",
+        0.00027
+      ],
+      [
+        "tt",
+        0.00027
+      ],
+      [
+        "sklearn",
+        0.00026
+      ]
+    ]
+  }
+}
