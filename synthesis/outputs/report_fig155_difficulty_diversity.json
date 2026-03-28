@@ -1,0 +1,112 @@
+{
+  "figure": "fig155_difficulty_diversity",
+  "title": "Difficulty-Diversity Interaction",
+  "Code": {
+    "easy": {
+      "count": 1143,
+      "mean_ttr": 0.5613403801831208,
+      "mean_length": 300.42432195975505
+    },
+    "hard": {
+      "count": 8,
+      "mean_ttr": 0.4466413472020848,
+      "mean_length": 901.0
+    },
+    "medium": {
+      "count": 28749,
+      "mean_ttr": 0.5402301938781287,
+      "mean_length": 442.3441163170893
+    },
+    "unknown": {
+      "count": 7,
+      "mean_ttr": 0.618514653360079,
+      "mean_length": 356.2857142857143
+    }
+  },
+  "Complex QA": {
+    "advanced": {
+      "count": 1,
+      "mean_ttr": 0.579250720461095,
+      "mean_length": 347.0
+    },
+    "expert": {
+      "count": 767,
+      "mean_ttr": 0.6061972595373621,
+      "mean_length": 349.5893089960887
+    },
+    "hard": {
+      "count": 22576,
+      "mean_ttr": 0.6090333276546208,
+      "mean_length": 387.3087792345854
+    },
+    "medium": {
+      "count": 26547,
+      "mean_ttr": 0.5859037944921601,
+      "mean_length": 356.3183033864467
+    },
+    "medium|hard": {
+      "count": 1,
+      "mean_ttr": 0.6145833333333334,
+      "mean_length": 384.0
+    },
+    "medium|hard|expert": {
+      "count": 1,
+      "mean_ttr": 0.632183908045977,
+      "mean_length": 348.0
+    },
+    "unknown": {
+      "count": 2,
+      "mean_ttr": 0.703854444381417,
+      "mean_length": 205.5
+    }
+  },
+  "Math": {
+    "college": {
+      "count": 3742,
+      "mean_ttr": 0.45562686545179015,
+      "mean_length": 241.29449492250134
+    },
+    "competition": {
+      "count": 3512,
+      "mean_ttr": 0.3917724402621446,
+      "mean_length": 277.8100797266515
+    },
+    "elementary": {
+      "count": 4257,
+      "mean_ttr": 0.5436088579089025,
+      "mean_length": 119.39981207423068
+    },
+    "high_school": {
+      "count": 4130,
+      "mean_ttr": 0.43675066129580564,
+      "mean_length": 269.41961259079903
+    },
+    "middle_school": {
+      "count": 4248,
+      "mean_ttr": 0.508758420359352,
+      "mean_length": 195.57368173258004
+    }
+  },
+  "Reasoning": {
+    "expert": {
+      "count": 739,
+      "mean_ttr": 0.5331546631615494,
+      "mean_length": 209.41136671177267
+    },
+    "hard": {
+      "count": 10830,
+      "mean_ttr": 0.5409329614889421,
+      "mean_length": 285.5243767313019
+    },
+    "medium": {
+      "count": 8002,
+      "mean_ttr": 0.5599474630228819,
+      "mean_length": 142.51274681329667
+    },
+    "unknown": {
+      "count": 337,
+      "mean_ttr": 0.5541835345650802,
+      "mean_length": 285.98219584569733
+    }
+  }
+}
