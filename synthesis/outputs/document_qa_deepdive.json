@@ -1,0 +1,36 @@
+{
+  "description": "Document QA pipeline deep analysis",
+  "total_samples": 24286,
+  "doc_preview_stats": {
+    "has_preview": 24286,
+    "mean_length": 33.3,
+    "median_length": 33.0,
+    "max_length": 47,
+    "min_length": 10
+  },
+  "instruction_types": {
+    "Procedural (How)": 8220,
+    "Factual (What)": 4523,
+    "Explanation": 3166,
+    "Other": 2723,
+    "Analysis": 2336,
+    "Comparison": 1744,
+    "Evaluation": 1104,
+    "Causal (Why)": 281,
+    "Discussion": 189
+  },
+  "q_length_stats": {
+    "mean": 57.8,
+    "median": 46.0
+  },
+  "a_length_stats": {
+    "mean": 400.9,
+    "median": 370.0
+  },
+  "key_findings": [
+    "Most valuable pipeline: +6.2% Vendi when removed (leave-one-out)",
+    "Hit@1 = 97% Q-A alignment (highest of all pipelines)",
+    "Doc previews avg 33 words, providing rich context",
+    "Analysis and Factual questions dominate instruction types"
+  ]
+}

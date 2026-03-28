@@ -1,0 +1,39 @@
+{
+  "description": "Pipeline efficiency and ROI analysis",
+  "cost_per_1k_clean": {
+    "Complex QA": 15.55,
+    "Document QA": 16.04,
+    "Reasoning": 15.87,
+    "Code QA": 21.3,
+    "Math QA": 20.43,
+    "Creative": 15.14,
+    "Self-Inv": 14.42
+  },
+  "vendi_per_100_dollars": {
+    "Complex QA": 16.74,
+    "Document QA": 23.48,
+    "Reasoning": 44.25,
+    "Code QA": 20.77,
+    "Math QA": 27.92,
+    "Creative": 28.44,
+    "Self-Inv": 174.26
+  },
+  "composite_ranking": [
+    "Self-Inv",
+    "Complex QA",
+    "Reasoning",
+    "Document QA",
+    "Math QA",
+    "Creative",
+    "Code QA"
+  ],
+  "composite_scores": {
+    "Self-Inv": 0.7839,
+    "Complex QA": 0.7152,
+    "Reasoning": 0.5945,
+    "Document QA": 0.4728,
+    "Math QA": 0.3648,
+    "Creative": 0.3615,
+    "Code QA": 0.3581
+  }
+}

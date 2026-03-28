@@ -1,0 +1,42 @@
+{
+  "description": "Multi-turn dialog pattern and scenario analysis",
+  "total": 19901,
+  "patterns": {
+    "socratic_method": 2751,
+    "iterative_refinement": 2508,
+    "topic_shift": 2503,
+    "collaborative_problem_solving": 2480,
+    "exploration_to_decision": 2447,
+    "progressive_deepening": 2406,
+    "correction_and_refinement": 2395,
+    "multi_task": 2394,
+    "unknown": 15,
+    "A user learning a new programming language through practical examples": 1,
+    "A teacher preparing lesson materials with pedagogical considerations": 1
+  },
+  "n_patterns": 11,
+  "n_scenarios": 18,
+  "turn_stats": {
+    "mean": 6.2,
+    "median": 6.0,
+    "min": 4,
+    "max": 14
+  },
+  "top_scenarios": {
+    "A user learning a new skill step by step with an AI tutor": 1491,
+    "A user troubleshooting a technical problem with systematic elimination": 1447,
+    "A user seeking medical information (general, not diagnosis) with clarifying questions": 1422,
+    "A student asking a professor about a complex topic, with follow-up questions that go deeper": 1401,
+    "A user learning a new programming language through practical examples": 1381,
+    "A developer debugging code with an AI assistant, iteratively narrowing down the issue": 1368,
+    "A researcher discussing methodology choices for an experiment": 1294,
+    "A teacher preparing lesson materials with pedagogical considerations": 1289,
+    "An engineer designing a system architecture with trade-off discussions": 1288,
+    "A user exploring philosophical questions with deepening argumentation": 1285,
+    "A user planning a complex project with task breakdown and prioritization": 1282,
+    "A business analyst exploring data-driven insights with an AI": 1263,
+    "A user seeking legal information about contracts or regulations": 1256,
+    "A data scientist exploring dataset characteristics and modeling approaches": 1236,
+    "A writer brainstorming and refining creative ideas with an AI collaborator": 1171
+  }
+}

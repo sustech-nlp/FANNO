@@ -1,0 +1,191 @@
+{
+  "Code QA": {
+    "composite": {
+      "mean": 0.8086,
+      "std": 0.0476,
+      "median": 0.813
+    },
+    "length": {
+      "mean": 0.9993,
+      "std": 0.0113,
+      "median": 1.0
+    },
+    "structure": {
+      "mean": 0.7905,
+      "std": 0.1849,
+      "median": 0.75
+    },
+    "ttr": {
+      "mean": 0.731,
+      "std": 0.0572,
+      "median": 0.73
+    },
+    "relevance": {
+      "mean": 0.6718,
+      "std": 0.1128,
+      "median": 0.6739
+    }
+  },
+  "Complex QA": {
+    "composite": {
+      "mean": 0.6741,
+      "std": 0.042,
+      "median": 0.6709
+    },
+    "length": {
+      "mean": 1.0,
+      "std": 0.0,
+      "median": 1.0
+    },
+    "structure": {
+      "mean": 0.1595,
+      "std": 0.208,
+      "median": 0.0
+    },
+    "ttr": {
+      "mean": 0.7452,
+      "std": 0.0675,
+      "median": 0.75
+    },
+    "relevance": {
+      "mean": 0.6236,
+      "std": 0.1359,
+      "median": 0.641
+    }
+  },
+  "Creative": {
+    "composite": {
+      "mean": 0.5918,
+      "std": 0.0506,
+      "median": 0.5923
+    },
+    "length": {
+      "mean": 0.9811,
+      "std": 0.0809,
+      "median": 1.0
+    },
+    "structure": {
+      "mean": 0.0315,
+      "std": 0.1285,
+      "median": 0.0
+    },
+    "ttr": {
+      "mean": 0.7793,
+      "std": 0.0404,
+      "median": 0.78
+    },
+    "relevance": {
+      "mean": 0.3852,
+      "std": 0.1115,
+      "median": 0.38
+    }
+  },
+  "Multi-Turn": {
+    "composite": {
+      "mean": 0.3742,
+      "std": 0.0922,
+      "median": 0.3558
+    },
+    "length": {
+      "mean": 0.2882,
+      "std": 0.1866,
+      "median": 0.2425
+    },
+    "structure": {
+      "mean": 0.0434,
+      "std": 0.1528,
+      "median": 0.0
+    },
+    "ttr": {
+      "mean": 0.8551,
+      "std": 0.0712,
+      "median": 0.8571
+    },
+    "relevance": {
+      "mean": 0.2613,
+      "std": 0.1165,
+      "median": 0.2593
+    }
+  },
+  "Reasoning": {
+    "composite": {
+      "mean": 0.603,
+      "std": 0.0926,
+      "median": 0.6064
+    },
+    "length": {
+      "mean": 0.807,
+      "std": 0.185,
+      "median": 0.83
+    },
+    "structure": {
+      "mean": 0.2159,
+      "std": 0.2073,
+      "median": 0.25
+    },
+    "ttr": {
+      "mean": 0.6437,
+      "std": 0.0921,
+      "median": 0.65
+    },
+    "relevance": {
+      "mean": 0.6272,
+      "std": 0.1216,
+      "median": 0.625
+    }
+  },
+  "Document QA": {
+    "composite": {
+      "mean": 0.7078,
+      "std": 0.1248,
+      "median": 0.7434
+    },
+    "length": {
+      "mean": 0.915,
+      "std": 0.2246,
+      "median": 1.0
+    },
+    "structure": {
+      "mean": 0.4214,
+      "std": 0.241,
+      "median": 0.5
+    },
+    "ttr": {
+      "mean": 0.7613,
+      "std": 0.0733,
+      "median": 0.77
+    },
+    "relevance": {
+      "mean": 0.6346,
+      "std": 0.1791,
+      "median": 0.6667
+    }
+  },
+  "Self-Inv": {
+    "composite": {
+      "mean": 0.5894,
+      "std": 0.1256,
+      "median": 0.5937
+    },
+    "length": {
+      "mean": 0.8139,
+      "std": 0.2499,
+      "median": 1.0
+    },
+    "structure": {
+      "mean": 0.1889,
+      "std": 0.2831,
+      "median": 0.0
+    },
+    "ttr": {
+      "mean": 0.7221,
+      "std": 0.0913,
+      "median": 0.74
+    },
+    "relevance": {
+      "mean": 0.5077,
+      "std": 0.1616,
+      "median": 0.5
+    }
+  }
+}

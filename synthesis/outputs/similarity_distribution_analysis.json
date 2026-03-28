@@ -1,0 +1,68 @@
+{
+  "description": "Cosine similarity distribution analysis: within-source vs between-source",
+  "within_source_mean": {
+    "Code": 0.1366,
+    "Complex QA": 0.0835,
+    "Creative": 0.3019,
+    "Document QA": 0.0936,
+    "Math": 0.1693,
+    "Reasoning": 0.1005,
+    "Self-Inversion": 0.0599
+  },
+  "within_source_std": {
+    "Code": 0.1749,
+    "Complex QA": 0.1057,
+    "Creative": 0.1258,
+    "Document QA": 0.1015,
+    "Math": 0.1635,
+    "Reasoning": 0.1205,
+    "Self-Inversion": 0.1074
+  },
+  "overall_within_mean": 0.135,
+  "overall_between_mean": 0.0384,
+  "separation": 0.0966,
+  "most_similar_pairs": [
+    [
+      "Creative vs Document QA",
+      0.1055
+    ],
+    [
+      "Math vs Reasoning",
+      0.0779
+    ],
+    [
+      "Complex QA vs Creative",
+      0.0752
+    ],
+    [
+      "Creative vs Self-Inversion",
+      0.0692
+    ],
+    [
+      "Complex QA vs Document QA",
+      0.0667
+    ]
+  ],
+  "most_dissimilar_pairs": [
+    [
+      "Code vs Reasoning",
+      0.001
+    ],
+    [
+      "Code vs Math",
+      0.0047
+    ],
+    [
+      "Code vs Complex QA",
+      0.0051
+    ],
+    [
+      "Code vs Document QA",
+      0.0051
+    ],
+    [
+      "Code vs Creative",
+      0.0096
+    ]
+  ]
+}

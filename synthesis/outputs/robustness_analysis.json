@@ -1,0 +1,77 @@
+{
+  "description": "Bootstrap robustness analysis for Vendi Score (fast version)",
+  "bootstrap_iterations": 10,
+  "overall_stability": {
+    "100": {
+      "mean": 63.06,
+      "std": 2.01,
+      "ci_lower": 59.99,
+      "ci_upper": 65.32
+    },
+    "200": {
+      "mean": 92.79,
+      "std": 1.8,
+      "ci_lower": 90.61,
+      "ci_upper": 95.22
+    },
+    "300": {
+      "mean": 111.13,
+      "std": 2.16,
+      "ci_lower": 108.19,
+      "ci_upper": 113.92
+    },
+    "500": {
+      "mean": 127.41,
+      "std": 1.86,
+      "ci_lower": 124.38,
+      "ci_upper": 129.62
+    },
+    "750": {
+      "mean": 138.51,
+      "std": 2.0,
+      "ci_lower": 136.53,
+      "ci_upper": 141.98
+    },
+    "1000": {
+      "mean": 143.89,
+      "std": 1.56,
+      "ci_lower": 141.27,
+      "ci_upper": 145.53
+    }
+  },
+  "per_source_stability": {
+    "Code": {
+      "mean": 39.91,
+      "std": 1.33
+    },
+    "Complex QA": {
+      "mean": 77.35,
+      "std": 1.56
+    },
+    "Creative": {
+      "mean": 35.86,
+      "std": 0.82
+    },
+    "Document QA": {
+      "mean": 87.57,
+      "std": 1.67
+    },
+    "Math": {
+      "mean": 40.37,
+      "std": 1.0
+    },
+    "Reasoning": {
+      "mean": 69.94,
+      "std": 1.53
+    },
+    "Self-Inversion": {
+      "mean": 91.07,
+      "std": 1.27
+    }
+  },
+  "key_findings": [
+    "Vendi Score increases monotonically with sample size (N=100: 63.06, N=1000: 143.89)",
+    "Coefficient of variation decreases from 3.2% to 1.1%",
+    "Per-source ranking is consistent across bootstrap samples"
+  ]
+}
