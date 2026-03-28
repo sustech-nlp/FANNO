@@ -1,0 +1,77 @@
+{
+  "figure": "fig176_spectral_signatures",
+  "combined": {
+    "participation_ratio": 71.4,
+    "vendi_score": 155.7,
+    "d80": 119,
+    "d90": 178,
+    "d95": 225,
+    "top1_eigenvalue": 0.0729
+  },
+  "per_pipeline": {
+    "Code": {
+      "participation_ratio": 20.8,
+      "vendi_score": 46.3,
+      "top1_eigenvalue": 0.1471,
+      "d80": 31,
+      "d90": 61,
+      "d95": 98,
+      "pr": 20.8
+    },
+    "Complex QA": {
+      "participation_ratio": 46.7,
+      "vendi_score": 100.7,
+      "top1_eigenvalue": 0.0968,
+      "d80": 72,
+      "d90": 115,
+      "d95": 156,
+      "pr": 46.7
+    },
+    "Creative": {
+      "participation_ratio": 9.3,
+      "vendi_score": 43.3,
+      "top1_eigenvalue": 0.313,
+      "d80": 47,
+      "d90": 90,
+      "d95": 133,
+      "pr": 9.3
+    },
+    "Document QA": {
+      "participation_ratio": 46.9,
+      "vendi_score": 119.0,
+      "top1_eigenvalue": 0.1124,
+      "d80": 91,
+      "d90": 137,
+      "d95": 180,
+      "pr": 46.9
+    },
+    "Math": {
+      "participation_ratio": 17.1,
+      "vendi_score": 47.1,
+      "top1_eigenvalue": 0.195,
+      "d80": 36,
+      "d90": 69,
+      "d95": 104,
+      "pr": 17.1
+    },
+    "Reasoning": {
+      "participation_ratio": 36.6,
+      "vendi_score": 90.4,
+      "top1_eigenvalue": 0.1177,
+      "d80": 69,
+      "d90": 114,
+      "d95": 156,
+      "pr": 36.6
+    },
+    "Self-Inversion": {
+      "participation_ratio": 61.6,
+      "vendi_score": 125.1,
+      "top1_eigenvalue": 0.0746,
+      "d80": 90,
+      "d90": 136,
+      "d95": 179,
+      "pr": 61.6
+    }
+  },
+  "pr_vendi_correlation": 0.9697
+}
