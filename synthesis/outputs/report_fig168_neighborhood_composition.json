@@ -1,0 +1,87 @@
+{
+  "figure": "fig168_neighborhood_composition",
+  "title": "Embedding Neighborhood Composition",
+  "self_containment": {
+    "Code": 0.9165999999999963,
+    "Complex QA": 0.5752000000000004,
+    "Creative": 0.953299999999998,
+    "Document QA": 0.42629999999999985,
+    "Math": 0.8912999999999981,
+    "Reasoning": 0.6851,
+    "Self-Inversion": 0.22419999999999995
+  },
+  "neighborhood_entropy": {
+    "Code": 0.3528452488208471,
+    "Complex QA": 1.2819128540680393,
+    "Creative": 0.2440002541283765,
+    "Document QA": 1.587176388444063,
+    "Math": 0.39315008415895425,
+    "Reasoning": 1.1157388583386236,
+    "Self-Inversion": 1.8708952387445794
+  },
+  "avg_composition": {
+    "Code": {
+      "Code": 0.9165999999999963,
+      "Complex QA": 0.0005,
+      "Creative": 0.0005,
+      "Document QA": 0.011599999999999996,
+      "Math": 0.002,
+      "Reasoning": 0.0047,
+      "Self-Inversion": 0.06410000000000023
+    },
+    "Complex QA": {
+      "Code": 0.005299999999999999,
+      "Complex QA": 0.5752000000000004,
+      "Creative": 0.06070000000000009,
+      "Document QA": 0.08340000000000003,
+      "Math": 0.013699999999999995,
+      "Reasoning": 0.06730000000000004,
+      "Self-Inversion": 0.19439999999999977
+    },
+    "Creative": {
+      "Code": 0.0006,
+      "Complex QA": 0.008899999999999996,
+      "Creative": 0.953299999999998,
+      "Document QA": 0.009699999999999993,
+      "Math": 0.0,
+      "Reasoning": 0.0024000000000000002,
+      "Self-Inversion": 0.02510000000000002
+    },
+    "Document QA": {
+      "Code": 0.0283,
+      "Complex QA": 0.16659999999999975,
+      "Creative": 0.14819999999999983,
+      "Document QA": 0.42629999999999985,
+      "Math": 0.0235,
+      "Reasoning": 0.06280000000000009,
+      "Self-Inversion": 0.1442999999999999
+    },
+    "Math": {
+      "Code": 0.0,
+      "Complex QA": 0.0013,
+      "Creative": 0.0,
+      "Document QA": 0.0016,
+      "Math": 0.8912999999999981,
+      "Reasoning": 0.010399999999999996,
+      "Self-Inversion": 0.0953999999999999
+    },
+    "Reasoning": {
+      "Code": 0.0052000000000000015,
+      "Complex QA": 0.0625000000000001,
+      "Creative": 0.037800000000000035,
+      "Document QA": 0.029000000000000036,
+      "Math": 0.07019999999999998,
+      "Reasoning": 0.6851,
+      "Self-Inversion": 0.11019999999999996
+    },
+    "Self-Inversion": {
+      "Code": 0.13929999999999998,
+      "Complex QA": 0.15909999999999982,
+      "Creative": 0.10209999999999998,
+      "Document QA": 0.06290000000000007,
+      "Math": 0.2092,
+      "Reasoning": 0.1031999999999999,
+      "Self-Inversion": 0.22419999999999995
+    }
+  }
+}
