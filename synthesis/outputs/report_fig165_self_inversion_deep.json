@@ -1,0 +1,33 @@
+{
+  "figure": "fig165_self_inversion_deep",
+  "title": "Self-Inversion Pipeline Deep Dive",
+  "total_samples": 5000,
+  "unique_domains": 2288,
+  "exclusive_domains": 2064,
+  "unique_new_angles": 5000,
+  "mean_question_length": 29.593,
+  "mean_answer_length": 227.1368,
+  "mean_expansion": 9.754799478124776,
+  "top_domains": {
+    "mathematics": 157,
+    "Software Development": 154,
+    "software development": 93,
+    "literature": 81,
+    "geometry": 64,
+    "Mathematics": 63,
+    "programming": 50,
+    "Programming": 49,
+    "probability": 44,
+    "Literature": 41,
+    "Calculus": 41,
+    "statistics": 38,
+    "Computer Science": 37,
+    "combinatorics": 37,
+    "graph theory": 37,
+    "software engineering": 35,
+    "calculus": 34,
+    "linear algebra": 32,
+    "Web Development": 32,
+    "trigonometry": 32
+  }
+}

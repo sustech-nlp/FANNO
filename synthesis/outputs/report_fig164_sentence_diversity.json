@@ -1,0 +1,41 @@
+{
+  "figure": "fig164_sentence_diversity",
+  "title": "Sentence-Level Diversity Analysis",
+  "stats": {
+    "Code": {
+      "mean_sent_len": 12.64429613150414,
+      "mean_sent_count": 36.4095,
+      "mean_bigrams": 385.0095
+    },
+    "Complex QA": {
+      "mean_sent_len": 19.2042097107438,
+      "mean_sent_count": 19.36,
+      "mean_bigrams": 342.7565
+    },
+    "Creative": {
+      "mean_sent_len": 16.403889272162814,
+      "mean_sent_count": 23.192,
+      "mean_bigrams": 363.843
+    },
+    "Document QA": {
+      "mean_sent_len": 18.965974903474905,
+      "mean_sent_count": 20.72,
+      "mean_bigrams": 357.6415
+    },
+    "Math": {
+      "mean_sent_len": 18.819987775061126,
+      "mean_sent_count": 11.452,
+      "mean_bigrams": 160.2125
+    },
+    "Reasoning": {
+      "mean_sent_len": 15.21465193902481,
+      "mean_sent_count": 14.5305,
+      "mean_bigrams": 180.276
+    },
+    "Self-Inversion": {
+      "mean_sent_len": 16.889555372272625,
+      "mean_sent_count": 13.337,
+      "mean_bigrams": 204.212
+    }
+  }
+}
