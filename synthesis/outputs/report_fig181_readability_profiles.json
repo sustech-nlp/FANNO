@@ -1,0 +1,91 @@
+{
+  "figure": "fig181_readability_profiles",
+  "fk_grade_ranking": [
+    [
+      "Complex QA",
+      15.07
+    ],
+    [
+      "Document QA",
+      14.88
+    ],
+    [
+      "Self-Inversion",
+      11.93
+    ],
+    [
+      "Creative",
+      11.21
+    ],
+    [
+      "Code",
+      10.35
+    ],
+    [
+      "Reasoning",
+      10.29
+    ],
+    [
+      "Math",
+      7.27
+    ]
+  ],
+  "per_pipeline": {
+    "Complex QA": {
+      "avg_fk_grade": 15.07,
+      "avg_fre": 22.51,
+      "avg_fog": 19.22,
+      "avg_sent_len": 19.95,
+      "avg_syllables": 1.939,
+      "poly_ratio": 0.281
+    },
+    "Document QA": {
+      "avg_fk_grade": 14.88,
+      "avg_fre": 24.9,
+      "avg_fog": 18.94,
+      "avg_sent_len": 20.51,
+      "avg_syllables": 1.904,
+      "poly_ratio": 0.2684
+    },
+    "Reasoning": {
+      "avg_fk_grade": 10.29,
+      "avg_fre": 48.7,
+      "avg_fog": 14.19,
+      "avg_sent_len": 15.38,
+      "avg_syllables": 1.685,
+      "poly_ratio": 0.2008
+    },
+    "Code": {
+      "avg_fk_grade": 10.35,
+      "avg_fre": 47.94,
+      "avg_fog": 13.1,
+      "avg_sent_len": 15.22,
+      "avg_syllables": 1.696,
+      "poly_ratio": 0.1754
+    },
+    "Math": {
+      "avg_fk_grade": 7.27,
+      "avg_fre": 70.95,
+      "avg_fog": 10.52,
+      "avg_sent_len": 15.72,
+      "avg_syllables": 1.418,
+      "poly_ratio": 0.1057
+    },
+    "Creative": {
+      "avg_fk_grade": 11.21,
+      "avg_fre": 48.57,
+      "avg_fog": 14.42,
+      "avg_sent_len": 19.03,
+      "avg_syllables": 1.642,
+      "poly_ratio": 0.1701
+    },
+    "Self-Inversion": {
+      "avg_fk_grade": 11.93,
+      "avg_fre": 41.67,
+      "avg_fog": 15.51,
+      "avg_sent_len": 18.04,
+      "avg_syllables": 1.736,
+      "poly_ratio": 0.2073
+    }
+  }
+}
