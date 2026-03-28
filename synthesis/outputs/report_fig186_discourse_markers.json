@@ -1,0 +1,96 @@
+{
+  "figure": "fig186_discourse_markers",
+  "highest_density": "Complex QA",
+  "lowest_density": "Code",
+  "most_diverse": "Complex QA",
+  "total_density_per_1k": {
+    "Complex QA": 22.06,
+    "Document QA": 10.48,
+    "Reasoning": 18.6,
+    "Code": 7.73,
+    "Math": 15.24,
+    "Creative": 9.0,
+    "Self-Inversion": 14.39
+  },
+  "category_density": {
+    "Complex QA": {
+      "Addition": 3.197,
+      "Contrast": 2.305,
+      "Cause/Effect": 2.865,
+      "Example": 5.17,
+      "Sequence": 2.142,
+      "Summary": 2.232,
+      "Emphasis": 1.072,
+      "Comparison": 3.077
+    },
+    "Document QA": {
+      "Addition": 1.121,
+      "Contrast": 0.755,
+      "Cause/Effect": 1.065,
+      "Example": 2.076,
+      "Sequence": 1.84,
+      "Summary": 1.411,
+      "Emphasis": 0.463,
+      "Comparison": 1.749
+    },
+    "Reasoning": {
+      "Addition": 1.258,
+      "Contrast": 1.375,
+      "Cause/Effect": 7.433,
+      "Example": 1.271,
+      "Sequence": 5.167,
+      "Summary": 0.576,
+      "Emphasis": 0.256,
+      "Comparison": 1.266
+    },
+    "Code": {
+      "Addition": 0.586,
+      "Contrast": 0.107,
+      "Cause/Effect": 0.806,
+      "Example": 0.764,
+      "Sequence": 4.643,
+      "Summary": 0.029,
+      "Emphasis": 0.076,
+      "Comparison": 0.72
+    },
+    "Math": {
+      "Addition": 0.534,
+      "Contrast": 0.3,
+      "Cause/Effect": 9.645,
+      "Example": 0.13,
+      "Sequence": 4.392,
+      "Summary": 0.025,
+      "Emphasis": 0.013,
+      "Comparison": 0.197
+    },
+    "Creative": {
+      "Addition": 0.972,
+      "Contrast": 2.289,
+      "Cause/Effect": 0.968,
+      "Example": 0.27,
+      "Sequence": 3.09,
+      "Summary": 0.289,
+      "Emphasis": 0.118,
+      "Comparison": 1.0
+    },
+    "Self-Inversion": {
+      "Addition": 1.371,
+      "Contrast": 1.391,
+      "Cause/Effect": 3.386,
+      "Example": 2.311,
+      "Sequence": 3.543,
+      "Summary": 0.526,
+      "Emphasis": 0.43,
+      "Comparison": 1.431
+    }
+  },
+  "marker_entropy": {
+    "Complex QA": 2.8868,
+    "Document QA": 2.8764,
+    "Reasoning": 2.3514,
+    "Code": 1.8934,
+    "Math": 1.3797,
+    "Creative": 2.4701,
+    "Self-Inversion": 2.7188
+  }
+}
