@@ -29,3 +29,16 @@ build/
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Training outputs
+checkpoints/
+train_data/
+wandb/
+
+# Large data files
+outputs/
+*.safetensors
+
+# Sub-repos (not FANNO core)
+DataFlow/
+PlanGPT-VL/
