@@ -1,0 +1,47 @@
+{
+  "figure": "fig184_random_walk",
+  "walk_params": {
+    "n_walks": 100,
+    "n_steps": 30,
+    "k_choices": 5
+  },
+  "most_confined": "Creative",
+  "most_exploring": "Self-Inversion",
+  "per_pipeline": {
+    "Code": {
+      "avg_first_change": 23.41,
+      "avg_unique_labels": 1.46,
+      "avg_return_rate": 0.9484
+    },
+    "Complex QA": {
+      "avg_first_change": 6.78,
+      "avg_unique_labels": 2.75,
+      "avg_return_rate": 0.4787
+    },
+    "Creative": {
+      "avg_first_change": 26.6,
+      "avg_unique_labels": 1.21,
+      "avg_return_rate": 0.9832
+    },
+    "Document QA": {
+      "avg_first_change": 4.0,
+      "avg_unique_labels": 2.99,
+      "avg_return_rate": 0.1506
+    },
+    "Math": {
+      "avg_first_change": 21.47,
+      "avg_unique_labels": 1.42,
+      "avg_return_rate": 0.9652
+    },
+    "Reasoning": {
+      "avg_first_change": 11.94,
+      "avg_unique_labels": 2.27,
+      "avg_return_rate": 0.6732
+    },
+    "Self-Inversion": {
+      "avg_first_change": 1.35,
+      "avg_unique_labels": 2.3,
+      "avg_return_rate": 0.1052
+    }
+  }
+}
