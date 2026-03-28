@@ -1,0 +1,106 @@
+{
+  "figure": "fig145_complexity_profiling",
+  "title": "Instruction Complexity Profiling",
+  "complexity_ranking": [
+    [
+      "Document QA",
+      1.6151333333333333
+    ],
+    [
+      "Reasoning",
+      1.5661033333333334
+    ],
+    [
+      "Complex QA",
+      1.5005766666666664
+    ],
+    [
+      "Code",
+      1.3530433333333334
+    ],
+    [
+      "Creative",
+      1.1730099999999999
+    ],
+    [
+      "Self-Inversion",
+      1.0334166666666667
+    ],
+    [
+      "Math",
+      1.0310633333333334
+    ]
+  ],
+  "mean_features": {
+    "Code": {
+      "word_count": 41.897666666666666,
+      "sentence_count": 2.753,
+      "constraints": 0.489,
+      "sub_questions": 0.7953333333333333,
+      "conditionals": 0.25833333333333336,
+      "technical_terms": 2.3573333333333335,
+      "enumerations": 0.373,
+      "complexity_score": 1.3530433333333334
+    },
+    "Complex QA": {
+      "word_count": 51.78966666666667,
+      "sentence_count": 2.820333333333333,
+      "constraints": 0.2846666666666667,
+      "sub_questions": 0.805,
+      "conditionals": 0.2856666666666667,
+      "technical_terms": 4.351,
+      "enumerations": 0.16733333333333333,
+      "complexity_score": 1.5005766666666664
+    },
+    "Creative": {
+      "word_count": 54.25033333333333,
+      "sentence_count": 3.19,
+      "constraints": 0.44266666666666665,
+      "sub_questions": 0.04533333333333334,
+      "conditionals": 0.152,
+      "technical_terms": 3.2103333333333333,
+      "enumerations": 0.048,
+      "complexity_score": 1.1730099999999999
+    },
+    "Document QA": {
+      "word_count": 56.891,
+      "sentence_count": 1.684,
+      "constraints": 0.24233333333333335,
+      "sub_questions": 0.758,
+      "conditionals": 0.31466666666666665,
+      "technical_terms": 5.631333333333333,
+      "enumerations": 0.03,
+      "complexity_score": 1.6151333333333333
+    },
+    "Math": {
+      "word_count": 41.31966666666667,
+      "sentence_count": 2.8626666666666667,
+      "constraints": 0.2663333333333333,
+      "sub_questions": 0.46166666666666667,
+      "conditionals": 0.5446666666666666,
+      "technical_terms": 0.8583333333333333,
+      "enumerations": 0.14166666666666666,
+      "complexity_score": 1.0310633333333334
+    },
+    "Reasoning": {
+      "word_count": 52.02033333333333,
+      "sentence_count": 3.6426666666666665,
+      "constraints": 0.5233333333333333,
+      "sub_questions": 0.9933333333333333,
+      "conditionals": 0.5936666666666667,
+      "technical_terms": 1.9096666666666666,
+      "enumerations": 0.19266666666666668,
+      "complexity_score": 1.5661033333333334
+    },
+    "Self-Inversion": {
+      "word_count": 29.438333333333333,
+      "sentence_count": 1.4086666666666667,
+      "constraints": 0.28933333333333333,
+      "sub_questions": 0.9103333333333333,
+      "conditionals": 0.27166666666666667,
+      "technical_terms": 2.097,
+      "enumerations": 0.009666666666666667,
+      "complexity_score": 1.0334166666666667
+    }
+  }
+}
