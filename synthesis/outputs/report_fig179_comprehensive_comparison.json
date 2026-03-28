@@ -1,0 +1,162 @@
+{
+  "figure": "fig179_comprehensive_comparison",
+  "metrics_count": 12,
+  "metrics": [
+    "Vendi Score",
+    "Participation Ratio",
+    "Var Uniformity",
+    "Info Density",
+    "Vocabulary Size",
+    "Exclusive Vocab %",
+    "Avg Pairwise Dist",
+    "Hull Coverage %",
+    "Domain Count",
+    "Content Ratio",
+    "Quality Score",
+    "Bigram Richness"
+  ],
+  "normalized_values": {
+    "Code": {
+      "Vendi Score": 0.0367,
+      "Participation Ratio": 0.2199,
+      "Var Uniformity": 0.0,
+      "Info Density": 0.6968,
+      "Vocabulary Size": 0.2798,
+      "Exclusive Vocab %": 1.0,
+      "Avg Pairwise Dist": 1.0,
+      "Hull Coverage %": 0.1479,
+      "Domain Count": 0.0083,
+      "Content Ratio": 0.8202,
+      "Quality Score": 1.0,
+      "Bigram Richness": 0.427
+    },
+    "Complex QA": {
+      "Vendi Score": 0.7017,
+      "Participation Ratio": 0.7151,
+      "Var Uniformity": 0.8854,
+      "Info Density": 0.9138,
+      "Vocabulary Size": 0.6735,
+      "Exclusive Vocab %": 0.3375,
+      "Avg Pairwise Dist": 0.4587,
+      "Hull Coverage %": 0.6657,
+      "Domain Count": 0.0087,
+      "Content Ratio": 1.0,
+      "Quality Score": 0.25,
+      "Bigram Richness": 0.8053
+    },
+    "Creative": {
+      "Vendi Score": 0.0,
+      "Participation Ratio": 0.0,
+      "Var Uniformity": 0.5624,
+      "Info Density": 1.0,
+      "Vocabulary Size": 0.9942,
+      "Exclusive Vocab %": 0.7626,
+      "Avg Pairwise Dist": 0.0,
+      "Hull Coverage %": 0.0,
+      "Domain Count": 0.0052,
+      "Content Ratio": 0.8957,
+      "Quality Score": 0.0,
+      "Bigram Richness": 1.0
+    },
+    "Document QA": {
+      "Vendi Score": 0.9254,
+      "Participation Ratio": 0.7189,
+      "Var Uniformity": 1.0,
+      "Info Density": 0.8693,
+      "Vocabulary Size": 1.0,
+      "Exclusive Vocab %": 0.8752,
+      "Avg Pairwise Dist": 0.6116,
+      "Hull Coverage %": 0.5178,
+      "Domain Count": 0.0,
+      "Content Ratio": 0.9369,
+      "Quality Score": 0.5,
+      "Bigram Richness": 0.9561
+    },
+    "Math": {
+      "Vendi Score": 0.0465,
+      "Participation Ratio": 0.1491,
+      "Var Uniformity": 0.1534,
+      "Info Density": 0.0,
+      "Vocabulary Size": 0.0,
+      "Exclusive Vocab %": 0.0466,
+      "Avg Pairwise Dist": 0.7645,
+      "Hull Coverage %": 0.074,
+      "Domain Count": 0.0061,
+      "Content Ratio": 0.0,
+      "Quality Score": 0.25,
+      "Bigram Richness": 0.0
+    },
+    "Reasoning": {
+      "Vendi Score": 0.5758,
+      "Participation Ratio": 0.522,
+      "Var Uniformity": 0.6789,
+      "Info Density": 0.5244,
+      "Vocabulary Size": 0.2636,
+      "Exclusive Vocab %": 0.0,
+      "Avg Pairwise Dist": 0.3976,
+      "Hull Coverage %": 0.3698,
+      "Domain Count": 0.0052,
+      "Content Ratio": 0.7008,
+      "Quality Score": 0.5,
+      "Bigram Richness": 0.3013
+    },
+    "Self-Inversion": {
+      "Vendi Score": 1.0,
+      "Participation Ratio": 1.0,
+      "Var Uniformity": 0.9069,
+      "Info Density": 0.8001,
+      "Vocabulary Size": 0.7031,
+      "Exclusive Vocab %": 0.0512,
+      "Avg Pairwise Dist": 0.6116,
+      "Hull Coverage %": 1.0,
+      "Domain Count": 1.0,
+      "Content Ratio": 0.7582,
+      "Quality Score": 0.0,
+      "Bigram Richness": 0.5165
+    }
+  },
+  "composite_ranking": [
+    [
+      "Document QA",
+      0.7426
+    ],
+    [
+      "Self-Inversion",
+      0.6956
+    ],
+    [
+      "Complex QA",
+      0.618
+    ],
+    [
+      "Code",
+      0.4697
+    ],
+    [
+      "Creative",
+      0.435
+    ],
+    [
+      "Reasoning",
+      0.4033
+    ],
+    [
+      "Math",
+      0.1242
+    ]
+  ],
+  "metric_winners": {
+    "Vendi Score": "Self-Inversion",
+    "Participation Ratio": "Self-Inversion",
+    "Var Uniformity": "Document QA",
+    "Info Density": "Creative",
+    "Vocabulary Size": "Document QA",
+    "Exclusive Vocab %": "Code",
+    "Avg Pairwise Dist": "Code",
+    "Hull Coverage %": "Self-Inversion",
+    "Domain Count": "Self-Inversion",
+    "Content Ratio": "Complex QA",
+    "Quality Score": "Code",
+    "Bigram Richness": "Creative"
+  }
+}
