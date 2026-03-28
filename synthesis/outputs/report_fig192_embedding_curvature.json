@@ -1,0 +1,127 @@
+{
+  "figure": "fig192",
+  "title": "Embedding Space Curvature & Local Geometry",
+  "metrics": {
+    "local_intrinsic_dimensionality": {
+      "Code": {
+        "mean": 3.2002296447753906,
+        "median": 2.6840317249298096,
+        "std": 2.242337465286255
+      },
+      "Complex QA": {
+        "mean": 5.7292022705078125,
+        "median": 4.816579818725586,
+        "std": 3.8102076053619385
+      },
+      "Creative": {
+        "mean": 8.232155799865723,
+        "median": 7.617603302001953,
+        "std": 3.8009819984436035
+      },
+      "Document QA": {
+        "mean": 13.36266803741455,
+        "median": 12.924766540527344,
+        "std": 5.12095308303833
+      },
+      "Math": {
+        "mean": 4.195349216461182,
+        "median": 3.137938976287842,
+        "std": 3.9055731296539307
+      },
+      "Reasoning": {
+        "mean": 6.887355327606201,
+        "median": 5.81082010269165,
+        "std": 4.628151893615723
+      },
+      "Self-Inversion": {
+        "mean": 8.721471786499023,
+        "median": 7.96657133102417,
+        "std": 4.560575008392334
+      }
+    },
+    "geodesic_cosine_ratio": {
+      "Code": {
+        "median": 1.5717547889422978,
+        "mean": 1.6178009685959291
+      },
+      "Complex QA": {
+        "median": 1.9889187629940763,
+        "mean": 1.930404964694463
+      },
+      "Creative": {
+        "median": 1.4805294611536572,
+        "mean": 1.4535939596213394
+      },
+      "Document QA": {
+        "median": 2.0373317054359306,
+        "mean": 1.9671830529603087
+      },
+      "Math": {
+        "median": 1.6007180922888922,
+        "mean": 1.611301675457802
+      },
+      "Reasoning": {
+        "median": 2.0228764541125557,
+        "mean": 1.9892477050224517
+      },
+      "Self-Inversion": {
+        "median": 2.190184868104099,
+        "mean": 2.1667665808345764
+      }
+    },
+    "local_density_k10": {
+      "Code": {
+        "mean_k_dist": 0.3175410032272339,
+        "mean_density": 3.1491994857788086
+      },
+      "Complex QA": {
+        "mean_k_dist": 0.5644523501396179,
+        "mean_density": 1.771628737449646
+      },
+      "Creative": {
+        "mean_k_dist": 0.42604994773864746,
+        "mean_density": 2.3471426963806152
+      },
+      "Document QA": {
+        "mean_k_dist": 0.6251425743103027,
+        "mean_density": 1.599635124206543
+      },
+      "Math": {
+        "mean_k_dist": 0.3446919918060303,
+        "mean_density": 2.9011406898498535
+      },
+      "Reasoning": {
+        "mean_k_dist": 0.5221730470657349,
+        "mean_density": 1.9150739908218384
+      },
+      "Self-Inversion": {
+        "mean_k_dist": 0.5188795328140259,
+        "mean_density": 1.927229642868042
+      }
+    },
+    "neighborhood_label_consistency_k15": {
+      "Code": 0.9368000000000001,
+      "Complex QA": 0.6101333333333332,
+      "Creative": 0.9569333333333334,
+      "Document QA": 0.44626666666666664,
+      "Math": 0.9085333333333334,
+      "Reasoning": 0.7132000000000001,
+      "Self-Inversion": 0.22866666666666668
+    },
+    "pca_dims_for_90pct": {
+      "Code": 51,
+      "Complex QA": 51,
+      "Creative": 51,
+      "Document QA": 51,
+      "Math": 51,
+      "Reasoning": 51,
+      "Self-Inversion": 51
+    }
+  },
+  "findings": [
+    "Highest LID: Document QA (13.4), lowest: Code (3.2)",
+    "Most curved space: Self-Inversion (geodesic/cosine ratio=2.19)",
+    "Most label-consistent neighborhood: Creative (0.957)",
+    "Least label-consistent: Self-Inversion (0.229)"
+  ]
+}
