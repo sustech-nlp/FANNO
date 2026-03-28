@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-03-28T08:40:00",
+  "greedy_order": [
+    "Self-Inversion",
+    "Document QA",
+    "Reasoning",
+    "Complex QA",
+    "Code",
+    "Math",
+    "Creative"
+  ],
+  "greedy_vendis": [
+    125.07,
+    150.37,
+    155.01,
+    160.43,
+    160.42,
+    160.6,
+    155.65
+  ],
+  "random_avg_vendis": [
+    101.42,
+    124.77,
+    128.04,
+    137.24,
+    145.23,
+    150.02,
+    155.65
+  ],
+  "n_sources": 7
+}
