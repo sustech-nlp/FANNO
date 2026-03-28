@@ -1,0 +1,22 @@
+{
+  "figure": "fig188_paper_main_figure",
+  "type": "publication-ready",
+  "panels": [
+    "(a) composition pie",
+    "(b) t-SNE",
+    "(c) per-pipeline Vendi",
+    "(d) cross-source distance",
+    "(e) scaling law",
+    "(f) key stats"
+  ],
+  "per_pipeline_vendi": {
+    "Code": 46.3,
+    "Complex QA": 100.7,
+    "Creative": 43.3,
+    "Document QA": 119.0,
+    "Math": 47.1,
+    "Reasoning": 90.4,
+    "Self-Inversion": 125.1
+  },
+  "avg_cross_distance": 0.961
+}
