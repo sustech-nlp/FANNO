@@ -1,0 +1,15 @@
+{
+  "figure": "fig190_grand_summary",
+  "total_figures": 190,
+  "total_tables": 27,
+  "total_reports": "75+",
+  "total_samples": 153351,
+  "sessions": {
+    "Sessions 1-3": 67,
+    "Session 4": 33,
+    "Session 5": 29,
+    "Session 6": 39,
+    "Session 7": 22
+  },
+  "claims_count": 10
+}
