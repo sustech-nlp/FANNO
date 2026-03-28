@@ -1,0 +1,31 @@
+{
+  "figure": "fig153_qa_alignment",
+  "title": "Question-Answer Semantic Alignment Analysis",
+  "mean_alignment": {
+    "Code": 0.4050742306970892,
+    "Complex QA": 0.4949932455154814,
+    "Creative": 0.1992870055586702,
+    "Document QA": 0.5160677259751355,
+    "Math": 0.4958812177757712,
+    "Reasoning": 0.6528283177004723,
+    "Self-Inversion": 0.33047993898691064
+  },
+  "mean_expansion": {
+    "Code": 12.861286087494035,
+    "Complex QA": 11.409367433687793,
+    "Creative": 8.324738961418603,
+    "Document QA": 9.188586539096661,
+    "Math": 6.249842867306325,
+    "Reasoning": 4.780978584577403,
+    "Self-Inversion": 9.788318476124442
+  },
+  "vocab_overlap": {
+    "Code": 0.08508919875525572,
+    "Complex QA": 0.18734214462617396,
+    "Creative": 0.13509557430687102,
+    "Document QA": 0.1853419557123261,
+    "Math": 0.16860330896498654,
+    "Reasoning": 0.2666176109884719,
+    "Self-Inversion": 0.13874852166433715
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "figure": "fig151_reduction_comparison",
+  "title": "Dimensionality Reduction Method Comparison",
+  "quality_metrics": {
+    "PCA": {
+      "spearman": 0.3926571252091107,
+      "knn_preservation": 0.1514000000000002
+    },
+    "p=15": {
+      "spearman": 0.40862192811461895,
+      "knn_preservation": 0.45999999999999996
+    },
+    "p=30": {
+      "spearman": 0.4196714968835538,
+      "knn_preservation": 0.48300000000000015
+    },
+    "p=50": {
+      "spearman": 0.42714629195545273,
+      "knn_preservation": 0.49320000000000014
+    }
+  },
+  "pca_variance_explained": 0.09224336594343185
+}
