@@ -300,8 +300,24 @@
 | Fig 129 | Final summary | 8-panel abstract/teaser figure |
 
 ## Total Deliverables (Updated)
-- **129 figures** (PNG+PDF pairs)
-- **26 LaTeX tables**
-- **57 JSON analysis reports**
+- **180 figures** (PNG+PDF pairs)
+- **27 LaTeX tables**
+- **70+ JSON analysis reports**
 - **1 LaTeX paper draft** (synthesis/paper/main.tex)
 - **1 comprehensive inventory** (synthesis/outputs/final_inventory.json)
+
+## Session 7 New Figures (fig169-180)
+| Figure | Description | Key Finding |
+|--------|-------------|-------------|
+| Fig 169 | Vocabulary transfer | 69K vocab, 2.2K core, Code 38.1% exclusive |
+| Fig 170 | Response format classification | Code 86% code+text, Creative 84% prose |
+| Fig 171 | Question complexity | DocQA highest 22.7, Self-Inv simplest 12.9 |
+| Fig 172 | Density-diversity relation | r=-0.724, Math densest, DocQA most diverse |
+| Fig 173 | Information density | Creative highest 63.6, Math lowest 42.5 |
+| Fig 174 | Interpolation analysis | Smoothest Creative-DocQA, Sharpest Code-DocQA |
+| Fig 175 | N-gram overlap | 1.19M bigrams, ComplexQA-SelfInv most overlap |
+| Fig 176 | Spectral signatures | Self-Inv PR=61.6, Combined Vendi=155.7, PR-Vendi r=0.970 |
+| Fig 177 | Isotropy analysis | DocQA most isotropic, Code least; combined > individual |
+| Fig 178 | Domain coverage gaps | 2,366 domains, 99.8% single-source, Self-Inv 2,288 excl |
+| Fig 179 | 12-axis comparison | DocQA #1, Self-Inv #2, Complex QA #3, Math #7 |
+| Fig 180 | Session 7 summary | 12 key findings, 180 total figures |

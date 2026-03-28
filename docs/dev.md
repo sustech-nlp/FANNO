@@ -1544,3 +1544,50 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
 - **Vendi Score: 182.75** | Cross-source distance: 0.961 | 2,297 unique domains
 - **0 benchmark contamination** across MMLU, GSM8K, HumanEval, ARC, HellaSwag
 - **Azure token still expired** — synthesis stalled at 21,432/30,000 Document QA
+
+---
+
+## Session 7 — Deep Linguistic & Embedding Analysis (fig169-180)
+
+### New Figures (fig169-180)
+
+| Figure | Description | Key Finding |
+|--------|-------------|-------------|
+| fig169 | Cross-pipeline vocabulary transfer | 69,119 unique words; 2,214 core shared by all 7; Code 38.1% exclusive; Greedy order: DocQA→Creative→Code→ComplexQA→SelfInv→Reasoning→Math |
+| fig170 | Response format classification | Code 86% code+text mixed; Creative 84% prose/narrative; Reasoning 58% list-based; 9 format categories |
+| fig171 | Multi-dimensional question complexity | DocQA highest complexity 22.7/100; Self-Inv simplest 12.9; 7 dimensions: words, sentences, constraints, conditionals, tech terms, multi-part, depth |
+| fig172 | Density-diversity relationship | Overall r=-0.724 (inverse); Math densest region; DocQA most locally diverse; confirms dense = homogeneous |
+| fig173 | Answer information density | Creative highest 63.6/100; Math lowest 42.5; TTR, content ratio, hapax ratio, vocabulary entropy analyzed |
+| fig174 | Embedding interpolation analysis | Smoothest transition: Creative↔DocQA (0.068); Sharpest: Code↔DocQA (0.153); 21 pairs analyzed |
+| fig175 | N-gram overlap & uniqueness | 1.19M unique bigrams; ComplexQA-SelfInv most overlap (Jaccard=0.134); Code/Creative most exclusive |
+| fig176 | Eigenvalue spectrum signatures | Self-Inv PR=61.6 (highest individual); Combined Vendi=155.7; PR-Vendi r=0.970; Combined PR=71.4 > any single |
+| fig177 | Embedding isotropy analysis | DocQA most isotropic; Code least; Combined more isotropic than individuals; mixing improves uniformity |
+| fig178 | Domain coverage gap analysis | 2,366 domains; 99.8% single-source; Self-Inv 2,288 exclusive; Zipf long-tail distribution |
+| fig179 | 12-axis comprehensive comparison | Composite ranking: DocQA #1 (0.743), Self-Inv #2 (0.696), Complex QA #3 (0.618), Math #7 (0.124) |
+| fig180 | Session 7 grand summary | 12 key findings across linguistic, embedding, and structural analyses |
+
+### Key Session 7 Findings
+
+1. **Vocabulary transfer**: 69K total vocabulary; Code (38.1%) and DocQA (33.9%) have most exclusive words; 2,214 core words shared by all 7 pipelines
+2. **Response formats are highly pipeline-specific**: Code=code+text, Creative=prose, Reasoning=lists, Math=mathematical; confirms structural diversity
+3. **Question complexity varies 12.9-22.7**: DocQA asks most constrained questions; Self-Inversion generates simplest prompts
+4. **Density-diversity inverse relationship (r=-0.724)**: Denser embedding regions have lower local diversity; confirms need for spreading
+5. **Information density**: Creative writing has richest vocabulary per answer (63.6); Math most formulaic (42.5)
+6. **Interpolation**: Creative↔DocQA transition smoothest (shared narrative structure); Code↔DocQA sharpest (distinct modalities)
+7. **Spectral signatures**: Self-Inversion has highest per-pipeline effective dimensionality (PR=61.6); combining all 7 achieves PR=71.4
+8. **PR-Vendi correlation is 0.970**: Participation ratio is an excellent proxy for Vendi Score
+9. **Isotropy**: DocQA uses embedding space most uniformly; Code most concentrated; mixing pipelines improves isotropy
+10. **Domain explosion**: 2,366 domains total, 99.8% exclusive to one pipeline; Self-Inversion alone generates 2,288
+11. **Composite ranking**: DocQA > Self-Inv > Complex QA > Code > Creative > Reasoning > Math across 12 normalized metrics
+12. **Key takeaway**: Pipelines are genuinely complementary — each excels in different dimensions, confirming multi-pipeline design
+
+### Grand Total (Session 7 — 180 FIGURES)
+- **180 figures** (PNG+PDF pairs) — fig1 through fig180 + fig_dashboard
+- **27 LaTeX tables** — tab1 through tab27
+- **70+ JSON analysis reports** + 1 comprehensive inventory
+- **1 LaTeX paper draft** — complete with abstract, 8 sections, references, appendix
+- **160+ git commits** on dev branch
+- **153,351 cleaned instruction samples** (211K raw, 27.4% rejection)
+- **Vendi Score: 182.75** | Cross-source distance: 0.961 | 2,297 unique domains
+- **0 benchmark contamination** across MMLU, GSM8K, HumanEval, ARC, HellaSwag
+- **Azure token still expired** — synthesis stalled at 21,432/30,000 Document QA
