@@ -1278,3 +1278,54 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
 - **24 LaTeX tables** — +3 new
 - **40 JSON reports** — +6 new
 - Paper outline updated with §6.12-§6.14 (UMAP, Self-Inv deep dive, per-pipeline composition)
+
+### Phase 60: Document QA Deep Dive
+- **Files**: fig58_document_qa_deepdive.png/pdf, document_qa_deepdive.json
+- Doc previews avg 33 words; Instruction types: Procedural 34%, Factual 19%, Explanation 13%
+- Confirmed: most valuable pipeline (+6.2% Vendi, Hit@1=97%)
+
+### Phase 61: Multi-Turn Pattern Analysis  
+- **Files**: fig59_multiturn_patterns.png/pdf, multiturn_pattern_analysis.json
+- 8 patterns (socratic_method 2,751, iterative_refinement 2,508, topic_shift 2,503, ...)
+- 15 scenarios, avg 6.2 turns per conversation
+
+### Phase 62: Robustness Analysis (Bootstrap)
+- **Files**: fig60_robustness_analysis.png/pdf, robustness_analysis.json
+- Vendi Score at N=100: 63.1, N=500: 127.4, N=1000: 143.9
+- CV decreases from 3.2% (N=100) to 1.1% (N=1000)
+- Per-source ranking consistent: Self-Inv (91.1) > Doc QA (87.6) > Complex (77.4)
+
+### Phase 63: Efficiency & ROI Analysis
+- **Files**: fig61_efficiency_roi.png/pdf, efficiency_roi_analysis.json
+- Composite ranking: Self-Inv (0.784) > Complex QA (0.715) > Reasoning (0.595) > Doc QA (0.473) > Math (0.365)
+
+### Phase 64: Quality Score Analysis
+- **Files**: fig62_quality_analysis.png/pdf, quality_score_analysis.json
+- Composite quality: Code QA (0.809) > Doc QA (0.708) > Complex (0.674) > Reasoning (0.603)
+
+### Phase 65: Similarity Distribution Analysis
+- **Files**: fig63_similarity_distributions.png/pdf, similarity_distribution_analysis.json
+- Within-source mean similarity: 0.135, Between-source: 0.038
+- Separation: 0.097 (pipelines are clearly complementary)
+- Creative highest within-sim (0.302), Self-Inv lowest (0.060)
+
+### Phase 66: Density Analysis (KNN)
+- **Files**: fig64_density_analysis.png/pdf, density_analysis.json
+- Document QA lowest density (1.53 = most spread), Math highest (3.03 = most clustered)
+- Sparse regions: Doc QA (33%) and Complex QA (28%) dominate
+- Dense regions: Math (43%) and Code (39%) dominate
+
+### Phase 67: Baseline Comparison & Pareto Frontier
+- **Files**: fig65_baseline_comparison.png/pdf, fig66_pareto_frontier.png/pdf
+- FANNO-Dev dominates Pareto frontier (scale × diversity × cost)
+
+### Phase 68: Comprehensive Length Statistics
+- **Files**: fig67_length_statistics.png/pdf
+- Code QA highest expansion ratio (13.1x), Reasoning lowest (4.8x)
+- Complex QA mean A=361 words, Doc QA A=391, Creative A=372
+
+### Updated Deliverables (End of Session 3)
+- **67 figures** (PNG+PDF)
+- **24 LaTeX tables**
+- **46 JSON reports**
+- **95+ git commits** on dev branch

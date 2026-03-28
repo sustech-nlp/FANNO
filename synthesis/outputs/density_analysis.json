@@ -1,0 +1,55 @@
+{
+  "description": "Embedding space density analysis",
+  "per_source_density": {
+    "Code": {
+      "mean": 2.6003,
+      "median": 2.5018
+    },
+    "Complex QA": {
+      "mean": 1.6018,
+      "median": 1.5642
+    },
+    "Creative": {
+      "mean": 2.193,
+      "median": 2.11
+    },
+    "Document QA": {
+      "mean": 1.5312,
+      "median": 1.5066
+    },
+    "Math": {
+      "mean": 3.0305,
+      "median": 2.2122
+    },
+    "Reasoning": {
+      "mean": 1.749,
+      "median": 1.6343
+    },
+    "Self-Inversion": {
+      "mean": 1.903,
+      "median": 1.6992
+    }
+  },
+  "sparse_region": {
+    "Complex QA": 97,
+    "Reasoning": 59,
+    "Code": 8,
+    "Math": 8,
+    "Document QA": 114,
+    "Creative": 1,
+    "Self-Inversion": 63
+  },
+  "dense_region": {
+    "Reasoning": 11,
+    "Code": 137,
+    "Math": 151,
+    "Creative": 22,
+    "Self-Inversion": 29
+  },
+  "key_findings": [
+    "Document QA and Complex QA dominate sparse regions (114+97 of 350 points)",
+    "Math and Code dominate dense regions (151+137 of 350 points)",
+    "Math has highest mean density (3.03) \u2014 samples cluster around specific topics",
+    "Document QA has lowest density (1.53) \u2014 most spread out in embedding space"
+  ]
+}
