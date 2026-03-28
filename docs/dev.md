@@ -1534,12 +1534,12 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
 8. **Teamwork score**: Reasoning has highest avg synergy (+18.9) across all pairs
 9. **Structure signatures**: Code QA uniquely rich (5+ features/response); Creative nearly featureless (plain text)
 
-### Grand Total (Session 6 — 150 FIGURES MILESTONE)
-- **150 figures** (PNG+PDF pairs) — fig1 through fig150 + fig_dashboard
+### Grand Total (Session 6 — 167 FIGURES)
+- **167 figures** (PNG+PDF pairs) — fig1 through fig167 + fig_dashboard
 - **27 LaTeX tables** — tab1 through tab27
-- **60 JSON analysis reports** + 1 comprehensive inventory
+- **65 JSON analysis reports** + 1 comprehensive inventory
 - **1 LaTeX paper draft** — complete with abstract, 8 sections, references, appendix
-- **140+ git commits** on dev branch
+- **150+ git commits** on dev branch
 - **153,351 cleaned instruction samples** (211K raw, 27.4% rejection)
 - **Vendi Score: 182.75** | Cross-source distance: 0.961 | 2,297 unique domains
 - **0 benchmark contamination** across MMLU, GSM8K, HumanEval, ARC, HellaSwag
