@@ -1,0 +1,50 @@
+{
+  "figure": "fig185_graph_connectivity",
+  "most_isolated": "Creative",
+  "most_connected": "Self-Inversion",
+  "k_analysis": {
+    "3": {
+      "cross_ratio": 0.2326,
+      "n_components": 12,
+      "avg_degree": 4.51
+    },
+    "5": {
+      "cross_ratio": 0.2579,
+      "n_components": 1,
+      "avg_degree": 7.35
+    },
+    "10": {
+      "cross_ratio": 0.2918,
+      "n_components": 1,
+      "avg_degree": 14.36
+    },
+    "20": {
+      "cross_ratio": 0.3326,
+      "n_components": 1,
+      "avg_degree": 27.65
+    },
+    "50": {
+      "cross_ratio": 0.417,
+      "n_components": 1,
+      "avg_degree": 66.68
+    }
+  },
+  "k20_pipeline_cross": {
+    "Code": 0.0834,
+    "Complex QA": 0.4248,
+    "Creative": 0.0467,
+    "Document QA": 0.5737,
+    "Math": 0.1087,
+    "Reasoning": 0.3149,
+    "Self-Inversion": 0.7758
+  },
+  "k20_isolation": {
+    "Code": 0.9166,
+    "Complex QA": 0.5752,
+    "Creative": 0.9533,
+    "Document QA": 0.4263,
+    "Math": 0.8913,
+    "Reasoning": 0.6851,
+    "Self-Inversion": 0.2242
+  }
+}
