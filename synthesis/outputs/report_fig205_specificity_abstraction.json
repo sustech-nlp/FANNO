@@ -1,0 +1,144 @@
+{
+  "figure": "fig205",
+  "title": "Answer Specificity & Abstraction Level",
+  "specificity_scores": {
+    "Code": {
+      "numbers": 15.044,
+      "proper_nouns": 43.456,
+      "dates": 0.649,
+      "percentages": 0.033,
+      "measurements": 0.017,
+      "urls": 0.207,
+      "technical_terms": 24.826
+    },
+    "Complex QA": {
+      "numbers": 9.634,
+      "proper_nouns": 25.513,
+      "dates": 0.43,
+      "percentages": 0.642,
+      "measurements": 0.378,
+      "urls": 0.0,
+      "technical_terms": 3.224
+    },
+    "Creative": {
+      "numbers": 0.71,
+      "proper_nouns": 29.738,
+      "dates": 0.092,
+      "percentages": 0.014,
+      "measurements": 0.008,
+      "urls": 0.001,
+      "technical_terms": 0.46
+    },
+    "Document QA": {
+      "numbers": 8.427,
+      "proper_nouns": 39.658,
+      "dates": 0.253,
+      "percentages": 0.059,
+      "measurements": 0.028,
+      "urls": 0.004,
+      "technical_terms": 2.767
+    },
+    "Math": {
+      "numbers": 44.245,
+      "proper_nouns": 16.122,
+      "dates": 0.777,
+      "percentages": 0.001,
+      "measurements": 0.584,
+      "urls": 0.0,
+      "technical_terms": 2.145
+    },
+    "Reasoning": {
+      "numbers": 13.192,
+      "proper_nouns": 23.151,
+      "dates": 0.608,
+      "percentages": 0.448,
+      "measurements": 0.109,
+      "urls": 0.0,
+      "technical_terms": 1.417
+    },
+    "Self-Inversion": {
+      "numbers": 10.336,
+      "proper_nouns": 17.99,
+      "dates": 0.34,
+      "percentages": 0.101,
+      "measurements": 0.126,
+      "urls": 0.023,
+      "technical_terms": 3.461
+    }
+  },
+  "abstraction_scores": {
+    "Code": {
+      "generalizations": 0.101,
+      "hedging": 0.362,
+      "conceptual": 2.709,
+      "abstract_nouns": 0.429
+    },
+    "Complex QA": {
+      "generalizations": 0.987,
+      "hedging": 2.817,
+      "conceptual": 1.104,
+      "abstract_nouns": 0.897
+    },
+    "Creative": {
+      "generalizations": 0.226,
+      "hedging": 1.063,
+      "conceptual": 0.135,
+      "abstract_nouns": 0.159
+    },
+    "Document QA": {
+      "generalizations": 1.074,
+      "hedging": 2.808,
+      "conceptual": 0.746,
+      "abstract_nouns": 0.878
+    },
+    "Math": {
+      "generalizations": 0.03,
+      "hedging": 0.038,
+      "conceptual": 0.082,
+      "abstract_nouns": 0.018
+    },
+    "Reasoning": {
+      "generalizations": 0.181,
+      "hedging": 1.214,
+      "conceptual": 0.287,
+      "abstract_nouns": 0.291
+    },
+    "Self-Inversion": {
+      "generalizations": 0.246,
+      "hedging": 0.798,
+      "conceptual": 0.624,
+      "abstract_nouns": 0.292
+    }
+  },
+  "mean_specificity_index": {
+    "Code": 0.9382,
+    "Complex QA": 0.8169,
+    "Creative": 0.9128,
+    "Document QA": 0.8576,
+    "Math": 0.9735,
+    "Reasoning": 0.895,
+    "Self-Inversion": 0.8779
+  },
+  "total_specificity": {
+    "Code": 84.23,
+    "Complex QA": 39.82,
+    "Creative": 31.02,
+    "Document QA": 51.2,
+    "Math": 63.87,
+    "Reasoning": 38.93,
+    "Self-Inversion": 32.38
+  },
+  "total_abstraction": {
+    "Code": 3.6,
+    "Complex QA": 5.8,
+    "Creative": 1.58,
+    "Document QA": 5.51,
+    "Math": 0.17,
+    "Reasoning": 1.97,
+    "Self-Inversion": 1.96
+  },
+  "findings": [
+    "Most specific: Math (SI=0.974)",
+    "Most abstract: Complex QA (SI=0.817)"
+  ]
+}
