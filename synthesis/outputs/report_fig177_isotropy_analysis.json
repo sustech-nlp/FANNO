@@ -1,0 +1,79 @@
+{
+  "figure": "fig177_isotropy_analysis",
+  "most_isotropic": "Document QA",
+  "least_isotropic": "Code",
+  "per_pipeline": {
+    "Code": {
+      "avg_cos_to_centroid": 0.36515,
+      "sv_ratio": 0.0,
+      "var_uniformity": 0.86116,
+      "avg_pairwise_sim": 0.12886,
+      "std_pairwise_sim": 0.17023,
+      "participation_ratio": 20.75279,
+      "eff_dim_ratio": 0.05404
+    },
+    "Complex QA": {
+      "avg_cos_to_centroid": 0.29572,
+      "sv_ratio": 0.0,
+      "var_uniformity": 0.94972,
+      "avg_pairwise_sim": 0.08552,
+      "std_pairwise_sim": 0.11091,
+      "participation_ratio": 46.69178,
+      "eff_dim_ratio": 0.12159
+    },
+    "Creative": {
+      "avg_cos_to_centroid": 0.55006,
+      "sv_ratio": 0.0,
+      "var_uniformity": 0.91741,
+      "avg_pairwise_sim": 0.28844,
+      "std_pairwise_sim": 0.12613,
+      "participation_ratio": 9.2949,
+      "eff_dim_ratio": 0.02421
+    },
+    "Document QA": {
+      "avg_cos_to_centroid": 0.31233,
+      "sv_ratio": 0.0,
+      "var_uniformity": 0.96118,
+      "avg_pairwise_sim": 0.0903,
+      "std_pairwise_sim": 0.10068,
+      "participation_ratio": 46.92735,
+      "eff_dim_ratio": 0.12221
+    },
+    "Math": {
+      "avg_cos_to_centroid": 0.41603,
+      "sv_ratio": 0.0,
+      "var_uniformity": 0.8765,
+      "avg_pairwise_sim": 0.17477,
+      "std_pairwise_sim": 0.16928,
+      "participation_ratio": 17.13117,
+      "eff_dim_ratio": 0.04461
+    },
+    "Reasoning": {
+      "avg_cos_to_centroid": 0.32116,
+      "sv_ratio": 0.0,
+      "var_uniformity": 0.92906,
+      "avg_pairwise_sim": 0.10473,
+      "std_pairwise_sim": 0.1234,
+      "participation_ratio": 36.57056,
+      "eff_dim_ratio": 0.09524
+    },
+    "Self-Inversion": {
+      "avg_cos_to_centroid": 0.24616,
+      "sv_ratio": 0.0,
+      "var_uniformity": 0.95187,
+      "avg_pairwise_sim": 0.05602,
+      "std_pairwise_sim": 0.10317,
+      "participation_ratio": 61.56475,
+      "eff_dim_ratio": 0.16032
+    },
+    "Combined": {
+      "avg_cos_to_centroid": 0.22979,
+      "sv_ratio": 0.0,
+      "var_uniformity": 0.94844,
+      "avg_pairwise_sim": 0.05117,
+      "std_pairwise_sim": 0.10797,
+      "participation_ratio": 71.37745,
+      "eff_dim_ratio": 0.18588
+    }
+  }
+}
