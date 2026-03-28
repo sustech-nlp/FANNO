@@ -1,0 +1,22 @@
+{
+  "figure": "fig180_session7_summary",
+  "session": 7,
+  "figures_in_session": "fig169-fig180",
+  "total_figures": 180,
+  "total_tables": 27,
+  "total_reports": "70+",
+  "key_findings": [
+    "Cross-pipeline vocabulary: 69K unique words, 2.2K core shared by all 7 pipelines",
+    "Response format: Code 86% code+text, Creative 84% prose, 9 format categories identified",
+    "Question complexity: DocQA most complex (22.7), Self-Inversion simplest (12.9)",
+    "Density-diversity inverse correlation r=-0.724 in embedding space",
+    "Information density: Creative highest (63.6), Math lowest (42.5)",
+    "N-gram overlap: 1.19M unique bigrams, ComplexQA-SelfInv most shared",
+    "Spectral: Self-Inv PR=61.6 highest, PR-Vendi correlation r=0.970",
+    "Isotropy: DocQA most isotropic, Code least; combining improves uniformity",
+    "Domain coverage: 2,366 domains, 99.8% single-source, Self-Inv discovers 2,288",
+    "Interpolation: Creative-DocQA smoothest transition, Code-DocQA sharpest",
+    "Composite ranking: DocQA #1, Self-Inv #2, Complex QA #3, Math #7",
+    "Cumulative: 180 figures, 27 tables, 70+ reports across 7 sessions"
+  ]
+}
