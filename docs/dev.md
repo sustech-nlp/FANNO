@@ -1606,3 +1606,45 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
 - **Vendi Score: 182.75** | Cross-source distance: 0.961 | 2,297 unique domains
 - **0 benchmark contamination** across MMLU, GSM8K, HumanEval, ARC, HellaSwag
 - **Azure token still expired** — synthesis stalled at 21,432/30,000 Document QA
+
+---
+
+## Session 8: Advanced Analysis & 200-Figure Milestone (fig191-fig200)
+
+### Figures Generated
+
+| Figure | Title | Key Finding |
+|--------|-------|------------|
+| fig191 | Structural Fingerprinting | Code 7.25 features (most complex), Creative 1.31 (simplest), 15 binary features |
+| fig192 | Embedding Curvature | DocQA LID=13.4 (highest), Self-Inv curvature ratio=2.19, Creative consistency=0.957 |
+| fig193 | Citation Patterns | ComplexQA 5,187/1K (densest), DocQA 10/10 diversity, 10 pattern categories |
+| fig194 | Argument Structure | ComplexQA 5.4/ans most argumentative, Math highest density 0.303/sent |
+| fig195 | Manifold Topology | Self-Inv hull=0.537 (largest), ComplexQA corr_dim=10.6, Betti-0 analysis |
+| fig196 | Pipeline Synergy | DocQA LOO=+12.3 (largest), greedy: Self-Inv→DocQA→ComplexQA, full Vendi=131.0 |
+| fig197 | Novelty Decay | Self-Inv half-life=0.9 (slowest), DocQA final=0.518, Math fastest saturation |
+| fig198 | Question Taxonomy | Creative bloom=4.25 (highest cognitive), Code 69% How-type, Reasoning 97% Other |
+| fig199 | Entity Overlap | 52,525 entities, DocQA 76.6% exclusive (22,092), Jaccard=0.094 avg |
+| fig200 | Grand Dashboard | 200-figure milestone, 8 sessions, all metrics summarized |
+
+### Key Session 8 Findings
+
+1. **Embedding curvature**: DocQA has highest local intrinsic dimensionality (13.4), indicating the richest local structure. Self-Inversion has the most curved space (geodesic/cosine ratio=2.19).
+2. **Citation patterns**: ComplexQA uses 5,187 reference patterns per 1K answers (3× Code). DocQA achieves perfect pattern diversity (10/10 types).
+3. **Argument structure**: ComplexQA is most argumentative (5.4 elements/answer). Math has highest transition density (0.303/sentence). Creative Writing is least argumentative.
+4. **Manifold topology**: Self-Inversion occupies the largest convex hull in PCA-2D (0.537), confirming its role as the broadest pipeline. ComplexQA has highest correlation dimension (10.6).
+5. **Pipeline synergy**: Document QA contributes most to combined diversity (LOO=+12.3 Vendi). Greedy addition order starts with Self-Inv→DocQA. Solo diversity doesn't perfectly predict combined contribution.
+6. **Novelty decay**: Self-Inversion maintains novelty longest (half-life=0.9 batches). Math saturates fastest (0.3 batches). DocQA retains highest final novelty (0.518).
+7. **Question taxonomy**: Creative Writing demands highest Bloom's cognitive level (4.25). Code QA dominated by "How" questions (69%). Math/Reasoning primarily use non-standard question formats.
+8. **Entity coverage**: 52,525 unique entities across 7 pipelines. DocQA contributes 76.6% exclusive entities (22,092). Average pairwise Jaccard similarity is only 0.094 (highly disjoint).
+
+### Updated Grand Totals (Session 8)
+
+- **200 figures** (PNG+PDF pairs) — fig1 through fig200 + fig_dashboard
+- **27 LaTeX tables** — tab1 through tab27
+- **80+ JSON analysis reports** + 1 comprehensive inventory
+- **1 LaTeX paper draft** — complete with abstract, 8 sections, references, appendix
+- **175+ git commits** on dev branch
+- **153,351 cleaned instruction samples** (211K raw, 27.4% rejection)
+- **Vendi Score: 182.75** | Cross-source distance: 0.961 | 2,297 unique domains
+- **0 benchmark contamination** across MMLU, GSM8K, HumanEval, ARC, HellaSwag
+- **Azure token still expired** — synthesis stalled at 21,432/30,000 Document QA
