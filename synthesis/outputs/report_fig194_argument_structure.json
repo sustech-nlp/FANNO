@@ -1,0 +1,118 @@
+{
+  "figure": "fig194",
+  "title": "Answer Argument Structure Analysis",
+  "argument_elements_per_answer": {
+    "Code": {
+      "claim": 0.047,
+      "premise": 0.288,
+      "qualification": 0.341,
+      "conditional": 0.29,
+      "enumeration": 1.139,
+      "comparison": 0.013,
+      "generalization": 0.094,
+      "specification": 0.049
+    },
+    "Complex QA": {
+      "claim": 0.576,
+      "premise": 0.712,
+      "qualification": 1.338,
+      "conditional": 0.29,
+      "enumeration": 1.021,
+      "comparison": 0.198,
+      "generalization": 1.021,
+      "specification": 0.206
+    },
+    "Creative": {
+      "claim": 0.223,
+      "premise": 0.203,
+      "qualification": 0.558,
+      "conditional": 0.138,
+      "enumeration": 0.813,
+      "comparison": 0.01,
+      "generalization": 0.286,
+      "specification": 0.026
+    },
+    "Document QA": {
+      "claim": 0.163,
+      "premise": 0.433,
+      "qualification": 0.834,
+      "conditional": 0.174,
+      "enumeration": 0.368,
+      "comparison": 0.101,
+      "generalization": 1.13,
+      "specification": 0.323
+    },
+    "Math": {
+      "claim": 1.332,
+      "premise": 0.866,
+      "qualification": 0.072,
+      "conditional": 0.692,
+      "enumeration": 0.64,
+      "comparison": 0.003,
+      "generalization": 0.035,
+      "specification": 0.014
+    },
+    "Reasoning": {
+      "claim": 0.759,
+      "premise": 1.111,
+      "qualification": 0.511,
+      "conditional": 0.843,
+      "enumeration": 0.586,
+      "comparison": 0.075,
+      "generalization": 0.195,
+      "specification": 0.061
+    },
+    "Self-Inversion": {
+      "claim": 0.379,
+      "premise": 0.405,
+      "qualification": 0.409,
+      "conditional": 0.308,
+      "enumeration": 0.589,
+      "comparison": 0.046,
+      "generalization": 0.261,
+      "specification": 0.079
+    }
+  },
+  "total_argumentativeness": {
+    "Code": 2.26,
+    "Complex QA": 5.36,
+    "Creative": 2.26,
+    "Document QA": 3.53,
+    "Math": 3.65,
+    "Reasoning": 4.14,
+    "Self-Inversion": 2.48
+  },
+  "avg_sentences": {
+    "Code": 40.3,
+    "Complex QA": 22.4,
+    "Creative": 24.3,
+    "Document QA": 26.6,
+    "Math": 13.5,
+    "Reasoning": 18.5,
+    "Self-Inversion": 15.6
+  },
+  "avg_paragraphs": {
+    "Code": 15.5,
+    "Complex QA": 6.8,
+    "Creative": 8.6,
+    "Document QA": 11.7,
+    "Math": 8.0,
+    "Reasoning": 4.2,
+    "Self-Inversion": 4.9
+  },
+  "transition_density": {
+    "Code": 0.0768,
+    "Complex QA": 0.2661,
+    "Creative": 0.1005,
+    "Document QA": 0.1526,
+    "Math": 0.303,
+    "Reasoning": 0.2616,
+    "Self-Inversion": 0.1992
+  },
+  "findings": [
+    "Most argumentative: Complex QA (5.4/answer)",
+    "Least argumentative: Creative (2.3/answer)",
+    "Longest answers: Code (40 sentences)",
+    "Shortest answers: Math (13 sentences)"
+  ]
+}
