@@ -1380,3 +1380,57 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
 - **153,351 cleaned instruction samples** (211K raw, 27.4% rejection)
 - **Vendi Score: 182.75** | Cross-source distance: 0.961 | 2,297 unique domains
 - **Azure token still expired** — synthesis stalled at 21,432/30,000 Document QA
+
+---
+
+## Session 4 (2026-03-27 continued)
+
+### Phases 79-100: Extended Analysis Suite
+
+| Phase | Analysis | Key Finding | Output |
+|-------|----------|-------------|--------|
+| 79 | Readability (FK grades) | Complex QA FK=16.5 (highest), Math=8.7 (lowest) | fig79 |
+| 80 | Semantic Drift | Within-batch diversity stable; Self-Inv highest batch novelty | fig80 |
+| 81 | Factuality Heuristics | Complex QA: 2.43 citations/ans, Math: 32.8% with numbers | fig81 |
+| 82 | Template Effectiveness | Per-pipeline domain × category heatmaps with coverage % | fig82 |
+| 83 | Neighbor Analysis | 1-NN, K-NN, and per-sample isolation distributions | fig83 |
+| 84 | Verb Taxonomy | Code QA: 78% "How", Creative: 43% "Write", Math: "Find"/"Solve" | fig84 |
+| 85 | Diversity Decomposition | Greedy order: Self-Inv first; Creative negative marginal (-0.4) | fig85 |
+| 86 | Sentence Analysis | Creative: 18.2 sents/ans (most), Code: 57.9 words/sent (longest) | fig86 |
+| 87 | Efficiency Frontier | Self-Inv #1 composite (0.924), Code QA lowest (0.146) | fig87 |
+| 88 | Token Analysis | Code QA: 11.1× expansion, 2.36 code blocks/sample | fig88 |
+| 89 | Cross-Pipeline Synergy | Code+Math best pair (gain=4.5), distance→synergy correlation | fig89 |
+| 90 | Spectral Analysis | Self-Inv slowest eigenvalue decay = most diverse spectrum | fig90 |
+| 91 | Quality Scorecard | Dashboard with A/A+ grades across 15 quality dimensions | fig91 |
+| 92 | Source Ordering | Greedy optimal: Self-Inv→DocQA→Reason→Complex→Code→Math→Creative | fig92 |
+| 93 | Hull Coverage | Self-Inv covers 87.6% of PCA convex hull (highest spatial coverage) | fig93 |
+| 94 | Answer Patterns | Self-Inv entropy=2.55 (most diverse structure), Code=0.02 | fig94 |
+| 95 | Difficulty-Diversity | Interaction analysis of difficulty levels vs category diversity | fig95 |
+| 96 | Domain Explosion | Self-Inv: 2,272 exclusive domains (99.3% of its domains unique) | fig96 |
+| 97 | Main Results Figure | THE paper figure: 9-panel comprehensive overview | fig97 |
+| 98 | Multi-Turn Flow | 19,901 conversations, 11 patterns, 18 scenarios, 6.2 avg turns | fig98 |
+| 99 | Ecosystem Overview | Complete data synthesis ecosystem infographic | fig99 |
+| 100 | Claims & Evidence | 20 key claims with quantitative evidence (milestone 100th figure!) | fig100 |
+
+### Session 4 New Tables
+| Table | Description |
+|-------|-------------|
+| Tab 25 | Complete deliverables index (90+ figures, 25 tables mapped to sections) |
+
+### Grand Total (Session 4, 2026-03-27)
+- **100 figures** (PNG+PDF) — fig1 through fig100 + fig_dashboard
+- **25 LaTeX tables** — tab1 through tab25
+- **53+ JSON analysis reports**
+- **110+ git commits** on dev branch, all pushed to remote
+- **153,351 cleaned instruction samples** (211K raw, 27.4% rejection)
+- **Vendi Score: 182.75** | Cross-source distance: 0.961 | 2,297 unique domains
+- **Paper outline updated** with complete figure/table mapping
+- **Azure token still expired** — synthesis stalled at 21,432/30,000 Document QA
+
+### Key Session 4 Findings
+1. **Self-Inversion dominance**: 87.6% hull coverage, 2,272 exclusive domains (99.3%), highest answer pattern entropy (2.55), slowest spectral decay
+2. **Greedy source ordering**: Self-Inv→DocQA→Reasoning reaches >95% of full diversity with just 3 sources
+3. **Cross-pipeline synergy**: Code+Math is the best pair (Vendi gain=4.5), distance correlates with synergy
+4. **Creative Writing**: Negative marginal contribution (-0.4 Vendi), most isolated (95.6% self-overlap), lowest answer diversity
+5. **Efficiency**: Self-Inversion composite score 0.924 vs Code QA 0.146 (6.3× more efficient)
+6. **Semantic stability**: Within-batch diversity is stable across sequential batches for all pipelines
