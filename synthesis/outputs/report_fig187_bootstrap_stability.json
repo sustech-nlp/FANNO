@@ -1,0 +1,51 @@
+{
+  "figure": "fig187_bootstrap_stability",
+  "n_bootstrap": 30,
+  "sample_size": 250,
+  "combined_vendi": {
+    "mean": 101.4,
+    "ci": [
+      98.6,
+      104.4
+    ]
+  },
+  "most_stable": "Self-Inversion",
+  "least_stable": "Complex QA",
+  "per_pipeline": {
+    "Code": {
+      "vendi_mean": 38.7,
+      "vendi_cv": 2.32,
+      "dist_mean": 0.8669
+    },
+    "Complex QA": {
+      "vendi_mean": 73.2,
+      "vendi_cv": 3.11,
+      "dist_mean": 0.9118
+    },
+    "Creative": {
+      "vendi_mean": 35.0,
+      "vendi_cv": 3.09,
+      "dist_mean": 0.6988
+    },
+    "Document QA": {
+      "vendi_mean": 83.1,
+      "vendi_cv": 2.89,
+      "dist_mean": 0.9025
+    },
+    "Math": {
+      "vendi_mean": 38.6,
+      "vendi_cv": 3.07,
+      "dist_mean": 0.8261
+    },
+    "Reasoning": {
+      "vendi_mean": 67.1,
+      "vendi_cv": 2.59,
+      "dist_mean": 0.8983
+    },
+    "Self-Inversion": {
+      "vendi_mean": 86.7,
+      "vendi_cv": 2.23,
+      "dist_mean": 0.9376
+    }
+  }
+}
