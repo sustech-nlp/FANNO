@@ -1,6 +1,6 @@
 # FANNO-Dev: Paper Structure & Figure/Table Mapping
 
-## Total Deliverables: 58 Figures (PNG+PDF), 24 LaTeX Tables, 40 JSON Reports
+## Total Deliverables: 71 Figures (PNG+PDF), 24 LaTeX Tables, 47 JSON Reports
 
 ---
 
