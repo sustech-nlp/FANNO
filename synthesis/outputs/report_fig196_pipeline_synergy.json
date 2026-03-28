@@ -1,0 +1,96 @@
+{
+  "figure": "fig196",
+  "title": "Pipeline Synergy & Leave-One-Out Diversity",
+  "full_vendi": 131.05,
+  "solo_vendi": {
+    "Code": 43.55,
+    "Complex QA": 89.11,
+    "Creative": 39.64,
+    "Document QA": 102.72,
+    "Math": 42.68,
+    "Reasoning": 81.14,
+    "Self-Inversion": 107.83
+  },
+  "loo_contribution": {
+    "Code": 6.05,
+    "Complex QA": 5.38,
+    "Creative": -3.57,
+    "Document QA": 12.25,
+    "Math": 6.63,
+    "Reasoning": 7.83,
+    "Self-Inversion": 2.62
+  },
+  "top_synergy_pairs": [
+    {
+      "pair": "Code-Math",
+      "synergy": -14.87
+    },
+    {
+      "pair": "Code-Creative",
+      "synergy": -16.91
+    },
+    {
+      "pair": "Creative-Math",
+      "synergy": -17.59
+    },
+    {
+      "pair": "Code-Reasoning",
+      "synergy": -33.69
+    },
+    {
+      "pair": "Code-Complex QA",
+      "synergy": -39.12
+    }
+  ],
+  "worst_synergy_pairs": [
+    {
+      "pair": "Complex QA-Document QA",
+      "synergy": -76.14
+    },
+    {
+      "pair": "Complex QA-Self-Inversion",
+      "synergy": -80.91
+    },
+    {
+      "pair": "Document QA-Self-Inversion",
+      "synergy": -81.91
+    }
+  ],
+  "greedy_order": [
+    {
+      "pipeline": "Self-Inversion",
+      "marginal_gain": 107.83
+    },
+    {
+      "pipeline": "Document QA",
+      "marginal_gain": 26.67
+    },
+    {
+      "pipeline": "Complex QA",
+      "marginal_gain": 1.6
+    },
+    {
+      "pipeline": "Reasoning",
+      "marginal_gain": -1.79
+    },
+    {
+      "pipeline": "Code",
+      "marginal_gain": 0.63
+    },
+    {
+      "pipeline": "Math",
+      "marginal_gain": -1.8
+    },
+    {
+      "pipeline": "Creative",
+      "marginal_gain": -6.3
+    }
+  ],
+  "solo_contribution_correlation": 0.4229,
+  "findings": [
+    "Full Vendi: 131.0",
+    "Biggest LOO contributor: Document QA (+12.3)",
+    "Best synergy: Code-Math (-14.9)",
+    "Greedy order starts with: Self-Inversion"
+  ]
+}
