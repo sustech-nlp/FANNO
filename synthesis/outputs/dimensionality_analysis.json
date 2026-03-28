@@ -1,0 +1,21 @@
+{
+  "description": "Intrinsic dimensionality via PCA on mean-centered L2-normalized embeddings",
+  "note": "Raw embeddings are L2-normalized (sentence-transformers). Centering before PCA gives meaningful eigenvalue analysis.",
+  "dims_90pct": {
+    "Code": 68,
+    "Complex QA": 100,
+    "Creative": 100,
+    "Document QA": 100,
+    "Math": 78,
+    "Reasoning": 100,
+    "Self-Inversion": 100
+  },
+  "overall_90pct": 100,
+  "pc1_pct": 5.28,
+  "pc2_pct": 3.94,
+  "key_findings": [
+    "Overall: 100 components for 90% variance (high intrinsic dimensionality)",
+    "Confirms dataset requires many dimensions to represent, not low-rank",
+    "Each pipeline occupies a different subspace of the 384-dim embedding space"
+  ]
+}
