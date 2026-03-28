@@ -1,0 +1,48 @@
+\begin{table*}[t]
+\centering
+\caption{Comprehensive evidence summary for FANNO-Dev claims. Each claim is supported by specific quantitative evidence with figure/table cross-references.}
+\label{tab:evidence_summary}
+\scriptsize
+\begin{tabular}{p{0.08\textwidth}p{0.30\textwidth}p{0.38\textwidth}p{0.12\textwidth}}
+\toprule
+\textbf{Category} & \textbf{Claim} & \textbf{Evidence} & \textbf{Reference} \\
+\midrule
+Scale & FANNO-Dev achieves large-scale diverse data synthesis (153K+ samples) & 153,351 cleaned samples from 211,093 raw (27.4% rejection rate) & Tab 1, Fig 34 \\
+\midrule
+Diversity & Multi-pipeline synthesis produces near-orthogonal data & Average cross-source cosine distance = 0.961; 7 of 8 sources occupy distinct embedding regions & Fig 14, Tab 5 \\
+ & Vendi Score enables quantitative diversity measurement & Overall Vendi Score = 182.75 on 15K sample; per-source Vendi ranges from 66 (Code QA) to 170 (Document QA) & Tab 2, Fig 5, Fig Dashboard \\
+\midrule
+Scaling & Diversity follows exponential saturation scaling law & V(N) = 55.4(1-exp(-N/745))+109.0, R²=0.996, ceiling at 164.5 for single-turn data & Fig 30, Tab 4 \\
+ & Tag space utilization limits diversity ceiling & Only 4.1% of domain×type×difficulty combinations utilized; Vendi saturates at ~5K samples & Fig 6, Fig 12 \\
+\midrule
+Selection & K-Center-Greedy is optimal for small subsets & +33.3% Vendi improvement over random at N=500; advantage diminishes at N≥5000 & Fig 27, Tab 3, Tab 14 \\
+\midrule
+Pipeline & Self-Inversion is a universal diversity amplifier & Present in all 20 K-Means clusters; lowest isolation (0.224); highest within-source diversity (0.943); 0% same-angle rate & Fig 25, Fig 42, Fig 32 \\
+\midrule
+Efficiency & Self-Inversion has highest diversity density & 32.4 Vendi/1K samples (12× more than Complex QA at 2.6); recommended 17.4% mixing ratio vs 3.2% natural & Fig 39 \\
+\midrule
+Pipeline & Self-Inversion produces genuine perspective shifts & Mean cosine distance 0.458 between original and new angles; 82.6% > 0.3 threshold; 0% same angle; 5000 unique new angles & Fig 32 \\
+\midrule
+Quality & Multi-turn conversations maintain coherence across turns & Adjacent turn similarity 0.575; natural Q-A alternating pattern; TTR stable at 0.84-0.85 across depths & Fig 35, Fig 19 \\
+ & Data quality passes comprehensive validation & 100% JSON valid, 100% required fields, 0.01% refusal rate (14/125K), 0 encoding issues & Quality validation report \\
+ & No benchmark contamination & 0 exact matches across 33K+ test instances (MMLU, GSM8K, HumanEval, ARC, HellaSwag); 416 MMLU false positives identified & Contamination report \\
+\midrule
+Efficiency & Efficient pipelines are more diverse (negative correlation) & Pearson r = -0.776 between rejection rate and Vendi Score & Fig 11, Fig 17, Tab 7 \\
+ & Self-Inversion is most cost-efficient pipeline & Efficiency score 18.8, only 0.5% rejection rate; Pareto-optimal on cost-diversity frontier & Fig 17, Tab 7 \\
+\midrule
+Diversity & Embedding space has high intrinsic dimensionality & PCA requires 50+ components for 90% variance; PC1+PC2 explain only 9.2% & Fig 22 \\
+\midrule
+Pipeline & Code QA and Math QA occupy distinct semantic regions & Code QA: 0.917 isolation, 0.677 centroid distance (most unique); Math QA: 0.891 isolation, 0.494 centroid distance & Fig 42, Fig 23 \\
+\midrule
+Quality & Creative Writing has lowest Q-A alignment by design & Hit@1=31.8%, MRR=0.407, Mean Rank=60.4; creative outputs are intentionally diverse and not uniquely tied to prompts & Fig 46 \\
+ & Document QA has highest answer specificity & Hit@1=97.0%, MRR=0.979; answers are highly specific to their questions & Fig 46 \\
+\midrule
+Diversity & Difficulty level shows inverted-U diversity pattern & Vendi: easy(35.8) < expert(102.1) < hard(128.4) < medium(143.1); medium difficulty maximizes diversity & Fig 37, Tab 17 \\
+\midrule
+Pipeline & Document QA has richest linguistic diversity & #1 in composite diversity (0.921); highest exclusive vocabulary (32.7%); most unique bigrams (754K) & Fig 13, Fig 45 \\
+\midrule
+Analysis & 20 latent topics discovered across 8 pipelines via NMF & Code dominates 5 topics, Math 5 topics, Creative 1 pure topic; Self-Inversion has no dominant topic & Fig 40 \\
+ & Response structures differ significantly across pipelines & Code QA: 100% code blocks; Creative: 91% multi-paragraph; Multi-Turn: 90% single paragraph; Doc QA: 73% numbered steps & Fig 44 \\
+\bottomrule
+\end{tabular}
+\end{table*}

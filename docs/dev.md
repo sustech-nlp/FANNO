@@ -1121,3 +1121,103 @@ Computed composite mixing score = 0.3×Vendi + 0.25×within_diversity + 0.25×ce
 **Interpretation:** Self-Inversion literally bridges all other pipelines' semantic spaces, confirming the "universal diversity amplifier" characterization from cluster analysis (appears in all 20 K-Means clusters).
 
 **Files created:** `source_overlap_analysis.json`, `fig42_source_overlap.{png,pdf}`, `tab20_source_overlap.tex`
+
+---
+
+### Phase 48: Response Structure Analysis
+
+**Q: What response formats do different pipelines produce?**
+
+**Analysis:** Regex-based detection of numbered steps, bullet points, code blocks, math formulas, headers, tables, paragraphs.
+
+**Key findings:**
+- Code QA: 100% code blocks, 85% headers, 74% numbered steps
+- Creative Writing: 91% multi-paragraph (long narrative)
+- Multi-Turn: 90% single paragraph (conversational)
+- Math QA: 61% numbered steps + 28% math formulas
+- Document QA: most structured — 73% numbered steps, 56% bullets, 38% headers
+
+**Files created:** `response_structure_analysis.json`, `fig44_response_structure.{png,pdf}`
+
+---
+
+### Phase 49: Quality Validation Report
+
+**Q: Does the data pass formal quality checks?**
+
+**Results:**
+- Alpaca format: 100% JSON valid, 100% has all fields, 100% reasonable length
+- ShareGPT format: 100% JSON valid, 100% valid conversation structure
+- Refusal rate: 0.01% (14/125,280) — only in Document QA
+- Encoding issues: 0
+- Contamination: 0 real matches across 33K+ benchmark instances
+
+**Files created:** `quality_validation_report.json`, `contamination_report.json`
+
+---
+
+### Phase 50: N-gram Diversity & Vocabulary Richness
+
+**Q: How does vocabulary diversity compare across pipelines?**
+
+**Analysis:** TF-IDF features, unique n-grams, Yule's K, hapax ratio, vocabulary Jaccard overlap.
+
+**Key findings:**
+- Document QA: most exclusive vocabulary (32.7%), most unique bigrams (754K)
+- Creative Writing: 2nd most exclusive (28.7%), rich literary vocabulary
+- Math QA: lowest TTR (0.005), highest Yule's K (126.7) — most formulaic
+- Self-Inversion: highest TTR (0.023) — most efficient vocabulary usage
+- Math-Reasoning highest vocabulary overlap (Jaccard=0.52)
+
+**Files created:** `ngram_diversity_analysis.json`, `fig45_ngram_diversity.{png,pdf}`
+
+---
+
+### Phase 51: Q-A Alignment Analysis
+
+**Q: How well do answers address their questions?**
+
+**Analysis:** Embedding cosine similarity between Q and A + retrieval metrics (MRR, Hit@K).
+
+**Key findings:**
+- Document QA: best alignment (MRR=0.979, Hit@1=97%) — highly specific answers
+- Complex QA: strong (Hit@1=72.9%, MRR=0.821)
+- Self-Inversion: good despite trajectory reversal (Hit@1=68.1%)
+- Creative Writing: lowest (Hit@1=31.8%) — creative diversity by design
+- Code QA: moderate (Hit@1=44.2%) — shared code structure across problems
+
+**Files created:** `qa_alignment_analysis.json`, `fig46_qa_alignment.{png,pdf}`
+
+---
+
+### Phase 52: Evidence Summary & Final Updates
+
+- Generated tab21_evidence_summary.tex: 22 claims with quantitative evidence
+- Updated tab10 baseline comparison: 153K (was 144K)
+- Updated DATASET_CARD.md with all latest metrics
+- Generated fig43 poster summary (8-panel overview)
+
+---
+
+### Final Status (Session 2, 2026-03-28)
+
+- **Raw total: 211,093**
+- **Cleaned total: 153,351** (27.4% rejection)
+- **Single-turn: 134,643** / **Multi-turn: 18,708**
+- **Alpaca format: 125,280** / **ShareGPT format: 141,901**
+- **Total deliverables:**
+  - **47 figures** (PNG+PDF pairs)
+  - **21 LaTeX tables**
+  - **29 JSON analysis reports**
+  - **86+ git commits** on dev branch
+- **Key metrics:**
+  - Vendi Score: 182.75
+  - Avg pairwise cosine distance: 0.951
+  - Cross-source distance: 0.961
+  - Unique domains: 2,297
+  - Question types: 25
+  - Cost estimate: ~$2,245 ($15.58/1K clean)
+  - Self-Inversion diversity density: 32.4 Vendi/1K (12× Complex QA)
+  - Q-A alignment: Document QA Hit@1=97%, overall >68% for most pipelines
+  - Quality: 100% valid JSON, 0.01% refusals, 0 contamination
+  - Token expired ~23:30 UTC 3/27; synthesis stalled at 21,432 Document QA samples
