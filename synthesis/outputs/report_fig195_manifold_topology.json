@@ -1,0 +1,46 @@
+{
+  "figure": "fig195",
+  "title": "Embedding Manifold Topology Analysis",
+  "hull_areas_pca2d": {
+    "Code": 0.1476,
+    "Complex QA": 0.2209,
+    "Creative": 0.1406,
+    "Document QA": 0.3757,
+    "Math": 0.1335,
+    "Reasoning": 0.2384,
+    "Self-Inversion": 0.5374
+  },
+  "correlation_dimension": {
+    "Code": 5.14,
+    "Complex QA": 10.61,
+    "Creative": 6.12,
+    "Document QA": 9.23,
+    "Math": 5.59,
+    "Reasoning": 8.4,
+    "Self-Inversion": 9.49
+  },
+  "merge_thresholds": {
+    "Code": 0.72,
+    "Complex QA": 0.798,
+    "Creative": 0.682,
+    "Document QA": 0.837,
+    "Math": 0.682,
+    "Reasoning": 0.798,
+    "Self-Inversion": 0.837
+  },
+  "hull_overlap_mean": 0.5699,
+  "dbscan_clusters_eps05": {
+    "Code": 6,
+    "Complex QA": 26,
+    "Creative": 1,
+    "Document QA": 5,
+    "Math": 6,
+    "Reasoning": 7,
+    "Self-Inversion": 21
+  },
+  "findings": [
+    "Largest hull: Self-Inversion (0.537)",
+    "Highest corr dim: Complex QA (10.6)",
+    "Mean hull overlap: 0.570"
+  ]
+}
