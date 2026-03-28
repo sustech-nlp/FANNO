@@ -1,0 +1,106 @@
+{
+  "figure": "fig148_pairwise_diversity",
+  "title": "Pairwise Pipeline Combination Diversity",
+  "individual_vendi": {
+    "Code": 41.18307113647461,
+    "Complex QA": 84.98233795166016,
+    "Creative": 39.23440170288086,
+    "Document QA": 97.21701049804688,
+    "Math": 40.2650260925293,
+    "Reasoning": 75.10414123535156,
+    "Self-Inversion": 103.1661376953125
+  },
+  "top_pairs_by_vendi": [
+    [
+      "Document QA+Self-Inversion",
+      135.06813049316406
+    ],
+    [
+      "Document QA+Reasoning",
+      125.32366943359375
+    ],
+    [
+      "Complex QA+Self-Inversion",
+      124.74837493896484
+    ],
+    [
+      "Complex QA+Document QA",
+      124.44963836669922
+    ],
+    [
+      "Reasoning+Self-Inversion",
+      122.78160095214844
+    ],
+    [
+      "Complex QA+Reasoning",
+      116.8415756225586
+    ],
+    [
+      "Document QA+Math",
+      104.12004852294922
+    ],
+    [
+      "Code+Document QA",
+      101.58857727050781
+    ],
+    [
+      "Code+Self-Inversion",
+      96.95919799804688
+    ],
+    [
+      "Complex QA+Math",
+      96.61273193359375
+    ]
+  ],
+  "top_pairs_by_synergy": [
+    [
+      "Document QA+Self-Inversion",
+      31.901992797851562
+    ],
+    [
+      "Complex QA+Reasoning",
+      31.859237670898438
+    ],
+    [
+      "Code+Math",
+      30.136707305908203
+    ],
+    [
+      "Creative+Math",
+      29.568477630615234
+    ],
+    [
+      "Document QA+Reasoning",
+      28.106658935546875
+    ],
+    [
+      "Complex QA+Document QA",
+      27.232627868652344
+    ],
+    [
+      "Code+Creative",
+      26.50284194946289
+    ],
+    [
+      "Complex QA+Self-Inversion",
+      21.582237243652344
+    ],
+    [
+      "Reasoning+Self-Inversion",
+      19.615463256835938
+    ],
+    [
+      "Code+Reasoning",
+      15.659843444824219
+    ]
+  ],
+  "teamwork_scores": {
+    "Reasoning": 18.916600545247395,
+    "Complex QA": 17.592113494873047,
+    "Document QA": 14.632301330566406,
+    "Math": 13.843167622884115,
+    "Code": 13.681652069091797,
+    "Self-Inversion": 7.646605173746745,
+    "Creative": 6.566070556640625
+  }
+}

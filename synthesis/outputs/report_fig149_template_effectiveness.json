@@ -1,0 +1,110 @@
+{
+  "figure": "fig149_template_effectiveness",
+  "title": "Template Parameter Effectiveness",
+  "total_tag_combinations": 145,
+  "top_10_by_ttr": [
+    [
+      "Creative:type:poetry composition",
+      0.7110567074539751,
+      889
+    ],
+    [
+      "Self-Inversion:domain:business strategy",
+      0.7058977735333976,
+      24
+    ],
+    [
+      "Self-Inversion:domain:literature",
+      0.6874724268574334,
+      81
+    ],
+    [
+      "Self-Inversion:domain:Literature",
+      0.6872130559575955,
+      41
+    ],
+    [
+      "Self-Inversion:domain:Web Development",
+      0.6866862743627312,
+      32
+    ],
+    [
+      "Creative:type:writing style transfer",
+      0.6849028637974891,
+      759
+    ],
+    [
+      "Creative:type:dialogue writing",
+      0.677064275022824,
+      727
+    ],
+    [
+      "Self-Inversion:domain:psychology",
+      0.6769576815804669,
+      24
+    ],
+    [
+      "Creative:type:creative brainstorming",
+      0.6717246359077449,
+      915
+    ],
+    [
+      "Self-Inversion:domain:education",
+      0.6698995271670263,
+      22
+    ]
+  ],
+  "bottom_10_by_ttr": [
+    [
+      "Math:level:college",
+      0.45562686545179015,
+      3742
+    ],
+    [
+      "Math:topic:optimization",
+      0.44905674674658613,
+      1377
+    ],
+    [
+      "Reasoning:type:logical puzzles",
+      0.4437322601943877,
+      1670
+    ],
+    [
+      "Math:level:high_school",
+      0.43675066129580564,
+      4130
+    ],
+    [
+      "Math:topic:abstract_algebra",
+      0.4322990406254091,
+      1176
+    ],
+    [
+      "Math:topic:calculus",
+      0.4292085999878502,
+      1234
+    ],
+    [
+      "Math:level:competition",
+      0.3917724402621446,
+      3512
+    ],
+    [
+      "Math:topic:real_analysis",
+      0.3895039256895654,
+      1152
+    ],
+    [
+      "Math:topic:number_theory",
+      0.3694540378845353,
+      1332
+    ],
+    [
+      "Math:topic:linear_algebra",
+      0.3530664968217278,
+      1126
+    ]
+  ],
+  "self_inversion_unique_domains": 35
+}
