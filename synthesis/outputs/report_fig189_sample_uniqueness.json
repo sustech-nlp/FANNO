@@ -1,0 +1,50 @@
+{
+  "figure": "fig189_sample_uniqueness",
+  "most_unique_pipeline": "Document QA",
+  "best_bridge_pipeline": "Self-Inversion",
+  "most_isolated_pipeline": "Creative",
+  "per_pipeline": {
+    "Code": {
+      "avg_within_uniqueness": 0.3007,
+      "avg_cross_distance": 0.55541,
+      "avg_isolation": 0.9166,
+      "bridge_score": 0.02903
+    },
+    "Complex QA": {
+      "avg_within_uniqueness": 0.50364,
+      "avg_cross_distance": 0.57951,
+      "avg_isolation": 0.5752,
+      "bridge_score": 0.21751
+    },
+    "Creative": {
+      "avg_within_uniqueness": 0.41505,
+      "avg_cross_distance": 0.7685,
+      "avg_isolation": 0.9533,
+      "bridge_score": 0.02213
+    },
+    "Document QA": {
+      "avg_within_uniqueness": 0.59319,
+      "avg_cross_distance": 0.63122,
+      "avg_isolation": 0.4263,
+      "bridge_score": 0.33507
+    },
+    "Math": {
+      "avg_within_uniqueness": 0.32675,
+      "avg_cross_distance": 0.50302,
+      "avg_isolation": 0.8913,
+      "bridge_score": 0.04039
+    },
+    "Reasoning": {
+      "avg_within_uniqueness": 0.4918,
+      "avg_cross_distance": 0.60511,
+      "avg_isolation": 0.6851,
+      "bridge_score": 0.1624
+    },
+    "Self-Inversion": {
+      "avg_within_uniqueness": 0.48046,
+      "avg_cross_distance": 0.50938,
+      "avg_isolation": 0.2242,
+      "bridge_score": 0.36355
+    }
+  }
+}
