@@ -1,0 +1,10 @@
+{
+  "hopchain_sft": {
+    "file_name": "hopchain_sft_data.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    }
+  }
+}

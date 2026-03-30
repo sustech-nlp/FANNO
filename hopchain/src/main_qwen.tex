@@ -1,0 +1,165 @@
+\documentclass{article}
+
+
+\pdfinfoomitdate=1
+\pdfsuppressptexinfo=15
+\pdftrailerid{}
+
+
+
+\usepackage{colm2024_conference}
+
+
+
+
+
+
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage[utf8]{inputenc} %
+\usepackage[T1]{fontenc}    %
+\usepackage{hyperref}       %
+\usepackage{url}            %
+\usepackage{booktabs}       %
+\usepackage{amsfonts}       %
+\usepackage{nicefrac}       %
+\usepackage{microtype}      %
+\usepackage{placeins}
+\usepackage{xcolor}     %
+\usepackage{colortbl}
+\usepackage{wrapfig}
+\usepackage{marvosym}
+
+\makeatletter
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+\makeatother
+
+\definecolor{darkred}{RGB}{177, 38, 26}
+\definecolor{darkblue}{RGB}{67, 116, 177}
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+
+\definecolor{bestcol}{RGB}{  0,102,204} %
+\definecolor{goodcol}{RGB}{ 34,139, 34} %
+\definecolor{deltaBg}{RGB}{220,230,255} %
+\newcommand{\best}[1]{\textbf{\textcolor{bestcol}{#1}}}
+\newcommand{\better}[1]{\textbf{\textcolor{goodcol}{#1}}}
+
+\newcommand{\rowhighlight}{\rowcolor{deltaBg}}
+
+
+\usepackage[inline]{enumitem}
+
+\usepackage[most]{tcolorbox}
+\usepackage{listings}
+\usepackage{etoc}
+
+\tcbset{
+  colback=white, %
+  colframe=black, %
+  arc=2mm,            %
+  boxrule=1pt,      %
+  left=6pt, right=6pt, top=6pt, bottom=6pt  %
+}
+
+
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{0.85\linewidth}
+
+\usepackage{amsmath, amssymb}
+\usepackage[capitalize,noabbrev]{cleveref}
+
+\usepackage{multirow}
+\usepackage{array} 
+\usepackage{tabularx}
+\usetikzlibrary{calc}
+
+\captionsetup[figure]{skip=4pt}
+
+\newlist{inlinelist}{enumerate*}{1}
+\setlist[inlinelist]{label=(\roman*)}
+
+\newcommand{\shenzhi}[1] {{~\color{red}~[Shenzhi: #1]~}}
+
+\newcommand{\CiteInline}[1]{\cite{#1}}
+\newcommand{\CiteParen}[1]{\citep{#1}}
+
+\makeatletter
+\renewenvironment{abstract}{\vskip.075in\centerline{\large\bf Abstract}\vspace{0.5ex}\begin{quote}}{\par\end{quote}\vskip 1ex}
+\makeatother
+
+
+
+\title{HopChain: Multi-Hop Data Synthesis for Generalizable Vision-Language Reasoning}
+
+
+\author{%
+ \textbf{Shenzhi Wang$^{1,2,\ast}$, Shixuan Liu$^{1,\ast}$, Jing Zhou$^{1}$, Chang Gao$^{1}$, Xiong-Hui Chen$^{1}$, Binghai Wang$^{1}$, An Yang$^{1}$, Shiji Song$^{2}$, Bowen Yu$^{1,\textrm{\Letter},\dagger}$,  Gao Huang$^{2,\textrm{\Letter}}$, Junyang Lin$^{1}$} \\
+ $^1$ Qwen Team, Alibaba Inc. \qquad $^2$ LeapLab, Tsinghua University
+}
+
+
+
+\begin{document}
+
+\blfootnote{\hspace*{-1.5em}$^\ast$Equal contribution \quad $\textrm{\Letter}$: Corresponding authors \quad $\dagger$: Project lead}
+\blfootnote{\hspace*{-1.5em}\mbox{\footnotesize Emails: \texttt{wangshenzhi99@gmail.com}, \texttt{liushixuan66@gmail.com}, \texttt{yubowen.ph@gmail.com}, \texttt{gaohuang@tsinghua.edu.cn}}}
+
+\maketitle
+
+
+\begin{abstract}
+  \input{sections/0_abstract}
+\end{abstract}
+
+\input{sections/1_introduction}
+
+\input{sections/3_preliminaries}
+
+\input{sections/4_observations}
+
+\input{sections/5_method}
+
+\input{sections/6_experiments}
+
+\input{sections/2_related_work}
+
+\input{sections/8_conclusion}
+
+
+
+
+
+
+
+
+
+\newpage
+{
+\small
+\bibliographystyle{plainnat}
+\bibliography{ref.bib}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\input{sections/9_appendix}
+
+\end{document}

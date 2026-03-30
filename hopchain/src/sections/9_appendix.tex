@@ -1,0 +1,76 @@
+\appendix
+\renewcommand{\theHsection}{app.\thesection}
+\section*{Appendix}
+
+
+
+\section{Full Prompt for Multi-Hop Query Design}
+\label{app:multihop-prompt}
+
+We provide the complete prompt used for synthesizing multi-hop vision-language reasoning queries below. Placeholders such as \texttt{\{num\_queries\_word\}}, \texttt{\{object\_list\}}, \texttt{\{num\_queries\}}, and \texttt{\{target\_hop\_count\_info\}} are filled at runtime.
+
+\medskip
+\noindent
+\begin{tcolorbox}[
+  breakable,
+  title={\textbf{Multi-Hop Query Design Prompt (Full)}},
+  fonttitle=\bfseries,
+  colback=white,
+  colframe=black,
+  boxrule=0.5pt,
+  left=4pt,
+  right=4pt,
+  top=6pt,
+  bottom=6pt,
+]
+\lstset{
+  basicstyle=\small\ttfamily,
+  breaklines=true,
+  columns=flexible,
+  frame=none,
+  numbers=none,
+  showstringspaces=false,
+  keepspaces=true,
+  breakatwhitespace=false,
+  xleftmargin=0pt,
+  aboveskip=0pt,
+  belowskip=0pt,
+}
+\lstinputlisting{sections/prompts/multihop_query_prompt.txt}
+\end{tcolorbox}
+
+\newpage
+\section{Full Prompt for Image Filtering}
+\label{app:image-select-prompt}
+
+We also provide the complete prompt used to screen images before multi-hop query synthesis.
+
+\medskip
+\noindent
+\begin{tcolorbox}[
+  breakable,
+  title={\textbf{Image Filtering Prompt (Full)}},
+  fonttitle=\bfseries,
+  colback=white,
+  colframe=black,
+  boxrule=0.5pt,
+  left=4pt,
+  right=4pt,
+  top=6pt,
+  bottom=6pt,
+]
+\lstset{
+  basicstyle=\small\ttfamily,
+  breaklines=true,
+  columns=flexible,
+  frame=none,
+  numbers=none,
+  showstringspaces=false,
+  keepspaces=true,
+  breakatwhitespace=false,
+  xleftmargin=0pt,
+  aboveskip=0pt,
+  belowskip=0pt,
+}
+\lstinputlisting{sections/prompts/select_images.txt}
+\end{tcolorbox}

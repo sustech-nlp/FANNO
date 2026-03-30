@@ -1,0 +1,43 @@
+\section{Related Work}
+
+\subsection{Vision-Language Models}
+
+The integration of visual encoders with large language models has driven rapid progress in multimodal understanding.
+LLaVA~\CiteParen{liu2024visual} introduced the visual instruction tuning paradigm by projecting visual features into the language model's embedding space, a design subsequently refined in LLaVA-1.5~\CiteParen{liu2024improved} with stronger projectors and higher-resolution inputs.
+This architectural template has been adopted and scaled by both open-source and proprietary efforts, including InternVL~\CiteParen{chen2024internvl,chen2024internvl2}, Qwen-VL~\CiteParen{bai2023qwenvl,bai2025qwen25vl}, GPT-4V~\CiteParen{openai2023gpt4}, and Gemini~\CiteParen{geminiteam2024gemini}.
+Alongside these advances, diagnostic studies show that even strong VLMs remain vulnerable to object hallucination, visual illusion, and language-prior-driven errors~\CiteParen{rohrbach2018object,guan2024hallusionbench,leng2024vcd}.
+Recent analyses further suggest that these failures can become more pronounced when multimodal reasoning chains grow longer and drift away from image-grounded evidence~\CiteParen{liu2025morethinking}.
+While these models achieve strong aggregate scores on diverse benchmarks, their visual perception can still become unreliable during multi-step reasoning.
+This is the bottleneck our work targets through synthesized multi-hop data.
+
+\subsection{Reinforcement Learning for Language and Vision-Language Models}
+
+Reinforcement learning from human feedback (RLHF)~\CiteParen{ouyang2022training} first demonstrated the effectiveness of reinforcement learning (RL)-based alignment for language models, using proximal policy optimization (PPO)~\CiteParen{schulman2017proximal} as the default optimizer.
+More recently, reinforcement learning with verifiable rewards (RLVR)~\CiteParen{shao2024deepseekmath} has emerged as a powerful alternative to RLHF, eliminating the need for a learned reward model by using programmatically verifiable answers.
+DeepSeek-R1~\CiteParen{deepseekr1} further showed that pure RL can induce strong chain-of-thought reasoning in LLMs, which has motivated parallel extensions to VLMs such as VLM-R1~\CiteParen{shen2025vlmr1} and TikArt~\CiteParen{ding2026tikart}.
+In parallel, the optimization toolkit has also evolved: GRPO~\CiteParen{shao2024deepseekmath} and GSPO~\CiteParen{gspo} use group-based advantage estimation with hard clipping, while SAPO~\CiteParen{sapo} replaces hard clipping with a temperature-controlled soft gate for improved stability.
+Beyond algorithm design, recent mechanistic and robustness analyses suggest that RL's effects are selective rather than uniform. In LLMs, improvements are concentrated on a minority of high-entropy tokens~\CiteParen{wang2025beyond}; in VLMs, RL appears to primarily refine vision-to-reasoning alignment in mid-to-late layers rather than uniformly strengthening visual perception~\CiteParen{li2026frankenstein}, and RL-finetuned models can still exhibit weak visual grounding and over-reliance on textual cues~\CiteParen{zhao2026robustness}.
+In related multimodal reasoning settings, recent work has also begun to explicitly reward visually grounded reasoning traces, for example through visually grounded reinforcement finetuning for visual document reasoning~\CiteParen{ni2025pointrft} and evidence-grounded RL for video reasoning~\CiteParen{luo2025thinkingdrifts}.
+Most existing RL and RLVR works remain tied to pre-existing task or benchmark data, including math- and science-oriented reasoning sets as well as task-specific multimodal datasets for documents or videos.
+In contrast, our pipeline generates a benchmark-agnostic proxy task designed to force repeated visual grounding and yield broad, generalizable improvements.
+
+\subsection{Vision-Language Reasoning and Multi-Hop Reasoning}
+
+Compositional visual reasoning has been studied through synthetic diagnostic datasets such as CLEVR~\CiteParen{johnson2017clevr} and real-image benchmarks such as GQA~\CiteParen{hudson2019gqa}, with early architectural innovations including neural module networks~\CiteParen{andreas2016neural} and visual programming~\CiteParen{gupta2023visual}.
+In the language domain, multi-hop question answering requires chaining evidence across multiple passages.
+This setting has been formalized by benchmarks such as HotpotQA~\CiteParen{yang2018hotpotqa}.
+Chain-of-thought (CoT) prompting~\CiteParen{wei2022chain} and its multimodal extension~\CiteParen{zhang2023multimodal} have shown that eliciting step-by-step reasoning significantly improves both LLM and VLM performance.
+At the same time, several recent works argue that strong multimodal reasoning requires more than language-space CoT: it depends on fine-grained observation, stronger intermediate perception representations, repeated image inspection, or iterative revisiting of visual regions~\CiteParen{bigverdi2025perception,ye2025blinktwice,jiang2025vlmr3}.
+Our work differs from prior visual reasoning research in three respects.
+(1)~We formalize multi-hop vision-language reasoning with two complementary hop types: perception-level hops (switching between single-object and multi-object perception) and instance-chain hops (A $\rightarrow$ B $\rightarrow$ C dependency chains), instead of treating it as a single-axis chain.
+(2)~We use multi-hop reasoning as a \emph{proxy task} to improve general VLM capabilities rather than as an end goal.
+(3)~Our data is synthesized on real images at scale, which bridges the gap between synthetic diagnostics and manually curated benchmarks.
+
+\subsection{Scalable Data Synthesis for Model Training}
+
+Using strong models to generate training data for weaker ones has become a central scaling strategy.
+Self-Instruct~\CiteParen{wang2023selfinstruct} and Alpaca~\CiteParen{taori2023stanford} pioneered LLM-generated instruction data, while ShareGPT4V~\CiteParen{chen2023sharegpt4v} extended this idea to vision-language captions.
+Representative multimodal data synthesis pipelines additionally integrate vision foundation models.
+They often combine a VLM for object detection with SAM/SAM2~\CiteParen{kirillov2023segment,ravi2024sam2} for instance segmentation.
+They may also use open-set detection approaches such as Grounding DINO~\CiteParen{liu2023grounding} to construct structured multi-hop queries from raw images.
+Unlike prior data synthesis efforts that aim to approximate the target task distribution, our pipeline generates a benchmark-agnostic proxy task designed to force repeated visual grounding for generalizable improvement.

@@ -1,0 +1,64 @@
+description: hopchain-vlm-sft-eval-v12
+
+target:
+  service: sing
+  name: msrresrchvc
+  workspace_name: workspace_genai
+  resource_group: gcr-singularity-resrch
+
+environment:
+  image: zhuhe/opd:latest
+  registry: workspacegenaiacr.azurecr.io
+  setup:
+    - pip install lmms-eval decord python-Levenshtein
+    - python3 -c "import lmms_eval,os,glob,re;td=os.path.join(os.path.dirname(lmms_eval.__file__),'tasks');[os.makedirs(os.path.dirname(p),exist_ok=True) or open(p,'w').write('{}') for y in glob.glob(os.path.join(td,'**/*.yaml'),recursive=True) for line in open(y) for m in re.findall(r'[\"\\x27]?include[\"\\x27]?\\s*:\\s*[\"\\x27]?([^\"\\x27\\s]+)',line) if not os.path.exists(p:=os.path.join(os.path.dirname(y),m))]"
+    - python3 -c "import lmms_eval,os,urllib.request as u;td=os.path.join(os.path.dirname(lmms_eval.__file__),'tasks');[(lambda p,url:open(p,'w').write(u.urlopen(url).read().decode()))(os.path.join(td,d,f),'https://raw.githubusercontent.com/EvolvingLMMs-Lab/lmms-eval/v0.7.1/lmms_eval/tasks/'+d+'/'+f) for d,f in [('mmmu','_default_template_yaml'),('mmstar','_default_template_yaml')]]"
+    - python3 -c "from lmms_eval.tasks import TaskManager;TaskManager('INFO');print('lmms-eval OK')"
+
+storage:
+  zhuhe:
+    storage_account_name: msranlpinternhot
+    container_name: hezhu
+    mount_dir: /mnt/zhuhe
+
+jobs:
+  - name: hopchain-baseline-eval
+    sku: 40G8-A100-IB-NvLink
+    process_count_per_node: 1
+    sla_tier: Premium
+    priority: High
+    command:
+      - nvidia-smi -L
+      - export BASE_DIR=/mnt/zhuhe
+      - if [ -d /mnt/zhuhe/zhuhe ]; then export BASE_DIR=/mnt/zhuhe/zhuhe; fi
+      - ls -ld "$$BASE_DIR"
+      - export HF_TOKEN=$$(cat $$BASE_DIR/data/hopchain/.hf_token) && python3 -c "import huggingface_hub,os; huggingface_hub.login(token=os.environ['HF_TOKEN'])"
+      - export MODEL=$$BASE_DIR/models/Qwen2.5-VL-7B-Instruct
+      - ls -lh "$$MODEL"/config.json
+      - python -m lmms_eval --model qwen2_5_vl --model_args pretrained=$$MODEL --tasks mathvista_testmini,mmmu_val,realworldqa,ai2d,scienceqa_img,mmstar --batch_size 1 --output_path $$BASE_DIR/eval_results/hopchain_baseline --log_samples
+
+  - name: hopchain-sft-then-eval
+    sku: 40G8-A100-IB-NvLink
+    process_count_per_node: 1
+    sla_tier: Premium
+    priority: High
+    command:
+      - nvidia-smi -L
+      - export BASE_DIR=/mnt/zhuhe
+      - if [ -d /mnt/zhuhe/zhuhe ]; then export BASE_DIR=/mnt/zhuhe/zhuhe; fi
+      - ls -ld "$$BASE_DIR"
+      - export HF_TOKEN=$$(cat $$BASE_DIR/data/hopchain/.hf_token) && python3 -c "import huggingface_hub,os; huggingface_hub.login(token=os.environ['HF_TOKEN'])"
+      - echo "=== Phase 1 LoRA SFT Training ==="
+      - pip install peft
+      - export TRAIN_CONFIG=/tmp/train_lora_config.yaml
+      - cp $$BASE_DIR/data/hopchain/train_lora_config.yaml $$TRAIN_CONFIG
+      - sed -i "s|__BASE_DIR__|$$BASE_DIR|g" $$TRAIN_CONFIG
+      - cat $$TRAIN_CONFIG
+      - cp $$BASE_DIR/data/hopchain/hopchain_sft_data.json /tmp/hopchain_sft_data.json
+      - sed -i "s|__BASE_DIR__|$$BASE_DIR|g" /tmp/hopchain_sft_data.json
+      - cp /tmp/hopchain_sft_data.json $$BASE_DIR/data/hopchain/hopchain_sft_data.json
+      - python $$BASE_DIR/data/hopchain/train_lora_sft.py --config $$TRAIN_CONFIG
+      - echo "=== Phase 2 Evaluation ==="
+      - export SFT_MODEL=$$BASE_DIR/saves/hopchain/sft-qwen25vl-7b/merged
+      - ls -lh "$$SFT_MODEL"/config.json
+      - python -m lmms_eval --model qwen2_5_vl --model_args pretrained=$$SFT_MODEL --tasks mathvista_testmini,mmmu_val,realworldqa,ai2d,scienceqa_img,mmstar --batch_size 1 --output_path $$BASE_DIR/eval_results/hopchain_sft --log_samples

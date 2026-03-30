@@ -1,0 +1,137 @@
+[
+  {
+    "messages": [
+      {
+        "content": "<image>Starting from the long shelf on the left wall, find the large window immediately to its right. In front of that window, locate the long black cutting board being held over the pot. Identify the utensil that is touching this board and determine its color. If that utensil is red, output how many green bell peppers are visible in the scene; otherwise output how many drawers under the back counter are labeled. Give the final number.",
+        "role": "user"
+      },
+      {
+        "content": "<think>\nStep 1: Locate the long shelf on the left wall. → left-wall shelf found\nStep 2: Find the large window to the right of the shelf. → window identified to the right of the shelf\nStep 3: In front of this window, locate the long black cutting board held over the pot. → cutting board in front of the window found\nStep 4: Identify the color of the utensil touching the board. → spatula is red\nStep 5: If the utensil is red, count green bell peppers; else count labeled drawers under the back counter. → Condition true → number of green bell peppers = 1\n</think>\nThe answer is 1.",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "__BASE_DIR__/data/hopchain/test_images/kitchen.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>Find the green bell pepper near the front-left. Determine whether the long black cutting board used above the pot is positioned to the right of this pepper. Next, identify the color of the utensil scraping the board. If the board is indeed to the right of the pepper, output how many of the named instances (spatula, shelf, window, cutting board, drawer, bell pepper) are predominantly red in themselves; otherwise output how many labeled drawers under the back counter are present. Give the final number.",
+        "role": "user"
+      },
+      {
+        "content": "<think>\nStep 1: Locate the bell pepper and note it is green. → pepper found; green\nStep 2: Check the relative position of the cutting board with respect to the pepper. → board is to the right of the pepper\nStep 3: Identify the color of the spatula scraping the board. → spatula is red\nStep 4: Using the color from the previous step, count how many of the listed instances themselves are predominantly red. → only the spatula among these instances is red → count = 1\nStep 5: If the board is to the right of the pepper, return the red-instance count from step 4; otherwise return the number of labeled drawers. → Condition true → final = 1\n</think>\nThe answer is 1.",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "__BASE_DIR__/data/hopchain/test_images/kitchen.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>Identify the large window on the back wall. Find the long shelf located to the left of this window. Then, in front of the same window, locate the long black cutting board held over the pot and the utensil touching it; determine that utensil’s color. If the utensil is red, count how many of the following objects are positioned left of the window: the left-wall shelf, the green bell pepper near the front-left, and the leftmost white drawer under the back counter. If the utensil is not red, instead count how many of those three objects are green. Output the resulting number.",
+        "role": "user"
+      },
+      {
+        "content": "<think>\nStep 1: Locate the large window on the back wall. → window identified\nStep 2: Find the shelf to the left of the window. → shelf left of window found\nStep 3: In front of the same window, locate the angled long black cutting board. → cutting board in front of window found\nStep 4: Determine the color of the utensil touching the board. → spatula is red\nStep 5: If the utensil is red, count how many of [shelf, bell pepper, leftmost drawer] lie to the left of the window; otherwise count how many of those are green. → Condition true → all three (shelf, pepper, drawer) are left of the window → count = 3\n</think>\nThe answer is 3.",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "__BASE_DIR__/data/hopchain/test_images/kitchen.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>Start at the teal cushioned bench on the far left. Using the shelf attached to this bench, choose the upright book in the upper row’s far‑right cubby. From this book, look straight across to the right-side kitchenette and compare the countertop with the large floor area: if the countertop is darker than the floor, set N to the number of panels in the white double door at the end of the corridor; otherwise set N to the number of recessed ceiling spots above the seating area. Finally, if that recessed spot above the seating is lit, add 1 to N; otherwise add 0. What is N?",
+        "role": "user"
+      },
+      {
+        "content": "<think>\nStep 1: Identify the leftmost seating bench and note it anchors the shelf. → Teal bench found\nStep 2: From the bench’s attached shelf, pick the upright book at the far-right upper cubby. → Upright book located\nStep 3: From the book, look across to the kitchenette and compare the countertop’s tone to the floor. → Countertop darker than floor = True\nStep 4: Because the countertop is darker, set base N to the number of door panels at the corridor end. → N = 2\nStep 5: If the recessed spot above the seating is lit, add 1; else add 0. → Spot is lit, N = 2 + 1 = 3\n</think>\nThe answer is 5.",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "__BASE_DIR__/data/hopchain/test_images/office_desk.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>Begin with the single upright book in the rightmost upper cubby beside the left bench. If this book is standing vertically, set the base value to the number of panels in the white door at the corridor’s end; otherwise set the base value to the number of recessed ceiling spots above the seating. From that chosen reference, move to the right-side kitchenette and check whether the countertop is darker than the large floor area; if it is, add 1 to the base, otherwise add 0. Finally, look at the left bench: if its teal cushion is lighter than the countertop, add the number of recessed spots above it; otherwise add 0. What total do you get?",
+        "role": "user"
+      },
+      {
+        "content": "<think>\nStep 1: Check the book’s orientation. → Book is upright = True\nStep 2: Because the book is upright, use the door and set base to its panel count. → Base = 2\nStep 3: From the chosen reference, evaluate if the countertop is darker than the floor. → Countertop darker than floor = True, total = 2 + 1 = 3\nStep 4: If the bench cushion is lighter than the dark countertop, add the count of recessed spots above it; else add 0. → Bench cushion lighter than countertop = True; add 1 -> final = 4\n</think>\nThe answer is 5.",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "__BASE_DIR__/data/hopchain/test_images/office_desk.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>Start at the dark kitchenette countertop on the right. Go across the corridor to the bench area and, in the shelf next to that bench, select the upright book in the upper row’s far-right cubby. From this area, look upward to the single recessed ceiling spot above the bench; if this spot is lit, set N to the number of panels in the white door at the corridor’s end, otherwise set N to 1. Finally, compare the expansive floor to the countertop: if the floor is lighter than the countertop, add 1 to N; else add 0. What is N?",
+        "role": "user"
+      },
+      {
+        "content": "<think>\nStep 1: Identify the dark right-side countertop as the starting point. → Countertop is dark\nStep 2: Move across to the bench side and pick the upright book in the shelf beside the bench. → Book located; upright\nStep 3: Look up to the recessed spot above the bench and check if it is on. → Spot is lit = True\nStep 4: Because the spot is lit, set N to the number of panels in the end door. → N = 2\nStep 5: Compare floor brightness to the dark countertop; if lighter, add 1 to N. → Floor lighter than countertop = True; N = 2 + 1 = 3\n</think>\nThe answer is 5.",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "__BASE_DIR__/data/hopchain/test_images/office_desk.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>Start from the tall black tower with two antennas. Move right to the large water body. From that water, go to the small park of trees along its shore. From those trees, find the prominent vertical street nearby at the bottom of the city. If this street is closer to the water than to the black tower, output the number of natural elements among the listed instances (sky band, leftmost cloud cluster, the lake, and the shoreline trees). Otherwise, output the number of built elements among the listed instances (the black tower and the vertical street). What number do you get?",
+        "role": "user"
+      },
+      {
+        "content": "<think>\nStep 1: Identify the tall black tower with twin antennas near the lakefront skyline. → building_1 found\nStep 2: Locate the large water body relative to the tower; it lies to the right of the tower. → lake/sea_1 is right of building_1\nStep 3: From the lake, find the small patch of trees along its shoreline on the right. → tree_1 found on the lakefront\nStep 4: From the shoreline trees, locate the nearby vertical street at the bottom-right portion of the city and compare its proximity to the lake vs. the black tower. → road_1 is closer to lake/sea_1 than to building_1 (True)\nStep 5: Conditional count: since the statement is True, count natural elements among the listed instances. → count = 4\n</think>\nThe answer is 4.",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "__BASE_DIR__/data/hopchain/test_images/street_scene.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>Begin with the large water body on the right. From this water, move to the patch of shoreline trees. From those trees, go left across the city to the tall black tower with two antennas. Looking up into the sky from that tower, determine whether the leftmost cloud cluster lies to the left of the tower. If it does, count how many of the listed instances lie to the right of the tower (the lake, the shoreline trees, and the vertical street). Otherwise, count how many lie to its left (only the leftmost cloud cluster). What is the resulting number?",
+        "role": "user"
+      },
+      {
+        "content": "<think>\nStep 1: Identify the expansive water body to the right of the skyline. → lake/sea_1 found\nStep 2: From the lake, find the small park of trees along its immediate shore. → tree_1 found on shoreline\nStep 3: Move leftward from the shoreline trees to the dominant black tower with two antennas. → building_1 located left of tree_1\nStep 4: From the tower, look into the sky and judge the relative side of the leftmost cloud cluster; it sits to the left of the tower. → cloud_1 is left of building_1 (True)\nStep 5: Conditional count relative to the tower: since True, count instances to the right of it. → count = 3\n</think>\nThe answer is 3.",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "__BASE_DIR__/data/hopchain/test_images/street_scene.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "content": "<image>Use the vertical street near the bottom-right as a divider. From this street, move right to reach the water body, and then from the water find the shoreline trees on the same (right) side. From the street again, move left into the city to the tall black tower, and from that tower look up into the sky to verify whether the leftmost cloud cluster is on the same (left) side of the street as the tower. If the building and that cloud share the left side while the lake and trees are on the right side, output the total number of listed instances that lie on the right side of the street; otherwise, output the total on the left side. What number results?",
+        "role": "user"
+      },
+      {
+        "content": "<think>\nStep 1: Identify the vertical street near the bottom-right of the city view. → road_1 found\nStep 2: From the street, go to the large water body on its right. → lake/sea_1 is right of road_1\nStep 3: From the lake, locate the shoreline tree patch on that same right side. → tree_1 on right side with lake/sea_1\nStep 4: Return to the street and go to the tall black tower on its left. → building_1 is left of road_1\nStep 5: From the tower, look into the sky and determine the side of the leftmost cloud cluster relative to the street; it is on the same left side as the tower. → cloud_1 shares left side with building_1 (True)\nStep 6: Conditional aggregation by side: since the condition is satisfied, count instances on the right side of the street. → count = 2\n</think>\nThe answer is 2.",
+        "role": "assistant"
+      }
+    ],
+    "images": [
+      "__BASE_DIR__/data/hopchain/test_images/street_scene.jpg"
+    ]
+  }
+]

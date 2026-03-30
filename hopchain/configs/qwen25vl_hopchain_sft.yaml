@@ -1,0 +1,41 @@
+### model
+model_name_or_path: __BASE_DIR__/models/Qwen2.5-VL-7B-Instruct
+image_max_pixels: 262144
+video_max_pixels: 16384
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_target: all
+lora_rank: 16
+lora_alpha: 32
+freeze_vision_tower: true
+
+### dataset
+dataset_dir: __BASE_DIR__/data/hopchain
+dataset: hopchain_sft
+template: qwen2_vl
+cutoff_len: 4096
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+
+### output
+output_dir: __BASE_DIR__/saves/hopchain/sft-qwen25vl-7b
+logging_steps: 1
+save_steps: 50
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: none
+
+### train
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 2.0e-4
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+gradient_checkpointing: true
