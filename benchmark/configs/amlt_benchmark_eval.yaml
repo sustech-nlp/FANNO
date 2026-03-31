@@ -1,0 +1,114 @@
+description: fanno-benchmark-eval-v1
+
+target:
+  service: sing
+  name: msrresrchvc
+  workspace_name: workspace_genai
+  resource_group: gcr-singularity-resrch
+
+environment:
+  image: zhuhe/opd:latest
+  registry: workspacegenaiacr.azurecr.io
+  setup:
+    - pip install lm_eval[vllm] evalplus
+    - python3 -c "import lm_eval; print('lm_eval version:', lm_eval.__version__)"
+
+storage:
+  zhuhe:
+    storage_account_name: msranlpinternhot
+    container_name: hezhu
+    mount_dir: /mnt/zhuhe
+
+jobs:
+  # ================================================================
+  # Job 1: Full-Parameter SFT Training (Qwen2.5-7B-Instruct + FANNO 160K)
+  # ================================================================
+  - name: fanno-sft-qwen25-7b
+    sku: 40G8-A100-IB-NvLink
+    process_count_per_node: 1
+    mpi: true
+    sla_tier: Premium
+    priority: High
+    command:
+      - nvidia-smi -L
+      - export BASE_DIR=/mnt/zhuhe
+      - if [ -d /mnt/zhuhe/zhuhe ]; then export BASE_DIR=/mnt/zhuhe/zhuhe; fi
+      - ls -ld "$$BASE_DIR"
+      - export HF_TOKEN=$$(cat $$BASE_DIR/data/hopchain/.hf_token) && python3 -c "import huggingface_hub,os; huggingface_hub.login(token=os.environ['HF_TOKEN'])"
+      - if [ ! -f "$$BASE_DIR/models/Qwen2.5-7B-Instruct/config.json" ]; then pip install "huggingface_hub[hf_transfer]" && export HF_HUB_ENABLE_HF_TRANSFER=1 && huggingface-cli download Qwen/Qwen2.5-7B-Instruct --local-dir $$BASE_DIR/models/Qwen2.5-7B-Instruct; fi
+      - ls -lh "$$BASE_DIR/models/Qwen2.5-7B-Instruct/config.json"
+      - pip install deepspeed
+      - export MODEL_PATH=$$BASE_DIR/models/Qwen2.5-7B-Instruct
+      - export TRAIN_DATA=$$BASE_DIR/data/fanno/fanno_160k_sharegpt.jsonl
+      - export OUTPUT_DIR=$$BASE_DIR/saves/fanno/sft-qwen25-7b-instruct
+      - ls -lh "$$TRAIN_DATA"
+      - deepspeed --num_gpus=8 $$BASE_DIR/data/fanno/train_sft.py --model "$$MODEL_PATH" --data "$$TRAIN_DATA" --output-dir "$$OUTPUT_DIR" --epochs 3 --lr 2e-5 --per-device-batch 2 --gradient-accum 4 --max-length 4096 --deepspeed --wandb-project fanno-sft --wandb-run-name fanno-sft-qwen25-7b-160k --save-steps 500
+      - echo "Training complete!"
+      - ls -lh "$$OUTPUT_DIR/final/"
+
+  # ================================================================
+  # Job 2: Baseline Evaluation (Original Qwen2.5-7B-Instruct)
+  # ================================================================
+  - name: fanno-baseline-eval
+    sku: 40G8-A100-IB-NvLink
+    process_count_per_node: 1
+    sla_tier: Premium
+    priority: High
+    command:
+      - nvidia-smi -L
+      - export BASE_DIR=/mnt/zhuhe
+      - if [ -d /mnt/zhuhe/zhuhe ]; then export BASE_DIR=/mnt/zhuhe/zhuhe; fi
+      - export HF_TOKEN=$$(cat $$BASE_DIR/data/hopchain/.hf_token) && python3 -c "import huggingface_hub,os; huggingface_hub.login(token=os.environ['HF_TOKEN'])"
+      - if [ ! -f "$$BASE_DIR/models/Qwen2.5-7B-Instruct/config.json" ]; then pip install "huggingface_hub[hf_transfer]" && export HF_HUB_ENABLE_HF_TRANSFER=1 && huggingface-cli download Qwen/Qwen2.5-7B-Instruct --local-dir $$BASE_DIR/models/Qwen2.5-7B-Instruct; fi
+      - export MODEL=$$BASE_DIR/models/Qwen2.5-7B-Instruct
+      - ls -lh "$$MODEL/config.json"
+      - echo "=== Tier 1 Benchmarks ==="
+      - python -m lm_eval --model vllm --model_args pretrained=$$MODEL,dtype=auto,gpu_memory_utilization=0.88,max_model_len=4096,tensor_parallel_size=4 --tasks leaderboard_ifeval,leaderboard_mmlu_pro,gsm8k_cot,leaderboard_math_hard,leaderboard_bbh --batch_size auto --output_path $$BASE_DIR/eval_results/fanno_baseline/tier1 --log_samples
+      - echo "=== Tier 2 GPQA Diamond ==="
+      - python -m lm_eval --model vllm --model_args pretrained=$$MODEL,dtype=auto,gpu_memory_utilization=0.88,max_model_len=4096,tensor_parallel_size=4 --tasks leaderboard_gpqa_diamond --batch_size auto --output_path $$BASE_DIR/eval_results/fanno_baseline/tier2 --log_samples
+      - echo "Baseline evaluation complete!"
+
+  # ================================================================
+  # Job 3: SFT Model Evaluation (run AFTER training completes)
+  # ================================================================
+  - name: fanno-sft-eval
+    sku: 40G8-A100-IB-NvLink
+    process_count_per_node: 1
+    sla_tier: Premium
+    priority: High
+    command:
+      - nvidia-smi -L
+      - export BASE_DIR=/mnt/zhuhe
+      - if [ -d /mnt/zhuhe/zhuhe ]; then export BASE_DIR=/mnt/zhuhe/zhuhe; fi
+      - export HF_TOKEN=$$(cat $$BASE_DIR/data/hopchain/.hf_token) && python3 -c "import huggingface_hub,os; huggingface_hub.login(token=os.environ['HF_TOKEN'])"
+      - export MODEL=$$BASE_DIR/saves/fanno/sft-qwen25-7b-instruct/final
+      - ls -lh "$$MODEL/config.json" || (echo "ERROR SFT model not found. Run fanno-sft-qwen25-7b first!" && exit 1)
+      - echo "=== Tier 1 Benchmarks ==="
+      - python -m lm_eval --model vllm --model_args pretrained=$$MODEL,dtype=auto,gpu_memory_utilization=0.88,max_model_len=4096,tensor_parallel_size=4 --tasks leaderboard_ifeval,leaderboard_mmlu_pro,gsm8k_cot,leaderboard_math_hard,leaderboard_bbh --batch_size auto --output_path $$BASE_DIR/eval_results/fanno_sft/tier1 --log_samples
+      - echo "=== Tier 2 GPQA Diamond ==="
+      - python -m lm_eval --model vllm --model_args pretrained=$$MODEL,dtype=auto,gpu_memory_utilization=0.88,max_model_len=4096,tensor_parallel_size=4 --tasks leaderboard_gpqa_diamond --batch_size auto --output_path $$BASE_DIR/eval_results/fanno_sft/tier2 --log_samples
+      - echo "SFT evaluation complete!"
+
+  # ================================================================
+  # Job 4: Code Evaluation — EvalPlus (HumanEval+ / MBPP+)
+  # ================================================================
+  - name: fanno-code-eval
+    sku: 40G8-A100-IB-NvLink
+    process_count_per_node: 1
+    sla_tier: Premium
+    priority: High
+    command:
+      - nvidia-smi -L
+      - export BASE_DIR=/mnt/zhuhe
+      - if [ -d /mnt/zhuhe/zhuhe ]; then export BASE_DIR=/mnt/zhuhe/zhuhe; fi
+      - export HF_TOKEN=$$(cat $$BASE_DIR/data/hopchain/.hf_token) && python3 -c "import huggingface_hub,os; huggingface_hub.login(token=os.environ['HF_TOKEN'])"
+      - if [ ! -f "$$BASE_DIR/models/Qwen2.5-7B-Instruct/config.json" ]; then pip install "huggingface_hub[hf_transfer]" && export HF_HUB_ENABLE_HF_TRANSFER=1 && huggingface-cli download Qwen/Qwen2.5-7B-Instruct --local-dir $$BASE_DIR/models/Qwen2.5-7B-Instruct; fi
+      - mkdir -p $$BASE_DIR/eval_results/fanno_baseline $$BASE_DIR/eval_results/fanno_sft
+      - export BASELINE_MODEL=$$BASE_DIR/models/Qwen2.5-7B-Instruct
+      - echo "=== Baseline HumanEval+ ==="
+      - evalplus.evaluate --model "$$BASELINE_MODEL" --dataset humaneval --backend vllm --greedy 2>&1 | tee $$BASE_DIR/eval_results/fanno_baseline/humaneval_plus.log
+      - echo "=== Baseline MBPP+ ==="
+      - evalplus.evaluate --model "$$BASELINE_MODEL" --dataset mbpp --backend vllm --greedy 2>&1 | tee $$BASE_DIR/eval_results/fanno_baseline/mbpp_plus.log
+      - export SFT_MODEL=$$BASE_DIR/saves/fanno/sft-qwen25-7b-instruct/final
+      - if [ -f "$$SFT_MODEL/config.json" ]; then echo "=== SFT HumanEval+ ===" && evalplus.evaluate --model "$$SFT_MODEL" --dataset humaneval --backend vllm --greedy 2>&1 | tee $$BASE_DIR/eval_results/fanno_sft/humaneval_plus.log && echo "=== SFT MBPP+ ===" && evalplus.evaluate --model "$$SFT_MODEL" --dataset mbpp --backend vllm --greedy 2>&1 | tee $$BASE_DIR/eval_results/fanno_sft/mbpp_plus.log; else echo "SFT model not found, skipping SFT code eval"; fi
+      - echo "Code evaluation complete!"

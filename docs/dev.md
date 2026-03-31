@@ -1826,3 +1826,111 @@ Per-source delta:
 - **words_num fixed**: 4 → 0 (full instruction embedding for diversity)
 - **Quality filters upgraded**: source-aware alpha ratio, multi-turn checks, expanded refusal patterns
 
+---
+
+## Session 10 — Benchmark Evaluation Deployment (2026-03-31)
+
+### Goal
+
+Deploy and test Tier 1 + Tier 2 benchmarks to systematically evaluate whether FANNO 160K synthetic data improves post-training model capability.
+
+### Benchmark Suite Design
+
+**Tier 1 (Must-have, no API needed)**:
+| Benchmark | Task Name | Category |
+|-----------|-----------|----------|
+| IFEval | `leaderboard_ifeval` | Instruction Following |
+| MMLU-Pro | `leaderboard_mmlu_pro` | Knowledge (10-choice) |
+| GSM8K (CoT) | `gsm8k_cot` | Math Reasoning |
+| MATH Hard | `leaderboard_math_hard` | Math (Hendrycks) |
+| BBH | `leaderboard_bbh` | Hard Reasoning |
+
+**Tier 2 (Recommended)**:
+| Benchmark | Task Name / Tool | Category |
+|-----------|-----------------|----------|
+| GPQA Diamond | `leaderboard_gpqa_diamond` | Graduate-level Science |
+| HumanEval+ | `evalplus` | Code Generation |
+| MBPP+ | `evalplus` | Code Generation |
+
+**Deferred** (need OpenAI API for judge): AlpacaEval 2 LC, Arena-Hard-Auto, WildBench
+
+### Evaluation Framework
+
+- **lm-evaluation-harness** (EleutherAI): IFEval, MMLU-Pro, GSM8K, MATH, BBH, GPQA Diamond — all deterministic/auto-graded, no API needed
+- **EvalPlus**: HumanEval+, MBPP+ — code execution-based evaluation
+- Backend: **vLLM** with tensor_parallel_size=4 on 8×A100
+
+### Base Model
+
+**Qwen2.5-7B-Instruct** — already on Azure blob at `models/Qwen2.5-7B-Instruct`
+
+### Training Configuration
+
+- Full-parameter SFT with DeepSpeed ZeRO-3 (8×A100 40GB)
+- Data: 160,153 FANNO samples (all 8 pipelines merged into ShareGPT format)
+- Hyperparameters: lr=2e-5, epochs=3, per_device_batch=2, gradient_accum=4, max_length=4096
+- Standalone training script: `benchmark/train_sft.py`
+
+### Data Preparation
+
+Converted 160,153 samples from heterogeneous formats to unified ShareGPT format:
+- `question`/`answer` → complex_qa, code_qa, reasoning_qa, fanno_seed_qa
+- `instruction`/`response` → creative_writing, self_inversion
+- `question`/`solution`+`final_answer` → math_qa
+- `conversation` (multi-turn) → multi_turn
+
+Source distribution:
+| Source | Count | % |
+|--------|------:|---:|
+| fanno_complex_qa | 54,223 | 33.9% |
+| fanno_seed_qa | 28,206 | 17.6% |
+| fanno_multi_turn | 18,708 | 11.7% |
+| fanno_reasoning_qa | 17,785 | 11.1% |
+| fanno_code_qa | 15,411 | 9.6% |
+| fanno_math_qa | 11,491 | 7.2% |
+| fanno_creative_writing | 9,360 | 5.8% |
+| self_inversion | 4,969 | 3.1% |
+| **Total** | **160,153** | **100%** |
+
+### AMLT Submission
+
+Experiment: **possible-goose** (4 jobs)
+
+| Job | Description | AMLT URL |
+|-----|------------|----------|
+| `fanno-sft-qwen25-7b` | Full SFT: Qwen2.5-7B + 160K data | j8xwd |
+| `fanno-baseline-eval` | Baseline: lm-eval-harness Tier 1+2 | j8xwe |
+| `fanno-sft-eval` | SFT Model: lm-eval-harness Tier 1+2 | j8xwf |
+| `fanno-code-eval` | Code: EvalPlus (HumanEval+, MBPP+) | j8xwg |
+
+### Files Created
+
+| File | Description |
+|------|------------|
+| `benchmark/prepare_sft_data.py` | Convert FANNO data to ShareGPT format |
+| `benchmark/train_sft.py` | Standalone SFT script (DeepSpeed ZeRO-3) |
+| `benchmark/configs/amlt_benchmark_eval.yaml` | AMLT 4-job config |
+| `benchmark/data/fanno_160k_sharegpt.jsonl` | Training data (160K samples, 425MB) |
+
+### Azure Storage
+
+| Path | Content |
+|------|---------|
+| `data/fanno/fanno_160k_sharegpt.jsonl` | Training data (424 MB) |
+| `data/fanno/train_sft.py` | Training script |
+| `models/Qwen2.5-7B-Instruct/` | Base model (pre-existing) |
+| `eval_results/fanno_baseline/` | Baseline evaluation results |
+| `eval_results/fanno_sft/` | SFT evaluation results |
+| `saves/fanno/sft-qwen25-7b-instruct/` | SFT model checkpoints |
+
+### Status
+
+- [x] Data preparation (160K → ShareGPT format)
+- [x] Upload to Azure blob
+- [x] AMLT job submission
+- [ ] Baseline eval results (waiting)
+- [ ] SFT training completion (waiting)
+- [ ] SFT eval results (waiting)
+- [ ] Code eval results (waiting)
+- [ ] Results comparison and analysis
+
